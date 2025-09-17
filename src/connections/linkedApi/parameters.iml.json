@@ -1,0 +1,16 @@
+[
+  {
+    "name": "linkedApiToken",
+    "type": "password",
+    "label": "Linked API Token",
+    "required": true,
+    "editable": true
+  },
+  {
+    "name": "identificationToken",
+    "type": "password",
+    "label": "Identification Token",
+    "required": true,
+    "editable": true
+  }
+]

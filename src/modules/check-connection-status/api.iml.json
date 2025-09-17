@@ -1,0 +1,50 @@
+{
+  "sequential": [
+    {
+      "name": "startWorkflow",
+      "request": {
+        "method": "POST",
+        "url": "https://api.linkedapi.io/workflows",
+        "headers": {
+          "linked-api-token": "{{connection.linkedApiToken}}",
+          "identification-token": "{{connection.identificationToken}}",
+          "content-type": "application/json"
+        },
+        "body": {
+          "actionType": "st.checkConnectionStatus",
+          "personUrl": "{{parameters.personUrl}}"
+        }
+      }
+    },
+    {
+      "repeat": {
+        "until": {
+          "or": [
+            { "equals": ["{{last.body.result.workflowStatus}}", "completed"] },
+            { "greaterThan": ["{{repeat.index}}", 60] }
+          ]
+        },
+        "do": [
+          { "wait": { "seconds": 2 } },
+          {
+            "request": {
+              "method": "GET",
+              "url": "https://api.linkedapi.io/workflows/{{sequential.startWorkflow.body.result.workflowId}}",
+              "headers": {
+                "linked-api-token": "{{connection.linkedApiToken}}",
+                "identification-token": "{{connection.identificationToken}}"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "output": {
+    "success": "{{equals(last.body.result.workflowStatus, 'completed')}}",
+    "completion": "{{last.body.result.completion}}",
+    "data": "{{last.body.result.completion.data}}",
+    "workflowId": "{{sequential.startWorkflow.body.result.workflowId}}",
+    "workflowStatus": "{{last.body.result.workflowStatus}}"
+  }
+}

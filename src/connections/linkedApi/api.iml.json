@@ -1,6 +1,7 @@
 {
-  // Request
+  // Request used by Make to validate the connection during creation
   "url": "https://api.linkedapi.io/stats/actions",
+  "method": "GET",
   "headers": {
     "linked-api-token": "{{parameters.linkedApiToken}}",
     "identification-token": "{{parameters.identificationToken}}"
@@ -8,15 +9,18 @@
 
   // Response handling
   "response": {
+    // Show a static label in the connection chip
     "metadata": {
       "type": "text",
-      "value": "Linked API Connection"
+      "value": "Linked API"
     },
     "error": {
-      "message": "[{{statusCode}}] {{body.error.message}}"
+      // Linked API returns `{ success: false, error: { message } }`
+      "message": "[{{statusCode}}] {{body.error.message || body.error || body}}"
     }
   },
 
+  // Logs
   "log": {
     "sanitize": [
       "request.headers.linked-api-token",
