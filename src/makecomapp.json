@@ -1,0 +1,32 @@
+{
+  "fileVersion": 1,
+  "generalCodeFiles": {
+    "base": "general/base.iml.json",
+    "common": "general/common.json",
+    "readme": "README.md",
+    "groups": "modules/groups.json"
+  },
+  "components": {
+    "connection": {},
+    "module": {},
+    "function": {},
+    "rpc": {},
+    "webhook": {}
+  },
+  "origins": [
+    {
+      "label": "Origin",
+      "baseUrl": "https://eu2.make.com/api",
+      "appId": "linked-api-wulvs7",
+      "appVersion": 1,
+      "idMapping": {
+        "connection": [],
+        "module": [],
+        "function": [],
+        "rpc": [],
+        "webhook": []
+      },
+      "apikeyFile": "../.secrets/apikey"
+    }
+  ]
+}
