@@ -1,61 +1,61 @@
 {
-    "fileVersion": 1,
-    "generalCodeFiles": {
-        "base": "general/base.iml.json",
-        "common": "general/common.json",
-        "groups": "modules/groups.json"
-    },
-    "components": {
-        "connection": {
-            "linkedApi": {
-                "label": "Linked API Connection",
-                "connectionType": "other",
-                "codeFiles": {
-                    "communication": "connections/linkedApi/api.iml.json",
-                    "params": "connections/linkedApi/parameters.iml.json"
-                }
-            }
-        },
-        "module": {
-            "checkConnectionStatus": {
-                "label": "Check Connection Status",
-                "description": "Starts st.checkConnectionStatus workflow and waits for completion.",
-                "moduleType": "action",
-                "connection": "linkedApi",
-                "codeFiles": {
-                    "communication": "modules/check-connection-status/api.iml.json",
-                    "staticParams": "modules/check-connection-status/parameters.iml.json"
-                }
-            }
-        },
-        "function": {},
-        "rpc": {},
-        "webhook": {}
-    },
-    "origins": [
-        {
-            "label": "Origin",
-            "baseUrl": "https://eu2.make.com/api",
-            "appId": "linked-api-wulvs7",
-            "appVersion": 1,
-            "idMapping": {
-                "connection": [
-                    {
-                        "local": "linkedApi",
-                        "remote": "linked-api-wulvs7"
-                    }
-                ],
-                "module": [
-                    {
-                        "local": "checkConnectionStatus",
-                        "remote": "checkConnectionStatus"
-                    }
-                ],
-                "function": [],
-                "rpc": [],
-                "webhook": []
-            },
-            "apikeyFile": "../.secrets/apikey"
+  "fileVersion": 1,
+  "generalCodeFiles": {
+    "base": "general/base.iml.json",
+    "common": "general/common.json",
+    "groups": "modules/groups.json"
+  },
+  "components": {
+    "connection": {
+      "linkedApi": {
+        "label": "Linked API Connection",
+        "connectionType": "basic",
+        "codeFiles": {
+          "communication": "connections/linkedApi/api.iml.json",
+          "params": "connections/linkedApi/parameters.iml.json"
         }
-    ]
+      }
+    },
+    "module": {
+      "checkConnectionStatus": {
+        "label": "Check Connection Status",
+        "description": "Starts st.checkConnectionStatus workflow and waits for completion.",
+        "moduleType": "action",
+        "connection": "linkedApi",
+        "codeFiles": {
+          "communication": "modules/check-connection-status/api.iml.json",
+          "staticParams": "modules/check-connection-status/parameters.iml.json"
+        }
+      }
+    },
+    "function": {},
+    "rpc": {},
+    "webhook": {}
+  },
+  "origins": [
+    {
+      "label": "Origin",
+      "baseUrl": "https://eu2.make.com/api",
+      "appId": "linked-api-wulvs7",
+      "appVersion": 1,
+      "idMapping": {
+        "connection": [
+          {
+            "local": "linkedApi",
+            "remote": "linked-api-wulvs7"
+          }
+        ],
+        "module": [
+          {
+            "local": "checkConnectionStatus",
+            "remote": "checkConnectionStatus"
+          }
+        ],
+        "function": [],
+        "rpc": [],
+        "webhook": []
+      },
+      "apikeyFile": "../.secrets/apikey"
+    }
+  ]
 }

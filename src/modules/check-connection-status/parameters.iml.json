@@ -3,6 +3,7 @@
     "name": "personUrl",
     "type": "text",
     "label": "Person URL",
-    "required": true
+    "required": true,
+    "help": "LinkedIn URL of the person to check connection status with"
   }
 ]

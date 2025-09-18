@@ -1,22 +1,14 @@
 {
-  // Request
-  "url": "https://api.linkedapi.io/stats/actions",
+  "baseUrl": "https://api.linkedapi.io",
   "headers": {
-    "linked-api-token": "{{parameters.linkedApiToken}}",
-    "identification-token": "{{parameters.identificationToken}}"
+    "linked-api-token": "{{connection.linkedApiToken}}",
+    "identification-token": "{{connection.identificationToken}}"
   },
-
-  // Response handling
   "response": {
-    "metadata": {
-      "type": "text",
-      "value": "Linked API Connection"
-    },
     "error": {
       "message": "[{{statusCode}}] {{body.error.message}}"
     }
   },
-
   "log": {
     "sanitize": [
       "request.headers.linked-api-token",
