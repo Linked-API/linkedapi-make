@@ -1,12 +1,14 @@
 {
-  "baseUrl": "https://api.linkedapi.io",
+  "baseUrl": "https://api.linkedapi.io/automation",
   "headers": {
     "linked-api-token": "{{connection.linkedApiToken}}",
-    "identification-token": "{{connection.identificationToken}}"
+    "identification-token": "{{connection.identificationToken}}",
+    "client": "make",
+    "Content-Type": "application/json"
   },
   "response": {
     "error": {
-      "message": "[{{statusCode}}] {{body.error.message}}"
+      "message": "[{{statusCode}}] {{body.error.message || body.error || body}}"
     }
   },
   "log": {

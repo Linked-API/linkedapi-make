@@ -4,6 +4,7 @@
     "type": "text",
     "label": "Person URL",
     "required": true,
-    "help": "LinkedIn URL of the person to check connection status with"
+    "help": "Public or hashed LinkedIn URL of the person",
+    "placeholder": "https://www.linkedin.com/in/john-doe"
   }
 ]

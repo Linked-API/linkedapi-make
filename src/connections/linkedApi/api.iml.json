@@ -1,10 +1,12 @@
 {
   // Request used by Make to validate the connection during creation
-  "url": "https://api.linkedapi.io/stats/actions",
-  "method": "GET",
+  "url": "https://api.linkedapi.io/automation/validate",
+  "method": "POST",
   "headers": {
     "linked-api-token": "{{parameters.linkedApiToken}}",
-    "identification-token": "{{parameters.identificationToken}}"
+    "identification-token": "{{parameters.identificationToken}}",
+    "client": "make",
+    "Content-Type": "application/json"
   },
 
   // Response handling
@@ -28,4 +30,3 @@
     ]
   }
 }
-

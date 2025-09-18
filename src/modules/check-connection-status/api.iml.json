@@ -1,49 +1,46 @@
 [
   {
-    "url": "/workflows",
+    "url": "/execute",
     "method": "POST",
-    "headers": {
-      "linked-api-token": "{{connection.linkedApiToken}}",
-      "identification-token": "{{connection.identificationToken}}"
-    },
     "body": {
-      "actionType": "st.checkConnectionStatus",
-      "personUrl": "{{parameters.personUrl}}"
+      "operationName": "checkConnectionStatus",
+      "data": {
+        "personUrl": "{{parameters.personUrl}}"
+      }
     },
     "response": {
       "temp": {
-        "workflowId": "{{body.result.workflowId}}",
-        "workflowStatus": "{{body.result.workflowStatus}}"
+        "workflowId": "{{body.workflowId}}"
       }
     }
   },
   {
-    "url": "/workflows/{{temp.workflowId}}",
+    "url": "/status/{{temp.workflowId}}",
     "method": "GET",
-    "headers": {
-      "linked-api-token": "{{connection.linkedApiToken}}",
-      "identification-token": "{{connection.identificationToken}}"
-    },
     "repeat": {
-      "condition": "{{body.result.workflowStatus !== 'completed' && body.result.workflowStatus !== 'failed'}}",
+      "condition": "{{!body.criticalError && body.status !== 'completed'}}",
       "delay": 2000,
       "limit": 1800
     },
     "response": {
       "temp": {
-        "workflowId": "{{body.result.workflowId}}",
-        "workflowStatus": "{{body.result.workflowStatus}}",
-        "completion": "{{body.result.completion}}"
+        "status": "{{body.status}}",
+        "data": "{{body.data}}",
+        "errors": "{{body.errors}}",
+        "criticalError": "{{body.criticalError}}"
       }
     }
   },
   {
     "response": {
-      "valid": "{{temp.workflowStatus === 'completed'}}",
+      "valid": "{{!temp.criticalError && temp.status === 'completed'}}",
       "error": {
-        "message": "{{if(temp.workflowStatus === 'failed', 'Workflow failed', 'Workflow timed out')}}"
+        "message": "{{(temp.criticalError && (temp.criticalError.message || temp.criticalError)) || 'Workflow timed out'}}"
       },
-      "output": "{{temp.completion}}"
+      "output": {
+        "data": "{{temp.data}}",
+        "errors": "{{temp.errors}}"
+      }
     }
   }
 ]

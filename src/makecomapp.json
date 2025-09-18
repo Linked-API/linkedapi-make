@@ -19,7 +19,7 @@
     "module": {
       "checkConnectionStatus": {
         "label": "Check Connection Status",
-        "description": "Starts st.checkConnectionStatus workflow and waits for completion.",
+        "description": "Check the connection status between your account and another person.",
         "moduleType": "action",
         "connection": "linkedApi",
         "codeFiles": {
