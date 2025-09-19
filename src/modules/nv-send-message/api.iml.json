@@ -22,7 +22,7 @@
     "method": "GET",
     "repeat": {
       "condition": "{{body.status !== 'completed'}}",
-      "delay": 2000,
+      "delay": 5000,
       "limit": 1800
     },
     "response": {
