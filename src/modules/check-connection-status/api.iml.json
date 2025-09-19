@@ -1,6 +1,6 @@
 [
   {
-    "url": "/execute",
+    "url": "/workflows",
     "method": "POST",
     "body": {
       "operationName": "checkConnectionStatus",
@@ -10,15 +10,16 @@
     },
     "response": {
       "temp": {
-        "workflowId": "{{body.workflowId}}"
+        "workflowId": "{{body.workflowId}}",
+        "operationName": "checkConnectionStatus"
       }
     }
   },
   {
-    "url": "/status/{{temp.workflowId}}",
+    "url": "/workflows/{{temp.workflowId}}?operationName={{temp.operationName}}",
     "method": "GET",
     "repeat": {
-      "condition": "{{!body.criticalError && body.status !== 'completed'}}",
+      "condition": "{{body.status !== 'completed'}}",
       "delay": 2000,
       "limit": 1800
     },
@@ -26,16 +27,15 @@
       "temp": {
         "status": "{{body.status}}",
         "data": "{{body.data}}",
-        "errors": "{{body.errors}}",
-        "criticalError": "{{body.criticalError}}"
+        "errors": "{{body.errors}}"
       }
     }
   },
   {
     "response": {
-      "valid": "{{!temp.criticalError && temp.status === 'completed'}}",
+      "valid": "{{temp.status === 'completed'}}",
       "error": {
-        "message": "{{(temp.criticalError && (temp.criticalError.message || temp.criticalError)) || 'Workflow timed out'}}"
+        "message": "Workflow timed out or did not complete."
       },
       "output": {
         "data": "{{temp.data}}",

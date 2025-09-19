@@ -24,7 +24,7 @@
         "connection": "linkedApi",
         "codeFiles": {
           "communication": "modules/check-connection-status/api.iml.json",
-          "staticParams": "modules/check-connection-status/parameters.iml.json"
+          "mappableParams": "modules/check-connection-status/parameters.iml.json"
         }
       }
     },

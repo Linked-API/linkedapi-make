@@ -7,8 +7,9 @@
     "Content-Type": "application/json"
   },
   "response": {
+    "valid": "{{!body.criticalError}}",
     "error": {
-      "message": "[{{statusCode}}] {{body.error.message || body.error || body}}"
+      "message": "{{body.criticalError.type}}: {{body.criticalError.message}}"
     }
   },
   "log": {

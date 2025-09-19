@@ -1,28 +1,22 @@
 {
-  // Request used by Make to validate the connection during creation
-  "url": "https://api.linkedapi.io/automation/validate",
-  "method": "POST",
+  "url": "https://api.linkedapi.io/automation/stats/actions?start=2024-01-01T00:00:00Z&end=2024-01-01T00:01:00Z",
+  "method": "GET",
   "headers": {
     "linked-api-token": "{{parameters.linkedApiToken}}",
     "identification-token": "{{parameters.identificationToken}}",
     "client": "make",
     "Content-Type": "application/json"
   },
-
-  // Response handling
   "response": {
-    // Show a static label in the connection chip
     "metadata": {
       "type": "text",
       "value": "Linked API"
     },
+    "valid": "{{!body.criticalError}}",
     "error": {
-      // Linked API returns `{ success: false, error: { message } }`
-      "message": "[{{statusCode}}] {{body.error.message || body.error || body}}"
+      "message": "{{body.criticalError.type}}: {{body.criticalError.message}}"
     }
   },
-
-  // Logs
   "log": {
     "sanitize": [
       "request.headers.linked-api-token",
