@@ -1,0 +1,10 @@
+[
+  {
+    "name": "personUrl",
+    "type": "text",
+    "label": "Person URL",
+    "required": true,
+    "help": "The LinkedIn URL of the person whose conversation you want to sync in Sales Navigator",
+    "placeholder": "https://www.linkedin.com/in/john-doe"
+  }
+]

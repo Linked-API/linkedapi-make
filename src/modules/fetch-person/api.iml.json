@@ -1,0 +1,56 @@
+[
+  {
+    "url": "/workflows",
+    "method": "POST",
+    "body": {
+      "operationName": "fetchPerson",
+      "data": {
+        "personUrl": "{{parameters.personUrl}}",
+        "retrieveExperience": "{{parameters.retrieveExperience}}",
+        "retrieveEducation": "{{parameters.retrieveEducation}}",
+        "retrieveSkills": "{{parameters.retrieveSkills}}",
+        "retrieveLanguages": "{{parameters.retrieveLanguages}}",
+        "retrievePosts": "{{parameters.retrievePosts}}",
+        "retrieveComments": "{{parameters.retrieveComments}}",
+        "retrieveReactions": "{{parameters.retrieveReactions}}",
+        "postsRetrievalConfig": "{{if(parameters.retrievePosts, { limit: parameters.postsLimit, since: parameters.postsSince }, undefined)}}",
+        "commentRetrievalConfig": "{{if(parameters.retrieveComments, { limit: parameters.commentsLimit, since: parameters.commentsSince }, undefined)}}",
+        "reactionRetrievalConfig": "{{if(parameters.retrieveReactions, { limit: parameters.reactionsLimit, since: parameters.reactionsSince }, undefined)}}"
+      }
+    },
+    "response": {
+      "temp": {
+        "workflowId": "{{body.workflowId}}",
+        "operationName": "fetchPerson"
+      }
+    }
+  },
+  {
+    "url": "/workflows/{{temp.workflowId}}?operationName={{temp.operationName}}",
+    "method": "GET",
+    "repeat": {
+      "condition": "{{body.status !== 'completed'}}",
+      "delay": 2000,
+      "limit": 1800
+    },
+    "response": {
+      "temp": {
+        "status": "{{body.status}}",
+        "data": "{{body.data}}",
+        "errors": "{{body.errors}}"
+      }
+    }
+  },
+  {
+    "response": {
+      "valid": "{{temp.status === 'completed'}}",
+      "error": {
+        "message": "Workflow timed out or did not complete."
+      },
+      "output": {
+        "data": "{{temp.data}}",
+        "errors": "{{temp.errors}}"
+      }
+    }
+  }
+]

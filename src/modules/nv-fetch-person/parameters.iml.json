@@ -1,0 +1,10 @@
+[
+  {
+    "name": "personHashedUrl",
+    "type": "text",
+    "label": "Person Hashed URL",
+    "required": true,
+    "help": "Hashed LinkedIn URL of the person in Sales Navigator",
+    "placeholder": "https://www.linkedin.com/in/SInQBmjJ015eLr8"
+  }
+]

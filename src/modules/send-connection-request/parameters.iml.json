@@ -1,0 +1,26 @@
+[
+  {
+    "name": "personUrl",
+    "type": "text",
+    "label": "Person URL",
+    "required": true,
+    "help": "Public or hashed LinkedIn URL of the person you want to send a connection request to",
+    "placeholder": "https://www.linkedin.com/in/john-doe"
+  },
+  {
+    "name": "note",
+    "type": "text",
+    "label": "Connection Note",
+    "required": false,
+    "help": "Optional note to include with the connection request",
+    "placeholder": "Hello! I'd love to connect and discuss opportunities."
+  },
+  {
+    "name": "email",
+    "type": "text",
+    "label": "Email Address",
+    "required": false,
+    "help": "Email address required by some people for sending connection requests to them",
+    "placeholder": "john.doe@example.com"
+  }
+]

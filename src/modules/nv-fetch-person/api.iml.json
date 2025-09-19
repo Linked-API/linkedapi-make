@@ -1,0 +1,46 @@
+[
+  {
+    "url": "/workflows",
+    "method": "POST",
+    "body": {
+      "operationName": "nvFetchPerson",
+      "data": {
+        "personHashedUrl": "{{parameters.personHashedUrl}}"
+      }
+    },
+    "response": {
+      "temp": {
+        "workflowId": "{{body.workflowId}}",
+        "operationName": "nvFetchPerson"
+      }
+    }
+  },
+  {
+    "url": "/workflows/{{temp.workflowId}}?operationName={{temp.operationName}}",
+    "method": "GET",
+    "repeat": {
+      "condition": "{{body.status !== 'completed'}}",
+      "delay": 2000,
+      "limit": 1800
+    },
+    "response": {
+      "temp": {
+        "status": "{{body.status}}",
+        "data": "{{body.data}}",
+        "errors": "{{body.errors}}"
+      }
+    }
+  },
+  {
+    "response": {
+      "valid": "{{temp.status === 'completed'}}",
+      "error": {
+        "message": "Workflow timed out or did not complete."
+      },
+      "output": {
+        "data": "{{temp.data}}",
+        "errors": "{{temp.errors}}"
+      }
+    }
+  }
+]

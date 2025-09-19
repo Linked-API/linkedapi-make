@@ -1,0 +1,79 @@
+[
+  {
+    "name": "searchTerm",
+    "type": "text",
+    "label": "Search Term",
+    "required": false,
+    "help": "Keyword or phrase to search for",
+    "placeholder": "software engineer"
+  },
+  {
+    "name": "limit",
+    "type": "number",
+    "label": "Limit",
+    "required": false,
+    "help": "Number of search results to return (max 100)",
+    "default": 10,
+    "minimum": 1,
+    "maximum": 100
+  },
+  {
+    "name": "firstName",
+    "type": "text",
+    "label": "First Name",
+    "required": false,
+    "help": "First name of person to search for",
+    "placeholder": "John"
+  },
+  {
+    "name": "lastName",
+    "type": "text",
+    "label": "Last Name",
+    "required": false,
+    "help": "Last name of person to search for",
+    "placeholder": "Doe"
+  },
+  {
+    "name": "position",
+    "type": "text",
+    "label": "Position",
+    "required": false,
+    "help": "Job position of person to search for",
+    "placeholder": "Software Engineer"
+  },
+  {
+    "name": "locations",
+    "type": "array",
+    "label": "Locations",
+    "required": false,
+    "help": "Locations to filter by (e.g., New York, San Francisco)"
+  },
+  {
+    "name": "industries",
+    "type": "array",
+    "label": "Industries",
+    "required": false,
+    "help": "Industries to filter by (e.g., Software Development, Technology)"
+  },
+  {
+    "name": "currentCompanies",
+    "type": "array",
+    "label": "Current Companies",
+    "required": false,
+    "help": "Current companies to filter by (e.g., Google, Microsoft)"
+  },
+  {
+    "name": "previousCompanies",
+    "type": "array",
+    "label": "Previous Companies",
+    "required": false,
+    "help": "Previous companies to filter by (e.g., Apple, Facebook)"
+  },
+  {
+    "name": "schools",
+    "type": "array",
+    "label": "Schools",
+    "required": false,
+    "help": "Schools to filter by (e.g., Stanford University, MIT)"
+  }
+]

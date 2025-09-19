@@ -1,6 +1,39 @@
 [
   {
-    "label": "Other",
-    "modules": []
+    "label": "Standard Interface",
+    "modules": [
+      "checkConnectionStatus",
+      "commentOnPost",
+      "fetchCompany",
+      "fetchPerson",
+      "fetchPost",
+      "reactToPost",
+      "removeConnection",
+      "retrieveConnections",
+      "retrievePendingRequests",
+      "retrievePerformance",
+      "retrieveSSI",
+      "searchCompanies",
+      "searchPeople",
+      "sendConnectionRequest",
+      "sendMessage",
+      "syncConversation",
+      "withdrawConnectionRequest"
+    ]
+  },
+  {
+    "label": "Sales Navigator",
+    "modules": [
+      "nvFetchCompany",
+      "nvFetchPerson",
+      "nvSearchCompanies",
+      "nvSearchPeople",
+      "nvSendMessage",
+      "nvSyncConversation"
+    ]
+  },
+  {
+    "label": "Other Operations",
+    "modules": ["customWorkflow", "getWorkflowResult"]
   }
 ]

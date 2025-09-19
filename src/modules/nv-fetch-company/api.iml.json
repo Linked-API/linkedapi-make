@@ -1,0 +1,50 @@
+[
+  {
+    "url": "/workflows",
+    "method": "POST",
+    "body": {
+      "operationName": "nvFetchCompany",
+      "data": {
+        "companyHashedUrl": "{{parameters.companyHashedUrl}}",
+        "retrieveEmployees": "{{parameters.retrieveEmployees}}",
+        "retrieveDMs": "{{parameters.retrieveDMs}}",
+        "employeeRetrievalConfig": "{{if(parameters.retrieveEmployees, { limit: parameters.employeeLimit, filter: { firstName: parameters.firstName, lastName: parameters.lastName, positions: parameters.positions, locations: parameters.locations, industries: parameters.industries, schools: parameters.schools, yearsOfExperiences: parameters.yearsOfExperiences } }, undefined)}}",
+        "dmRetrievalConfig": "{{if(parameters.retrieveDMs, { limit: parameters.dmsLimit }, undefined)}}"
+      }
+    },
+    "response": {
+      "temp": {
+        "workflowId": "{{body.workflowId}}",
+        "operationName": "nvFetchCompany"
+      }
+    }
+  },
+  {
+    "url": "/workflows/{{temp.workflowId}}?operationName={{temp.operationName}}",
+    "method": "GET",
+    "repeat": {
+      "condition": "{{body.status !== 'completed'}}",
+      "delay": 2000,
+      "limit": 1800
+    },
+    "response": {
+      "temp": {
+        "status": "{{body.status}}",
+        "data": "{{body.data}}",
+        "errors": "{{body.errors}}"
+      }
+    }
+  },
+  {
+    "response": {
+      "valid": "{{temp.status === 'completed'}}",
+      "error": {
+        "message": "Workflow timed out or did not complete."
+      },
+      "output": {
+        "data": "{{temp.data}}",
+        "errors": "{{temp.errors}}"
+      }
+    }
+  }
+]

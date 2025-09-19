@@ -1,0 +1,92 @@
+[
+  {
+    "name": "searchTerm",
+    "type": "text",
+    "label": "Search Term",
+    "required": false,
+    "help": "Keyword or phrase to search for company name or description",
+    "placeholder": "AI startup"
+  },
+  {
+    "name": "limit",
+    "type": "number",
+    "label": "Limit",
+    "required": false,
+    "help": "Number of search results to return (max 100)",
+    "default": 10,
+    "minimum": 1,
+    "maximum": 100
+  },
+  {
+    "name": "locations",
+    "type": "array",
+    "label": "Locations",
+    "required": false,
+    "help": "Locations to filter by (e.g., San Francisco, New York)"
+  },
+  {
+    "name": "industries",
+    "type": "array",
+    "label": "Industries",
+    "required": false,
+    "help": "Industries to filter by (e.g., Software Development, Marketing)"
+  },
+  {
+    "name": "sizes",
+    "type": "select",
+    "label": "Company Sizes",
+    "required": false,
+    "help": "Filter by company size (employee count)",
+    "multiple": true,
+    "options": [
+      { "value": "1-10", "label": "1-10" },
+      { "value": "11-50", "label": "11-50" },
+      { "value": "51-200", "label": "51-200" },
+      { "value": "201-500", "label": "201-500" },
+      { "value": "501-1000", "label": "501-1000" },
+      { "value": "1001-5000", "label": "1001-5000" },
+      { "value": "5001-10000", "label": "5001-10000" },
+      { "value": "10001+", "label": "10001+" }
+    ]
+  },
+  {
+    "name": "annualRevenueMin",
+    "type": "select",
+    "label": "Annual Revenue Min (Million USD)",
+    "required": false,
+    "help": "Minimum annual revenue in million USD",
+    "options": [
+      { "value": "0", "label": "0" },
+      { "value": "0.5", "label": "0.5" },
+      { "value": "1", "label": "1" },
+      { "value": "2.5", "label": "2.5" },
+      { "value": "5", "label": "5" },
+      { "value": "10", "label": "10" },
+      { "value": "20", "label": "20" },
+      { "value": "50", "label": "50" },
+      { "value": "100", "label": "100" },
+      { "value": "500", "label": "500" },
+      { "value": "1000", "label": "1000" }
+    ]
+  },
+  {
+    "name": "annualRevenueMax",
+    "type": "select",
+    "label": "Annual Revenue Max (Million USD)",
+    "required": false,
+    "help": "Maximum annual revenue in million USD",
+    "options": [
+      { "value": "0.5", "label": "0.5" },
+      { "value": "1", "label": "1" },
+      { "value": "2.5", "label": "2.5" },
+      { "value": "5", "label": "5" },
+      { "value": "10", "label": "10" },
+      { "value": "20", "label": "20" },
+      { "value": "50", "label": "50" },
+      { "value": "100", "label": "100" },
+      { "value": "500", "label": "500" },
+      { "value": "1000", "label": "1000" },
+      { "value": "1000+", "label": "1000+" }
+    ]
+  }
+]

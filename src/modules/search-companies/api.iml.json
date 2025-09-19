@@ -1,0 +1,52 @@
+[
+  {
+    "url": "/workflows",
+    "method": "POST",
+    "body": {
+      "operationName": "searchCompanies",
+      "data": {
+        "term": "{{parameters.searchTerm}}",
+        "limit": "{{parameters.limit}}",
+        "filter": {
+          "locations": "{{parameters.locations}}",
+          "industries": "{{parameters.industries}}",
+          "sizes": "{{parameters.sizes}}"
+        }
+      }
+    },
+    "response": {
+      "temp": {
+        "workflowId": "{{body.workflowId}}",
+        "operationName": "searchCompanies"
+      }
+    }
+  },
+  {
+    "url": "/workflows/{{temp.workflowId}}?operationName={{temp.operationName}}",
+    "method": "GET",
+    "repeat": {
+      "condition": "{{body.status !== 'completed'}}",
+      "delay": 2000,
+      "limit": 1800
+    },
+    "response": {
+      "temp": {
+        "status": "{{body.status}}",
+        "data": "{{body.data}}",
+        "errors": "{{body.errors}}"
+      }
+    }
+  },
+  {
+    "response": {
+      "valid": "{{temp.status === 'completed'}}",
+      "error": {
+        "message": "Workflow timed out or did not complete."
+      },
+      "output": {
+        "data": "{{temp.data}}",
+        "errors": "{{temp.errors}}"
+      }
+    }
+  }
+]

@@ -1,0 +1,114 @@
+[
+  {
+    "name": "personUrl",
+    "type": "text",
+    "label": "Person URL",
+    "required": true,
+    "help": "The LinkedIn profile URL of the person to fetch",
+    "placeholder": "https://www.linkedin.com/in/john-doe"
+  },
+  {
+    "name": "retrieveExperience",
+    "type": "boolean",
+    "label": "Retrieve Experience",
+    "required": false,
+    "help": "Whether to retrieve the person's experience information",
+    "default": false
+  },
+  {
+    "name": "retrieveEducation",
+    "type": "boolean",
+    "label": "Retrieve Education",
+    "required": false,
+    "help": "Whether to retrieve the person's education information",
+    "default": false
+  },
+  {
+    "name": "retrieveSkills",
+    "type": "boolean",
+    "label": "Retrieve Skills",
+    "required": false,
+    "help": "Whether to retrieve the person's skills information",
+    "default": false
+  },
+  {
+    "name": "retrieveLanguages",
+    "type": "boolean",
+    "label": "Retrieve Languages",
+    "required": false,
+    "help": "Whether to retrieve the person's languages information",
+    "default": false
+  },
+  {
+    "name": "retrievePosts",
+    "type": "boolean",
+    "label": "Retrieve Posts",
+    "required": false,
+    "help": "Whether to retrieve the person's posts information",
+    "default": false
+  },
+  {
+    "name": "postsLimit",
+    "type": "number",
+    "label": "Posts Limit",
+    "required": false,
+    "help": "Number of posts to retrieve (max 20). Only used when Retrieve Posts is enabled",
+    "default": 20,
+    "maximum": 20
+  },
+  {
+    "name": "postsSince",
+    "type": "date",
+    "label": "Posts Since",
+    "required": false,
+    "help": "Retrieve posts published after this date. Only used when Retrieve Posts is enabled"
+  },
+  {
+    "name": "retrieveComments",
+    "type": "boolean",
+    "label": "Retrieve Comments",
+    "required": false,
+    "help": "Whether to retrieve the person's comments information",
+    "default": false
+  },
+  {
+    "name": "commentsLimit",
+    "type": "number",
+    "label": "Comments Limit",
+    "required": false,
+    "help": "Number of comments to retrieve (max 20). Only used when Retrieve Comments is enabled",
+    "default": 10,
+    "maximum": 20
+  },
+  {
+    "name": "commentsSince",
+    "type": "date",
+    "label": "Comments Since",
+    "required": false,
+    "help": "Retrieve comments made after this date. Only used when Retrieve Comments is enabled"
+  },
+  {
+    "name": "retrieveReactions",
+    "type": "boolean",
+    "label": "Retrieve Reactions",
+    "required": false,
+    "help": "Whether to retrieve the person's reactions information",
+    "default": false
+  },
+  {
+    "name": "reactionsLimit",
+    "type": "number",
+    "label": "Reactions Limit",
+    "required": false,
+    "help": "Number of reactions to retrieve (max 20). Only used when Retrieve Reactions is enabled",
+    "default": 10,
+    "maximum": 20
+  },
+  {
+    "name": "reactionsSince",
+    "type": "date",
+    "label": "Reactions Since",
+    "required": false,
+    "help": "Retrieve reactions made after this date. Only used when Retrieve Reactions is enabled"
+  }
+]

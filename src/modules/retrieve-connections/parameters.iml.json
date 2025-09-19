@@ -1,0 +1,71 @@
+[
+  {
+    "name": "limit",
+    "type": "number",
+    "label": "Limit",
+    "required": false,
+    "help": "Number of connections to return. Defaults to 10, with a maximum value of 500",
+    "default": 10,
+    "minimum": 1,
+    "maximum": 500
+  },
+  {
+    "name": "firstName",
+    "type": "text",
+    "label": "First Name",
+    "required": false,
+    "help": "First name of person to filter by",
+    "placeholder": "John"
+  },
+  {
+    "name": "lastName",
+    "type": "text",
+    "label": "Last Name",
+    "required": false,
+    "help": "Last name of person to filter by",
+    "placeholder": "Doe"
+  },
+  {
+    "name": "position",
+    "type": "text",
+    "label": "Position",
+    "required": false,
+    "help": "Job position of person to filter by",
+    "placeholder": "Software Engineer"
+  },
+  {
+    "name": "locations",
+    "type": "array",
+    "label": "Locations",
+    "required": false,
+    "help": "Locations to filter by (e.g., New York, San Francisco)"
+  },
+  {
+    "name": "industries",
+    "type": "array",
+    "label": "Industries",
+    "required": false,
+    "help": "Industries to filter by (e.g., Software Development, Technology)"
+  },
+  {
+    "name": "currentCompanies",
+    "type": "array",
+    "label": "Current Companies",
+    "required": false,
+    "help": "Current companies to filter by (e.g., Google, Microsoft)"
+  },
+  {
+    "name": "previousCompanies",
+    "type": "array",
+    "label": "Previous Companies",
+    "required": false,
+    "help": "Previous companies to filter by (e.g., Apple, Facebook)"
+  },
+  {
+    "name": "schools",
+    "type": "array",
+    "label": "Schools",
+    "required": false,
+    "help": "Schools to filter by (e.g., Stanford University, MIT)"
+  }
+]

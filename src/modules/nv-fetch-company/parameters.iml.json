@@ -1,0 +1,103 @@
+[
+  {
+    "name": "companyHashedUrl",
+    "type": "text",
+    "label": "Company Hashed URL",
+    "required": true,
+    "help": "Hashed LinkedIn URL of the company in Sales Navigator",
+    "placeholder": "https://www.linkedin.com/company/12345678"
+  },
+  {
+    "name": "retrieveEmployees",
+    "type": "boolean",
+    "label": "Retrieve Employees",
+    "required": false,
+    "help": "Whether to retrieve company employees information",
+    "default": false
+  },
+  {
+    "name": "employeeLimit",
+    "type": "number",
+    "label": "Employee Limit",
+    "required": false,
+    "help": "Maximum number of employees to retrieve (max 500). Only used when Retrieve Employees is enabled",
+    "default": 500,
+    "maximum": 500
+  },
+  {
+    "name": "firstName",
+    "type": "text",
+    "label": "Employee First Name",
+    "required": false,
+    "help": "First name of employee to filter by. Only used when Retrieve Employees is enabled",
+    "placeholder": "John"
+  },
+  {
+    "name": "lastName",
+    "type": "text",
+    "label": "Employee Last Name",
+    "required": false,
+    "help": "Last name of employee to filter by. Only used when Retrieve Employees is enabled",
+    "placeholder": "Doe"
+  },
+  {
+    "name": "positions",
+    "type": "array",
+    "label": "Employee Positions",
+    "required": false,
+    "help": "Job position names to filter by. Only used when Retrieve Employees is enabled"
+  },
+  {
+    "name": "locations",
+    "type": "array",
+    "label": "Employee Locations",
+    "required": false,
+    "help": "Employee locations to filter by. Only used when Retrieve Employees is enabled"
+  },
+  {
+    "name": "industries",
+    "type": "array",
+    "label": "Employee Industries",
+    "required": false,
+    "help": "Employee industries to filter by. Only used when Retrieve Employees is enabled"
+  },
+  {
+    "name": "schools",
+    "type": "array",
+    "label": "Employee Schools",
+    "required": false,
+    "help": "Schools attended by employees to filter by. Only used when Retrieve Employees is enabled"
+  },
+  {
+    "name": "yearsOfExperiences",
+    "type": "select",
+    "label": "Years of Experience",
+    "required": false,
+    "help": "Years of professional experience ranges to filter by. Only used when Retrieve Employees is enabled",
+    "multiple": true,
+    "options": [
+      { "value": "lessThanOne", "label": "Less than 1 year" },
+      { "value": "oneToTwo", "label": "1 to 2 years" },
+      { "value": "threeToFive", "label": "3 to 5 years" },
+      { "value": "sixToTen", "label": "6 to 10 years" },
+      { "value": "moreThanTen", "label": "More than 10 years" }
+    ]
+  },
+  {
+    "name": "retrieveDMs",
+    "type": "boolean",
+    "label": "Retrieve Decision Makers",
+    "required": false,
+    "help": "Whether to retrieve company decision makers information",
+    "default": false
+  },
+  {
+    "name": "dmsLimit",
+    "type": "number",
+    "label": "Decision Makers Limit",
+    "required": false,
+    "help": "Number of decision makers to retrieve (max 20). Only used when Retrieve Decision Makers is enabled",
+    "default": 20,
+    "maximum": 20
+  }
+]

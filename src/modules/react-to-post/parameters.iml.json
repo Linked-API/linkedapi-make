@@ -1,0 +1,26 @@
+[
+  {
+    "name": "postUrl",
+    "type": "text",
+    "label": "Post URL",
+    "required": true,
+    "help": "LinkedIn URL of the post to react to",
+    "placeholder": "https://www.linkedin.com/posts/username_activity-id"
+  },
+  {
+    "name": "reactionType",
+    "type": "select",
+    "label": "Reaction Type",
+    "required": true,
+    "help": "Type of reaction to add to the post",
+    "default": "like",
+    "options": [
+      { "value": "like", "label": "Like" },
+      { "value": "celebrate", "label": "Celebrate" },
+      { "value": "support", "label": "Support" },
+      { "value": "love", "label": "Love" },
+      { "value": "insightful", "label": "Insightful" },
+      { "value": "funny", "label": "Funny" }
+    ]
+  }
+]

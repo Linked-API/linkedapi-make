@@ -1,0 +1,13 @@
+[
+  {
+    "url": "/workflows/{{parameters.workflowId}}?operationName={{parameters.operationName}}",
+    "method": "GET",
+    "response": {
+      "output": {
+        "data": "{{body.data}}",
+        "errors": "{{body.errors}}",
+        "status": "{{body.status}}"
+      }
+    }
+  }
+]

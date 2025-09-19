@@ -1,61 +1,397 @@
 {
-  "fileVersion": 1,
-  "generalCodeFiles": {
-    "base": "general/base.iml.json",
-    "common": "general/common.json",
-    "groups": "modules/groups.json"
-  },
-  "components": {
-    "connection": {
-      "linkedApi": {
-        "label": "Linked API Connection",
-        "connectionType": "basic",
-        "codeFiles": {
-          "communication": "connections/linkedApi/api.iml.json",
-          "params": "connections/linkedApi/parameters.iml.json"
-        }
-      }
+    "fileVersion": 1,
+    "generalCodeFiles": {
+        "base": "general/base.iml.json",
+        "common": "general/common.json",
+        "groups": "modules/groups.json"
     },
-    "module": {
-      "checkConnectionStatus": {
-        "label": "Check Connection Status",
-        "description": "Check the connection status between your account and another person.",
-        "moduleType": "action",
-        "connection": "linkedApi",
-        "codeFiles": {
-          "communication": "modules/check-connection-status/api.iml.json",
-          "mappableParams": "modules/check-connection-status/parameters.iml.json"
-        }
-      }
+    "components": {
+        "connection": {
+            "linkedApi": {
+                "label": "Linked API Connection",
+                "connectionType": "basic",
+                "codeFiles": {
+                    "communication": "connections/linkedApi/api.iml.json",
+                    "params": "connections/linkedApi/parameters.iml.json"
+                }
+            }
+        },
+        "module": {
+            "checkConnectionStatus": {
+                "label": "Check Connection Status",
+                "description": "Check the connection status between your account and another person.",
+                "moduleType": "action",
+                "connection": "linkedApi",
+                "codeFiles": {
+                    "communication": "modules/check-connection-status/api.iml.json",
+                    "mappableParams": "modules/check-connection-status/parameters.iml.json"
+                }
+            },
+            "sendConnectionRequest": {
+                "label": "Send Connection Request",
+                "description": "Send a connection request to a person.",
+                "moduleType": "action",
+                "connection": "linkedApi",
+                "codeFiles": {
+                    "communication": "modules/send-connection-request/api.iml.json",
+                    "mappableParams": "modules/send-connection-request/parameters.iml.json"
+                }
+            },
+            "withdrawConnectionRequest": {
+                "label": "Withdraw Connection Request",
+                "description": "Withdraw a connection request sent to a person.",
+                "moduleType": "action",
+                "connection": "linkedApi",
+                "codeFiles": {
+                    "communication": "modules/withdraw-connection-request/api.iml.json",
+                    "mappableParams": "modules/withdraw-connection-request/parameters.iml.json"
+                }
+            },
+            "removeConnection": {
+                "label": "Remove Connection",
+                "description": "Remove a person from your connections.",
+                "moduleType": "action",
+                "connection": "linkedApi",
+                "codeFiles": {
+                    "communication": "modules/remove-connection/api.iml.json",
+                    "mappableParams": "modules/remove-connection/parameters.iml.json"
+                }
+            },
+            "retrieveConnections": {
+                "label": "Retrieve Connections",
+                "description": "Retrieve your connections with optional filtering.",
+                "moduleType": "action",
+                "connection": "linkedApi",
+                "codeFiles": {
+                    "communication": "modules/retrieve-connections/api.iml.json",
+                    "mappableParams": "modules/retrieve-connections/parameters.iml.json"
+                }
+            },
+            "retrievePendingRequests": {
+                "label": "Retrieve Pending Requests",
+                "description": "Retrieve pending connection requests sent from your account.",
+                "moduleType": "action",
+                "connection": "linkedApi",
+                "codeFiles": {
+                    "communication": "modules/retrieve-pending-requests/api.iml.json",
+                    "mappableParams": "modules/retrieve-pending-requests/parameters.iml.json"
+                }
+            },
+            "fetchPerson": {
+                "label": "Fetch Person",
+                "description": "Fetch detailed information about a LinkedIn person.",
+                "moduleType": "action",
+                "connection": "linkedApi",
+                "codeFiles": {
+                    "communication": "modules/fetch-person/api.iml.json",
+                    "mappableParams": "modules/fetch-person/parameters.iml.json"
+                }
+            },
+            "searchPeople": {
+                "label": "Search People",
+                "description": "Search for people on LinkedIn.",
+                "moduleType": "action",
+                "connection": "linkedApi",
+                "codeFiles": {
+                    "communication": "modules/search-people/api.iml.json",
+                    "mappableParams": "modules/search-people/parameters.iml.json"
+                }
+            },
+            "fetchCompany": {
+                "label": "Fetch Company",
+                "description": "Fetch detailed information about a LinkedIn company.",
+                "moduleType": "action",
+                "connection": "linkedApi",
+                "codeFiles": {
+                    "communication": "modules/fetch-company/api.iml.json",
+                    "mappableParams": "modules/fetch-company/parameters.iml.json"
+                }
+            },
+            "searchCompanies": {
+                "label": "Search Companies",
+                "description": "Search for companies on LinkedIn.",
+                "moduleType": "action",
+                "connection": "linkedApi",
+                "codeFiles": {
+                    "communication": "modules/search-companies/api.iml.json",
+                    "mappableParams": "modules/search-companies/parameters.iml.json"
+                }
+            },
+            "fetchPost": {
+                "label": "Fetch Post",
+                "description": "Retrieve detailed information about a LinkedIn post.",
+                "moduleType": "action",
+                "connection": "linkedApi",
+                "codeFiles": {
+                    "communication": "modules/fetch-post/api.iml.json",
+                    "mappableParams": "modules/fetch-post/parameters.iml.json"
+                }
+            },
+            "reactToPost": {
+                "label": "React to Post",
+                "description": "React to a LinkedIn post with like, celebrate, support, love, insightful, or funny.",
+                "moduleType": "action",
+                "connection": "linkedApi",
+                "codeFiles": {
+                    "communication": "modules/react-to-post/api.iml.json",
+                    "mappableParams": "modules/react-to-post/parameters.iml.json"
+                }
+            },
+            "commentOnPost": {
+                "label": "Comment on Post",
+                "description": "Leave a comment on a LinkedIn post.",
+                "moduleType": "action",
+                "connection": "linkedApi",
+                "codeFiles": {
+                    "communication": "modules/comment-on-post/api.iml.json",
+                    "mappableParams": "modules/comment-on-post/parameters.iml.json"
+                }
+            },
+            "sendMessage": {
+                "label": "Send Message",
+                "description": "Send a message to a LinkedIn person.",
+                "moduleType": "action",
+                "connection": "linkedApi",
+                "codeFiles": {
+                    "communication": "modules/send-message/api.iml.json",
+                    "mappableParams": "modules/send-message/parameters.iml.json"
+                }
+            },
+            "syncConversation": {
+                "label": "Sync Conversation",
+                "description": "Sync a conversation so you can start polling it for new messages.",
+                "moduleType": "action",
+                "connection": "linkedApi",
+                "codeFiles": {
+                    "communication": "modules/sync-conversation/api.iml.json",
+                    "mappableParams": "modules/sync-conversation/parameters.iml.json"
+                }
+            },
+            "retrieveSSI": {
+                "label": "Retrieve SSI",
+                "description": "Retrieve your current Social Selling Index (SSI) score.",
+                "moduleType": "action",
+                "connection": "linkedApi",
+                "codeFiles": {
+                    "communication": "modules/retrieve-ssi/api.iml.json",
+                    "mappableParams": "modules/retrieve-ssi/parameters.iml.json"
+                }
+            },
+            "retrievePerformance": {
+                "label": "Retrieve Performance",
+                "description": "Retrieve performance analytics from your LinkedIn dashboard.",
+                "moduleType": "action",
+                "connection": "linkedApi",
+                "codeFiles": {
+                    "communication": "modules/retrieve-performance/api.iml.json",
+                    "mappableParams": "modules/retrieve-performance/parameters.iml.json"
+                }
+            },
+            "nvFetchCompany": {
+                "label": "Fetch Company in Sales Navigator",
+                "description": "Fetch detailed information about a company in Sales Navigator.",
+                "moduleType": "action",
+                "connection": "linkedApi",
+                "codeFiles": {
+                    "communication": "modules/nv-fetch-company/api.iml.json",
+                    "mappableParams": "modules/nv-fetch-company/parameters.iml.json"
+                }
+            },
+            "nvFetchPerson": {
+                "label": "Fetch Person in Sales Navigator",
+                "description": "Fetch detailed information about a person in Sales Navigator.",
+                "moduleType": "action",
+                "connection": "linkedApi",
+                "codeFiles": {
+                    "communication": "modules/nv-fetch-person/api.iml.json",
+                    "mappableParams": "modules/nv-fetch-person/parameters.iml.json"
+                }
+            },
+            "nvSearchCompanies": {
+                "label": "Search Companies in Sales Navigator",
+                "description": "Search for companies in Sales Navigator.",
+                "moduleType": "action",
+                "connection": "linkedApi",
+                "codeFiles": {
+                    "communication": "modules/nv-search-companies/api.iml.json",
+                    "mappableParams": "modules/nv-search-companies/parameters.iml.json"
+                }
+            },
+            "nvSearchPeople": {
+                "label": "Search People in Sales Navigator",
+                "description": "Search for people in Sales Navigator.",
+                "moduleType": "action",
+                "connection": "linkedApi",
+                "codeFiles": {
+                    "communication": "modules/nv-search-people/api.iml.json",
+                    "mappableParams": "modules/nv-search-people/parameters.iml.json"
+                }
+            },
+            "nvSendMessage": {
+                "label": "Send Message in Sales Navigator",
+                "description": "Send a message to a person in Sales Navigator.",
+                "moduleType": "action",
+                "connection": "linkedApi",
+                "codeFiles": {
+                    "communication": "modules/nv-send-message/api.iml.json",
+                    "mappableParams": "modules/nv-send-message/parameters.iml.json"
+                }
+            },
+            "nvSyncConversation": {
+                "label": "Sync Conversation in Sales Navigator",
+                "description": "Sync a conversation in Sales Navigator so you can start polling it.",
+                "moduleType": "action",
+                "connection": "linkedApi",
+                "codeFiles": {
+                    "communication": "modules/nv-sync-conversation/api.iml.json",
+                    "mappableParams": "modules/nv-sync-conversation/parameters.iml.json"
+                }
+            },
+            "customWorkflow": {
+                "label": "Custom Workflow",
+                "description": "Execute a custom multi-step workflow using raw workflow definition.",
+                "moduleType": "action",
+                "connection": "linkedApi",
+                "codeFiles": {
+                    "communication": "modules/custom-workflow/api.iml.json",
+                    "mappableParams": "modules/custom-workflow/parameters.iml.json"
+                }
+            },
+            "getWorkflowResult": {
+                "label": "Get Workflow Result",
+                "description": "Get the result of workflow execution.",
+                "moduleType": "action",
+                "connection": "linkedApi",
+                "codeFiles": {
+                    "communication": "modules/get-workflow-result/api.iml.json",
+                    "mappableParams": "modules/get-workflow-result/parameters.iml.json"
+                }
+            }
+        },
+        "function": {},
+        "rpc": {},
+        "webhook": {}
     },
-    "function": {},
-    "rpc": {},
-    "webhook": {}
-  },
-  "origins": [
-    {
-      "label": "Origin",
-      "baseUrl": "https://eu2.make.com/api",
-      "appId": "linked-api-wulvs7",
-      "appVersion": 1,
-      "idMapping": {
-        "connection": [
-          {
-            "local": "linkedApi",
-            "remote": "linked-api-wulvs7"
-          }
-        ],
-        "module": [
-          {
-            "local": "checkConnectionStatus",
-            "remote": "checkConnectionStatus"
-          }
-        ],
-        "function": [],
-        "rpc": [],
-        "webhook": []
-      },
-      "apikeyFile": "../.secrets/apikey"
-    }
-  ]
+    "origins": [
+        {
+            "label": "Origin",
+            "baseUrl": "https://eu2.make.com/api",
+            "appId": "linked-api-wulvs7",
+            "appVersion": 1,
+            "idMapping": {
+                "connection": [
+                    {
+                        "local": "linkedApi",
+                        "remote": "linked-api-wulvs7"
+                    }
+                ],
+                "module": [
+                    {
+                        "local": "checkConnectionStatus",
+                        "remote": "checkConnectionStatus"
+                    },
+                    {
+                        "local": "sendConnectionRequest",
+                        "remote": "sendConnectionRequest"
+                    },
+                    {
+                        "local": "withdrawConnectionRequest",
+                        "remote": "withdrawConnectionRequest"
+                    },
+                    {
+                        "local": "removeConnection",
+                        "remote": "removeConnection"
+                    },
+                    {
+                        "local": "retrieveConnections",
+                        "remote": "retrieveConnections"
+                    },
+                    {
+                        "local": "retrievePendingRequests",
+                        "remote": "retrievePendingRequests"
+                    },
+                    {
+                        "local": "fetchPerson",
+                        "remote": "fetchPerson"
+                    },
+                    {
+                        "local": "searchPeople",
+                        "remote": "searchPeople"
+                    },
+                    {
+                        "local": "fetchCompany",
+                        "remote": "fetchCompany"
+                    },
+                    {
+                        "local": "searchCompanies",
+                        "remote": "searchCompanies"
+                    },
+                    {
+                        "local": "fetchPost",
+                        "remote": "fetchPost"
+                    },
+                    {
+                        "local": "reactToPost",
+                        "remote": "reactToPost"
+                    },
+                    {
+                        "local": "commentOnPost",
+                        "remote": "commentOnPost"
+                    },
+                    {
+                        "local": "sendMessage",
+                        "remote": "sendMessage"
+                    },
+                    {
+                        "local": "syncConversation",
+                        "remote": "syncConversation"
+                    },
+                    {
+                        "local": "retrieveSSI",
+                        "remote": "retrieveSSI"
+                    },
+                    {
+                        "local": "retrievePerformance",
+                        "remote": "retrievePerformance"
+                    },
+                    {
+                        "local": "nvFetchCompany",
+                        "remote": "nvFetchCompany"
+                    },
+                    {
+                        "local": "nvFetchPerson",
+                        "remote": "nvFetchPerson"
+                    },
+                    {
+                        "local": "nvSearchCompanies",
+                        "remote": "nvSearchCompanies"
+                    },
+                    {
+                        "local": "nvSearchPeople",
+                        "remote": "nvSearchPeople"
+                    },
+                    {
+                        "local": "nvSendMessage",
+                        "remote": "nvSendMessage"
+                    },
+                    {
+                        "local": "nvSyncConversation",
+                        "remote": "nvSyncConversation"
+                    },
+                    {
+                        "local": "customWorkflow",
+                        "remote": "customWorkflow"
+                    },
+                    {
+                        "local": "getWorkflowResult",
+                        "remote": "getWorkflowResult"
+                    }
+                ],
+                "function": [],
+                "rpc": [],
+                "webhook": []
+            },
+            "apikeyFile": "../.secrets/apikey"
+        }
+    ]
 }
