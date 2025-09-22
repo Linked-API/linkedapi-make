@@ -8,3 +8,4 @@
     "placeholder": "{\n  \"actionType\": \"st.searchCompanies\",\n  \"term\": \"AI startup\",\n  \"limit\": 10\n}"
   }
 ]
+
