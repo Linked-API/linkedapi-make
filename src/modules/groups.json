@@ -34,6 +34,6 @@
   },
   {
     "label": "Other Operations",
-    "modules": ["customWorkflow", "getWorkflowResult"]
+    "modules": ["customWorkflow", "retrieveActionsStats", "pollConversations"]
   }
 ]

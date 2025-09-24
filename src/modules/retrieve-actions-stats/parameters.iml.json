@@ -1,0 +1,18 @@
+[
+  {
+    "name": "startDate",
+    "type": "date",
+    "label": "Start Date",
+    "required": true,
+    "help": "Start date for the statistics period",
+    "placeholder": "2024-01-01T00:00:00Z"
+  },
+  {
+    "name": "endDate",
+    "type": "date",
+    "label": "End Date",
+    "required": true,
+    "help": "End date for the statistics period. Date range must not exceed 30 days",
+    "placeholder": "2024-01-30T00:00:00Z"
+  }
+]

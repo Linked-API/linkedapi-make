@@ -1,0 +1,15 @@
+[
+  {
+    "url": "/stats/actions",
+    "method": "GET",
+    "qs": {
+      "start": "{{parameters.startDate}}",
+      "end": "{{parameters.endDate}}"
+    },
+    "response": {
+      "output": {
+        "data": "{{body}}"
+      }
+    }
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "url": "/conversations/poll",
+    "method": "POST",
+    "body": {
+      "conversations": "{{parameters.conversations}}"
+    },
+    "response": {
+      "output": {
+        "data": "{{body}}"
+      }
+    }
+  }
+]

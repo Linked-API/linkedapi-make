@@ -248,7 +248,7 @@
                 }
             },
             "customWorkflow": {
-                "label": "Custom Workflow",
+                "label": "Execute Custom Workflow",
                 "description": "Execute a custom multi-step workflow using raw workflow definition.",
                 "moduleType": "action",
                 "connection": "linkedApi",
@@ -257,14 +257,24 @@
                     "mappableParams": "modules/custom-workflow/parameters.iml.json"
                 }
             },
-            "getWorkflowResult": {
-                "label": "Get Workflow Result",
-                "description": "Get the result of workflow execution.",
+            "retrieveActionsStats": {
+                "label": "Get Actions Statistics",
+                "description": "Get statistics about previously executed actions.",
                 "moduleType": "action",
                 "connection": "linkedApi",
                 "codeFiles": {
-                    "communication": "modules/get-workflow-result/api.iml.json",
-                    "mappableParams": "modules/get-workflow-result/parameters.iml.json"
+                    "communication": "modules/retrieve-actions-stats/api.iml.json",
+                    "mappableParams": "modules/retrieve-actions-stats/parameters.iml.json"
+                }
+            },
+            "pollConversations": {
+                "label": "Poll Conversations",
+                "description": "Poll multiple conversations for new messages.",
+                "moduleType": "action",
+                "connection": "linkedApi",
+                "codeFiles": {
+                    "communication": "modules/poll-conversations/api.iml.json",
+                    "mappableParams": "modules/poll-conversations/parameters.iml.json"
                 }
             }
         },
@@ -383,8 +393,12 @@
                         "remote": "customWorkflow"
                     },
                     {
-                        "local": "getWorkflowResult",
-                        "remote": "getWorkflowResult"
+                        "local": "pollConversations",
+                        "remote": "pollConversations"
+                    },
+                    {
+                        "local": "retrieveActionsStats",
+                        "remote": "retrieveActionsStats"
                     }
                 ],
                 "function": [],
