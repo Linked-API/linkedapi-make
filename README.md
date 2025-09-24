@@ -12,7 +12,7 @@ Linked API for Make connects your LinkedIn account to Make's automation platform
 
 
 ## Get started
-To build LinkedIn automations with Make, read these essential guides::
+To build LinkedIn automations with Make, read these essential guides:
 
 1. [Creating connection](https://linkedapi.io/integrations/make/creating-connection/) – get your API tokens and connect to Make.
 2. [Building scenarios](https://linkedapi.io/integrations/make/building-scenarios/) – learn how to use Linked API modules in your scenarios.
