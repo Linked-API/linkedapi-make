@@ -1,15 +1,19 @@
-{
-  "url": "{{parameters.url}}",
-  "method": "{{parameters.method}}",
-  "headers": {
-    "linked-api-token": "{{connection.linkedApiToken}}",
-    "identification-token": "{{connection.identificationToken}}",
-    "client": "make",
-    "Content-Type": "application/json"
-  },
-  "body": "{{parameters.body}}",
-  "qs": "{{parameters.qs}}",
-  "response": {
-    "output": "{{body}}"
+[
+  {
+    "url": "{{parameters.url}}",
+    "method": "{{parameters.method}}",
+    "headers": {
+      "linked-api-token": "{{connection.linkedApiToken}}",
+      "identification-token": "{{connection.identificationToken}}",
+      "client": "make",
+      "Content-Type": "application/json"
+    },
+    "body": "{{parameters.body}}",
+    "qs": "{{parameters.qs}}",
+    "response": {
+      "output": {
+        "data": "{{body.data}}"
+      }
+    }
   }
-}
+]

@@ -9,7 +9,7 @@
   "components": {
     "connection": {
       "linkedApi": {
-        "label": "linked-api-wulvs7",
+        "label": "Linked API",
         "connectionType": "basic",
         "codeFiles": {
           "communication": "connections/linkedApi/api.iml.json",
