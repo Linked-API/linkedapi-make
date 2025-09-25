@@ -1,0 +1,69 @@
+[
+  {
+    "name": "url",
+    "type": "url",
+    "label": "URL",
+    "required": true,
+    "help": "Enter the full URL for the API endpoint."
+  },
+  {
+    "name": "method",
+    "type": "select",
+    "label": "Method",
+    "required": true,
+    "default": "GET",
+    "options": [
+      { "label": "GET", "value": "GET" },
+      { "label": "POST", "value": "POST" },
+      { "label": "PUT", "value": "PUT" },
+      { "label": "PATCH", "value": "PATCH" },
+      { "label": "DELETE", "value": "DELETE" }
+    ]
+  },
+  {
+    "name": "headers",
+    "type": "collection",
+    "label": "Headers",
+    "help": "Additional headers to send with the request.",
+    "spec": [
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Name",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "text",
+        "label": "Value",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "qs",
+    "type": "collection",
+    "label": "Query String",
+    "help": "Query string parameters to append to the URL.",
+    "spec": [
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Name",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "text",
+        "label": "Value",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "body",
+    "type": "text",
+    "label": "Request Body",
+    "help": "Raw request body (JSON format for POST/PUT requests)."
+  }
+]
