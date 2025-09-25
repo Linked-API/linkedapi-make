@@ -4,13 +4,15 @@
     "type": "password",
     "label": "Linked API Token",
     "required": true,
-    "editable": true
+    "editable": true,
+    "help": "How to get your tokens: https://linkedapi.io/integrations/make/creating-connection/"
   },
   {
     "name": "identificationToken",
     "type": "password",
     "label": "Identification Token",
     "required": true,
-    "editable": true
+    "editable": true,
+    "help": "How to get your tokens: https://linkedapi.io/integrations/make/creating-connection/"
   }
 ]
