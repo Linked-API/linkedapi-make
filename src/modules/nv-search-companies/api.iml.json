@@ -1,5 +1,6 @@
 [
   {
+    "condition": "{{parameters.annualRevenueMin && parameters.annualRevenueMax}}",
     "url": "/workflows",
     "method": "POST",
     "body": {
@@ -11,7 +12,33 @@
           "locations": "{{parameters.locations}}",
           "industries": "{{parameters.industries}}",
           "sizes": "{{parameters.sizes}}",
-          "annualRevenue": "{{if(parameters.annualRevenueMin && parameters.annualRevenueMax, { min: parameters.annualRevenueMin, max: parameters.annualRevenueMax }, undefined)}}"
+          "annualRevenue": {
+            "min": "{{parameters.annualRevenueMin}}",
+            "max": "{{parameters.annualRevenueMax}}"
+          }
+        }
+      }
+    },
+    "response": {
+      "temp": {
+        "workflowId": "{{body.workflowId}}",
+        "operationName": "nvSearchCompanies"
+      }
+    }
+  },
+  {
+    "condition": "{{!parameters.annualRevenueMin || !parameters.annualRevenueMax}}",
+    "url": "/workflows",
+    "method": "POST",
+    "body": {
+      "operationName": "nvSearchCompanies",
+      "data": {
+        "term": "{{parameters.searchTerm}}",
+        "limit": "{{parameters.limit}}",
+        "filter": {
+          "locations": "{{parameters.locations}}",
+          "industries": "{{parameters.industries}}",
+          "sizes": "{{parameters.sizes}}"
         }
       }
     },
@@ -51,4 +78,3 @@
     }
   }
 ]
-

@@ -4,9 +4,7 @@
     "method": "POST",
     "body": {
       "operationName": "customWorkflow",
-      "data": {
-        "definition": "{{parameters.workflowDefinition}}"
-      }
+      "data": "{{parameters.workflowDefinition}}"
     },
     "response": {
       "temp": {
@@ -44,4 +42,3 @@
     }
   }
 ]
-

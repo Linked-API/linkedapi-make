@@ -1,0 +1,61 @@
+[
+  {
+    "name": "workflowId",
+    "type": "text",
+    "label": "Workflow ID",
+    "required": true,
+    "help": "ID of the workflow to retrieve the result from",
+    "placeholder": "wf-1234567890"
+  },
+  {
+    "name": "operationName",
+    "type": "select",
+    "label": "Operation Name",
+    "required": false,
+    "help": "Operation name used during the execution of the workflow",
+    "options": [
+      { "value": "checkConnectionStatus", "label": "Check Connection Status" },
+      { "value": "commentOnPost", "label": "Comment on Post" },
+      { "value": "fetchCompany", "label": "Fetch Company" },
+      { "value": "fetchPerson", "label": "Fetch Person" },
+      { "value": "fetchPost", "label": "Fetch Post" },
+      { "value": "reactToPost", "label": "React to Post" },
+      { "value": "removeConnection", "label": "Remove Connection" },
+      { "value": "retrieveConnections", "label": "Retrieve Connections" },
+      {
+        "value": "retrievePendingRequests",
+        "label": "Retrieve Pending Requests"
+      },
+      { "value": "retrievePerformance", "label": "Retrieve Performance" },
+      { "value": "retrieveSSI", "label": "Retrieve SSI" },
+      { "value": "searchCompanies", "label": "Search Companies" },
+      { "value": "searchPeople", "label": "Search People" },
+      { "value": "sendConnectionRequest", "label": "Send Connection Request" },
+      { "value": "sendMessage", "label": "Send Message" },
+      { "value": "syncConversation", "label": "Sync Conversation" },
+      {
+        "value": "withdrawConnectionRequest",
+        "label": "Withdraw Connection Request"
+      },
+      {
+        "value": "nvFetchCompany",
+        "label": "Fetch Company in Sales Navigator"
+      },
+      { "value": "nvFetchPerson", "label": "Fetch Person in Sales Navigator" },
+      {
+        "value": "nvSearchCompanies",
+        "label": "Search Companies in Sales Navigator"
+      },
+      {
+        "value": "nvSearchPeople",
+        "label": "Search People in Sales Navigator"
+      },
+      { "value": "nvSendMessage", "label": "Send Message in Sales Navigator" },
+      {
+        "value": "nvSyncConversation",
+        "label": "Sync Conversation in Sales Navigator"
+      },
+      { "value": "customWorkflow", "label": "Custom Workflow" }
+    ]
+  }
+]

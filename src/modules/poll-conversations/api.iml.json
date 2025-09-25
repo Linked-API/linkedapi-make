@@ -2,9 +2,7 @@
   {
     "url": "/conversations/poll",
     "method": "POST",
-    "body": {
-      "conversations": "{{parameters.conversations}}"
-    },
+    "body": "{{parameters.conversations}}",
     "response": {
       "output": {
         "data": "{{body}}"
