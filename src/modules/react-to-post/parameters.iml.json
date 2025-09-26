@@ -4,8 +4,7 @@
     "type": "text",
     "label": "Post URL",
     "required": true,
-    "help": "LinkedIn URL of the post to react to",
-    "placeholder": "https://www.linkedin.com/posts/username_activity-id"
+    "help": "LinkedIn URL of the post to react to"
   },
   {
     "name": "reactionType",
@@ -15,13 +14,30 @@
     "help": "Type of reaction to add to the post",
     "default": "like",
     "options": [
-      { "value": "like", "label": "Like" },
-      { "value": "celebrate", "label": "Celebrate" },
-      { "value": "support", "label": "Support" },
-      { "value": "love", "label": "Love" },
-      { "value": "insightful", "label": "Insightful" },
-      { "value": "funny", "label": "Funny" }
+      {
+        "value": "like",
+        "label": "Like"
+      },
+      {
+        "value": "celebrate",
+        "label": "Celebrate"
+      },
+      {
+        "value": "support",
+        "label": "Support"
+      },
+      {
+        "value": "love",
+        "label": "Love"
+      },
+      {
+        "value": "insightful",
+        "label": "Insightful"
+      },
+      {
+        "value": "funny",
+        "label": "Funny"
+      }
     ]
   }
 ]
-

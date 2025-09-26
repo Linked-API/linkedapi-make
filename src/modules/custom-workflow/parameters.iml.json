@@ -4,7 +4,6 @@
     "type": "json",
     "label": "Workflow Definition",
     "required": true,
-    "help": "Raw workflow definition object for complex multi-step operations in JSON format",
-    "placeholder": "{\n  \"actionType\": \"st.searchCompanies\",\n  \"term\": \"AI startup\",\n  \"limit\": 10\n}"
+    "help": "Raw workflow definition object for complex multi-step operations in JSON format"
   }
 ]

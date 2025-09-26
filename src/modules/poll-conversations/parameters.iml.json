@@ -11,16 +11,14 @@
         "type": "text",
         "label": "Person URL",
         "required": true,
-        "help": "LinkedIn URL of the person whose conversation you want to poll",
-        "placeholder": "https://www.linkedin.com/in/john-doe"
+        "help": "LinkedIn URL of the person whose conversation you want to poll"
       },
       {
         "name": "since",
         "type": "date",
         "label": "Since Date",
         "required": false,
-        "help": "Only retrieve messages since this date (ISO 8601 format)",
-        "placeholder": "2024-01-15T10:30:00Z"
+        "help": "Only retrieve messages since this date (ISO 8601 format)"
       },
       {
         "name": "type",
@@ -30,8 +28,14 @@
         "help": "Choose which LinkedIn interface to use",
         "default": "st",
         "options": [
-          { "value": "st", "label": "Standard Interface" },
-          { "value": "nv", "label": "Sales Navigator" }
+          {
+            "value": "st",
+            "label": "Standard Interface"
+          },
+          {
+            "value": "nv",
+            "label": "Sales Navigator"
+          }
         ]
       }
     ]

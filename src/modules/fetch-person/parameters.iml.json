@@ -4,8 +4,7 @@
     "type": "text",
     "label": "Person URL",
     "required": true,
-    "help": "The LinkedIn profile URL of the person to fetch",
-    "placeholder": "https://www.linkedin.com/in/john-doe"
+    "help": "The LinkedIn profile URL of the person to fetch"
   },
   {
     "name": "retrieveExperience",

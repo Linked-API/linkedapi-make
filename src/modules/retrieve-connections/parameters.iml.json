@@ -14,24 +14,21 @@
     "type": "text",
     "label": "First Name",
     "required": false,
-    "help": "First name of person to filter by",
-    "placeholder": "John"
+    "help": "First name of person to filter by"
   },
   {
     "name": "lastName",
     "type": "text",
     "label": "Last Name",
     "required": false,
-    "help": "Last name of person to filter by",
-    "placeholder": "Doe"
+    "help": "Last name of person to filter by"
   },
   {
     "name": "position",
     "type": "text",
     "label": "Position",
     "required": false,
-    "help": "Job position of person to filter by",
-    "placeholder": "Software Engineer"
+    "help": "Job position of person to filter by"
   },
   {
     "name": "locations",

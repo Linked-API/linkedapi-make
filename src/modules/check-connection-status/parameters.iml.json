@@ -4,7 +4,6 @@
     "type": "text",
     "label": "Person URL",
     "required": true,
-    "help": "Public or hashed LinkedIn URL of the person",
-    "placeholder": "https://www.linkedin.com/in/john-doe"
+    "help": "Public or hashed LinkedIn URL of the person"
   }
 ]

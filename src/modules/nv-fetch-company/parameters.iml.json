@@ -4,8 +4,7 @@
     "type": "text",
     "label": "Company Hashed URL",
     "required": true,
-    "help": "Hashed LinkedIn URL of the company in Sales Navigator",
-    "placeholder": "https://www.linkedin.com/company/12345678"
+    "help": "Hashed LinkedIn URL of the company in Sales Navigator"
   },
   {
     "name": "retrieveEmployees",
@@ -29,16 +28,14 @@
     "type": "text",
     "label": "Employee First Name",
     "required": false,
-    "help": "First name of employee to filter by. Only used when Retrieve Employees is enabled",
-    "placeholder": "John"
+    "help": "First name of employee to filter by. Only used when Retrieve Employees is enabled"
   },
   {
     "name": "lastName",
     "type": "text",
     "label": "Employee Last Name",
     "required": false,
-    "help": "Last name of employee to filter by. Only used when Retrieve Employees is enabled",
-    "placeholder": "Doe"
+    "help": "Last name of employee to filter by. Only used when Retrieve Employees is enabled"
   },
   {
     "name": "positions",
@@ -76,11 +73,26 @@
     "help": "Years of professional experience ranges to filter by. Only used when Retrieve Employees is enabled",
     "multiple": true,
     "options": [
-      { "value": "lessThanOne", "label": "Less than 1 year" },
-      { "value": "oneToTwo", "label": "1 to 2 years" },
-      { "value": "threeToFive", "label": "3 to 5 years" },
-      { "value": "sixToTen", "label": "6 to 10 years" },
-      { "value": "moreThanTen", "label": "More than 10 years" }
+      {
+        "value": "lessThanOne",
+        "label": "Less than 1 year"
+      },
+      {
+        "value": "oneToTwo",
+        "label": "1 to 2 years"
+      },
+      {
+        "value": "threeToFive",
+        "label": "3 to 5 years"
+      },
+      {
+        "value": "sixToTen",
+        "label": "6 to 10 years"
+      },
+      {
+        "value": "moreThanTen",
+        "label": "More than 10 years"
+      }
     ]
   },
   {

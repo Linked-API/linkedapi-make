@@ -4,8 +4,7 @@
     "type": "text",
     "label": "Search Term",
     "required": false,
-    "help": "Keyword or phrase to search for",
-    "placeholder": "software engineer"
+    "help": "Keyword or phrase to search for"
   },
   {
     "name": "limit",
@@ -22,24 +21,21 @@
     "type": "text",
     "label": "First Name",
     "required": false,
-    "help": "First name of person to search for",
-    "placeholder": "John"
+    "help": "First name of person to search for"
   },
   {
     "name": "lastName",
     "type": "text",
     "label": "Last Name",
     "required": false,
-    "help": "Last name of person to search for",
-    "placeholder": "Doe"
+    "help": "Last name of person to search for"
   },
   {
     "name": "position",
     "type": "text",
     "label": "Position",
     "required": false,
-    "help": "Job position of person to search for",
-    "placeholder": "Software Engineer"
+    "help": "Job position of person to search for"
   },
   {
     "name": "locations",
@@ -84,12 +80,26 @@
     "help": "Professional experience ranges to filter by",
     "multiple": true,
     "options": [
-      { "value": "lessThanOne", "label": "Less than 1 year" },
-      { "value": "oneToTwo", "label": "1 to 2 years" },
-      { "value": "threeToFive", "label": "3 to 5 years" },
-      { "value": "sixToTen", "label": "6 to 10 years" },
-      { "value": "moreThanTen", "label": "More than 10 years" }
+      {
+        "value": "lessThanOne",
+        "label": "Less than 1 year"
+      },
+      {
+        "value": "oneToTwo",
+        "label": "1 to 2 years"
+      },
+      {
+        "value": "threeToFive",
+        "label": "3 to 5 years"
+      },
+      {
+        "value": "sixToTen",
+        "label": "6 to 10 years"
+      },
+      {
+        "value": "moreThanTen",
+        "label": "More than 10 years"
+      }
     ]
   }
 ]
-

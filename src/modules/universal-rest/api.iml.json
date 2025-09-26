@@ -1,19 +1,19 @@
-[
-  {
-    "url": "{{parameters.url}}",
-    "method": "{{parameters.method}}",
-    "headers": {
-      "linked-api-token": "{{connection.linkedApiToken}}",
-      "identification-token": "{{connection.identificationToken}}",
-      "client": "make",
-      "Content-Type": "application/json"
-    },
-    "body": "{{parameters.body}}",
-    "qs": "{{parameters.qs}}",
-    "response": {
-      "output": {
-        "data": "{{body.data}}"
-      }
+{
+  "qs": {
+    "{{...}}": "{{toCollection(parameters.qs, 'key', 'value')}}"
+  },
+  "url": "https://api.linkedapi.io/{{parameters.url}}",
+  "body": "{{parameters.body}}",
+  "type": "text",
+  "method": "{{parameters.method}}",
+  "headers": {
+    "{{...}}": "{{toCollection(parameters.headers, 'key', 'value')}}"
+  },
+  "response": {
+    "output": {
+      "body": "{{body}}",
+      "headers": "{{headers}}",
+      "statusCode": "{{statusCode}}"
     }
   }
-]
+}

@@ -4,8 +4,7 @@
     "type": "text",
     "label": "Company URL",
     "required": true,
-    "help": "The LinkedIn company page URL to fetch",
-    "placeholder": "https://www.linkedin.com/company/microsoft"
+    "help": "The LinkedIn company page URL to fetch"
   },
   {
     "name": "retrieveEmployees",

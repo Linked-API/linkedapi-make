@@ -4,24 +4,20 @@
     "type": "text",
     "label": "Person URL",
     "required": true,
-    "help": "LinkedIn URL of the person you want to send a message to in Sales Navigator",
-    "placeholder": "https://www.linkedin.com/in/john-doe"
+    "help": "LinkedIn URL of the person you want to send a message to in Sales Navigator"
   },
   {
     "name": "messageText",
     "type": "text",
     "label": "Message Text",
     "required": true,
-    "help": "Message text, must be up to 1900 characters",
-    "placeholder": "Hi! How are you?"
+    "help": "Message text, must be up to 1900 characters"
   },
   {
     "name": "messageSubject",
     "type": "text",
     "label": "Subject",
     "required": true,
-    "help": "Subject line, must be up to 80 characters",
-    "placeholder": "Let's Connect!"
+    "help": "Subject line, must be up to 80 characters"
   }
 ]
-
