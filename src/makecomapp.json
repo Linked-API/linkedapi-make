@@ -25,7 +25,8 @@
         "connection": "linkedApi",
         "codeFiles": {
           "communication": "modules/check-connection-status/api.iml.json",
-          "mappableParams": "modules/check-connection-status/parameters.iml.json"
+          "mappableParams": "modules/check-connection-status/parameters.iml.json",
+          "interface": "modules/check-connection-status/interface.iml.json"
         }
       },
       "sendConnectionRequest": {
@@ -35,7 +36,8 @@
         "connection": "linkedApi",
         "codeFiles": {
           "communication": "modules/send-connection-request/api.iml.json",
-          "mappableParams": "modules/send-connection-request/parameters.iml.json"
+          "mappableParams": "modules/send-connection-request/parameters.iml.json",
+          "interface": "modules/send-connection-request/interface.iml.json"
         }
       },
       "withdrawConnectionRequest": {
@@ -45,7 +47,8 @@
         "connection": "linkedApi",
         "codeFiles": {
           "communication": "modules/withdraw-connection-request/api.iml.json",
-          "mappableParams": "modules/withdraw-connection-request/parameters.iml.json"
+          "mappableParams": "modules/withdraw-connection-request/parameters.iml.json",
+          "interface": "modules/withdraw-connection-request/interface.iml.json"
         }
       },
       "removeConnection": {
@@ -55,7 +58,8 @@
         "connection": "linkedApi",
         "codeFiles": {
           "communication": "modules/remove-connection/api.iml.json",
-          "mappableParams": "modules/remove-connection/parameters.iml.json"
+          "mappableParams": "modules/remove-connection/parameters.iml.json",
+          "interface": "modules/remove-connection/interface.iml.json"
         }
       },
       "retrieveConnections": {
@@ -65,7 +69,8 @@
         "connection": "linkedApi",
         "codeFiles": {
           "communication": "modules/retrieve-connections/api.iml.json",
-          "mappableParams": "modules/retrieve-connections/parameters.iml.json"
+          "mappableParams": "modules/retrieve-connections/parameters.iml.json",
+          "interface": "modules/retrieve-connections/interface.iml.json"
         }
       },
       "retrievePendingRequests": {
@@ -75,7 +80,8 @@
         "connection": "linkedApi",
         "codeFiles": {
           "communication": "modules/retrieve-pending-requests/api.iml.json",
-          "mappableParams": "modules/retrieve-pending-requests/parameters.iml.json"
+          "mappableParams": "modules/retrieve-pending-requests/parameters.iml.json",
+          "interface": "modules/retrieve-pending-requests/interface.iml.json"
         }
       },
       "fetchPerson": {
@@ -85,7 +91,8 @@
         "connection": "linkedApi",
         "codeFiles": {
           "communication": "modules/fetch-person/api.iml.json",
-          "mappableParams": "modules/fetch-person/parameters.iml.json"
+          "mappableParams": "modules/fetch-person/parameters.iml.json",
+          "interface": "modules/fetch-person/interface.iml.json"
         }
       },
       "searchPeople": {
@@ -95,7 +102,8 @@
         "connection": "linkedApi",
         "codeFiles": {
           "communication": "modules/search-people/api.iml.json",
-          "mappableParams": "modules/search-people/parameters.iml.json"
+          "mappableParams": "modules/search-people/parameters.iml.json",
+          "interface": "modules/search-people/interface.iml.json"
         }
       },
       "fetchCompany": {
@@ -105,7 +113,8 @@
         "connection": "linkedApi",
         "codeFiles": {
           "communication": "modules/fetch-company/api.iml.json",
-          "mappableParams": "modules/fetch-company/parameters.iml.json"
+          "mappableParams": "modules/fetch-company/parameters.iml.json",
+          "interface": "modules/fetch-company/interface.iml.json"
         }
       },
       "searchCompanies": {
@@ -115,7 +124,8 @@
         "connection": "linkedApi",
         "codeFiles": {
           "communication": "modules/search-companies/api.iml.json",
-          "mappableParams": "modules/search-companies/parameters.iml.json"
+          "mappableParams": "modules/search-companies/parameters.iml.json",
+          "interface": "modules/search-companies/interface.iml.json"
         }
       },
       "fetchPost": {
@@ -125,7 +135,8 @@
         "connection": "linkedApi",
         "codeFiles": {
           "communication": "modules/fetch-post/api.iml.json",
-          "mappableParams": "modules/fetch-post/parameters.iml.json"
+          "mappableParams": "modules/fetch-post/parameters.iml.json",
+          "interface": "modules/fetch-post/interface.iml.json"
         }
       },
       "reactToPost": {
@@ -135,7 +146,8 @@
         "connection": "linkedApi",
         "codeFiles": {
           "communication": "modules/react-to-post/api.iml.json",
-          "mappableParams": "modules/react-to-post/parameters.iml.json"
+          "mappableParams": "modules/react-to-post/parameters.iml.json",
+          "interface": "modules/react-to-post/interface.iml.json"
         }
       },
       "commentOnPost": {
@@ -145,7 +157,8 @@
         "connection": "linkedApi",
         "codeFiles": {
           "communication": "modules/comment-on-post/api.iml.json",
-          "mappableParams": "modules/comment-on-post/parameters.iml.json"
+          "mappableParams": "modules/comment-on-post/parameters.iml.json",
+          "interface": "modules/comment-on-post/interface.iml.json"
         }
       },
       "sendMessage": {
@@ -155,7 +168,8 @@
         "connection": "linkedApi",
         "codeFiles": {
           "communication": "modules/send-message/api.iml.json",
-          "mappableParams": "modules/send-message/parameters.iml.json"
+          "mappableParams": "modules/send-message/parameters.iml.json",
+          "interface": "modules/send-message/interface.iml.json"
         }
       },
       "syncConversation": {
@@ -165,27 +179,30 @@
         "connection": "linkedApi",
         "codeFiles": {
           "communication": "modules/sync-conversation/api.iml.json",
-          "mappableParams": "modules/sync-conversation/parameters.iml.json"
+          "mappableParams": "modules/sync-conversation/parameters.iml.json",
+          "interface": "modules/sync-conversation/interface.iml.json"
         }
       },
       "retrieveSSI": {
-        "label": "Retrieve a SSI",
+        "label": "Retrieve SSI",
         "description": "Retrieves a user's current Social Selling Index (SSI) score.",
         "moduleType": "action",
         "connection": "linkedApi",
         "codeFiles": {
           "communication": "modules/retrieve-ssi/api.iml.json",
-          "mappableParams": "modules/retrieve-ssi/parameters.iml.json"
+          "mappableParams": "modules/retrieve-ssi/parameters.iml.json",
+          "interface": "modules/retrieve-ssi/interface.iml.json"
         }
       },
       "retrievePerformance": {
-        "label": "Retrieve a Performance",
+        "label": "Retrieve Performance",
         "description": "Retrieve performance analytics from your LinkedIn dashboard.",
         "moduleType": "action",
         "connection": "linkedApi",
         "codeFiles": {
           "communication": "modules/retrieve-performance/api.iml.json",
-          "mappableParams": "modules/retrieve-performance/parameters.iml.json"
+          "mappableParams": "modules/retrieve-performance/parameters.iml.json",
+          "interface": "modules/retrieve-performance/interface.iml.json"
         }
       },
       "nvFetchCompany": {
@@ -195,7 +212,8 @@
         "connection": "linkedApi",
         "codeFiles": {
           "communication": "modules/nv-fetch-company/api.iml.json",
-          "mappableParams": "modules/nv-fetch-company/parameters.iml.json"
+          "mappableParams": "modules/nv-fetch-company/parameters.iml.json",
+          "interface": "modules/nv-fetch-company/interface.iml.json"
         }
       },
       "nvFetchPerson": {
@@ -205,7 +223,8 @@
         "connection": "linkedApi",
         "codeFiles": {
           "communication": "modules/nv-fetch-person/api.iml.json",
-          "mappableParams": "modules/nv-fetch-person/parameters.iml.json"
+          "mappableParams": "modules/nv-fetch-person/parameters.iml.json",
+          "interface": "modules/nv-fetch-person/interface.iml.json"
         }
       },
       "nvSearchCompanies": {
@@ -215,7 +234,8 @@
         "connection": "linkedApi",
         "codeFiles": {
           "communication": "modules/nv-search-companies/api.iml.json",
-          "mappableParams": "modules/nv-search-companies/parameters.iml.json"
+          "mappableParams": "modules/nv-search-companies/parameters.iml.json",
+          "interface": "modules/nv-search-companies/interface.iml.json"
         }
       },
       "nvSearchPeople": {
@@ -225,7 +245,8 @@
         "connection": "linkedApi",
         "codeFiles": {
           "communication": "modules/nv-search-people/api.iml.json",
-          "mappableParams": "modules/nv-search-people/parameters.iml.json"
+          "mappableParams": "modules/nv-search-people/parameters.iml.json",
+          "interface": "modules/nv-search-people/interface.iml.json"
         }
       },
       "nvSendMessage": {
@@ -235,7 +256,8 @@
         "connection": "linkedApi",
         "codeFiles": {
           "communication": "modules/nv-send-message/api.iml.json",
-          "mappableParams": "modules/nv-send-message/parameters.iml.json"
+          "mappableParams": "modules/nv-send-message/parameters.iml.json",
+          "interface": "modules/nv-send-message/interface.iml.json"
         }
       },
       "nvSyncConversation": {
@@ -245,7 +267,8 @@
         "connection": "linkedApi",
         "codeFiles": {
           "communication": "modules/nv-sync-conversation/api.iml.json",
-          "mappableParams": "modules/nv-sync-conversation/parameters.iml.json"
+          "mappableParams": "modules/nv-sync-conversation/parameters.iml.json",
+          "interface": "modules/nv-sync-conversation/interface.iml.json"
         }
       },
       "customWorkflow": {
@@ -255,17 +278,8 @@
         "connection": "linkedApi",
         "codeFiles": {
           "communication": "modules/custom-workflow/api.iml.json",
-          "mappableParams": "modules/custom-workflow/parameters.iml.json"
-        }
-      },
-      "retrieveActionsStats": {
-        "label": "Get Actions Statistics",
-        "description": "Retrieves statistics about previously executed actions.",
-        "moduleType": "action",
-        "connection": "linkedApi",
-        "codeFiles": {
-          "communication": "modules/retrieve-actions-stats/api.iml.json",
-          "mappableParams": "modules/retrieve-actions-stats/parameters.iml.json"
+          "mappableParams": "modules/custom-workflow/parameters.iml.json",
+          "interface": "modules/custom-workflow/interface.iml.json"
         }
       },
       "pollConversations": {
@@ -275,7 +289,19 @@
         "connection": "linkedApi",
         "codeFiles": {
           "communication": "modules/poll-conversations/api.iml.json",
-          "mappableParams": "modules/poll-conversations/parameters.iml.json"
+          "mappableParams": "modules/poll-conversations/parameters.iml.json",
+          "interface": "modules/poll-conversations/interface.iml.json"
+        }
+      },
+      "retrieveActionsStats": {
+        "label": "Get Actions Statistics",
+        "description": "Retrieves statistics about previously executed actions.",
+        "moduleType": "action",
+        "connection": "linkedApi",
+        "codeFiles": {
+          "communication": "modules/get-actions-statistics/api.iml.json",
+          "mappableParams": "modules/get-actions-statistics/parameters.iml.json",
+          "interface": "modules/get-actions-statistics/interface.iml.json"
         }
       },
       "universalRest": {
@@ -285,7 +311,8 @@
         "connection": "linkedApi",
         "codeFiles": {
           "communication": "modules/universal-rest/api.iml.json",
-          "mappableParams": "modules/universal-rest/parameters.iml.json"
+          "mappableParams": "modules/universal-rest/parameters.iml.json",
+          "interface": "modules/universal-rest/interface.iml.json"
         }
       }
     },

@@ -1,0 +1,144 @@
+[
+  {
+    "name": "data",
+    "type": "collection",
+    "label": "Data",
+    "spec": [
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Company Name"
+      },
+      {
+        "name": "publicUrl",
+        "type": "url",
+        "label": "Public LinkedIn URL"
+      },
+      {
+        "name": "description",
+        "type": "text",
+        "label": "Company Description"
+      },
+      {
+        "name": "location",
+        "type": "text",
+        "label": "Location"
+      },
+      {
+        "name": "headquarters",
+        "type": "text",
+        "label": "Headquarters Country Code"
+      },
+      {
+        "name": "industry",
+        "type": "text",
+        "label": "Industry"
+      },
+      {
+        "name": "website",
+        "type": "url",
+        "label": "Company Website"
+      },
+      {
+        "name": "employeeCount",
+        "type": "number",
+        "label": "Employee Count"
+      },
+      {
+        "name": "yearFounded",
+        "type": "number",
+        "label": "Year Founded"
+      },
+      {
+        "name": "employees",
+        "type": "array",
+        "label": "Employees",
+        "spec": [
+          {
+            "name": "name",
+            "type": "text",
+            "label": "Employee Name"
+          },
+          {
+            "name": "publicUrl",
+            "type": "url",
+            "label": "Employee LinkedIn URL"
+          },
+          {
+            "name": "headline",
+            "type": "text",
+            "label": "Employee Headline"
+          },
+          {
+            "name": "location",
+            "type": "text",
+            "label": "Employee Location"
+          }
+        ]
+      },
+      {
+        "name": "dms",
+        "type": "array",
+        "label": "Decision Makers",
+        "spec": [
+          {
+            "name": "name",
+            "type": "text",
+            "label": "Decision Maker Name"
+          },
+          {
+            "name": "hashedUrl",
+            "type": "url",
+            "label": "Decision Maker Hashed URL"
+          },
+          {
+            "name": "position",
+            "type": "text",
+            "label": "Decision Maker Position"
+          },
+          {
+            "name": "location",
+            "type": "text",
+            "label": "Decision Maker Location"
+          },
+          {
+            "name": "countryCode",
+            "type": "text",
+            "label": "Decision Maker Country Code"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": [
+      {
+        "name": "type",
+        "type": "select",
+        "label": "Error Type",
+        "options": [
+          {
+            "label": "No Sales Navigator",
+            "value": "noSalesNavigator"
+          },
+          {
+            "label": "Company Not Found",
+            "value": "companyNotFound"
+          },
+          {
+            "label": "Retrieving Not Allowed",
+            "value": "retrievingNotAllowed"
+          }
+        ]
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "label": "Error Message"
+      }
+    ]
+  }
+]

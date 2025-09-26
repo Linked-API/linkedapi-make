@@ -1,0 +1,99 @@
+[
+  {
+    "name": "data",
+    "type": "collection",
+    "label": "Data",
+    "spec": [
+      {
+        "name": "time",
+        "type": "date",
+        "label": "Post Time"
+      },
+      {
+        "name": "type",
+        "type": "select",
+        "label": "Post Type",
+        "options": [
+          {
+            "label": "Original",
+            "value": "original"
+          },
+          {
+            "label": "Repost",
+            "value": "repost"
+          }
+        ]
+      },
+      {
+        "name": "repostText",
+        "type": "text",
+        "label": "Repost Text"
+      },
+      {
+        "name": "text",
+        "type": "text",
+        "label": "Post Text"
+      },
+      {
+        "name": "images",
+        "type": "array",
+        "label": "Post Images",
+        "spec": [
+          {
+            "name": "imageUrl",
+            "type": "url",
+            "label": "Image URL"
+          }
+        ]
+      },
+      {
+        "name": "hasVideo",
+        "type": "boolean",
+        "label": "Has Video"
+      },
+      {
+        "name": "hasPoll",
+        "type": "boolean",
+        "label": "Has Poll"
+      },
+      {
+        "name": "reactionsCount",
+        "type": "number",
+        "label": "Reactions Count"
+      },
+      {
+        "name": "commentsCount",
+        "type": "number",
+        "label": "Comments Count"
+      },
+      {
+        "name": "repostsCount",
+        "type": "number",
+        "label": "Reposts Count"
+      }
+    ]
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": [
+      {
+        "name": "type",
+        "type": "select",
+        "label": "Error Type",
+        "options": [
+          {
+            "label": "Post Not Found",
+            "value": "postNotFound"
+          }
+        ]
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "label": "Error Message"
+      }
+    ]
+  }
+]

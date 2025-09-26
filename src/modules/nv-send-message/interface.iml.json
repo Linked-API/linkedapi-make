@@ -1,0 +1,39 @@
+[
+  {
+    "name": "data",
+    "type": "collection",
+    "label": "Data",
+    "spec": []
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": [
+      {
+        "name": "type",
+        "type": "select",
+        "label": "Error Type",
+        "options": [
+          {
+            "label": "Person Not Found",
+            "value": "personNotFound"
+          },
+          {
+            "label": "No Sales Navigator",
+            "value": "noSalesNavigator"
+          },
+          {
+            "label": "Messaging Not Allowed",
+            "value": "messagingNotAllowed"
+          }
+        ]
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "label": "Error Message"
+      }
+    ]
+  }
+]

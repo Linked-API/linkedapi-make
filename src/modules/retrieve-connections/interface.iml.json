@@ -1,0 +1,52 @@
+[
+  {
+    "name": "data",
+    "type": "array",
+    "label": "Connections",
+    "spec": [
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Full Name"
+      },
+      {
+        "name": "publicUrl",
+        "type": "url",
+        "label": "Public LinkedIn URL"
+      },
+      {
+        "name": "headline",
+        "type": "text",
+        "label": "Headline"
+      },
+      {
+        "name": "location",
+        "type": "text",
+        "label": "Location"
+      }
+    ]
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": [
+      {
+        "name": "type",
+        "type": "select",
+        "label": "Error Type",
+        "options": [
+          {
+            "label": "Retrieving Not Allowed",
+            "value": "retrievingNotAllowed"
+          }
+        ]
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "label": "Error Message"
+      }
+    ]
+  }
+]

@@ -5,7 +5,8 @@
     "body": "{{parameters.conversations}}",
     "response": {
       "output": {
-        "data": "{{body.data}}"
+        "data": "{{body.data}}",
+        "errors": "{{body.errors}}"
       }
     }
   }

@@ -1,0 +1,234 @@
+[
+  {
+    "name": "data",
+    "type": "collection",
+    "label": "Data",
+    "spec": [
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Company Name"
+      },
+      {
+        "name": "publicUrl",
+        "type": "url",
+        "label": "Public LinkedIn URL"
+      },
+      {
+        "name": "description",
+        "type": "text",
+        "label": "Company Description"
+      },
+      {
+        "name": "location",
+        "type": "text",
+        "label": "Location"
+      },
+      {
+        "name": "headquarters",
+        "type": "text",
+        "label": "Headquarters Country Code"
+      },
+      {
+        "name": "industry",
+        "type": "text",
+        "label": "Industry"
+      },
+      {
+        "name": "specialties",
+        "type": "text",
+        "label": "Specialties"
+      },
+      {
+        "name": "website",
+        "type": "url",
+        "label": "Company Website"
+      },
+      {
+        "name": "employeesCount",
+        "type": "number",
+        "label": "Employees Count"
+      },
+      {
+        "name": "yearFounded",
+        "type": "number",
+        "label": "Year Founded"
+      },
+      {
+        "name": "ventureFinancing",
+        "type": "boolean",
+        "label": "Venture Financing"
+      },
+      {
+        "name": "jobsCount",
+        "type": "number",
+        "label": "Jobs Count"
+      },
+      {
+        "name": "employees",
+        "type": "array",
+        "label": "Employees",
+        "spec": [
+          {
+            "name": "name",
+            "type": "text",
+            "label": "Employee Name"
+          },
+          {
+            "name": "publicUrl",
+            "type": "url",
+            "label": "Employee LinkedIn URL"
+          },
+          {
+            "name": "headline",
+            "type": "text",
+            "label": "Employee Headline"
+          },
+          {
+            "name": "location",
+            "type": "text",
+            "label": "Employee Location"
+          }
+        ]
+      },
+      {
+        "name": "dms",
+        "type": "array",
+        "label": "Decision Makers",
+        "spec": [
+          {
+            "name": "name",
+            "type": "text",
+            "label": "Decision Maker Name"
+          },
+          {
+            "name": "publicUrl",
+            "type": "url",
+            "label": "Decision Maker LinkedIn URL"
+          },
+          {
+            "name": "headline",
+            "type": "text",
+            "label": "Decision Maker Headline"
+          },
+          {
+            "name": "location",
+            "type": "text",
+            "label": "Decision Maker Location"
+          },
+          {
+            "name": "countryCode",
+            "type": "text",
+            "label": "Decision Maker Country Code"
+          }
+        ]
+      },
+      {
+        "name": "posts",
+        "type": "array",
+        "label": "Company Posts",
+        "spec": [
+          {
+            "name": "url",
+            "type": "url",
+            "label": "Post URL"
+          },
+          {
+            "name": "time",
+            "type": "date",
+            "label": "Post Time"
+          },
+          {
+            "name": "type",
+            "type": "select",
+            "label": "Post Type",
+            "options": [
+              {
+                "label": "Original",
+                "value": "original"
+              },
+              {
+                "label": "Repost",
+                "value": "repost"
+              }
+            ]
+          },
+          {
+            "name": "repostText",
+            "type": "text",
+            "label": "Repost Text"
+          },
+          {
+            "name": "text",
+            "type": "text",
+            "label": "Post Text"
+          },
+          {
+            "name": "images",
+            "type": "array",
+            "label": "Post Images",
+            "spec": [
+              {
+                "name": "imageUrl",
+                "type": "url",
+                "label": "Image URL"
+              }
+            ]
+          },
+          {
+            "name": "hasVideo",
+            "type": "boolean",
+            "label": "Has Video"
+          },
+          {
+            "name": "hasPoll",
+            "type": "boolean",
+            "label": "Has Poll"
+          },
+          {
+            "name": "reactionsCount",
+            "type": "number",
+            "label": "Reactions Count"
+          },
+          {
+            "name": "commentsCount",
+            "type": "number",
+            "label": "Comments Count"
+          },
+          {
+            "name": "repostsCount",
+            "type": "number",
+            "label": "Reposts Count"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": [
+      {
+        "name": "type",
+        "type": "select",
+        "label": "Error Type",
+        "options": [
+          {
+            "label": "Company Not Found",
+            "value": "companyNotFound"
+          },
+          {
+            "label": "Retrieving Not Allowed",
+            "value": "retrievingNotAllowed"
+          }
+        ]
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "label": "Error Message"
+      }
+    ]
+  }
+]

@@ -1,0 +1,419 @@
+[
+  {
+    "name": "data",
+    "type": "collection",
+    "label": "Data",
+    "spec": [
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Full Name"
+      },
+      {
+        "name": "publicUrl",
+        "type": "url",
+        "label": "Public LinkedIn URL"
+      },
+      {
+        "name": "hashedUrl",
+        "type": "url",
+        "label": "Hashed LinkedIn URL"
+      },
+      {
+        "name": "headline",
+        "type": "text",
+        "label": "Headline"
+      },
+      {
+        "name": "location",
+        "type": "text",
+        "label": "Location"
+      },
+      {
+        "name": "countryCode",
+        "type": "text",
+        "label": "Country Code"
+      },
+      {
+        "name": "position",
+        "type": "text",
+        "label": "Current Position"
+      },
+      {
+        "name": "companyName",
+        "type": "text",
+        "label": "Company Name"
+      },
+      {
+        "name": "companyHashedUrl",
+        "type": "url",
+        "label": "Company Hashed URL"
+      },
+      {
+        "name": "followersCount",
+        "type": "number",
+        "label": "Followers Count"
+      },
+      {
+        "name": "experiences",
+        "type": "array",
+        "label": "Work Experiences",
+        "spec": [
+          {
+            "name": "position",
+            "type": "text",
+            "label": "Job Position"
+          },
+          {
+            "name": "companyName",
+            "type": "text",
+            "label": "Company Name"
+          },
+          {
+            "name": "companyHashedUrl",
+            "type": "url",
+            "label": "Company Hashed URL"
+          },
+          {
+            "name": "employmentType",
+            "type": "select",
+            "label": "Employment Type",
+            "options": [
+              {
+                "label": "Full Time",
+                "value": "fullTime"
+              },
+              {
+                "label": "Part Time",
+                "value": "partTime"
+              },
+              {
+                "label": "Self Employed",
+                "value": "selfEmployed"
+              },
+              {
+                "label": "Freelance",
+                "value": "freelance"
+              },
+              {
+                "label": "Contract",
+                "value": "contract"
+              },
+              {
+                "label": "Internship",
+                "value": "internship"
+              },
+              {
+                "label": "Apprenticeship",
+                "value": "apprenticeship"
+              },
+              {
+                "label": "Seasonal",
+                "value": "seasonal"
+              }
+            ]
+          },
+          {
+            "name": "locationType",
+            "type": "select",
+            "label": "Location Type",
+            "options": [
+              {
+                "label": "Remote",
+                "value": "remote"
+              },
+              {
+                "label": "On Site",
+                "value": "onSite"
+              },
+              {
+                "label": "Hybrid",
+                "value": "hybrid"
+              }
+            ]
+          },
+          {
+            "name": "description",
+            "type": "text",
+            "label": "Job Description"
+          },
+          {
+            "name": "duration",
+            "type": "number",
+            "label": "Duration (months)"
+          },
+          {
+            "name": "startTime",
+            "type": "date",
+            "label": "Start Time"
+          },
+          {
+            "name": "endTime",
+            "type": "date",
+            "label": "End Time"
+          },
+          {
+            "name": "location",
+            "type": "text",
+            "label": "Job Location"
+          }
+        ]
+      },
+      {
+        "name": "education",
+        "type": "array",
+        "label": "Education",
+        "spec": [
+          {
+            "name": "schoolName",
+            "type": "text",
+            "label": "School Name"
+          },
+          {
+            "name": "schoolHashedUrl",
+            "type": "url",
+            "label": "School Hashed URL"
+          },
+          {
+            "name": "details",
+            "type": "text",
+            "label": "Education Details"
+          }
+        ]
+      },
+      {
+        "name": "skills",
+        "type": "array",
+        "label": "Skills",
+        "spec": [
+          {
+            "name": "name",
+            "type": "text",
+            "label": "Skill Name"
+          }
+        ]
+      },
+      {
+        "name": "languages",
+        "type": "array",
+        "label": "Languages",
+        "spec": [
+          {
+            "name": "name",
+            "type": "text",
+            "label": "Language Name"
+          },
+          {
+            "name": "proficiency",
+            "type": "select",
+            "label": "Proficiency Level",
+            "options": [
+              {
+                "label": "Elementary",
+                "value": "elementary"
+              },
+              {
+                "label": "Limited Working",
+                "value": "limitedWorking"
+              },
+              {
+                "label": "Professional Working",
+                "value": "professionalWorking"
+              },
+              {
+                "label": "Full Professional",
+                "value": "fullProfessional"
+              },
+              {
+                "label": "Native or Bilingual",
+                "value": "nativeOrBilingual"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "posts",
+        "type": "array",
+        "label": "Posts",
+        "spec": [
+          {
+            "name": "url",
+            "type": "url",
+            "label": "Post URL"
+          },
+          {
+            "name": "time",
+            "type": "date",
+            "label": "Post Time"
+          },
+          {
+            "name": "type",
+            "type": "select",
+            "label": "Post Type",
+            "options": [
+              {
+                "label": "Original",
+                "value": "original"
+              },
+              {
+                "label": "Repost",
+                "value": "repost"
+              }
+            ]
+          },
+          {
+            "name": "repostText",
+            "type": "text",
+            "label": "Repost Text"
+          },
+          {
+            "name": "text",
+            "type": "text",
+            "label": "Post Text"
+          },
+          {
+            "name": "images",
+            "type": "array",
+            "label": "Post Images",
+            "spec": [
+              {
+                "name": "imageUrl",
+                "type": "url",
+                "label": "Image URL"
+              }
+            ]
+          },
+          {
+            "name": "hasVideo",
+            "type": "boolean",
+            "label": "Has Video"
+          },
+          {
+            "name": "hasPoll",
+            "type": "boolean",
+            "label": "Has Poll"
+          },
+          {
+            "name": "reactionsCount",
+            "type": "number",
+            "label": "Reactions Count"
+          },
+          {
+            "name": "commentsCount",
+            "type": "number",
+            "label": "Comments Count"
+          },
+          {
+            "name": "repostsCount",
+            "type": "number",
+            "label": "Reposts Count"
+          }
+        ]
+      },
+      {
+        "name": "comments",
+        "type": "array",
+        "label": "Comments",
+        "spec": [
+          {
+            "name": "postUrl",
+            "type": "url",
+            "label": "Post URL"
+          },
+          {
+            "name": "time",
+            "type": "date",
+            "label": "Comment Time"
+          },
+          {
+            "name": "text",
+            "type": "text",
+            "label": "Comment Text"
+          },
+          {
+            "name": "image",
+            "type": "url",
+            "label": "Comment Image URL"
+          },
+          {
+            "name": "reactionsCount",
+            "type": "number",
+            "label": "Reactions Count"
+          }
+        ]
+      },
+      {
+        "name": "reactions",
+        "type": "array",
+        "label": "Reactions",
+        "spec": [
+          {
+            "name": "postUrl",
+            "type": "url",
+            "label": "Post URL"
+          },
+          {
+            "name": "time",
+            "type": "date",
+            "label": "Reaction Time"
+          },
+          {
+            "name": "type",
+            "type": "select",
+            "label": "Reaction Type",
+            "options": [
+              {
+                "label": "Like",
+                "value": "like"
+              },
+              {
+                "label": "Celebrate",
+                "value": "celebrate"
+              },
+              {
+                "label": "Support",
+                "value": "support"
+              },
+              {
+                "label": "Love",
+                "value": "love"
+              },
+              {
+                "label": "Insightful",
+                "value": "insightful"
+              },
+              {
+                "label": "Funny",
+                "value": "funny"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": [
+      {
+        "name": "type",
+        "type": "select",
+        "label": "Error Type",
+        "options": [
+          {
+            "label": "Person Not Found",
+            "value": "personNotFound"
+          }
+        ]
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "label": "Error Message"
+      }
+    ]
+  }
+]

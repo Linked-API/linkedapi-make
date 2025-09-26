@@ -1,0 +1,30 @@
+[
+  {
+    "name": "data",
+    "type": "array",
+    "label": "Actions Statistics",
+    "spec": [
+      {
+        "name": "actionType",
+        "type": "text",
+        "label": "Action Type"
+      },
+      {
+        "name": "success",
+        "type": "boolean",
+        "label": "Success"
+      },
+      {
+        "name": "time",
+        "type": "date",
+        "label": "Execution Time"
+      }
+    ]
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": []
+  }
+]

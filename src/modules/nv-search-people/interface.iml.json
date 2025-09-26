@@ -1,0 +1,56 @@
+[
+  {
+    "name": "data",
+    "type": "array",
+    "label": "Search Results",
+    "spec": [
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Full Name"
+      },
+      {
+        "name": "hashedUrl",
+        "type": "url",
+        "label": "Hashed LinkedIn URL"
+      },
+      {
+        "name": "position",
+        "type": "text",
+        "label": "Job Position"
+      },
+      {
+        "name": "location",
+        "type": "text",
+        "label": "Location"
+      }
+    ]
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": [
+      {
+        "name": "type",
+        "type": "select",
+        "label": "Error Type",
+        "options": [
+          {
+            "label": "No Sales Navigator",
+            "value": "noSalesNavigator"
+          },
+          {
+            "label": "Searching Not Allowed",
+            "value": "searchingNotAllowed"
+          }
+        ]
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "label": "Error Message"
+      }
+    ]
+  }
+]

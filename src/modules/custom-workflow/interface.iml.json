@@ -1,0 +1,14 @@
+[
+  {
+    "name": "data",
+    "type": "json",
+    "label": "Data",
+    "help": "Custom workflow result in JSON format. Structure depends on the workflow definition."
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": []
+  }
+]

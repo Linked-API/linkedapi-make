@@ -1,0 +1,47 @@
+[
+  {
+    "name": "data",
+    "type": "collection",
+    "label": "Data",
+    "spec": []
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": [
+      {
+        "name": "type",
+        "type": "select",
+        "label": "Error Type",
+        "options": [
+          {
+            "label": "Person Not Found",
+            "value": "personNotFound"
+          },
+          {
+            "label": "Already Pending",
+            "value": "alreadyPending"
+          },
+          {
+            "label": "Already Connected",
+            "value": "alreadyConnected"
+          },
+          {
+            "label": "Email Required",
+            "value": "emailRequired"
+          },
+          {
+            "label": "Request Not Allowed",
+            "value": "requestNotAllowed"
+          }
+        ]
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "label": "Error Message"
+      }
+    ]
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "name": "data",
+    "type": "array",
+    "label": "Pending Requests",
+    "spec": [
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Full Name"
+      },
+      {
+        "name": "publicUrl",
+        "type": "url",
+        "label": "Public LinkedIn URL"
+      },
+      {
+        "name": "headline",
+        "type": "text",
+        "label": "Headline"
+      }
+    ]
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": []
+  }
+]

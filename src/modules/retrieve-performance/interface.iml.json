@@ -1,0 +1,35 @@
+[
+  {
+    "name": "data",
+    "type": "collection",
+    "label": "Performance Data",
+    "spec": [
+      {
+        "name": "followersCount",
+        "type": "number",
+        "label": "Followers Count"
+      },
+      {
+        "name": "postViewsLast7Days",
+        "type": "number",
+        "label": "Post Views Last 7 Days"
+      },
+      {
+        "name": "profileViewsLast90Days",
+        "type": "number",
+        "label": "Profile Views Last 90 Days"
+      },
+      {
+        "name": "searchAppearancesPreviousWeek",
+        "type": "number",
+        "label": "Search Appearances Previous Week"
+      }
+    ]
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": []
+  }
+]

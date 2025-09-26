@@ -1,0 +1,52 @@
+[
+  {
+    "name": "data",
+    "type": "array",
+    "label": "Search Results",
+    "spec": [
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Company Name"
+      },
+      {
+        "name": "publicUrl",
+        "type": "url",
+        "label": "Public LinkedIn URL"
+      },
+      {
+        "name": "industry",
+        "type": "text",
+        "label": "Industry"
+      },
+      {
+        "name": "location",
+        "type": "text",
+        "label": "Company Location"
+      }
+    ]
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": [
+      {
+        "name": "type",
+        "type": "select",
+        "label": "Error Type",
+        "options": [
+          {
+            "label": "Searching Not Allowed",
+            "value": "searchingNotAllowed"
+          }
+        ]
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "label": "Error Message"
+      }
+    ]
+  }
+]

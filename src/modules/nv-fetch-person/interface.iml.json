@@ -1,0 +1,81 @@
+[
+  {
+    "name": "data",
+    "type": "collection",
+    "label": "Data",
+    "spec": [
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Full Name"
+      },
+      {
+        "name": "publicUrl",
+        "type": "url",
+        "label": "Public LinkedIn URL"
+      },
+      {
+        "name": "hashedUrl",
+        "type": "url",
+        "label": "Hashed LinkedIn URL"
+      },
+      {
+        "name": "headline",
+        "type": "text",
+        "label": "Headline"
+      },
+      {
+        "name": "location",
+        "type": "text",
+        "label": "Location"
+      },
+      {
+        "name": "countryCode",
+        "type": "text",
+        "label": "Country Code"
+      },
+      {
+        "name": "position",
+        "type": "text",
+        "label": "Current Position"
+      },
+      {
+        "name": "companyName",
+        "type": "text",
+        "label": "Company Name"
+      },
+      {
+        "name": "companyHashedUrl",
+        "type": "url",
+        "label": "Company Hashed URL"
+      }
+    ]
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": [
+      {
+        "name": "type",
+        "type": "select",
+        "label": "Error Type",
+        "options": [
+          {
+            "label": "No Sales Navigator",
+            "value": "noSalesNavigator"
+          },
+          {
+            "label": "Person Not Found",
+            "value": "personNotFound"
+          }
+        ]
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "label": "Error Message"
+      }
+    ]
+  }
+]

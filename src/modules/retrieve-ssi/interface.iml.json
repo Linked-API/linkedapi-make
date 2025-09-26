@@ -1,0 +1,30 @@
+[
+  {
+    "name": "data",
+    "type": "collection",
+    "label": "SSI Data",
+    "spec": [
+      {
+        "name": "ssi",
+        "type": "number",
+        "label": "Social Selling Index"
+      },
+      {
+        "name": "industryTop",
+        "type": "number",
+        "label": "Industry Top Percentage"
+      },
+      {
+        "name": "networkTop",
+        "type": "number",
+        "label": "Network Top Percentage"
+      }
+    ]
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": []
+  }
+]

@@ -1,0 +1,94 @@
+[
+  {
+    "name": "data",
+    "type": "array",
+    "label": "Conversations",
+    "spec": [
+      {
+        "name": "personUrl",
+        "type": "url",
+        "label": "Person LinkedIn URL"
+      },
+      {
+        "name": "since",
+        "type": "date",
+        "label": "Since Timestamp"
+      },
+      {
+        "name": "type",
+        "type": "select",
+        "label": "Conversation Type",
+        "options": [
+          {
+            "label": "Standard Interface",
+            "value": "st"
+          },
+          {
+            "label": "Sales Navigator",
+            "value": "nv"
+          }
+        ]
+      },
+      {
+        "name": "messages",
+        "type": "array",
+        "label": "Messages",
+        "spec": [
+          {
+            "name": "id",
+            "type": "text",
+            "label": "Message ID"
+          },
+          {
+            "name": "sender",
+            "type": "select",
+            "label": "Message Sender",
+            "options": [
+              {
+                "label": "Us",
+                "value": "us"
+              },
+              {
+                "label": "Them",
+                "value": "them"
+              }
+            ]
+          },
+          {
+            "name": "text",
+            "type": "text",
+            "label": "Message Text"
+          },
+          {
+            "name": "time",
+            "type": "date",
+            "label": "Message Time"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": [
+      {
+        "name": "type",
+        "type": "select",
+        "label": "Error Type",
+        "options": [
+          {
+            "label": "Conversations Not Synced",
+            "value": "conversationsNotSynced"
+          }
+        ]
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "label": "Error Message"
+      }
+    ]
+  }
+]

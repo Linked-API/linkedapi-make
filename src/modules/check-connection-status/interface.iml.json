@@ -1,0 +1,51 @@
+[
+  {
+    "name": "data",
+    "type": "collection",
+    "label": "Data",
+    "spec": [
+      {
+        "name": "connectionStatus",
+        "type": "select",
+        "label": "Connection Status",
+        "options": [
+          {
+            "label": "Connected",
+            "value": "connected"
+          },
+          {
+            "label": "Not Connected",
+            "value": "notConnected"
+          },
+          {
+            "label": "Pending",
+            "value": "pending"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": [
+      {
+        "name": "type",
+        "type": "select",
+        "label": "Error Type",
+        "options": [
+          {
+            "label": "Person Not Found",
+            "value": "personNotFound"
+          }
+        ]
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "label": "Error Message"
+      }
+    ]
+  }
+]
