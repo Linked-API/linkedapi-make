@@ -52,8 +52,7 @@
     "label": "Posts Limit",
     "required": false,
     "help": "Number of posts to retrieve (max 20). Only used when Retrieve Posts is enabled",
-    "default": 20,
-    "maximum": 20
+    "default": 20
   },
   {
     "name": "postsSince",
@@ -76,8 +75,7 @@
     "label": "Comments Limit",
     "required": false,
     "help": "Number of comments to retrieve (max 20). Only used when Retrieve Comments is enabled",
-    "default": 10,
-    "maximum": 20
+    "default": 10
   },
   {
     "name": "commentsSince",
@@ -100,8 +98,7 @@
     "label": "Reactions Limit",
     "required": false,
     "help": "Number of reactions to retrieve (max 20). Only used when Retrieve Reactions is enabled",
-    "default": 10,
-    "maximum": 20
+    "default": 10
   },
   {
     "name": "reactionsSince",

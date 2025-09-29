@@ -20,8 +20,7 @@
     "label": "Employee Limit",
     "required": false,
     "help": "Maximum number of employees to retrieve (max 500). Only used when Retrieve Employees is enabled",
-    "default": 500,
-    "maximum": 500
+    "default": 500
   },
   {
     "name": "retrieveDMs",
@@ -37,8 +36,7 @@
     "label": "Decision Makers Limit",
     "required": false,
     "help": "Number of decision makers to retrieve (max 20). Only used when Retrieve Decision Makers is enabled",
-    "default": 20,
-    "maximum": 20
+    "default": 20
   },
   {
     "name": "retrievePosts",
@@ -54,8 +52,7 @@
     "label": "Posts Limit",
     "required": false,
     "help": "Number of posts to retrieve (max 20). Only used when Retrieve Posts is enabled",
-    "default": 20,
-    "maximum": 20
+    "default": 20
   },
   {
     "name": "postsSince",
