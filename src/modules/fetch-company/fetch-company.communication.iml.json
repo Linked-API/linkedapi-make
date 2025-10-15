@@ -9,9 +9,16 @@
         "retrieveEmployees": "{{parameters.retrieveEmployees}}",
         "retrieveDMs": "{{parameters.retrieveDMs}}",
         "retrievePosts": "{{parameters.retrievePosts}}",
-        "employeeRetrievalConfig": "{{if(parameters.retrieveEmployees, { limit: parameters.employeeLimit }, undefined)}}",
-        "dmRetrievalConfig": "{{if(parameters.retrieveDMs, { limit: parameters.dmsLimit }, undefined)}}",
-        "postRetrievalConfig": "{{if(parameters.retrievePosts, { limit: parameters.postsLimit, since: parameters.postsSince }, undefined)}}"
+        "employeesRetrievalConfig": {
+          "limit": "{{parameters.employeeLimit}}"
+        },
+        "dmsRetrievalConfig": {
+          "limit": "{{parameters.dmsLimit}}"
+        },
+        "postsRetrievalConfig": {
+          "limit": "{{parameters.postsLimit}}",
+          "since": "{{parameters.postsSince}}"
+        }
       }
     },
     "response": {
@@ -50,4 +57,3 @@
     }
   }
 ]
-
