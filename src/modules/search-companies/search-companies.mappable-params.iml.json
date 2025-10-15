@@ -11,8 +11,15 @@
     "type": "number",
     "label": "Limit",
     "required": false,
-    "help": "Number of search results to return (max 100)",
+    "help": "Number of search results to return (max 1000)",
     "default": 10
+  },
+  {
+    "name": "customSearchUrl",
+    "type": "url",
+    "label": "Custom Search URL",
+    "required": false,
+    "help": "URL copied from LinkedIn search results page after configuring desired filters. When specified, overrides term and filter parameters. Allows using any search configuration available in the LinkedIn interface."
   },
   {
     "name": "locations",

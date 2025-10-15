@@ -5,6 +5,7 @@
     "body": {
       "operationName": "searchCompanies",
       "data": {
+        "customSearchUrl": "{{parameters.customSearchUrl}}",
         "term": "{{parameters.searchTerm}}",
         "limit": "{{parameters.limit}}",
         "filter": {
@@ -50,4 +51,3 @@
     }
   }
 ]
-

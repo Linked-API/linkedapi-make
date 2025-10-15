@@ -13,9 +13,18 @@
         "retrievePosts": "{{parameters.retrievePosts}}",
         "retrieveComments": "{{parameters.retrieveComments}}",
         "retrieveReactions": "{{parameters.retrieveReactions}}",
-        "postsRetrievalConfig": "{{if(parameters.retrievePosts, { limit: parameters.postsLimit, since: parameters.postsSince }, undefined)}}",
-        "commentRetrievalConfig": "{{if(parameters.retrieveComments, { limit: parameters.commentsLimit, since: parameters.commentsSince }, undefined)}}",
-        "reactionRetrievalConfig": "{{if(parameters.retrieveReactions, { limit: parameters.reactionsLimit, since: parameters.reactionsSince }, undefined)}}"
+        "postsRetrievalConfig": {
+          "limit": "{{parameters.postsLimit}}",
+          "since": "{{parameters.postsSince}}"
+        },
+        "commentsRetrievalConfig": {
+          "limit": "{{parameters.commentsLimit}}",
+          "since": "{{parameters.commentsSince}}"
+        },
+        "reactionsRetrievalConfig": {
+          "limit": "{{parameters.reactionsLimit}}",
+          "since": "{{parameters.reactionsSince}}"
+        }
       }
     },
     "response": {
@@ -54,4 +63,3 @@
     }
   }
 ]
-

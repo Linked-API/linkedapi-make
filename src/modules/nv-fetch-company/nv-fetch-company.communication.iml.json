@@ -8,8 +8,21 @@
         "companyHashedUrl": "{{parameters.companyHashedUrl}}",
         "retrieveEmployees": "{{parameters.retrieveEmployees}}",
         "retrieveDMs": "{{parameters.retrieveDMs}}",
-        "employeeRetrievalConfig": "{{if(parameters.retrieveEmployees, { limit: parameters.employeeLimit, filter: { firstName: parameters.firstName, lastName: parameters.lastName, positions: parameters.positions, locations: parameters.locations, industries: parameters.industries, schools: parameters.schools, yearsOfExperiences: parameters.yearsOfExperiences } }, undefined)}}",
-        "dmRetrievalConfig": "{{if(parameters.retrieveDMs, { limit: parameters.dmsLimit }, undefined)}}"
+        "employeesRetrievalConfig": {
+          "limit": "{{parameters.employeeLimit}}",
+          "filter": {
+            "firstName": "{{parameters.firstName}}",
+            "lastName": "{{parameters.lastName}}",
+            "positions": "{{parameters.positions}}",
+            "locations": "{{parameters.locations}}",
+            "industries": "{{parameters.industries}}",
+            "schools": "{{parameters.schools}}",
+            "yearsOfExperiences": "{{parameters.yearsOfExperiences}}"
+          }
+        },
+        "dmsRetrievalConfig": {
+          "limit": "{{parameters.dmsLimit}}"
+        }
       }
     },
     "response": {
@@ -48,4 +61,3 @@
     }
   }
 ]
-

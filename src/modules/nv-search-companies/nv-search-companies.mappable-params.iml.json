@@ -11,8 +11,8 @@
     "type": "number",
     "label": "Limit",
     "required": false,
-    "help": "Number of search results to return (max 100)",
-    "default": 10
+    "help": "Number of search results to return (max 2500)",
+    "default": 25
   },
   {
     "name": "locations",
@@ -27,6 +27,13 @@
     "label": "Industries",
     "required": false,
     "help": "Industries to filter by (e.g., Software Development, Marketing)"
+  },
+  {
+    "name": "customSearchUrl",
+    "type": "url",
+    "label": "Custom Search URL",
+    "required": false,
+    "help": "URL copied from Sales Navigator search results page after configuring desired filters. When specified, overrides term and filter parameters. Allows using any search configuration available in Sales Navigator."
   },
   {
     "name": "sizes",

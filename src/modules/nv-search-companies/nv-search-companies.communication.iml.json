@@ -6,6 +6,7 @@
     "body": {
       "operationName": "nvSearchCompanies",
       "data": {
+        "customSearchUrl": "{{parameters.customSearchUrl}}",
         "term": "{{parameters.searchTerm}}",
         "limit": "{{parameters.limit}}",
         "filter": {
