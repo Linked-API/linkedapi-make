@@ -5,5 +5,63 @@
     "label": "Post URL",
     "required": true,
     "help": "LinkedIn URL of the post to fetch"
+  },
+  {
+    "name": "retrieveComments",
+    "type": "boolean",
+    "label": "Retrieve Comments",
+    "required": false,
+    "help": "Whether to retrieve comments on the post",
+    "default": false
+  },
+  {
+    "name": "commentsLimit",
+    "type": "number",
+    "label": "Comments Limit",
+    "required": false,
+    "help": "Number of comments to retrieve (max 500). Only used when Retrieve Comments is enabled",
+    "default": 10
+  },
+  {
+    "name": "commentsReplies",
+    "type": "boolean",
+    "label": "Include Comment Replies",
+    "required": false,
+    "help": "Whether to include replies to comments. Only used when Retrieve Comments is enabled",
+    "default": false
+  },
+  {
+    "name": "commentsSort",
+    "type": "select",
+    "label": "Comments Sort Order",
+    "required": false,
+    "help": "Sort order for comments. Only used when Retrieve Comments is enabled",
+    "default": "mostRelevant",
+    "options": [
+      {
+        "label": "Most Relevant",
+        "value": "mostRelevant"
+      },
+      {
+        "label": "Most Recent",
+        "value": "mostRecent"
+      }
+    ]
+  },
+  {
+    "name": "retrieveReactions",
+    "type": "boolean",
+    "label": "Retrieve Reactions",
+    "required": false,
+    "help": "Whether to retrieve reactions to the post",
+    "default": false
+  },
+  {
+    "name": "reactionsLimit",
+    "type": "number",
+    "label": "Reactions Limit",
+    "required": false,
+    "help": "Number of reactions to retrieve (max 1000). Only used when Retrieve Reactions is enabled",
+    "default": 10
   }
 ]

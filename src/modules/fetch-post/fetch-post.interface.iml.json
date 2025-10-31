@@ -70,6 +70,141 @@
         "name": "repostsCount",
         "type": "number",
         "label": "Reposts Count"
+      },
+      {
+        "name": "comments",
+        "type": "array",
+        "label": "Comments",
+        "spec": [
+          {
+            "name": "commenterUrl",
+            "type": "url",
+            "label": "Commenter URL"
+          },
+          {
+            "name": "commenterName",
+            "type": "text",
+            "label": "Commenter Name"
+          },
+          {
+            "name": "commenterHeadline",
+            "type": "text",
+            "label": "Commenter Headline"
+          },
+          {
+            "name": "commenterType",
+            "type": "select",
+            "label": "Commenter Type",
+            "options": [
+              {
+                "label": "Person",
+                "value": "person"
+              },
+              {
+                "label": "Company",
+                "value": "company"
+              }
+            ]
+          },
+          {
+            "name": "time",
+            "type": "text",
+            "label": "Comment Time"
+          },
+          {
+            "name": "text",
+            "type": "text",
+            "label": "Comment Text"
+          },
+          {
+            "name": "image",
+            "type": "url",
+            "label": "Comment Image URL"
+          },
+          {
+            "name": "isReply",
+            "type": "boolean",
+            "label": "Is Reply"
+          },
+          {
+            "name": "reactionsCount",
+            "type": "number",
+            "label": "Reactions Count"
+          },
+          {
+            "name": "repliesCount",
+            "type": "number",
+            "label": "Replies Count"
+          }
+        ]
+      },
+      {
+        "name": "reactions",
+        "type": "array",
+        "label": "Reactions",
+        "spec": [
+          {
+            "name": "engagerUrl",
+            "type": "url",
+            "label": "Engager URL"
+          },
+          {
+            "name": "engagerName",
+            "type": "text",
+            "label": "Engager Name"
+          },
+          {
+            "name": "engagerHeadline",
+            "type": "text",
+            "label": "Engager Headline"
+          },
+          {
+            "name": "engagerType",
+            "type": "select",
+            "label": "Engager Type",
+            "options": [
+              {
+                "label": "Person",
+                "value": "person"
+              },
+              {
+                "label": "Company",
+                "value": "company"
+              }
+            ]
+          },
+          {
+            "name": "type",
+            "type": "select",
+            "label": "Reaction Type",
+            "options": [
+              {
+                "label": "Like",
+                "value": "like"
+              },
+              {
+                "label": "Celebrate",
+                "value": "celebrate"
+              },
+              {
+                "label": "Support",
+                "value": "support"
+              },
+              {
+                "label": "Love",
+                "value": "love"
+              },
+              {
+                "label": "Insightful",
+                "value": "insightful"
+              },
+              {
+                "label": "Funny",
+                "value": "funny"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
