@@ -5,7 +5,17 @@
     "body": {
       "operationName": "fetchPost",
       "data": {
-        "postUrl": "{{parameters.postUrl}}"
+        "postUrl": "{{parameters.postUrl}}",
+        "retrieveComments": "{{parameters.retrieveComments}}",
+        "retrieveReactions": "{{parameters.retrieveReactions}}",
+        "commentsRetrievalConfig": {
+          "limit": "{{parameters.commentsLimit}}",
+          "replies": "{{parameters.commentsReplies}}",
+          "sort": "{{parameters.commentsSort}}"
+        },
+        "reactionsRetrievalConfig": {
+          "limit": "{{parameters.reactionsLimit}}"
+        }
       }
     },
     "response": {
@@ -44,4 +54,3 @@
     }
   }
 ]
-
