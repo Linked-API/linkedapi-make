@@ -1,5 +1,8 @@
 Linked API for Make connects your LinkedIn account to Make's automation platform, so you can build visual scenarios that search for prospects, send messages, manage connections, extract data, and more – all with [industry-leading safety](https://linkedapi.io/safety/).
 
+> [!IMPORTANT]
+> Our app is available in the Make Apps Marketplace – just search for "Linked API" when adding a new module to your scenario.
+
 ## Use cases
 
 - **Lead generation pipeline**. Search for prospects matching your criteria, automatically send connection requests, wait for acceptance, then send personalized follow-up messages. Connect the results to your CRM to track everything in one place.

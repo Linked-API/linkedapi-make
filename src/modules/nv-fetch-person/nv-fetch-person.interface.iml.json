@@ -68,6 +68,10 @@
           {
             "label": "Person Not Found",
             "value": "personNotFound"
+          },
+          {
+            "label": "Self Profile Not Allowed",
+            "value": "selfProfileNotAllowed"
           }
         ]
       },
