@@ -51,6 +51,22 @@
                     "scope": "modules/comment-on-post/comment-on-post.scope.iml.json"
                 }
             },
+            "createPost": {
+                "label": "Create a Post",
+                "description": "Creates a new LinkedIn post.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/create-post/create-post.communication.iml.json",
+                    "staticParams": "modules/create-post/create-post.static-params.iml.json",
+                    "mappableParams": "modules/create-post/create-post.mappable-params.iml.json",
+                    "interface": "modules/create-post/create-post.interface.iml.json",
+                    "samples": "modules/create-post/create-post.samples.iml.json",
+                    "scope": "modules/create-post/create-post.scope.iml.json"
+                }
+            },
             "customWorkflow": {
                 "label": "Execute a Custom Workflow",
                 "description": "Execute a custom multi-step workflow using raw workflow definition.",
@@ -477,6 +493,10 @@
                     {
                         "local": "commentOnPost",
                         "remote": "commentOnPost"
+                    },
+                    {
+                        "local": "createPost",
+                        "remote": "createPost"
                     },
                     {
                         "local": "customWorkflow",

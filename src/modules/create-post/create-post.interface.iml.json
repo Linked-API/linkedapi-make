@@ -1,0 +1,73 @@
+[
+  {
+    "name": "data",
+    "type": "collection",
+    "label": "Data",
+    "spec": [
+      {
+        "name": "postUrl",
+        "type": "url",
+        "label": "Post URL"
+      }
+    ]
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": [
+      {
+        "name": "type",
+        "type": "select",
+        "label": "Error Type",
+        "options": [
+          {
+            "label": "Text Too Long",
+            "value": "textTooLong"
+          },
+          {
+            "label": "Company Not Found",
+            "value": "companyNotFound"
+          },
+          {
+            "label": "No Posting Permission",
+            "value": "noPostingPermission"
+          },
+          {
+            "label": "Unsupported Attachment Type",
+            "value": "unsupportedAttachmentType"
+          },
+          {
+            "label": "Missing Document Name",
+            "value": "missingDocumentName"
+          },
+          {
+            "label": "URL Not Accessible",
+            "value": "urlNotAccessible"
+          },
+          {
+            "label": "File Too Large",
+            "value": "fileTooLarge"
+          },
+          {
+            "label": "Unsupported MIME Type",
+            "value": "unsupportedMimeType"
+          },
+          {
+            "label": "Too Many Attachments",
+            "value": "tooManyAttachments"
+          },
+          {
+            "label": "Mixing Not Allowed",
+            "value": "mixingNotAllowed"
+          }
+        ]
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "label": "Error Message"
+      }
+    ]
+  }
+]

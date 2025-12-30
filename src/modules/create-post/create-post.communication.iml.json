@@ -1,0 +1,48 @@
+[
+  {
+    "url": "/workflows",
+    "method": "POST",
+    "body": {
+      "operationName": "createPost",
+      "data": {
+        "text": "{{parameters.postText}}",
+        "companyUrl": "{{if(parameters.companyUrl, parameters.companyUrl, undefined)}}",
+        "attachments": "{{if(length(parameters.attachments) > 0, parameters.attachments, undefined)}}"
+      }
+    },
+    "response": {
+      "temp": {
+        "workflowId": "{{body.workflowId}}",
+        "operationName": "createPost"
+      }
+    }
+  },
+  {
+    "url": "/workflows/{{temp.workflowId}}?operationName={{temp.operationName}}",
+    "method": "GET",
+    "repeat": {
+      "condition": "{{body.status !== 'completed'}}",
+      "delay": 5000,
+      "limit": 1800
+    },
+    "response": {
+      "temp": {
+        "status": "{{body.status}}",
+        "data": "{{body.data}}",
+        "errors": "{{body.errors}}"
+      }
+    }
+  },
+  {
+    "response": {
+      "valid": "{{temp.status === 'completed'}}",
+      "error": {
+        "message": "Workflow timed out or did not complete."
+      },
+      "output": {
+        "data": "{{temp.data}}",
+        "errors": "{{temp.errors}}"
+      }
+    }
+  }
+]
