@@ -1,0 +1,60 @@
+[
+  {
+    "name": "postText",
+    "type": "text",
+    "label": "Post Text",
+    "required": true,
+    "help": "Post content, must be up to 3000 characters"
+  },
+  {
+    "name": "companyUrl",
+    "type": "text",
+    "label": "Company URL",
+    "required": false,
+    "help": "LinkedIn company page URL. If specified, the post will be created on the company page (requires admin access)."
+  },
+  {
+    "name": "attachments",
+    "type": "array",
+    "label": "Attachments",
+    "required": false,
+    "help": "Media attachments for the post (max 9 images, or 1 video, or 1 document). Cannot mix different attachment types.",
+    "spec": [
+      {
+        "name": "url",
+        "type": "url",
+        "label": "File URL",
+        "required": true,
+        "help": "Publicly accessible URL of the media file"
+      },
+      {
+        "name": "type",
+        "type": "select",
+        "label": "Type",
+        "required": true,
+        "help": "Type of media attachment",
+        "options": [
+          {
+            "label": "Image",
+            "value": "image"
+          },
+          {
+            "label": "Video",
+            "value": "video"
+          },
+          {
+            "label": "Document",
+            "value": "document"
+          }
+        ]
+      },
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Document Name",
+        "required": false,
+        "help": "Display name for the document (required for documents)"
+      }
+    ]
+  }
+]

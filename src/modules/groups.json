@@ -4,6 +4,7 @@
 		"modules": [
 			"checkConnectionStatus",
 			"commentOnPost",
+			"createPost",
 			"fetchCompany",
 			"fetchPerson",
 			"fetchPost",

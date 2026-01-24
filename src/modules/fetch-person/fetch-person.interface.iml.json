@@ -55,6 +55,11 @@
         "label": "Followers Count"
       },
       {
+        "name": "about",
+        "type": "text",
+        "label": "About"
+      },
+      {
         "name": "experiences",
         "type": "array",
         "label": "Work Experiences",
