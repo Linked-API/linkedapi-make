@@ -18,6 +18,11 @@
         "name": "headline",
         "type": "text",
         "label": "Headline"
+      },
+      {
+        "name": "sentTime",
+        "type": "text",
+        "label": "Sent Time"
       }
     ]
   },
