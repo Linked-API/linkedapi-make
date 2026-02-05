@@ -6,6 +6,7 @@
       "operationName": "retrieveConnections",
       "data": {
         "limit": "{{parameters.limit}}",
+        "since": "{{parameters.since}}",
         "filter": {
           "firstName": "{{parameters.firstName}}",
           "lastName": "{{parameters.lastName}}",

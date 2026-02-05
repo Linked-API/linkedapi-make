@@ -4,8 +4,14 @@
     "type": "number",
     "label": "Limit",
     "required": false,
-    "help": "Number of connections to return. Defaults to 10, with a maximum value of 500",
-    "default": 10
+    "help": "Number of connections to return"
+  },
+  {
+    "name": "since",
+    "type": "date",
+    "label": "Since Date",
+    "required": false,
+    "help": "ISO date to filter connections made on or after this date. Only works without filter fields"
   },
   {
     "name": "firstName",

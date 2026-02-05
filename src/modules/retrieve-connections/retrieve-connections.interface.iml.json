@@ -23,6 +23,11 @@
         "name": "location",
         "type": "text",
         "label": "Location"
+      },
+      {
+        "name": "connectedAt",
+        "type": "date",
+        "label": "Connected At"
       }
     ]
   },
