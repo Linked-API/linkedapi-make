@@ -12,5 +12,12 @@
     "label": "Comment Text",
     "required": true,
     "help": "Comment text, must be up to 1000 characters"
+  },
+  {
+    "name": "companyUrl",
+    "type": "text",
+    "label": "Company URL",
+    "required": false,
+    "help": "LinkedIn company page URL. If specified, the comment will be added on behalf of the company page."
   }
 ]

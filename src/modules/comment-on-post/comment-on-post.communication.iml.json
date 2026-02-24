@@ -6,7 +6,8 @@
       "operationName": "commentOnPost",
       "data": {
         "postUrl": "{{parameters.postUrl}}",
-        "text": "{{parameters.commentText}}"
+        "text": "{{parameters.commentText}}",
+        "companyUrl": "{{if(parameters.companyUrl, parameters.companyUrl, undefined)}}"
       }
     },
     "response": {

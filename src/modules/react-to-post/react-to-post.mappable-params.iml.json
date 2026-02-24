@@ -39,5 +39,12 @@
         "label": "Funny"
       }
     ]
+  },
+  {
+    "name": "companyUrl",
+    "type": "text",
+    "label": "Company URL",
+    "required": false,
+    "help": "LinkedIn company page URL. If specified, the reaction will be added on behalf of the company page."
   }
 ]

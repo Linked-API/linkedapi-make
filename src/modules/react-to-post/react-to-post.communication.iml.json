@@ -6,7 +6,8 @@
       "operationName": "reactToPost",
       "data": {
         "postUrl": "{{parameters.postUrl}}",
-        "type": "{{parameters.reactionType}}"
+        "type": "{{parameters.reactionType}}",
+        "companyUrl": "{{if(parameters.companyUrl, parameters.companyUrl, undefined)}}"
       }
     },
     "response": {
