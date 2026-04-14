@@ -1,0 +1,23 @@
+[
+  {
+    "url": "https://api.linkedapi.io/admin/limits.getUsage",
+    "method": "POST",
+    "headers": {
+      "linked-api-token": "{{connection.linkedApiToken}}",
+      "client": "make",
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "accountId": "{{parameters.accountId}}"
+    },
+    "response": {
+      "valid": "{{body.success}}",
+      "error": {
+        "message": "{{body.error.type}}: {{body.error.message}}"
+      },
+      "output": {
+        "usage": "{{body.result.usage}}"
+      }
+    }
+  }
+]

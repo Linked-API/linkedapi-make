@@ -1,0 +1,23 @@
+[
+  {
+    "url": "https://api.linkedapi.io/admin/subscription.setSeats",
+    "method": "POST",
+    "headers": {
+      "linked-api-token": "{{connection.linkedApiToken}}",
+      "client": "make",
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "quantity": "{{parameters.quantity}}",
+      "seatType": "{{parameters.seatType}}",
+      "billingPeriod": "{{parameters.billingPeriod}}"
+    },
+    "response": {
+      "valid": "{{body.success}}",
+      "error": {
+        "message": "{{body.error.type}}: {{body.error.message}}"
+      },
+      "output": "{{body.result}}"
+    }
+  }
+]

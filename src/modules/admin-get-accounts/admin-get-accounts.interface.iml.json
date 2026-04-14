@@ -1,0 +1,24 @@
+[
+  {
+    "name": "accounts",
+    "type": "array",
+    "label": "Accounts",
+    "spec": [
+      { "name": "id", "type": "text", "label": "Account ID" },
+      { "name": "name", "type": "text", "label": "Name" },
+      { "name": "countryCode", "type": "text", "label": "Country Code" },
+      { "name": "identificationToken", "type": "text", "label": "Identification Token" },
+      { "name": "status", "type": "text", "label": "Status" },
+      { "name": "connectedAt", "type": "date", "label": "Connected At" }
+    ]
+  },
+  {
+    "name": "pendingConnectionSessions",
+    "type": "array",
+    "label": "Pending Connection Sessions",
+    "spec": [
+      { "name": "sessionId", "type": "text", "label": "Session ID" },
+      { "name": "status", "type": "text", "label": "Status" }
+    ]
+  }
+]

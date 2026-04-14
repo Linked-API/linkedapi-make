@@ -41,5 +41,20 @@
 			"pollConversations",
 			"universalRest"
 		]
+	},
+	{
+		"label": "Administration",
+		"modules": [
+			"adminGetSubscriptionStatus",
+			"adminGetSeats",
+			"adminSetSeats",
+			"adminGetAccounts",
+			"adminConnectAccount",
+			"adminDisconnectAccount",
+			"adminRegenerateToken",
+			"adminGetLimitsUsage",
+			"adminSetLimits",
+			"adminResetLimits"
+		]
 	}
 ]

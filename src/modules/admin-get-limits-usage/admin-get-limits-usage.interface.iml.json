@@ -1,0 +1,14 @@
+[
+  {
+    "name": "usage",
+    "type": "array",
+    "label": "Usage",
+    "spec": [
+      { "name": "category", "type": "text", "label": "Category" },
+      { "name": "period", "type": "text", "label": "Period" },
+      { "name": "maxValue", "type": "number", "label": "Max Value" },
+      { "name": "currentUsage", "type": "number", "label": "Current Usage" },
+      { "name": "isEnabled", "type": "boolean", "label": "Is Enabled" }
+    ]
+  }
+]

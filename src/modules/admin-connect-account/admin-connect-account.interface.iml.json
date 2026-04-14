@@ -1,0 +1,12 @@
+[
+  {
+    "name": "sessionId",
+    "type": "text",
+    "label": "Session ID"
+  },
+  {
+    "name": "connectionLink",
+    "type": "url",
+    "label": "Connection Link"
+  }
+]

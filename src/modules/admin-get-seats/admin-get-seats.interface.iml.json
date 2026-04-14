@@ -1,0 +1,12 @@
+[
+  {
+    "name": "seats",
+    "type": "array",
+    "label": "Seats",
+    "spec": [
+      { "name": "seatType", "type": "text", "label": "Seat Type" },
+      { "name": "quantity", "type": "number", "label": "Quantity" },
+      { "name": "billingPeriod", "type": "text", "label": "Billing Period" }
+    ]
+  }
+]

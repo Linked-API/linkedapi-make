@@ -1,0 +1,30 @@
+[
+  {
+    "name": "quantity",
+    "type": "number",
+    "label": "Quantity",
+    "required": true,
+    "help": "Number of seats (1-1000)"
+  },
+  {
+    "name": "seatType",
+    "type": "select",
+    "label": "Seat Type",
+    "required": true,
+    "options": [
+      { "value": "core", "label": "Core" },
+      { "value": "plus", "label": "Plus" }
+    ],
+    "help": "Seat type. Plus unlocks Sales Navigator actions."
+  },
+  {
+    "name": "billingPeriod",
+    "type": "select",
+    "label": "Billing Period",
+    "required": true,
+    "options": [
+      { "value": "month", "label": "Month" },
+      { "value": "year", "label": "Year" }
+    ]
+  }
+]

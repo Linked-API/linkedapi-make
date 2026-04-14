@@ -1,0 +1,17 @@
+[
+  {
+    "name": "status",
+    "type": "text",
+    "label": "Status"
+  },
+  {
+    "name": "eligibleForTrial",
+    "type": "boolean",
+    "label": "Eligible for Trial"
+  },
+  {
+    "name": "cancelAtPeriodEnd",
+    "type": "boolean",
+    "label": "Cancel at Period End"
+  }
+]
