@@ -15,7 +15,9 @@
       "error": {
         "message": "{{body.error.type}}: {{body.error.message}}"
       },
-      "output": "{{body.result}}"
+      "output": {
+        "success": "{{body.success}}"
+      }
     }
   }
 ]

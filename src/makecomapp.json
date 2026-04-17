@@ -20,7 +20,7 @@
         },
         "module": {
             "checkConnectionStatus": {
-                "label": "Check a Connection Status",
+                "label": "Check connection status",
                 "description": "Checks the connection status between a user's account and another person's account.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -36,7 +36,7 @@
                 }
             },
             "commentOnPost": {
-                "label": "Comment on a Post",
+                "label": "Comment on a post",
                 "description": "Posts a comment on a LinkedIn post.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -52,7 +52,7 @@
                 }
             },
             "createPost": {
-                "label": "Create a Post",
+                "label": "Create a post",
                 "description": "Creates a new LinkedIn post.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -68,7 +68,7 @@
                 }
             },
             "customWorkflow": {
-                "label": "Execute a Custom Workflow",
+                "label": "Execute a custom workflow",
                 "description": "Execute a custom multi-step workflow using raw workflow definition.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -84,7 +84,7 @@
                 }
             },
             "fetchCompany": {
-                "label": "Fetch a Company",
+                "label": "Fetch a company",
                 "description": "Fetches detailed information about a LinkedIn company.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -100,7 +100,7 @@
                 }
             },
             "fetchPerson": {
-                "label": "Fetch a Person",
+                "label": "Fetch a person",
                 "description": "Fetch detailed information about a LinkedIn person.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -116,7 +116,7 @@
                 }
             },
             "fetchPost": {
-                "label": "Fetch a Post",
+                "label": "Fetch a post",
                 "description": "Retrieve detailed information about a LinkedIn post.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -132,7 +132,7 @@
                 }
             },
             "nvFetchCompany": {
-                "label": "Fetch a Company in Sales Navigator",
+                "label": "Fetch a company in Sales Navigator",
                 "description": "Fetch detailed information about a company in Sales Navigator.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -148,7 +148,7 @@
                 }
             },
             "nvFetchPerson": {
-                "label": "Fetch a Person in Sales Navigator",
+                "label": "Fetch a person in Sales Navigator",
                 "description": "Fetches a person's detailed information in Sales Navigator.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -164,7 +164,7 @@
                 }
             },
             "nvSearchCompanies": {
-                "label": "Search Companies in Sales Navigator",
+                "label": "Search for companies in Sales Navigator",
                 "description": "Searches for companies in Sales Navigator.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -180,7 +180,7 @@
                 }
             },
             "nvSearchPeople": {
-                "label": "Search People in Sales Navigator",
+                "label": "Search for people in Sales Navigator",
                 "description": "Searches for people in Sales Navigator.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -196,7 +196,7 @@
                 }
             },
             "nvSendMessage": {
-                "label": "Send a Message in Sales Navigator",
+                "label": "Send a message in Sales Navigator",
                 "description": "Send a message to a person in Sales Navigator.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -212,7 +212,7 @@
                 }
             },
             "nvSyncConversation": {
-                "label": "Sync a Conversation in Sales Navigator",
+                "label": "Sync a conversation in Sales Navigator",
                 "description": "Sync a conversation in Sales Navigator so you can start polling it.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -228,7 +228,7 @@
                 }
             },
             "pollConversations": {
-                "label": "Poll Conversations",
+                "label": "Poll conversations for new messages",
                 "description": "Poll multiple conversations for new messages.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -244,7 +244,7 @@
                 }
             },
             "reactToPost": {
-                "label": "React to a Post",
+                "label": "React to a post",
                 "description": "Reacts to a LinkedIn post with like, celebrate, support, love, insightful, or funny.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -260,7 +260,7 @@
                 }
             },
             "removeConnection": {
-                "label": "Remove a Connection",
+                "label": "Remove a connection",
                 "description": "Removes a connection.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -276,7 +276,7 @@
                 }
             },
             "retrieveActionsStats": {
-                "label": "Get Actions Statistics",
+                "label": "Get actions statistics",
                 "description": "Retrieves statistics about previously executed actions.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -292,7 +292,7 @@
                 }
             },
             "retrieveConnections": {
-                "label": "Retrieve Connections",
+                "label": "Retrieve all connections",
                 "description": "Retrieves your connections with optional filtering.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -308,7 +308,7 @@
                 }
             },
             "retrievePendingRequests": {
-                "label": "Retrieve Pending Requests",
+                "label": "Retrieve pending connection requests",
                 "description": "Retrieves pending connection requests.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -324,7 +324,7 @@
                 }
             },
             "retrievePerformance": {
-                "label": "Retrieve Performance",
+                "label": "Retrieve performance analytics",
                 "description": "Retrieve performance analytics from your LinkedIn dashboard.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -340,7 +340,7 @@
                 }
             },
             "retrieveSSI": {
-                "label": "Retrieve SSI",
+                "label": "Retrieve SSI score",
                 "description": "Retrieves a user's current Social Selling Index (SSI) score.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -356,7 +356,7 @@
                 }
             },
             "searchCompanies": {
-                "label": "Search Companies",
+                "label": "Search for companies",
                 "description": "Search for companies on LinkedIn.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -372,7 +372,7 @@
                 }
             },
             "searchPeople": {
-                "label": "Search People",
+                "label": "Search for people",
                 "description": "Search for people on LinkedIn.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -388,7 +388,7 @@
                 }
             },
             "sendConnectionRequest": {
-                "label": "Send a Connection Request",
+                "label": "Send a connection request",
                 "description": "Send a connection request to a person.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -404,7 +404,7 @@
                 }
             },
             "sendMessage": {
-                "label": "Send a Message",
+                "label": "Send a message",
                 "description": "Send a message to a LinkedIn person.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -420,7 +420,7 @@
                 }
             },
             "syncConversation": {
-                "label": "Sync a Conversation",
+                "label": "Sync a conversation",
                 "description": "Sync a conversation so you can start polling it for new messages.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -436,7 +436,7 @@
                 }
             },
             "universalRest": {
-                "label": "Make a REST API Call",
+                "label": "Make a REST API call",
                 "description": "Performs a custom REST API call to any Linked API endpoint.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -452,7 +452,7 @@
                 }
             },
             "withdrawConnectionRequest": {
-                "label": "Withdraw a Connection Request",
+                "label": "Withdraw a connection request",
                 "description": "Withdraws a connection request sent to a person.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -468,7 +468,7 @@
                 }
             },
             "adminGetSubscriptionStatus": {
-                "label": "Get Subscription Status",
+                "label": "Get subscription status",
                 "description": "Get current subscription status and trial eligibility.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -484,7 +484,7 @@
                 }
             },
             "adminGetSeats": {
-                "label": "Get Seats",
+                "label": "Get all seats",
                 "description": "Get active subscription seats.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -500,7 +500,7 @@
                 }
             },
             "adminSetSeats": {
-                "label": "Set Seats",
+                "label": "Set seats",
                 "description": "Set number of subscription seats.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -516,7 +516,7 @@
                 }
             },
             "adminGetAccounts": {
-                "label": "Get Accounts",
+                "label": "Get all accounts",
                 "description": "Get all connected LinkedIn accounts and pending sessions.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -532,7 +532,7 @@
                 }
             },
             "adminConnectAccount": {
-                "label": "Connect Account",
+                "label": "Connect an account",
                 "description": "Create connection session for a new LinkedIn account.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -548,7 +548,7 @@
                 }
             },
             "adminDisconnectAccount": {
-                "label": "Disconnect Account",
+                "label": "Disconnect an account",
                 "description": "Disconnect a LinkedIn account (irreversible).",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -564,7 +564,7 @@
                 }
             },
             "adminRegenerateToken": {
-                "label": "Regenerate Token",
+                "label": "Regenerate identification token",
                 "description": "Regenerate identification token for an account.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -580,7 +580,7 @@
                 }
             },
             "adminGetLimitsUsage": {
-                "label": "Get Limits Usage",
+                "label": "Get limits usage",
                 "description": "Get current usage against configured rate limits.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -596,7 +596,7 @@
                 }
             },
             "adminSetLimits": {
-                "label": "Set Limits",
+                "label": "Set account limits",
                 "description": "Set rate limits for an account.",
                 "moduleType": "action",
                 "actionCrud": null,
@@ -612,7 +612,7 @@
                 }
             },
             "adminResetLimits": {
-                "label": "Reset Limits",
+                "label": "Reset limits to defaults",
                 "description": "Reset all rate limits to system defaults.",
                 "moduleType": "action",
                 "actionCrud": null,
