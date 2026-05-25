@@ -21,7 +21,11 @@
     "response": {
       "temp": {
         "workflowId": "{{body.workflowId}}",
-        "operationName": "fetchPost"
+        "operationName": "fetchPost",
+        "status": "{{body.status || body.workflowStatus}}",
+        "message": "{{body.message}}",
+        "workflowStatus": "{{body.workflowStatus || body.status}}",
+        "criticalError": "{{body.criticalError}}"
       }
     }
   },
@@ -29,23 +33,26 @@
     "url": "/workflows/{{temp.workflowId}}?operationName={{temp.operationName}}",
     "method": "GET",
     "repeat": {
-      "condition": "{{body.status !== 'completed'}}",
+      "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
       "delay": 5000,
       "limit": 1800
     },
     "response": {
       "temp": {
-        "status": "{{body.status}}",
+        "status": "{{body.status || body.workflowStatus}}",
         "data": "{{body.data}}",
-        "errors": "{{body.errors}}"
+        "errors": "{{body.errors}}",
+        "message": "{{body.message}}",
+        "workflowStatus": "{{body.workflowStatus || body.status}}",
+        "criticalError": "{{body.criticalError}}"
       }
     }
   },
   {
     "response": {
-      "valid": "{{temp.status === 'completed'}}",
+      "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}",
       "error": {
-        "message": "Workflow timed out or did not complete."
+        "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
       },
       "output": {
         "data": "{{temp.data}}",

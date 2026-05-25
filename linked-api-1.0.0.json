@@ -3802,7 +3802,11 @@
               },
               "temp": {
                 "operationName": "withdrawConnectionRequest",
-                "workflowId": "{{body.workflowId}}"
+                "workflowId": "{{body.workflowId}}",
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -3823,7 +3827,7 @@
             },
             "method": "GET",
             "repeat": {
-              "condition": "{{body.status !== 'completed'}}",
+              "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
               "delay": 5000,
               "limit": 1800
             },
@@ -3834,7 +3838,10 @@
               "temp": {
                 "data": "{{body.data}}",
                 "errors": "{{body.errors}}",
-                "status": "{{body.status}}"
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -3855,13 +3862,13 @@
             },
             "response": {
               "error": {
-                "message": "Workflow timed out or did not complete."
+                "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
               },
               "output": {
                 "data": "{{temp.data}}",
                 "errors": "{{temp.errors}}"
               },
-              "valid": "{{temp.status === 'completed'}}"
+              "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}"
             }
           }
         ]
@@ -3947,7 +3954,11 @@
               },
               "temp": {
                 "operationName": "syncConversation",
-                "workflowId": "{{body.workflowId}}"
+                "workflowId": "{{body.workflowId}}",
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -3968,7 +3979,7 @@
             },
             "method": "GET",
             "repeat": {
-              "condition": "{{body.status !== 'completed'}}",
+              "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
               "delay": 5000,
               "limit": 1800
             },
@@ -3979,7 +3990,10 @@
               "temp": {
                 "data": "{{body.data}}",
                 "errors": "{{body.errors}}",
-                "status": "{{body.status}}"
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -4000,13 +4014,13 @@
             },
             "response": {
               "error": {
-                "message": "Workflow timed out or did not complete."
+                "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
               },
               "output": {
                 "data": "{{temp.data}}",
                 "errors": "{{temp.errors}}"
               },
-              "valid": "{{temp.status === 'completed'}}"
+              "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}"
             }
           }
         ]
@@ -4050,7 +4064,11 @@
               },
               "temp": {
                 "operationName": "sendMessage",
-                "workflowId": "{{body.workflowId}}"
+                "workflowId": "{{body.workflowId}}",
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -4071,7 +4089,7 @@
             },
             "method": "GET",
             "repeat": {
-              "condition": "{{body.status !== 'completed'}}",
+              "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
               "delay": 5000,
               "limit": 1800
             },
@@ -4082,7 +4100,10 @@
               "temp": {
                 "data": "{{body.data}}",
                 "errors": "{{body.errors}}",
-                "status": "{{body.status}}"
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -4103,13 +4124,13 @@
             },
             "response": {
               "error": {
-                "message": "Workflow timed out or did not complete."
+                "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
               },
               "output": {
                 "data": "{{temp.data}}",
                 "errors": "{{temp.errors}}"
               },
-              "valid": "{{temp.status === 'completed'}}"
+              "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}"
             }
           }
         ]
@@ -4154,7 +4175,11 @@
               },
               "temp": {
                 "operationName": "sendConnectionRequest",
-                "workflowId": "{{body.workflowId}}"
+                "workflowId": "{{body.workflowId}}",
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -4175,7 +4200,7 @@
             },
             "method": "GET",
             "repeat": {
-              "condition": "{{body.status !== 'completed'}}",
+              "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
               "delay": 5000,
               "limit": 1800
             },
@@ -4186,7 +4211,10 @@
               "temp": {
                 "data": "{{body.data}}",
                 "errors": "{{body.errors}}",
-                "status": "{{body.status}}"
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -4207,13 +4235,13 @@
             },
             "response": {
               "error": {
-                "message": "Workflow timed out or did not complete."
+                "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
               },
               "output": {
                 "data": "{{temp.data}}",
                 "errors": "{{temp.errors}}"
               },
-              "valid": "{{temp.status === 'completed'}}"
+              "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}"
             }
           }
         ]
@@ -4267,7 +4295,11 @@
               },
               "temp": {
                 "operationName": "searchPeople",
-                "workflowId": "{{body.workflowId}}"
+                "workflowId": "{{body.workflowId}}",
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -4288,7 +4320,7 @@
             },
             "method": "GET",
             "repeat": {
-              "condition": "{{body.status !== 'completed'}}",
+              "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
               "delay": 5000,
               "limit": 1800
             },
@@ -4299,7 +4331,10 @@
               "temp": {
                 "data": "{{body.data}}",
                 "errors": "{{body.errors}}",
-                "status": "{{body.status}}"
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -4320,13 +4355,13 @@
             },
             "response": {
               "error": {
-                "message": "Workflow timed out or did not complete."
+                "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
               },
               "output": {
                 "data": "{{temp.data}}",
                 "errors": "{{temp.errors}}"
               },
-              "valid": "{{temp.status === 'completed'}}"
+              "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}"
             }
           }
         ]
@@ -4375,7 +4410,11 @@
               },
               "temp": {
                 "operationName": "searchCompanies",
-                "workflowId": "{{body.workflowId}}"
+                "workflowId": "{{body.workflowId}}",
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -4396,7 +4435,7 @@
             },
             "method": "GET",
             "repeat": {
-              "condition": "{{body.status !== 'completed'}}",
+              "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
               "delay": 5000,
               "limit": 1800
             },
@@ -4407,7 +4446,10 @@
               "temp": {
                 "data": "{{body.data}}",
                 "errors": "{{body.errors}}",
-                "status": "{{body.status}}"
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -4428,13 +4470,13 @@
             },
             "response": {
               "error": {
-                "message": "Workflow timed out or did not complete."
+                "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
               },
               "output": {
                 "data": "{{temp.data}}",
                 "errors": "{{temp.errors}}"
               },
-              "valid": "{{temp.status === 'completed'}}"
+              "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}"
             }
           }
         ]
@@ -4475,7 +4517,11 @@
               },
               "temp": {
                 "operationName": "retrieveSSI",
-                "workflowId": "{{body.workflowId}}"
+                "workflowId": "{{body.workflowId}}",
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -4496,7 +4542,7 @@
             },
             "method": "GET",
             "repeat": {
-              "condition": "{{body.status !== 'completed'}}",
+              "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
               "delay": 5000,
               "limit": 1800
             },
@@ -4507,7 +4553,10 @@
               "temp": {
                 "data": "{{body.data}}",
                 "errors": "{{body.errors}}",
-                "status": "{{body.status}}"
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -4528,13 +4577,13 @@
             },
             "response": {
               "error": {
-                "message": "Workflow timed out or did not complete."
+                "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
               },
               "output": {
                 "data": "{{temp.data}}",
                 "errors": "{{temp.errors}}"
               },
-              "valid": "{{temp.status === 'completed'}}"
+              "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}"
             }
           }
         ]
@@ -4575,7 +4624,11 @@
               },
               "temp": {
                 "operationName": "retrievePerformance",
-                "workflowId": "{{body.workflowId}}"
+                "workflowId": "{{body.workflowId}}",
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -4596,7 +4649,7 @@
             },
             "method": "GET",
             "repeat": {
-              "condition": "{{body.status !== 'completed'}}",
+              "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
               "delay": 5000,
               "limit": 1800
             },
@@ -4607,7 +4660,10 @@
               "temp": {
                 "data": "{{body.data}}",
                 "errors": "{{body.errors}}",
-                "status": "{{body.status}}"
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -4628,13 +4684,13 @@
             },
             "response": {
               "error": {
-                "message": "Workflow timed out or did not complete."
+                "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
               },
               "output": {
                 "data": "{{temp.data}}",
                 "errors": "{{temp.errors}}"
               },
-              "valid": "{{temp.status === 'completed'}}"
+              "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}"
             }
           }
         ]
@@ -4675,7 +4731,11 @@
               },
               "temp": {
                 "operationName": "retrievePendingRequests",
-                "workflowId": "{{body.workflowId}}"
+                "workflowId": "{{body.workflowId}}",
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -4696,7 +4756,7 @@
             },
             "method": "GET",
             "repeat": {
-              "condition": "{{body.status !== 'completed'}}",
+              "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
               "delay": 5000,
               "limit": 1800
             },
@@ -4707,7 +4767,10 @@
               "temp": {
                 "data": "{{body.data}}",
                 "errors": "{{body.errors}}",
-                "status": "{{body.status}}"
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -4728,13 +4791,13 @@
             },
             "response": {
               "error": {
-                "message": "Workflow timed out or did not complete."
+                "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
               },
               "output": {
                 "data": "{{temp.data}}",
                 "errors": "{{temp.errors}}"
               },
-              "valid": "{{temp.status === 'completed'}}"
+              "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}"
             }
           }
         ]
@@ -4787,7 +4850,11 @@
               },
               "temp": {
                 "operationName": "retrieveConnections",
-                "workflowId": "{{body.workflowId}}"
+                "workflowId": "{{body.workflowId}}",
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -4808,7 +4875,7 @@
             },
             "method": "GET",
             "repeat": {
-              "condition": "{{body.status !== 'completed'}}",
+              "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
               "delay": 5000,
               "limit": 1800
             },
@@ -4819,7 +4886,10 @@
               "temp": {
                 "data": "{{body.data}}",
                 "errors": "{{body.errors}}",
-                "status": "{{body.status}}"
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -4840,13 +4910,13 @@
             },
             "response": {
               "error": {
-                "message": "Workflow timed out or did not complete."
+                "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
               },
               "output": {
                 "data": "{{temp.data}}",
                 "errors": "{{temp.errors}}"
               },
-              "valid": "{{temp.status === 'completed'}}"
+              "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}"
             }
           }
         ]
@@ -4932,7 +5002,11 @@
               },
               "temp": {
                 "operationName": "removeConnection",
-                "workflowId": "{{body.workflowId}}"
+                "workflowId": "{{body.workflowId}}",
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -4953,7 +5027,7 @@
             },
             "method": "GET",
             "repeat": {
-              "condition": "{{body.status !== 'completed'}}",
+              "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
               "delay": 5000,
               "limit": 1800
             },
@@ -4964,7 +5038,10 @@
               "temp": {
                 "data": "{{body.data}}",
                 "errors": "{{body.errors}}",
-                "status": "{{body.status}}"
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -4985,13 +5062,13 @@
             },
             "response": {
               "error": {
-                "message": "Workflow timed out or did not complete."
+                "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
               },
               "output": {
                 "data": "{{temp.data}}",
                 "errors": "{{temp.errors}}"
               },
-              "valid": "{{temp.status === 'completed'}}"
+              "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}"
             }
           }
         ]
@@ -5035,7 +5112,11 @@
               },
               "temp": {
                 "operationName": "reactToPost",
-                "workflowId": "{{body.workflowId}}"
+                "workflowId": "{{body.workflowId}}",
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -5056,7 +5137,7 @@
             },
             "method": "GET",
             "repeat": {
-              "condition": "{{body.status !== 'completed'}}",
+              "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
               "delay": 5000,
               "limit": 1800
             },
@@ -5067,7 +5148,10 @@
               "temp": {
                 "data": "{{body.data}}",
                 "errors": "{{body.errors}}",
-                "status": "{{body.status}}"
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -5088,13 +5172,13 @@
             },
             "response": {
               "error": {
-                "message": "Workflow timed out or did not complete."
+                "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
               },
               "output": {
                 "data": "{{temp.data}}",
                 "errors": "{{temp.errors}}"
               },
-              "valid": "{{temp.status === 'completed'}}"
+              "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}"
             }
           }
         ]
@@ -5178,7 +5262,11 @@
               },
               "temp": {
                 "operationName": "nvSyncConversation",
-                "workflowId": "{{body.workflowId}}"
+                "workflowId": "{{body.workflowId}}",
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -5199,7 +5287,7 @@
             },
             "method": "GET",
             "repeat": {
-              "condition": "{{body.status !== 'completed'}}",
+              "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
               "delay": 5000,
               "limit": 1800
             },
@@ -5210,7 +5298,10 @@
               "temp": {
                 "data": "{{body.data}}",
                 "errors": "{{body.errors}}",
-                "status": "{{body.status}}"
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -5231,13 +5322,13 @@
             },
             "response": {
               "error": {
-                "message": "Workflow timed out or did not complete."
+                "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
               },
               "output": {
                 "data": "{{temp.data}}",
                 "errors": "{{temp.errors}}"
               },
-              "valid": "{{temp.status === 'completed'}}"
+              "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}"
             }
           }
         ]
@@ -5282,7 +5373,11 @@
               },
               "temp": {
                 "operationName": "nvSendMessage",
-                "workflowId": "{{body.workflowId}}"
+                "workflowId": "{{body.workflowId}}",
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -5303,7 +5398,7 @@
             },
             "method": "GET",
             "repeat": {
-              "condition": "{{body.status !== 'completed'}}",
+              "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
               "delay": 5000,
               "limit": 1800
             },
@@ -5314,7 +5409,10 @@
               "temp": {
                 "data": "{{body.data}}",
                 "errors": "{{body.errors}}",
-                "status": "{{body.status}}"
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -5335,13 +5433,13 @@
             },
             "response": {
               "error": {
-                "message": "Workflow timed out or did not complete."
+                "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
               },
               "output": {
                 "data": "{{temp.data}}",
                 "errors": "{{temp.errors}}"
               },
-              "valid": "{{temp.status === 'completed'}}"
+              "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}"
             }
           }
         ]
@@ -5396,7 +5494,11 @@
               },
               "temp": {
                 "operationName": "nvSearchPeople",
-                "workflowId": "{{body.workflowId}}"
+                "workflowId": "{{body.workflowId}}",
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -5417,7 +5519,7 @@
             },
             "method": "GET",
             "repeat": {
-              "condition": "{{body.status !== 'completed'}}",
+              "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
               "delay": 5000,
               "limit": 1800
             },
@@ -5428,7 +5530,10 @@
               "temp": {
                 "data": "{{body.data}}",
                 "errors": "{{body.errors}}",
-                "status": "{{body.status}}"
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -5449,13 +5554,13 @@
             },
             "response": {
               "error": {
-                "message": "Workflow timed out or did not complete."
+                "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
               },
               "output": {
                 "data": "{{temp.data}}",
                 "errors": "{{temp.errors}}"
               },
-              "valid": "{{temp.status === 'completed'}}"
+              "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}"
             }
           }
         ]
@@ -5509,7 +5614,11 @@
               },
               "temp": {
                 "operationName": "nvSearchCompanies",
-                "workflowId": "{{body.workflowId}}"
+                "workflowId": "{{body.workflowId}}",
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -5548,7 +5657,11 @@
               },
               "temp": {
                 "operationName": "nvSearchCompanies",
-                "workflowId": "{{body.workflowId}}"
+                "workflowId": "{{body.workflowId}}",
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -5569,7 +5682,7 @@
             },
             "method": "GET",
             "repeat": {
-              "condition": "{{body.status !== 'completed'}}",
+              "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
               "delay": 5000,
               "limit": 1800
             },
@@ -5580,7 +5693,10 @@
               "temp": {
                 "data": "{{body.data}}",
                 "errors": "{{body.errors}}",
-                "status": "{{body.status}}"
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -5601,13 +5717,13 @@
             },
             "response": {
               "error": {
-                "message": "Workflow timed out or did not complete."
+                "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
               },
               "output": {
                 "data": "{{temp.data}}",
                 "errors": "{{temp.errors}}"
               },
-              "valid": "{{temp.status === 'completed'}}"
+              "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}"
             }
           }
         ]
@@ -5650,7 +5766,11 @@
               },
               "temp": {
                 "operationName": "nvFetchPerson",
-                "workflowId": "{{body.workflowId}}"
+                "workflowId": "{{body.workflowId}}",
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -5671,7 +5791,7 @@
             },
             "method": "GET",
             "repeat": {
-              "condition": "{{body.status !== 'completed'}}",
+              "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
               "delay": 5000,
               "limit": 1800
             },
@@ -5682,7 +5802,10 @@
               "temp": {
                 "data": "{{body.data}}",
                 "errors": "{{body.errors}}",
-                "status": "{{body.status}}"
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -5703,13 +5826,13 @@
             },
             "response": {
               "error": {
-                "message": "Workflow timed out or did not complete."
+                "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
               },
               "output": {
                 "data": "{{temp.data}}",
                 "errors": "{{temp.errors}}"
               },
-              "valid": "{{temp.status === 'completed'}}"
+              "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}"
             }
           }
         ]
@@ -5756,7 +5879,11 @@
               },
               "temp": {
                 "operationName": "nvFetchCompany",
-                "workflowId": "{{body.workflowId}}"
+                "workflowId": "{{body.workflowId}}",
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -5777,7 +5904,7 @@
             },
             "method": "GET",
             "repeat": {
-              "condition": "{{body.status !== 'completed'}}",
+              "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
               "delay": 5000,
               "limit": 1800
             },
@@ -5788,7 +5915,10 @@
               "temp": {
                 "data": "{{body.data}}",
                 "errors": "{{body.errors}}",
-                "status": "{{body.status}}"
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -5809,13 +5939,13 @@
             },
             "response": {
               "error": {
-                "message": "Workflow timed out or did not complete."
+                "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
               },
               "output": {
                 "data": "{{temp.data}}",
                 "errors": "{{temp.errors}}"
               },
-              "valid": "{{temp.status === 'completed'}}"
+              "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}"
             }
           }
         ]
@@ -5858,7 +5988,11 @@
               },
               "temp": {
                 "operationName": "fetchPost",
-                "workflowId": "{{body.workflowId}}"
+                "workflowId": "{{body.workflowId}}",
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -5879,7 +6013,7 @@
             },
             "method": "GET",
             "repeat": {
-              "condition": "{{body.status !== 'completed'}}",
+              "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
               "delay": 5000,
               "limit": 1800
             },
@@ -5890,7 +6024,10 @@
               "temp": {
                 "data": "{{body.data}}",
                 "errors": "{{body.errors}}",
-                "status": "{{body.status}}"
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -5911,13 +6048,13 @@
             },
             "response": {
               "error": {
-                "message": "Workflow timed out or did not complete."
+                "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
               },
               "output": {
                 "data": "{{temp.data}}",
                 "errors": "{{temp.errors}}"
               },
-              "valid": "{{temp.status === 'completed'}}"
+              "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}"
             }
           }
         ]
@@ -5970,7 +6107,11 @@
               },
               "temp": {
                 "operationName": "fetchPerson",
-                "workflowId": "{{body.workflowId}}"
+                "workflowId": "{{body.workflowId}}",
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -5991,7 +6132,7 @@
             },
             "method": "GET",
             "repeat": {
-              "condition": "{{body.status !== 'completed'}}",
+              "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
               "delay": 5000,
               "limit": 1800
             },
@@ -6002,7 +6143,10 @@
               "temp": {
                 "data": "{{body.data}}",
                 "errors": "{{body.errors}}",
-                "status": "{{body.status}}"
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -6023,13 +6167,13 @@
             },
             "response": {
               "error": {
-                "message": "Workflow timed out or did not complete."
+                "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
               },
               "output": {
                 "data": "{{temp.data}}",
                 "errors": "{{temp.errors}}"
               },
-              "valid": "{{temp.status === 'completed'}}"
+              "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}"
             }
           }
         ]
@@ -6078,7 +6222,11 @@
               },
               "temp": {
                 "operationName": "fetchCompany",
-                "workflowId": "{{body.workflowId}}"
+                "workflowId": "{{body.workflowId}}",
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -6099,7 +6247,7 @@
             },
             "method": "GET",
             "repeat": {
-              "condition": "{{body.status !== 'completed'}}",
+              "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
               "delay": 5000,
               "limit": 1800
             },
@@ -6110,7 +6258,10 @@
               "temp": {
                 "data": "{{body.data}}",
                 "errors": "{{body.errors}}",
-                "status": "{{body.status}}"
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -6131,13 +6282,13 @@
             },
             "response": {
               "error": {
-                "message": "Workflow timed out or did not complete."
+                "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
               },
               "output": {
                 "data": "{{temp.data}}",
                 "errors": "{{temp.errors}}"
               },
-              "valid": "{{temp.status === 'completed'}}"
+              "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}"
             }
           }
         ]
@@ -6178,7 +6329,11 @@
               },
               "temp": {
                 "operationName": "customWorkflow",
-                "workflowId": "{{body.workflowId}}"
+                "workflowId": "{{body.workflowId}}",
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -6199,7 +6354,7 @@
             },
             "method": "GET",
             "repeat": {
-              "condition": "{{body.status !== 'completed'}}",
+              "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
               "delay": 5000,
               "limit": 1800
             },
@@ -6210,7 +6365,10 @@
               "temp": {
                 "data": "{{body.data}}",
                 "errors": "{{body.errors}}",
-                "status": "{{body.status}}"
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -6231,13 +6389,13 @@
             },
             "response": {
               "error": {
-                "message": "Workflow timed out or did not complete."
+                "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
               },
               "output": {
                 "data": "{{temp.data}}",
                 "errors": "{{temp.errors}}"
               },
-              "valid": "{{temp.status === 'completed'}}"
+              "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}"
             }
           }
         ]
@@ -6281,7 +6439,11 @@
               },
               "temp": {
                 "operationName": "commentOnPost",
-                "workflowId": "{{body.workflowId}}"
+                "workflowId": "{{body.workflowId}}",
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -6302,7 +6464,7 @@
             },
             "method": "GET",
             "repeat": {
-              "condition": "{{body.status !== 'completed'}}",
+              "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
               "delay": 5000,
               "limit": 1800
             },
@@ -6313,7 +6475,10 @@
               "temp": {
                 "data": "{{body.data}}",
                 "errors": "{{body.errors}}",
-                "status": "{{body.status}}"
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -6334,13 +6499,13 @@
             },
             "response": {
               "error": {
-                "message": "Workflow timed out or did not complete."
+                "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
               },
               "output": {
                 "data": "{{temp.data}}",
                 "errors": "{{temp.errors}}"
               },
-              "valid": "{{temp.status === 'completed'}}"
+              "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}"
             }
           }
         ]
@@ -6383,7 +6548,11 @@
               },
               "temp": {
                 "operationName": "checkConnectionStatus",
-                "workflowId": "{{body.workflowId}}"
+                "workflowId": "{{body.workflowId}}",
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -6404,7 +6573,7 @@
             },
             "method": "GET",
             "repeat": {
-              "condition": "{{body.status !== 'completed'}}",
+              "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
               "delay": 5000,
               "limit": 1800
             },
@@ -6415,7 +6584,10 @@
               "temp": {
                 "data": "{{body.data}}",
                 "errors": "{{body.errors}}",
-                "status": "{{body.status}}"
+                "status": "{{body.status || body.workflowStatus}}",
+                "message": "{{body.message}}",
+                "workflowStatus": "{{body.workflowStatus || body.status}}",
+                "criticalError": "{{body.criticalError}}"
               },
               "valid": "{{!body.criticalError}}"
             },
@@ -6436,13 +6608,13 @@
             },
             "response": {
               "error": {
-                "message": "Workflow timed out or did not complete."
+                "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
               },
               "output": {
                 "data": "{{temp.data}}",
                 "errors": "{{temp.errors}}"
               },
-              "valid": "{{temp.status === 'completed'}}"
+              "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}"
             }
           }
         ]

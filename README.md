@@ -11,6 +11,8 @@ Linked API for Make connects your LinkedIn account to Make's automation platform
 - **Recruitment workflows**. Search for candidates with specific skills, send personalized InMails through Sales Navigator, track responses in your ATS, and automatically follow up with interested candidates. Streamline your entire recruitment funnel.
 - **Multi-channel outreach**. Combine LinkedIn with email, Slack, and other channels. When someone accepts your connection request, trigger an email sequence, notify your team in Slack, and create a task in your project management tool.
 
+Workflow start and polling responses include `workflowStatus` (`pending`, `running`, `completed`, or `failed`) and `message` when Linked API has queue or progress context.
+
 ## Get started
 
 To build LinkedIn automations with Make, read these essential guides:
