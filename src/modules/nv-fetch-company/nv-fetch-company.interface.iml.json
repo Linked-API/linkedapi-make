@@ -40,7 +40,7 @@
         "label": "Company Website"
       },
       {
-        "name": "employeeCount",
+        "name": "employeesCount",
         "type": "number",
         "label": "Employee Count"
       },

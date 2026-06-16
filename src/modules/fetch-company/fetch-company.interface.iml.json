@@ -154,6 +154,148 @@
             ]
           },
           {
+            "name": "activityUrn",
+            "type": "text",
+            "label": "Activity URN"
+          },
+          {
+            "name": "author",
+            "type": "collection",
+            "label": "Post Author",
+            "spec": [
+              {
+                "name": "type",
+                "type": "select",
+                "label": "Author Type",
+                "options": [
+                  {
+                    "label": "Person",
+                    "value": "person"
+                  },
+                  {
+                    "label": "Company",
+                    "value": "company"
+                  }
+                ]
+              },
+              {
+                "name": "name",
+                "type": "text",
+                "label": "Author Name"
+              },
+              {
+                "name": "profileUrl",
+                "type": "url",
+                "label": "Author Profile URL"
+              },
+              {
+                "name": "headline",
+                "type": "text",
+                "label": "Author Headline"
+              },
+              {
+                "name": "companyUrl",
+                "type": "url",
+                "label": "Author Company URL"
+              }
+            ]
+          },
+          {
+            "name": "reposter",
+            "type": "collection",
+            "label": "Post Reposter",
+            "spec": [
+              {
+                "name": "type",
+                "type": "select",
+                "label": "Reposter Type",
+                "options": [
+                  {
+                    "label": "Person",
+                    "value": "person"
+                  },
+                  {
+                    "label": "Company",
+                    "value": "company"
+                  }
+                ]
+              },
+              {
+                "name": "name",
+                "type": "text",
+                "label": "Reposter Name"
+              },
+              {
+                "name": "profileUrl",
+                "type": "url",
+                "label": "Reposter Profile URL"
+              },
+              {
+                "name": "headline",
+                "type": "text",
+                "label": "Reposter Headline"
+              },
+              {
+                "name": "companyUrl",
+                "type": "url",
+                "label": "Reposter Company URL"
+              }
+            ]
+          },
+          {
+            "name": "hashtags",
+            "type": "array",
+            "label": "Hashtags",
+            "spec": [
+              {
+                "name": "hashtag",
+                "type": "text",
+                "label": "Hashtag"
+              }
+            ]
+          },
+          {
+            "name": "mentions",
+            "type": "array",
+            "label": "Mentions",
+            "spec": [
+              {
+                "name": "mentionUrl",
+                "type": "url",
+                "label": "Mention URL"
+              }
+            ]
+          },
+          {
+            "name": "externalLinks",
+            "type": "array",
+            "label": "External Links",
+            "spec": [
+              {
+                "name": "externalLinkUrl",
+                "type": "url",
+                "label": "External Link URL"
+              }
+            ]
+          },
+          {
+            "name": "documentSlides",
+            "type": "array",
+            "label": "Document Slides",
+            "spec": [
+              {
+                "name": "documentSlideUrl",
+                "type": "url",
+                "label": "Document Slide URL"
+              }
+            ]
+          },
+          {
+            "name": "videoThumbnail",
+            "type": "url",
+            "label": "Video Thumbnail"
+          },
+          {
             "name": "repostText",
             "type": "text",
             "label": "Repost Text"
