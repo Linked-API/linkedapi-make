@@ -547,6 +547,54 @@
                     "scope": "modules/admin-set-seats/admin-set-seats.scope.iml.json"
                 }
             },
+            "adminGetSubscriptionPricing": {
+                "label": "Get all accounts",
+                "description": "Get all connected LinkedIn accounts, pending sessions, and reconnection links.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/admin-get-subscription-pricing/admin-get-subscription-pricing.communication.iml.json",
+                    "staticParams": "modules/admin-get-subscription-pricing/admin-get-subscription-pricing.static-params.iml.json",
+                    "mappableParams": "modules/admin-get-subscription-pricing/admin-get-subscription-pricing.mappable-params.iml.json",
+                    "interface": "modules/admin-get-subscription-pricing/admin-get-subscription-pricing.interface.iml.json",
+                    "samples": "modules/admin-get-subscription-pricing/admin-get-subscription-pricing.samples.iml.json",
+                    "scope": "modules/admin-get-subscription-pricing/admin-get-subscription-pricing.scope.iml.json"
+                }
+            },
+            "adminGetBillingLink": {
+                "label": "Get all accounts",
+                "description": "Get all connected LinkedIn accounts, pending sessions, and reconnection links.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/admin-get-billing-link/admin-get-billing-link.communication.iml.json",
+                    "staticParams": "modules/admin-get-billing-link/admin-get-billing-link.static-params.iml.json",
+                    "mappableParams": "modules/admin-get-billing-link/admin-get-billing-link.mappable-params.iml.json",
+                    "interface": "modules/admin-get-billing-link/admin-get-billing-link.interface.iml.json",
+                    "samples": "modules/admin-get-billing-link/admin-get-billing-link.samples.iml.json",
+                    "scope": "modules/admin-get-billing-link/admin-get-billing-link.scope.iml.json"
+                }
+            },
+            "adminCancelSubscription": {
+                "label": "Get all accounts",
+                "description": "Get all connected LinkedIn accounts, pending sessions, and reconnection links.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/admin-cancel-subscription/admin-cancel-subscription.communication.iml.json",
+                    "staticParams": "modules/admin-cancel-subscription/admin-cancel-subscription.static-params.iml.json",
+                    "mappableParams": "modules/admin-cancel-subscription/admin-cancel-subscription.mappable-params.iml.json",
+                    "interface": "modules/admin-cancel-subscription/admin-cancel-subscription.interface.iml.json",
+                    "samples": "modules/admin-cancel-subscription/admin-cancel-subscription.samples.iml.json",
+                    "scope": "modules/admin-cancel-subscription/admin-cancel-subscription.scope.iml.json"
+                }
+            },
             "adminGetAccounts": {
                 "label": "Get all accounts",
                 "description": "Get all connected LinkedIn accounts, pending sessions, and reconnection links.",
@@ -916,18 +964,15 @@
                     },
                     {
                         "local": "adminGetSubscriptionPricing",
-                        "remote": "adminGetSubscriptionPricing",
-                        "localDeleted": true
+                        "remote": "adminGetSubscriptionPricing"
                     },
                     {
                         "local": "adminGetBillingLink",
-                        "remote": "adminGetBillingLink",
-                        "localDeleted": true
+                        "remote": "adminGetBillingLink"
                     },
                     {
                         "local": "adminCancelSubscription",
-                        "remote": "adminCancelSubscription",
-                        "localDeleted": true
+                        "remote": "adminCancelSubscription"
                     },
                     {
                         "local": "adminGetAccounts",
