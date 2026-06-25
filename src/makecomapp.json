@@ -547,54 +547,6 @@
                     "scope": "modules/admin-set-seats/admin-set-seats.scope.iml.json"
                 }
             },
-            "adminGetSubscriptionPricing": {
-                "label": "Get subscription pricing",
-                "description": "Get available subscription products and prices.",
-                "moduleType": "action",
-                "actionCrud": null,
-                "connection": "connection1",
-                "altConnection": null,
-                "codeFiles": {
-                    "communication": "modules/admin-get-subscription-pricing/admin-get-subscription-pricing.communication.iml.json",
-                    "staticParams": "modules/admin-get-subscription-pricing/admin-get-subscription-pricing.static-params.iml.json",
-                    "mappableParams": "modules/admin-get-subscription-pricing/admin-get-subscription-pricing.mappable-params.iml.json",
-                    "interface": "modules/admin-get-subscription-pricing/admin-get-subscription-pricing.interface.iml.json",
-                    "samples": "modules/admin-get-subscription-pricing/admin-get-subscription-pricing.samples.iml.json",
-                    "scope": "modules/admin-get-subscription-pricing/admin-get-subscription-pricing.scope.iml.json"
-                }
-            },
-            "adminGetBillingLink": {
-                "label": "Get billing link",
-                "description": "Get Stripe billing portal link.",
-                "moduleType": "action",
-                "actionCrud": null,
-                "connection": "connection1",
-                "altConnection": null,
-                "codeFiles": {
-                    "communication": "modules/admin-get-billing-link/admin-get-billing-link.communication.iml.json",
-                    "staticParams": "modules/admin-get-billing-link/admin-get-billing-link.static-params.iml.json",
-                    "mappableParams": "modules/admin-get-billing-link/admin-get-billing-link.mappable-params.iml.json",
-                    "interface": "modules/admin-get-billing-link/admin-get-billing-link.interface.iml.json",
-                    "samples": "modules/admin-get-billing-link/admin-get-billing-link.samples.iml.json",
-                    "scope": "modules/admin-get-billing-link/admin-get-billing-link.scope.iml.json"
-                }
-            },
-            "adminCancelSubscription": {
-                "label": "Cancel subscription",
-                "description": "Cancel subscription at period end.",
-                "moduleType": "action",
-                "actionCrud": null,
-                "connection": "connection1",
-                "altConnection": null,
-                "codeFiles": {
-                    "communication": "modules/admin-cancel-subscription/admin-cancel-subscription.communication.iml.json",
-                    "staticParams": "modules/admin-cancel-subscription/admin-cancel-subscription.static-params.iml.json",
-                    "mappableParams": "modules/admin-cancel-subscription/admin-cancel-subscription.mappable-params.iml.json",
-                    "interface": "modules/admin-cancel-subscription/admin-cancel-subscription.interface.iml.json",
-                    "samples": "modules/admin-cancel-subscription/admin-cancel-subscription.samples.iml.json",
-                    "scope": "modules/admin-cancel-subscription/admin-cancel-subscription.scope.iml.json"
-                }
-            },
             "adminGetAccounts": {
                 "label": "Get all accounts",
                 "description": "Get all connected LinkedIn accounts, pending sessions, and reconnection links.",
@@ -867,10 +819,6 @@
                         "remote": "fetchPost"
                     },
                     {
-                        "local": "fetchJob",
-                        "remote": "fetchJob"
-                    },
-                    {
                         "local": "nvFetchCompany",
                         "remote": "nvFetchCompany"
                     },
@@ -931,10 +879,6 @@
                         "remote": "searchCompanies"
                     },
                     {
-                        "local": "searchJobs",
-                        "remote": "searchJobs"
-                    },
-                    {
                         "local": "searchPeople",
                         "remote": "searchPeople"
                     },
@@ -972,39 +916,26 @@
                     },
                     {
                         "local": "adminGetSubscriptionPricing",
-                        "remote": "adminGetSubscriptionPricing"
+                        "remote": "adminGetSubscriptionPricing",
+                        "localDeleted": true
                     },
                     {
                         "local": "adminGetBillingLink",
-                        "remote": "adminGetBillingLink"
+                        "remote": "adminGetBillingLink",
+                        "localDeleted": true
                     },
                     {
                         "local": "adminCancelSubscription",
-                        "remote": "adminCancelSubscription"
+                        "remote": "adminCancelSubscription",
+                        "localDeleted": true
                     },
                     {
                         "local": "adminGetAccounts",
                         "remote": "adminGetAccounts"
                     },
                     {
-                        "local": "adminReparseAccountInfo",
-                        "remote": "adminReparseAccountInfo"
-                    },
-                    {
-                        "local": "adminCreateReconnectionSession",
-                        "remote": "adminCreateReconnectionSession"
-                    },
-                    {
                         "local": "adminConnectAccount",
                         "remote": "adminConnectAccount"
-                    },
-                    {
-                        "local": "adminGetConnectionSession",
-                        "remote": "adminGetConnectionSession"
-                    },
-                    {
-                        "local": "adminCancelConnectionSession",
-                        "remote": "adminCancelConnectionSession"
                     },
                     {
                         "local": "adminDisconnectAccount",
@@ -1015,14 +946,6 @@
                         "remote": "adminRegenerateToken"
                     },
                     {
-                        "local": "adminGetLimitsDefaults",
-                        "remote": "adminGetLimitsDefaults"
-                    },
-                    {
-                        "local": "adminGetLimits",
-                        "remote": "adminGetLimits"
-                    },
-                    {
                         "local": "adminGetLimitsUsage",
                         "remote": "adminGetLimitsUsage"
                     },
@@ -1031,12 +954,44 @@
                         "remote": "adminSetLimits"
                     },
                     {
-                        "local": "adminDeleteLimits",
-                        "remote": "adminDeleteLimits"
-                    },
-                    {
                         "local": "adminResetLimits",
                         "remote": "adminResetLimits"
+                    },
+                    {
+                        "local": "fetchJob",
+                        "remote": "fetchJob"
+                    },
+                    {
+                        "local": "searchJobs",
+                        "remote": "searchJobs"
+                    },
+                    {
+                        "local": "adminReparseAccountInfo",
+                        "remote": "adminReparseAccountInfo"
+                    },
+                    {
+                        "local": "adminCreateReconnectionSession",
+                        "remote": "adminCreateReconnectionSession"
+                    },
+                    {
+                        "local": "adminGetConnectionSession",
+                        "remote": "adminGetConnectionSession"
+                    },
+                    {
+                        "local": "adminCancelConnectionSession",
+                        "remote": "adminCancelConnectionSession"
+                    },
+                    {
+                        "local": "adminGetLimitsDefaults",
+                        "remote": "adminGetLimitsDefaults"
+                    },
+                    {
+                        "local": "adminGetLimits",
+                        "remote": "adminGetLimits"
+                    },
+                    {
+                        "local": "adminDeleteLimits",
+                        "remote": "adminDeleteLimits"
                     }
                 ],
                 "function": [],
