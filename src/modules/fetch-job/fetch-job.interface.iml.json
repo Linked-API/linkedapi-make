@@ -1,0 +1,56 @@
+[
+  {
+    "name": "data",
+    "type": "collection",
+    "label": "Data",
+    "spec": [
+      { "name": "jobId", "type": "text", "label": "Job ID" },
+      { "name": "jobUrl", "type": "url", "label": "Job URL" },
+      { "name": "title", "type": "text", "label": "Title" },
+      { "name": "companyName", "type": "text", "label": "Company Name" },
+      { "name": "companyUrl", "type": "url", "label": "Company URL" },
+      { "name": "location", "type": "text", "label": "Location" },
+      { "name": "postedDate", "type": "text", "label": "Posted Date" },
+      { "name": "applicantsCount", "type": "number", "label": "Applicants Count" },
+      { "name": "workplaceType", "type": "text", "label": "Workplace Type" },
+      { "name": "employmentType", "type": "text", "label": "Employment Type" },
+      {
+        "name": "salary",
+        "type": "collection",
+        "label": "Salary",
+        "spec": [
+          { "name": "currency", "type": "text", "label": "Currency" },
+          { "name": "minAmount", "type": "number", "label": "Min Amount" },
+          { "name": "maxAmount", "type": "number", "label": "Max Amount" },
+          {
+            "name": "period",
+            "type": "select",
+            "label": "Period",
+            "options": [
+              { "value": "yearly", "label": "Yearly" },
+              { "value": "monthly", "label": "Monthly" },
+              { "value": "hourly", "label": "Hourly" }
+            ]
+          }
+        ]
+      },
+      { "name": "description", "type": "text", "label": "Description" },
+      { "name": "applyUrl", "type": "url", "label": "Apply URL" },
+      { "name": "easyApply", "type": "boolean", "label": "Easy Apply" }
+    ]
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": [
+      {
+        "name": "type",
+        "type": "select",
+        "label": "Error Type",
+        "options": [{ "value": "jobNotFound", "label": "Job Not Found" }]
+      },
+      { "name": "message", "type": "text", "label": "Error Message" }
+    ]
+  }
+]

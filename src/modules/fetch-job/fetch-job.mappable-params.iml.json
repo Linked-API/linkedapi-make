@@ -1,0 +1,9 @@
+[
+  {
+    "name": "jobUrl",
+    "type": "url",
+    "label": "Job URL",
+    "required": true,
+    "help": "The LinkedIn job URL to fetch (e.g., https://www.linkedin.com/jobs/view/4416248954/)"
+  }
+]

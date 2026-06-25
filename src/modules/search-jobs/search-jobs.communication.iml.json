@@ -1,0 +1,70 @@
+[
+  {
+    "url": "/workflows",
+    "method": "POST",
+    "body": {
+      "operationName": "searchJobs",
+      "data": {
+        "customSearchUrl": "{{parameters.customSearchUrl}}",
+        "term": "{{parameters.searchTerm}}",
+        "limit": "{{parameters.limit}}",
+        "filter": {
+          "location": "{{parameters.location}}",
+          "datePosted": "{{parameters.datePosted}}",
+          "experienceLevels": "{{parameters.experienceLevels}}",
+          "employmentTypes": "{{parameters.employmentTypes}}",
+          "workplaceTypes": "{{parameters.workplaceTypes}}",
+          "companies": "{{parameters.companies}}",
+          "industries": "{{parameters.industries}}",
+          "jobFunctions": "{{parameters.jobFunctions}}",
+          "easyApply": "{{parameters.easyApply}}",
+          "hasVerifications": "{{parameters.hasVerifications}}",
+          "under10Applicants": "{{parameters.under10Applicants}}",
+          "inYourNetwork": "{{parameters.inYourNetwork}}",
+          "fairChanceEmployer": "{{parameters.fairChanceEmployer}}"
+        }
+      }
+    },
+    "response": {
+      "temp": {
+        "workflowId": "{{body.workflowId}}",
+        "operationName": "searchJobs",
+        "status": "{{body.status || body.workflowStatus}}",
+        "message": "{{body.message}}",
+        "workflowStatus": "{{body.workflowStatus || body.status}}",
+        "criticalError": "{{body.criticalError}}"
+      }
+    }
+  },
+  {
+    "url": "/workflows/{{temp.workflowId}}?operationName={{temp.operationName}}",
+    "method": "GET",
+    "repeat": {
+      "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
+      "delay": 5000,
+      "limit": 1800
+    },
+    "response": {
+      "temp": {
+        "status": "{{body.status || body.workflowStatus}}",
+        "data": "{{body.data}}",
+        "errors": "{{body.errors}}",
+        "message": "{{body.message}}",
+        "workflowStatus": "{{body.workflowStatus || body.status}}",
+        "criticalError": "{{body.criticalError}}"
+      }
+    }
+  },
+  {
+    "response": {
+      "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}",
+      "error": {
+        "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
+      },
+      "output": {
+        "data": "{{temp.data}}",
+        "errors": "{{temp.errors}}"
+      }
+    }
+  }
+]

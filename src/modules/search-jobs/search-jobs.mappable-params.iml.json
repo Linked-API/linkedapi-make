@@ -1,0 +1,151 @@
+[
+  {
+    "name": "searchTerm",
+    "type": "text",
+    "label": "Search Term",
+    "required": false,
+    "help": "Keyword or phrase to search. If omitted, starts from a broad jobs search and applies the filters."
+  },
+  {
+    "name": "limit",
+    "type": "number",
+    "label": "Limit",
+    "required": false,
+    "help": "Number of search results to return (max 1000)",
+    "default": 10
+  },
+  {
+    "name": "customSearchUrl",
+    "type": "url",
+    "label": "Custom Search URL",
+    "required": false,
+    "help": "URL copied from a LinkedIn jobs search page after configuring desired filters. When specified, overrides term and filter parameters."
+  },
+  {
+    "name": "location",
+    "type": "text",
+    "label": "Location",
+    "required": false,
+    "help": "Free-form location to filter by (e.g., San Francisco, California, United States)"
+  },
+  {
+    "name": "datePosted",
+    "type": "select",
+    "label": "Date Posted",
+    "required": false,
+    "help": "Filter by when the job was posted",
+    "options": [
+      { "value": "anyTime", "label": "Any Time" },
+      { "value": "past24Hours", "label": "Past 24 Hours" },
+      { "value": "pastWeek", "label": "Past Week" },
+      { "value": "pastMonth", "label": "Past Month" }
+    ]
+  },
+  {
+    "name": "experienceLevels",
+    "type": "select",
+    "label": "Experience Levels",
+    "required": false,
+    "help": "Filter by experience level",
+    "multiple": true,
+    "options": [
+      { "value": "internship", "label": "Internship" },
+      { "value": "entryLevel", "label": "Entry Level" },
+      { "value": "associate", "label": "Associate" },
+      { "value": "midSeniorLevel", "label": "Mid-Senior Level" },
+      { "value": "director", "label": "Director" },
+      { "value": "executive", "label": "Executive" }
+    ]
+  },
+  {
+    "name": "employmentTypes",
+    "type": "select",
+    "label": "Employment Types",
+    "required": false,
+    "help": "Filter by employment type",
+    "multiple": true,
+    "options": [
+      { "value": "fullTime", "label": "Full Time" },
+      { "value": "partTime", "label": "Part Time" },
+      { "value": "contract", "label": "Contract" },
+      { "value": "temporary", "label": "Temporary" },
+      { "value": "volunteer", "label": "Volunteer" },
+      { "value": "internship", "label": "Internship" },
+      { "value": "other", "label": "Other" }
+    ]
+  },
+  {
+    "name": "workplaceTypes",
+    "type": "select",
+    "label": "Workplace Types",
+    "required": false,
+    "help": "Filter by workplace type",
+    "multiple": true,
+    "options": [
+      { "value": "onSite", "label": "On-Site" },
+      { "value": "remote", "label": "Remote" },
+      { "value": "hybrid", "label": "Hybrid" }
+    ]
+  },
+  {
+    "name": "companies",
+    "type": "array",
+    "label": "Companies",
+    "required": false,
+    "help": "Company names to filter by (e.g., Google, Microsoft)"
+  },
+  {
+    "name": "industries",
+    "type": "array",
+    "label": "Industries",
+    "required": false,
+    "help": "Industries to filter by (e.g., Software Development, Technology)"
+  },
+  {
+    "name": "jobFunctions",
+    "type": "array",
+    "label": "Job Functions",
+    "required": false,
+    "help": "Job functions to filter by (e.g., Engineering, Product Management)"
+  },
+  {
+    "name": "easyApply",
+    "type": "boolean",
+    "label": "Easy Apply",
+    "required": false,
+    "help": "When enabled, only returns jobs with Easy Apply",
+    "default": false
+  },
+  {
+    "name": "hasVerifications",
+    "type": "boolean",
+    "label": "Has Verifications",
+    "required": false,
+    "help": "When enabled, only returns jobs with verification signals",
+    "default": false
+  },
+  {
+    "name": "under10Applicants",
+    "type": "boolean",
+    "label": "Under 10 Applicants",
+    "required": false,
+    "help": "When enabled, only returns jobs with fewer than 10 applicants",
+    "default": false
+  },
+  {
+    "name": "inYourNetwork",
+    "type": "boolean",
+    "label": "In Your Network",
+    "required": false,
+    "help": "When enabled, only returns jobs from your network",
+    "default": false
+  },
+  {
+    "name": "fairChanceEmployer",
+    "type": "boolean",
+    "label": "Fair Chance Employer",
+    "required": false,
+    "help": "When enabled, only returns fair chance employer jobs",
+    "default": false
+  }
+]
