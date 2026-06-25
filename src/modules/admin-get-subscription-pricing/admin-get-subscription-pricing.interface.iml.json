@@ -1,0 +1,14 @@
+[
+  {
+    "name": "products",
+    "type": "array",
+    "label": "Products",
+    "spec": [
+      { "name": "id", "type": "text", "label": "Product ID" },
+      { "name": "seatType", "type": "text", "label": "Seat Type" },
+      { "name": "billingPeriod", "type": "text", "label": "Billing Period" },
+      { "name": "unitPrice", "type": "number", "label": "Unit Price" },
+      { "name": "currency", "type": "text", "label": "Currency" }
+    ]
+  }
+]

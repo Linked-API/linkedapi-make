@@ -1,0 +1,9 @@
+[
+  {
+    "name": "accountId",
+    "type": "text",
+    "label": "Account ID",
+    "required": true,
+    "help": "UUID of the account to reconnect"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "name": "success",
+    "type": "boolean",
+    "label": "Success"
+  }
+]

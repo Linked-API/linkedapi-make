@@ -460,6 +460,14 @@
                     "value": "emailRequired"
                   },
                   {
+                    "label": "Note Too Long",
+                    "value": "noteTooLong"
+                  },
+                  {
+                    "label": "Note Limit Exceeded",
+                    "value": "noteLimitExceeded"
+                  },
+                  {
                     "label": "Request Not Allowed",
                     "value": "requestNotAllowed"
                   }

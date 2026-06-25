@@ -1,0 +1,7 @@
+[
+  {
+    "name": "workflowId",
+    "type": "text",
+    "label": "Workflow ID"
+  }
+]

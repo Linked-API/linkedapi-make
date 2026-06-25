@@ -1,0 +1,12 @@
+[
+  {
+    "name": "reconnectionSessionId",
+    "type": "text",
+    "label": "Reconnection Session ID"
+  },
+  {
+    "name": "reconnectionLink",
+    "type": "url",
+    "label": "Reconnection Link"
+  }
+]

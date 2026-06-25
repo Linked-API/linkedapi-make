@@ -1,0 +1,13 @@
+[
+  {
+    "name": "limits",
+    "type": "array",
+    "label": "Limits",
+    "spec": [
+      { "name": "category", "type": "text", "label": "Category" },
+      { "name": "period", "type": "text", "label": "Period" },
+      { "name": "maxValue", "type": "number", "label": "Max Value" },
+      { "name": "isEnabled", "type": "boolean", "label": "Is Enabled" }
+    ]
+  }
+]

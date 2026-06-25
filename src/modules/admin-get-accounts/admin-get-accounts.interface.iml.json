@@ -6,10 +6,15 @@
     "spec": [
       { "name": "id", "type": "text", "label": "Account ID" },
       { "name": "name", "type": "text", "label": "Name" },
+      { "name": "url", "type": "url", "label": "Profile URL" },
+      { "name": "avatarUrl", "type": "url", "label": "Avatar URL" },
+      { "name": "headline", "type": "text", "label": "Headline" },
       { "name": "countryCode", "type": "text", "label": "Country Code" },
       { "name": "identificationToken", "type": "text", "label": "Identification Token" },
       { "name": "status", "type": "text", "label": "Status" },
-      { "name": "connectedAt", "type": "date", "label": "Connected At" }
+      { "name": "connectedAt", "type": "date", "label": "Connected At" },
+      { "name": "reconnectionSessionId", "type": "text", "label": "Reconnection Session ID" },
+      { "name": "reconnectionLink", "type": "url", "label": "Reconnection Link" }
     ]
   },
   {

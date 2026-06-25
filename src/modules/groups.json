@@ -50,12 +50,22 @@
 			"adminGetSubscriptionStatus",
 			"adminGetSeats",
 			"adminSetSeats",
+			"adminGetSubscriptionPricing",
+			"adminGetBillingLink",
+			"adminCancelSubscription",
 			"adminGetAccounts",
+			"adminReparseAccountInfo",
+			"adminCreateReconnectionSession",
 			"adminConnectAccount",
+			"adminGetConnectionSession",
+			"adminCancelConnectionSession",
 			"adminDisconnectAccount",
 			"adminRegenerateToken",
+			"adminGetLimitsDefaults",
+			"adminGetLimits",
 			"adminGetLimitsUsage",
 			"adminSetLimits",
+			"adminDeleteLimits",
 			"adminResetLimits"
 		]
 	}

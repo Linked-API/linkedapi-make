@@ -1,0 +1,48 @@
+[
+  {
+    "name": "accountId",
+    "type": "text",
+    "label": "Account ID",
+    "required": true,
+    "help": "UUID of the account"
+  },
+  {
+    "name": "limits",
+    "type": "array",
+    "label": "Limits",
+    "required": true,
+    "help": "Array of limit keys to delete",
+    "spec": [
+      {
+        "name": "category",
+        "type": "select",
+        "label": "Category",
+        "required": true,
+        "options": [
+          { "value": "stPersonProfileViews", "label": "Person Profile Views" },
+          { "value": "stCompanyPageViews", "label": "Company Page Views" },
+          { "value": "stConnectionRequests", "label": "Connection Requests" },
+          { "value": "stMessages", "label": "Messages" },
+          { "value": "stSearchQueries", "label": "Search Queries" },
+          { "value": "stReactions", "label": "Reactions" },
+          { "value": "stComments", "label": "Comments" },
+          { "value": "stPosts", "label": "Posts" },
+          { "value": "nvPersonProfileViews", "label": "SN Person Profile Views" },
+          { "value": "nvCompanyPageViews", "label": "SN Company Page Views" },
+          { "value": "nvMessages", "label": "SN Messages" }
+        ]
+      },
+      {
+        "name": "period",
+        "type": "select",
+        "label": "Period",
+        "required": true,
+        "options": [
+          { "value": "daily", "label": "Daily" },
+          { "value": "weekly", "label": "Weekly" },
+          { "value": "monthly", "label": "Monthly" }
+        ]
+      }
+    ]
+  }
+]

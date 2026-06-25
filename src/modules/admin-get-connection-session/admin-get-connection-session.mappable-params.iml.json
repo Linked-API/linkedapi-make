@@ -1,0 +1,9 @@
+[
+  {
+    "name": "sessionId",
+    "type": "text",
+    "label": "Session ID",
+    "required": true,
+    "help": "Connection or reconnection session UUID"
+  }
+]

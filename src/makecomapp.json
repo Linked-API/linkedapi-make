@@ -547,9 +547,57 @@
                     "scope": "modules/admin-set-seats/admin-set-seats.scope.iml.json"
                 }
             },
+            "adminGetSubscriptionPricing": {
+                "label": "Get subscription pricing",
+                "description": "Get available subscription products and prices.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/admin-get-subscription-pricing/admin-get-subscription-pricing.communication.iml.json",
+                    "staticParams": "modules/admin-get-subscription-pricing/admin-get-subscription-pricing.static-params.iml.json",
+                    "mappableParams": "modules/admin-get-subscription-pricing/admin-get-subscription-pricing.mappable-params.iml.json",
+                    "interface": "modules/admin-get-subscription-pricing/admin-get-subscription-pricing.interface.iml.json",
+                    "samples": "modules/admin-get-subscription-pricing/admin-get-subscription-pricing.samples.iml.json",
+                    "scope": "modules/admin-get-subscription-pricing/admin-get-subscription-pricing.scope.iml.json"
+                }
+            },
+            "adminGetBillingLink": {
+                "label": "Get billing link",
+                "description": "Get Stripe billing portal link.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/admin-get-billing-link/admin-get-billing-link.communication.iml.json",
+                    "staticParams": "modules/admin-get-billing-link/admin-get-billing-link.static-params.iml.json",
+                    "mappableParams": "modules/admin-get-billing-link/admin-get-billing-link.mappable-params.iml.json",
+                    "interface": "modules/admin-get-billing-link/admin-get-billing-link.interface.iml.json",
+                    "samples": "modules/admin-get-billing-link/admin-get-billing-link.samples.iml.json",
+                    "scope": "modules/admin-get-billing-link/admin-get-billing-link.scope.iml.json"
+                }
+            },
+            "adminCancelSubscription": {
+                "label": "Cancel subscription",
+                "description": "Cancel subscription at period end.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/admin-cancel-subscription/admin-cancel-subscription.communication.iml.json",
+                    "staticParams": "modules/admin-cancel-subscription/admin-cancel-subscription.static-params.iml.json",
+                    "mappableParams": "modules/admin-cancel-subscription/admin-cancel-subscription.mappable-params.iml.json",
+                    "interface": "modules/admin-cancel-subscription/admin-cancel-subscription.interface.iml.json",
+                    "samples": "modules/admin-cancel-subscription/admin-cancel-subscription.samples.iml.json",
+                    "scope": "modules/admin-cancel-subscription/admin-cancel-subscription.scope.iml.json"
+                }
+            },
             "adminGetAccounts": {
                 "label": "Get all accounts",
-                "description": "Get all connected LinkedIn accounts and pending sessions.",
+                "description": "Get all connected LinkedIn accounts, pending sessions, and reconnection links.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -561,6 +609,38 @@
                     "interface": "modules/admin-get-accounts/admin-get-accounts.interface.iml.json",
                     "samples": "modules/admin-get-accounts/admin-get-accounts.samples.iml.json",
                     "scope": "modules/admin-get-accounts/admin-get-accounts.scope.iml.json"
+                }
+            },
+            "adminReparseAccountInfo": {
+                "label": "Reparse account info",
+                "description": "Refresh stored profile URL, avatar, headline, and name for a connected account.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/admin-reparse-account-info/admin-reparse-account-info.communication.iml.json",
+                    "staticParams": "modules/admin-reparse-account-info/admin-reparse-account-info.static-params.iml.json",
+                    "mappableParams": "modules/admin-reparse-account-info/admin-reparse-account-info.mappable-params.iml.json",
+                    "interface": "modules/admin-reparse-account-info/admin-reparse-account-info.interface.iml.json",
+                    "samples": "modules/admin-reparse-account-info/admin-reparse-account-info.samples.iml.json",
+                    "scope": "modules/admin-reparse-account-info/admin-reparse-account-info.scope.iml.json"
+                }
+            },
+            "adminCreateReconnectionSession": {
+                "label": "Reconnect an account",
+                "description": "Create reconnection session for an account that requires reconnection.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/admin-create-reconnection-session/admin-create-reconnection-session.communication.iml.json",
+                    "staticParams": "modules/admin-create-reconnection-session/admin-create-reconnection-session.static-params.iml.json",
+                    "mappableParams": "modules/admin-create-reconnection-session/admin-create-reconnection-session.mappable-params.iml.json",
+                    "interface": "modules/admin-create-reconnection-session/admin-create-reconnection-session.interface.iml.json",
+                    "samples": "modules/admin-create-reconnection-session/admin-create-reconnection-session.samples.iml.json",
+                    "scope": "modules/admin-create-reconnection-session/admin-create-reconnection-session.scope.iml.json"
                 }
             },
             "adminConnectAccount": {
@@ -577,6 +657,38 @@
                     "interface": "modules/admin-connect-account/admin-connect-account.interface.iml.json",
                     "samples": "modules/admin-connect-account/admin-connect-account.samples.iml.json",
                     "scope": "modules/admin-connect-account/admin-connect-account.scope.iml.json"
+                }
+            },
+            "adminGetConnectionSession": {
+                "label": "Get connection session",
+                "description": "Get connection or reconnection session status.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/admin-get-connection-session/admin-get-connection-session.communication.iml.json",
+                    "staticParams": "modules/admin-get-connection-session/admin-get-connection-session.static-params.iml.json",
+                    "mappableParams": "modules/admin-get-connection-session/admin-get-connection-session.mappable-params.iml.json",
+                    "interface": "modules/admin-get-connection-session/admin-get-connection-session.interface.iml.json",
+                    "samples": "modules/admin-get-connection-session/admin-get-connection-session.samples.iml.json",
+                    "scope": "modules/admin-get-connection-session/admin-get-connection-session.scope.iml.json"
+                }
+            },
+            "adminCancelConnectionSession": {
+                "label": "Cancel connection session",
+                "description": "Cancel a pending connection or reconnection session.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/admin-cancel-connection-session/admin-cancel-connection-session.communication.iml.json",
+                    "staticParams": "modules/admin-cancel-connection-session/admin-cancel-connection-session.static-params.iml.json",
+                    "mappableParams": "modules/admin-cancel-connection-session/admin-cancel-connection-session.mappable-params.iml.json",
+                    "interface": "modules/admin-cancel-connection-session/admin-cancel-connection-session.interface.iml.json",
+                    "samples": "modules/admin-cancel-connection-session/admin-cancel-connection-session.samples.iml.json",
+                    "scope": "modules/admin-cancel-connection-session/admin-cancel-connection-session.scope.iml.json"
                 }
             },
             "adminDisconnectAccount": {
@@ -611,6 +723,38 @@
                     "scope": "modules/admin-regenerate-token/admin-regenerate-token.scope.iml.json"
                 }
             },
+            "adminGetLimitsDefaults": {
+                "label": "Get limits defaults",
+                "description": "Get system default rate limits.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/admin-get-limits-defaults/admin-get-limits-defaults.communication.iml.json",
+                    "staticParams": "modules/admin-get-limits-defaults/admin-get-limits-defaults.static-params.iml.json",
+                    "mappableParams": "modules/admin-get-limits-defaults/admin-get-limits-defaults.mappable-params.iml.json",
+                    "interface": "modules/admin-get-limits-defaults/admin-get-limits-defaults.interface.iml.json",
+                    "samples": "modules/admin-get-limits-defaults/admin-get-limits-defaults.samples.iml.json",
+                    "scope": "modules/admin-get-limits-defaults/admin-get-limits-defaults.scope.iml.json"
+                }
+            },
+            "adminGetLimits": {
+                "label": "Get account limits",
+                "description": "Get configured rate limits for an account.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/admin-get-limits/admin-get-limits.communication.iml.json",
+                    "staticParams": "modules/admin-get-limits/admin-get-limits.static-params.iml.json",
+                    "mappableParams": "modules/admin-get-limits/admin-get-limits.mappable-params.iml.json",
+                    "interface": "modules/admin-get-limits/admin-get-limits.interface.iml.json",
+                    "samples": "modules/admin-get-limits/admin-get-limits.samples.iml.json",
+                    "scope": "modules/admin-get-limits/admin-get-limits.scope.iml.json"
+                }
+            },
             "adminGetLimitsUsage": {
                 "label": "Get limits usage",
                 "description": "Get current usage against configured rate limits.",
@@ -641,6 +785,22 @@
                     "interface": "modules/admin-set-limits/admin-set-limits.interface.iml.json",
                     "samples": "modules/admin-set-limits/admin-set-limits.samples.iml.json",
                     "scope": "modules/admin-set-limits/admin-set-limits.scope.iml.json"
+                }
+            },
+            "adminDeleteLimits": {
+                "label": "Delete account limits",
+                "description": "Delete specific account rate limits.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/admin-delete-limits/admin-delete-limits.communication.iml.json",
+                    "staticParams": "modules/admin-delete-limits/admin-delete-limits.static-params.iml.json",
+                    "mappableParams": "modules/admin-delete-limits/admin-delete-limits.mappable-params.iml.json",
+                    "interface": "modules/admin-delete-limits/admin-delete-limits.interface.iml.json",
+                    "samples": "modules/admin-delete-limits/admin-delete-limits.samples.iml.json",
+                    "scope": "modules/admin-delete-limits/admin-delete-limits.scope.iml.json"
                 }
             },
             "adminResetLimits": {
@@ -811,12 +971,40 @@
                         "remote": "adminSetSeats"
                     },
                     {
+                        "local": "adminGetSubscriptionPricing",
+                        "remote": "adminGetSubscriptionPricing"
+                    },
+                    {
+                        "local": "adminGetBillingLink",
+                        "remote": "adminGetBillingLink"
+                    },
+                    {
+                        "local": "adminCancelSubscription",
+                        "remote": "adminCancelSubscription"
+                    },
+                    {
                         "local": "adminGetAccounts",
                         "remote": "adminGetAccounts"
                     },
                     {
+                        "local": "adminReparseAccountInfo",
+                        "remote": "adminReparseAccountInfo"
+                    },
+                    {
+                        "local": "adminCreateReconnectionSession",
+                        "remote": "adminCreateReconnectionSession"
+                    },
+                    {
                         "local": "adminConnectAccount",
                         "remote": "adminConnectAccount"
+                    },
+                    {
+                        "local": "adminGetConnectionSession",
+                        "remote": "adminGetConnectionSession"
+                    },
+                    {
+                        "local": "adminCancelConnectionSession",
+                        "remote": "adminCancelConnectionSession"
                     },
                     {
                         "local": "adminDisconnectAccount",
@@ -827,12 +1015,24 @@
                         "remote": "adminRegenerateToken"
                     },
                     {
+                        "local": "adminGetLimitsDefaults",
+                        "remote": "adminGetLimitsDefaults"
+                    },
+                    {
+                        "local": "adminGetLimits",
+                        "remote": "adminGetLimits"
+                    },
+                    {
                         "local": "adminGetLimitsUsage",
                         "remote": "adminGetLimitsUsage"
                     },
                     {
                         "local": "adminSetLimits",
                         "remote": "adminSetLimits"
+                    },
+                    {
+                        "local": "adminDeleteLimits",
+                        "remote": "adminDeleteLimits"
                     },
                     {
                         "local": "adminResetLimits",

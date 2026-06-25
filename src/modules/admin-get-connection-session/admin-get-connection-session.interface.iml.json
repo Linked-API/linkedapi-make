@@ -1,0 +1,12 @@
+[
+  {
+    "name": "session",
+    "type": "collection",
+    "label": "Session",
+    "spec": [
+      { "name": "sessionId", "type": "text", "label": "Session ID" },
+      { "name": "status", "type": "text", "label": "Status" },
+      { "name": "type", "type": "text", "label": "Type" }
+    ]
+  }
+]

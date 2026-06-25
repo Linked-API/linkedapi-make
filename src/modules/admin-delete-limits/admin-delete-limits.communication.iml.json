@@ -1,0 +1,24 @@
+[
+  {
+    "url": "https://api.linkedapi.io/admin/limits.delete",
+    "method": "POST",
+    "headers": {
+      "linked-api-token": "{{connection.linkedApiToken}}",
+      "client": "make",
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "accountId": "{{parameters.accountId}}",
+      "limits": "{{parameters.limits}}"
+    },
+    "response": {
+      "valid": "{{body.success}}",
+      "error": {
+        "message": "{{body.error.type}}: {{body.error.message}}"
+      },
+      "output": {
+        "success": "{{body.success}}"
+      }
+    }
+  }
+]
