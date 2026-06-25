@@ -131,6 +131,22 @@
                     "scope": "modules/fetch-post/fetch-post.scope.iml.json"
                 }
             },
+            "fetchJob": {
+                "label": "Fetch a job",
+                "description": "Retrieve detailed information about a LinkedIn job.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/fetch-job/fetch-job.communication.iml.json",
+                    "staticParams": "modules/fetch-job/fetch-job.static-params.iml.json",
+                    "mappableParams": "modules/fetch-job/fetch-job.mappable-params.iml.json",
+                    "interface": "modules/fetch-job/fetch-job.interface.iml.json",
+                    "samples": "modules/fetch-job/fetch-job.samples.iml.json",
+                    "scope": "modules/fetch-job/fetch-job.scope.iml.json"
+                }
+            },
             "nvFetchCompany": {
                 "label": "Fetch a company in Sales Navigator",
                 "description": "Fetch detailed information about a company in Sales Navigator.",
@@ -369,6 +385,22 @@
                     "interface": "modules/search-companies/search-companies.interface.iml.json",
                     "samples": "modules/search-companies/search-companies.samples.iml.json",
                     "scope": "modules/search-companies/search-companies.scope.iml.json"
+                }
+            },
+            "searchJobs": {
+                "label": "Search for jobs",
+                "description": "Search for jobs on LinkedIn.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/search-jobs/search-jobs.communication.iml.json",
+                    "staticParams": "modules/search-jobs/search-jobs.static-params.iml.json",
+                    "mappableParams": "modules/search-jobs/search-jobs.mappable-params.iml.json",
+                    "interface": "modules/search-jobs/search-jobs.interface.iml.json",
+                    "samples": "modules/search-jobs/search-jobs.samples.iml.json",
+                    "scope": "modules/search-jobs/search-jobs.scope.iml.json"
                 }
             },
             "searchPeople": {
@@ -675,6 +707,10 @@
                         "remote": "fetchPost"
                     },
                     {
+                        "local": "fetchJob",
+                        "remote": "fetchJob"
+                    },
+                    {
                         "local": "nvFetchCompany",
                         "remote": "nvFetchCompany"
                     },
@@ -733,6 +769,10 @@
                     {
                         "local": "searchCompanies",
                         "remote": "searchCompanies"
+                    },
+                    {
+                        "local": "searchJobs",
+                        "remote": "searchJobs"
                     },
                     {
                         "local": "searchPeople",
