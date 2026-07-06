@@ -3,18 +3,13 @@
     "url": "/workflows",
     "method": "POST",
     "body": {
-      "operationName": "nvSendMessage",
-      "data": {
-        "personUrl": "{{parameters.personUrl}}",
-        "threadId": "{{parameters.threadId}}",
-        "text": "{{parameters.messageText}}",
-        "subject": "{{parameters.messageSubject}}"
-      }
+      "operationName": "syncInbox",
+      "data": {}
     },
     "response": {
       "temp": {
         "workflowId": "{{body.workflowId}}",
-        "operationName": "nvSendMessage",
+        "operationName": "syncInbox",
         "status": "{{body.status || body.workflowStatus}}",
         "message": "{{body.message}}",
         "workflowStatus": "{{body.workflowStatus || body.status}}",

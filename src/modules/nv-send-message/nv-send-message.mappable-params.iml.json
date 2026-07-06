@@ -3,8 +3,15 @@
     "name": "personUrl",
     "type": "text",
     "label": "Person URL",
-    "required": true,
-    "help": "LinkedIn URL of the person you want to send a message to in Sales Navigator"
+    "required": false,
+    "help": "LinkedIn URL of the person you want to send a message to in Sales Navigator. Optional if Thread ID is provided."
+  },
+  {
+    "name": "threadId",
+    "type": "text",
+    "label": "Thread ID",
+    "required": false,
+    "help": "Identifier of an existing conversation thread to reply into, as returned by Poll Inbox. Provide this instead of Person URL to reply directly into a known thread."
   },
   {
     "name": "messageText",
@@ -17,7 +24,7 @@
     "name": "messageSubject",
     "type": "text",
     "label": "Subject",
-    "required": true,
-    "help": "Subject line, must be up to 80 characters"
+    "required": false,
+    "help": "Subject line, must be up to 80 characters. Required when starting a new conversation; ignored when replying via Thread ID."
   }
 ]

@@ -6,6 +6,7 @@
       "operationName": "sendMessage",
       "data": {
         "personUrl": "{{parameters.personUrl}}",
+        "threadId": "{{parameters.threadId}}",
         "text": "{{parameters.messageText}}"
       }
     },

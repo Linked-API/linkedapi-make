@@ -1,0 +1,33 @@
+[
+  {
+    "name": "since",
+    "type": "date",
+    "label": "Since Date",
+    "required": false,
+    "help": "Only retrieve messages after this date (ISO 8601 format). If empty, all captured messages are returned."
+  },
+  {
+    "name": "type",
+    "type": "select",
+    "label": "Interface Type",
+    "required": false,
+    "help": "Filter messages by inbox type. If empty, both standard and Sales Navigator messages are returned.",
+    "options": [
+      {
+        "value": "st",
+        "label": "Standard Interface"
+      },
+      {
+        "value": "nv",
+        "label": "Sales Navigator"
+      }
+    ]
+  },
+  {
+    "name": "threadId",
+    "type": "text",
+    "label": "Thread ID",
+    "required": false,
+    "help": "Restrict the result to a single conversation thread"
+  }
+]

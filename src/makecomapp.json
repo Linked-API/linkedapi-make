@@ -243,6 +243,22 @@
                     "scope": "modules/nv-sync-conversation/nv-sync-conversation.scope.iml.json"
                 }
             },
+            "nvSyncInbox": {
+                "label": "Sync inbox in Sales Navigator",
+                "description": "Enable whole-inbox monitoring in Sales Navigator so every incoming conversation can be polled.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/nv-sync-inbox/nv-sync-inbox.communication.iml.json",
+                    "staticParams": "modules/nv-sync-inbox/nv-sync-inbox.static-params.iml.json",
+                    "mappableParams": "modules/nv-sync-inbox/nv-sync-inbox.mappable-params.iml.json",
+                    "interface": "modules/nv-sync-inbox/nv-sync-inbox.interface.iml.json",
+                    "samples": "modules/nv-sync-inbox/nv-sync-inbox.samples.iml.json",
+                    "scope": "modules/nv-sync-inbox/nv-sync-inbox.scope.iml.json"
+                }
+            },
             "pollConversations": {
                 "label": "Poll conversations for new messages",
                 "description": "Poll multiple conversations for new messages.",
@@ -257,6 +273,22 @@
                     "interface": "modules/poll-conversations/poll-conversations.interface.iml.json",
                     "samples": "modules/poll-conversations/poll-conversations.samples.iml.json",
                     "scope": "modules/poll-conversations/poll-conversations.scope.iml.json"
+                }
+            },
+            "pollInbox": {
+                "label": "Poll inbox for new messages",
+                "description": "Poll the monitored inbox for new messages across all conversations.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/poll-inbox/poll-inbox.communication.iml.json",
+                    "staticParams": "modules/poll-inbox/poll-inbox.static-params.iml.json",
+                    "mappableParams": "modules/poll-inbox/poll-inbox.mappable-params.iml.json",
+                    "interface": "modules/poll-inbox/poll-inbox.interface.iml.json",
+                    "samples": "modules/poll-inbox/poll-inbox.samples.iml.json",
+                    "scope": "modules/poll-inbox/poll-inbox.scope.iml.json"
                 }
             },
             "reactToPost": {
@@ -465,6 +497,22 @@
                     "interface": "modules/sync-conversation/sync-conversation.interface.iml.json",
                     "samples": "modules/sync-conversation/sync-conversation.samples.iml.json",
                     "scope": "modules/sync-conversation/sync-conversation.scope.iml.json"
+                }
+            },
+            "syncInbox": {
+                "label": "Sync inbox",
+                "description": "Enable whole-inbox monitoring so every incoming conversation can be polled.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/sync-inbox/sync-inbox.communication.iml.json",
+                    "staticParams": "modules/sync-inbox/sync-inbox.static-params.iml.json",
+                    "mappableParams": "modules/sync-inbox/sync-inbox.mappable-params.iml.json",
+                    "interface": "modules/sync-inbox/sync-inbox.interface.iml.json",
+                    "samples": "modules/sync-inbox/sync-inbox.samples.iml.json",
+                    "scope": "modules/sync-inbox/sync-inbox.scope.iml.json"
                 }
             },
             "universalRest": {

@@ -3,8 +3,15 @@
     "name": "personUrl",
     "type": "text",
     "label": "Person URL",
-    "required": true,
-    "help": "LinkedIn URL of the person you want to send a message to"
+    "required": false,
+    "help": "LinkedIn URL of the person you want to send a message to. Optional if Thread ID is provided."
+  },
+  {
+    "name": "threadId",
+    "type": "text",
+    "label": "Thread ID",
+    "required": false,
+    "help": "Identifier of an existing conversation thread to reply into, as returned by Poll Inbox. Provide this instead of Person URL to reply directly into a known thread."
   },
   {
     "name": "messageText",

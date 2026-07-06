@@ -1,0 +1,17 @@
+[
+  {
+    "url": "/inbox/poll",
+    "method": "POST",
+    "body": {
+      "since": "{{parameters.since}}",
+      "type": "{{parameters.type}}",
+      "threadId": "{{parameters.threadId}}"
+    },
+    "response": {
+      "output": {
+        "data": "{{body.data}}",
+        "errors": "{{body.errors}}"
+      }
+    }
+  }
+]
