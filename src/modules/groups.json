@@ -19,6 +19,7 @@
 			"searchJobs",
 			"searchPeople",
 			"sendConnectionRequest",
+			"manageConversation",
 			"sendMessage",
 			"syncConversation",
 			"syncInbox",
@@ -32,6 +33,7 @@
 			"nvFetchPerson",
 			"nvSearchCompanies",
 			"nvSearchPeople",
+			"nvManageConversation",
 			"nvSendMessage",
 			"nvSyncConversation",
 			"nvSyncInbox"

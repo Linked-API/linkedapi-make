@@ -211,6 +211,22 @@
                     "scope": "modules/nv-search-people/nv-search-people.scope.iml.json"
                 }
             },
+            "nvManageConversation": {
+                "label": "Manage a conversation in Sales Navigator",
+                "description": "Archive or unarchive a conversation thread by thread ID via Sales Navigator.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/nv-manage-conversation/nv-manage-conversation.communication.iml.json",
+                    "staticParams": "modules/nv-manage-conversation/nv-manage-conversation.static-params.iml.json",
+                    "mappableParams": "modules/nv-manage-conversation/nv-manage-conversation.mappable-params.iml.json",
+                    "interface": "modules/nv-manage-conversation/nv-manage-conversation.interface.iml.json",
+                    "samples": "modules/nv-manage-conversation/nv-manage-conversation.samples.iml.json",
+                    "scope": "modules/nv-manage-conversation/nv-manage-conversation.scope.iml.json"
+                }
+            },
             "nvSendMessage": {
                 "label": "Send a message in Sales Navigator",
                 "description": "Send a message to a person in Sales Navigator.",
@@ -465,6 +481,22 @@
                     "interface": "modules/send-connection-request/send-connection-request.interface.iml.json",
                     "samples": "modules/send-connection-request/send-connection-request.samples.iml.json",
                     "scope": "modules/send-connection-request/send-connection-request.scope.iml.json"
+                }
+            },
+            "manageConversation": {
+                "label": "Manage a conversation",
+                "description": "Archive, star, or mute a conversation thread by thread ID.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/manage-conversation/manage-conversation.communication.iml.json",
+                    "staticParams": "modules/manage-conversation/manage-conversation.static-params.iml.json",
+                    "mappableParams": "modules/manage-conversation/manage-conversation.mappable-params.iml.json",
+                    "interface": "modules/manage-conversation/manage-conversation.interface.iml.json",
+                    "samples": "modules/manage-conversation/manage-conversation.samples.iml.json",
+                    "scope": "modules/manage-conversation/manage-conversation.scope.iml.json"
                 }
             },
             "sendMessage": {

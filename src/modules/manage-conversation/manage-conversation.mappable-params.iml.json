@@ -1,0 +1,42 @@
+[
+  {
+    "name": "threadId",
+    "type": "text",
+    "label": "Thread ID",
+    "required": true,
+    "help": "Identifier of the conversation thread to manage, as returned by Poll Inbox or Poll Conversations. You can also read it from the address bar of an open conversation."
+  },
+  {
+    "name": "operation",
+    "type": "select",
+    "label": "Operation",
+    "required": true,
+    "help": "Operation to apply to the conversation thread.",
+    "options": [
+      {
+        "label": "Archive",
+        "value": "archive"
+      },
+      {
+        "label": "Unarchive",
+        "value": "unarchive"
+      },
+      {
+        "label": "Star",
+        "value": "star"
+      },
+      {
+        "label": "Unstar",
+        "value": "unstar"
+      },
+      {
+        "label": "Mute",
+        "value": "mute"
+      },
+      {
+        "label": "Unmute",
+        "value": "unmute"
+      }
+    ]
+  }
+]
