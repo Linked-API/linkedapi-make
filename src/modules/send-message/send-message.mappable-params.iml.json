@@ -19,5 +19,38 @@
     "label": "Message Text",
     "required": true,
     "help": "Message text, must be up to 1900 characters"
+  },
+  {
+    "name": "manageConversationOperation",
+    "type": "select",
+    "label": "Manage Conversation After Sending",
+    "required": false,
+    "help": "Optionally manage the conversation right after the message is sent. Acts on the same thread, so no Thread ID is needed.",
+    "options": [
+      {
+        "label": "Archive",
+        "value": "archive"
+      },
+      {
+        "label": "Unarchive",
+        "value": "unarchive"
+      },
+      {
+        "label": "Star",
+        "value": "star"
+      },
+      {
+        "label": "Unstar",
+        "value": "unstar"
+      },
+      {
+        "label": "Mute",
+        "value": "mute"
+      },
+      {
+        "label": "Unmute",
+        "value": "unmute"
+      }
+    ]
   }
 ]
