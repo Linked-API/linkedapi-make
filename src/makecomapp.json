@@ -371,6 +371,22 @@
                     "scope": "modules/retrieve-connections/retrieve-connections.scope.iml.json"
                 }
             },
+            "retrieveConnectionRequests": {
+                "label": "Retrieve incoming connection requests",
+                "description": "Retrieves incoming connection requests.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/retrieve-connection-requests/retrieve-connection-requests.communication.iml.json",
+                    "staticParams": "modules/retrieve-connection-requests/retrieve-connection-requests.static-params.iml.json",
+                    "mappableParams": "modules/retrieve-connection-requests/retrieve-connection-requests.mappable-params.iml.json",
+                    "interface": "modules/retrieve-connection-requests/retrieve-connection-requests.interface.iml.json",
+                    "samples": "modules/retrieve-connection-requests/retrieve-connection-requests.samples.iml.json",
+                    "scope": "modules/retrieve-connection-requests/retrieve-connection-requests.scope.iml.json"
+                }
+            },
             "retrievePendingRequests": {
                 "label": "Retrieve pending connection requests",
                 "description": "Retrieves pending connection requests.",
@@ -481,6 +497,38 @@
                     "interface": "modules/send-connection-request/send-connection-request.interface.iml.json",
                     "samples": "modules/send-connection-request/send-connection-request.samples.iml.json",
                     "scope": "modules/send-connection-request/send-connection-request.scope.iml.json"
+                }
+            },
+            "acceptConnectionRequest": {
+                "label": "Accept a connection request",
+                "description": "Accepts a connection request received from a person.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/accept-connection-request/accept-connection-request.communication.iml.json",
+                    "staticParams": "modules/accept-connection-request/accept-connection-request.static-params.iml.json",
+                    "mappableParams": "modules/accept-connection-request/accept-connection-request.mappable-params.iml.json",
+                    "interface": "modules/accept-connection-request/accept-connection-request.interface.iml.json",
+                    "samples": "modules/accept-connection-request/accept-connection-request.samples.iml.json",
+                    "scope": "modules/accept-connection-request/accept-connection-request.scope.iml.json"
+                }
+            },
+            "ignoreConnectionRequest": {
+                "label": "Ignore a connection request",
+                "description": "Ignores a connection request received from a person.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/ignore-connection-request/ignore-connection-request.communication.iml.json",
+                    "staticParams": "modules/ignore-connection-request/ignore-connection-request.static-params.iml.json",
+                    "mappableParams": "modules/ignore-connection-request/ignore-connection-request.mappable-params.iml.json",
+                    "interface": "modules/ignore-connection-request/ignore-connection-request.interface.iml.json",
+                    "samples": "modules/ignore-connection-request/ignore-connection-request.samples.iml.json",
+                    "scope": "modules/ignore-connection-request/ignore-connection-request.scope.iml.json"
                 }
             },
             "manageConversation": {
@@ -902,7 +950,8 @@
         },
         "function": {},
         "rpc": {},
-        "webhook": {}
+        "webhook": {},
+        "endpoint": {}
     },
     "origins": [
         {
@@ -1117,11 +1166,44 @@
                     {
                         "local": "adminDeleteLimits",
                         "remote": "adminDeleteLimits"
+                    },
+                    {
+                        "local": "nvManageConversation",
+                        "remote": "nvManageConversation"
+                    },
+                    {
+                        "local": "nvSyncInbox",
+                        "remote": "nvSyncInbox"
+                    },
+                    {
+                        "local": "pollInbox",
+                        "remote": "pollInbox"
+                    },
+                    {
+                        "local": "retrieveConnectionRequests",
+                        "remote": "retrieveConnectionRequests"
+                    },
+                    {
+                        "local": "acceptConnectionRequest",
+                        "remote": "acceptConnectionRequest"
+                    },
+                    {
+                        "local": "ignoreConnectionRequest",
+                        "remote": "ignoreConnectionRequest"
+                    },
+                    {
+                        "local": "manageConversation",
+                        "remote": "manageConversation"
+                    },
+                    {
+                        "local": "syncInbox",
+                        "remote": "syncInbox"
                     }
                 ],
                 "function": [],
                 "rpc": [],
-                "webhook": []
+                "webhook": [],
+                "endpoint": []
             },
             "apikeyFile": "../.secrets/apikey3"
         }
