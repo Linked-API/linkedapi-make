@@ -1,0 +1,67 @@
+[
+  {
+    "name": "data",
+    "type": "collection",
+    "label": "Data",
+    "spec": [
+      {
+        "name": "events",
+        "type": "array",
+        "label": "Events",
+        "spec": [
+          {
+            "name": "id",
+            "type": "text",
+            "label": "Event ID"
+          },
+          {
+            "name": "type",
+            "type": "select",
+            "label": "Event Type",
+            "options": [
+              {
+                "label": "Connection Accepted",
+                "value": "connectionAccepted"
+              },
+              {
+                "label": "Connection Added",
+                "value": "connectionAdded"
+              },
+              {
+                "label": "Connection Request Received",
+                "value": "connectionRequestReceived"
+              }
+            ]
+          },
+          {
+            "name": "personUrl",
+            "type": "url",
+            "label": "Person LinkedIn URL"
+          },
+          {
+            "name": "detectedAt",
+            "type": "date",
+            "label": "Detected At"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": [
+      {
+        "name": "type",
+        "type": "text",
+        "label": "Error Type"
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "label": "Error Message"
+      }
+    ]
+  }
+]

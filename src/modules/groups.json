@@ -26,6 +26,7 @@
 			"sendMessage",
 			"syncConversation",
 			"syncInbox",
+			"syncNetwork",
 			"withdrawConnectionRequest"
 		]
 	},
@@ -49,6 +50,7 @@
 			"retrieveActionsStats",
 			"pollConversations",
 			"pollInbox",
+			"pollNetwork",
 			"universalRest"
 		]
 	},

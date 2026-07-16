@@ -307,6 +307,22 @@
                     "scope": "modules/poll-inbox/poll-inbox.scope.iml.json"
                 }
             },
+            "pollNetwork": {
+                "label": "Poll network for new events",
+                "description": "Poll the monitored network for new connection events.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/poll-network/poll-network.communication.iml.json",
+                    "staticParams": "modules/poll-network/poll-network.static-params.iml.json",
+                    "mappableParams": "modules/poll-network/poll-network.mappable-params.iml.json",
+                    "interface": "modules/poll-network/poll-network.interface.iml.json",
+                    "samples": "modules/poll-network/poll-network.samples.iml.json",
+                    "scope": "modules/poll-network/poll-network.scope.iml.json"
+                }
+            },
             "reactToPost": {
                 "label": "React to a post",
                 "description": "Reacts to a LinkedIn post with like, celebrate, support, love, insightful, or funny.",
@@ -593,6 +609,22 @@
                     "interface": "modules/sync-inbox/sync-inbox.interface.iml.json",
                     "samples": "modules/sync-inbox/sync-inbox.samples.iml.json",
                     "scope": "modules/sync-inbox/sync-inbox.scope.iml.json"
+                }
+            },
+            "syncNetwork": {
+                "label": "Sync network",
+                "description": "Enable whole-network monitoring so every connection event can be polled.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/sync-network/sync-network.communication.iml.json",
+                    "staticParams": "modules/sync-network/sync-network.static-params.iml.json",
+                    "mappableParams": "modules/sync-network/sync-network.mappable-params.iml.json",
+                    "interface": "modules/sync-network/sync-network.interface.iml.json",
+                    "samples": "modules/sync-network/sync-network.samples.iml.json",
+                    "scope": "modules/sync-network/sync-network.scope.iml.json"
                 }
             },
             "universalRest": {
@@ -1180,6 +1212,10 @@
                         "remote": "pollInbox"
                     },
                     {
+                        "local": "pollNetwork",
+                        "remote": "pollNetwork"
+                    },
+                    {
                         "local": "retrieveConnectionRequests",
                         "remote": "retrieveConnectionRequests"
                     },
@@ -1198,6 +1234,10 @@
                     {
                         "local": "syncInbox",
                         "remote": "syncInbox"
+                    },
+                    {
+                        "local": "syncNetwork",
+                        "remote": "syncNetwork"
                     }
                 ],
                 "function": [],

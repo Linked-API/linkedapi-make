@@ -1,0 +1,30 @@
+[
+  {
+    "name": "since",
+    "type": "date",
+    "label": "Since Date",
+    "required": false,
+    "help": "Only retrieve events after this date (ISO 8601 format). If empty, all captured events are returned."
+  },
+  {
+    "name": "type",
+    "type": "select",
+    "label": "Event Type",
+    "required": false,
+    "help": "Filter events by type. If empty, all network events are returned.",
+    "options": [
+      {
+        "value": "connectionAccepted",
+        "label": "Connection Accepted"
+      },
+      {
+        "value": "connectionAdded",
+        "label": "Connection Added"
+      },
+      {
+        "value": "connectionRequestReceived",
+        "label": "Connection Request Received"
+      }
+    ]
+  }
+]

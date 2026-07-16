@@ -1,0 +1,16 @@
+[
+  {
+    "url": "/network/poll",
+    "method": "POST",
+    "body": {
+      "since": "{{parameters.since}}",
+      "type": "{{parameters.type}}"
+    },
+    "response": {
+      "output": {
+        "data": "{{body.data}}",
+        "errors": "{{body.errors}}"
+      }
+    }
+  }
+]
