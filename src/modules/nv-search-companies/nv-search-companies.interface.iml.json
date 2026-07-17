@@ -23,6 +23,11 @@
         "name": "employeesCount",
         "type": "number",
         "label": "Employees Count"
+      },
+      {
+        "name": "logoUrl",
+        "type": "url",
+        "label": "Logo URL"
       }
     ]
   },

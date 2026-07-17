@@ -23,6 +23,11 @@
         "name": "location",
         "type": "text",
         "label": "Location"
+      },
+      {
+        "name": "avatarUrl",
+        "type": "url",
+        "label": "Avatar URL"
       }
     ]
   },

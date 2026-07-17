@@ -60,6 +60,11 @@
         "label": "About"
       },
       {
+        "name": "avatarUrl",
+        "type": "url",
+        "label": "Avatar URL"
+      },
+      {
         "name": "experiences",
         "type": "array",
         "label": "Work Experiences",

@@ -23,6 +23,11 @@
         "name": "location",
         "type": "text",
         "label": "Company Location"
+      },
+      {
+        "name": "logoUrl",
+        "type": "url",
+        "label": "Logo URL"
       }
     ]
   },

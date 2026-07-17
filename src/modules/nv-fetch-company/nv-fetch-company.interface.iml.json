@@ -50,6 +50,11 @@
         "label": "Year Founded"
       },
       {
+        "name": "logoUrl",
+        "type": "url",
+        "label": "Logo URL"
+      },
+      {
         "name": "employees",
         "type": "array",
         "label": "Employees",

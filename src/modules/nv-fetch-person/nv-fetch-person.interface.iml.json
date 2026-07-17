@@ -48,6 +48,11 @@
         "name": "companyHashedUrl",
         "type": "url",
         "label": "Company Hashed URL"
+      },
+      {
+        "name": "avatarUrl",
+        "type": "url",
+        "label": "Avatar URL"
       }
     ]
   },
