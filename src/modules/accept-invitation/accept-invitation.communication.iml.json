@@ -3,15 +3,18 @@
     "url": "/workflows",
     "method": "POST",
     "body": {
-      "operationName": "ignoreConnectionRequest",
+      "operationName": "acceptInvitation",
       "data": {
-        "personUrl": "{{parameters.personUrl}}"
+        "invitationType": "{{parameters.invitationType}}",
+        "personUrl": "{{if(parameters.personUrl, parameters.personUrl, undefined)}}",
+        "companyUrl": "{{if(parameters.companyUrl, parameters.companyUrl, undefined)}}",
+        "newsletterUrl": "{{if(parameters.newsletterUrl, parameters.newsletterUrl, undefined)}}"
       }
     },
     "response": {
       "temp": {
         "workflowId": "{{body.workflowId}}",
-        "operationName": "ignoreConnectionRequest",
+        "operationName": "acceptInvitation",
         "status": "{{body.status || body.workflowStatus}}",
         "message": "{{body.message}}",
         "workflowStatus": "{{body.workflowStatus || body.status}}",

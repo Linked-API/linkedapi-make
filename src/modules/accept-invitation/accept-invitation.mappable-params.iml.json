@@ -1,0 +1,45 @@
+[
+  {
+    "name": "invitationType",
+    "type": "select",
+    "label": "Invitation Type",
+    "required": true,
+    "help": "Type of incoming invitation",
+    "default": "connect",
+    "options": [
+      {
+        "value": "connect",
+        "label": "Connect"
+      },
+      {
+        "value": "companyFollow",
+        "label": "Company Follow"
+      },
+      {
+        "value": "newsletterSubscribe",
+        "label": "Newsletter Subscribe"
+      }
+    ]
+  },
+  {
+    "name": "personUrl",
+    "type": "text",
+    "label": "Person URL",
+    "required": false,
+    "help": "Required only for connect invitations. Public or hashed LinkedIn URL of the person."
+  },
+  {
+    "name": "companyUrl",
+    "type": "text",
+    "label": "Company URL",
+    "required": false,
+    "help": "Required only for companyFollow invitations. LinkedIn company page URL."
+  },
+  {
+    "name": "newsletterUrl",
+    "type": "text",
+    "label": "Newsletter URL",
+    "required": false,
+    "help": "Required only for newsletterSubscribe invitations. LinkedIn newsletter URL."
+  }
+]

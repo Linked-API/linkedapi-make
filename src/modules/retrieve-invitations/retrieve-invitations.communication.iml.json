@@ -3,13 +3,13 @@
     "url": "/workflows",
     "method": "POST",
     "body": {
-      "operationName": "retrieveConnectionRequests",
+      "operationName": "retrieveInvitations",
       "data": {}
     },
     "response": {
       "temp": {
         "workflowId": "{{body.workflowId}}",
-        "operationName": "retrieveConnectionRequests",
+        "operationName": "retrieveInvitations",
         "status": "{{body.status || body.workflowStatus}}",
         "message": "{{body.message}}",
         "workflowStatus": "{{body.workflowStatus || body.status}}",

@@ -16,16 +16,12 @@
         "label": "Error Type",
         "options": [
           {
-            "label": "Person Not Found",
-            "value": "personNotFound"
-          },
-          {
-            "label": "Already Connected",
-            "value": "alreadyConnected"
-          },
-          {
-            "label": "No Pending Request",
+            "label": "No Pending Invitation",
             "value": "noPendingRequest"
+          },
+          {
+            "label": "Unexpected Error",
+            "value": "unexpectedError"
           }
         ]
       },

@@ -1,0 +1,74 @@
+[
+  {
+    "name": "data",
+    "type": "array",
+    "label": "Invitations",
+    "spec": [
+      {
+        "name": "invitationType",
+        "type": "select",
+        "label": "Invitation Type",
+        "options": [
+          {
+            "value": "connect",
+            "label": "Connect"
+          },
+          {
+            "value": "companyFollow",
+            "label": "Company Follow"
+          },
+          {
+            "value": "newsletterSubscribe",
+            "label": "Newsletter Subscribe"
+          }
+        ]
+      },
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Inviter Name"
+      },
+      {
+        "name": "publicUrl",
+        "type": "url",
+        "label": "Inviter LinkedIn URL"
+      },
+      {
+        "name": "headline",
+        "type": "text",
+        "label": "Headline"
+      },
+      {
+        "name": "note",
+        "type": "text",
+        "label": "Invitation Note"
+      },
+      {
+        "name": "companyUrl",
+        "type": "url",
+        "label": "Company URL"
+      },
+      {
+        "name": "companyName",
+        "type": "text",
+        "label": "Company Name"
+      },
+      {
+        "name": "newsletterUrl",
+        "type": "url",
+        "label": "Newsletter URL"
+      },
+      {
+        "name": "newsletterName",
+        "type": "text",
+        "label": "Newsletter Name"
+      }
+    ]
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": []
+  }
+]

@@ -1,9 +1,0 @@
-[
-  {
-    "name": "personUrl",
-    "type": "text",
-    "label": "Person URL",
-    "required": true,
-    "help": "Public or hashed LinkedIn URL of the person whose connection request you want to ignore"
-  }
-]
