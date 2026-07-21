@@ -1,0 +1,10 @@
+[
+  {
+    "name": "limit",
+    "type": "number",
+    "label": "Limit",
+    "required": false,
+    "help": "Maximum number of feed posts to retrieve (1-100)",
+    "default": 20
+  }
+]

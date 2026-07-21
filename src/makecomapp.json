@@ -387,6 +387,22 @@
                     "scope": "modules/retrieve-connections/retrieve-connections.scope.iml.json"
                 }
             },
+            "retrieveFeed": {
+                "label": "Retrieve feed posts",
+                "description": "Retrieves posts from your personalized LinkedIn home feed.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/retrieve-feed/retrieve-feed.communication.iml.json",
+                    "staticParams": "modules/retrieve-feed/retrieve-feed.static-params.iml.json",
+                    "mappableParams": "modules/retrieve-feed/retrieve-feed.mappable-params.iml.json",
+                    "interface": "modules/retrieve-feed/retrieve-feed.interface.iml.json",
+                    "samples": "modules/retrieve-feed/retrieve-feed.samples.iml.json",
+                    "scope": "modules/retrieve-feed/retrieve-feed.scope.iml.json"
+                }
+            },
             "retrieveInvitations": {
                 "label": "Retrieve incoming invitations",
                 "description": "Retrieves incoming connection, company-follow, and newsletter-subscription invitations.",
@@ -1238,6 +1254,10 @@
                     {
                         "local": "syncNetwork",
                         "remote": "syncNetwork"
+                    },
+                    {
+                        "local": "retrieveFeed",
+                        "remote": "retrieveFeed"
                     }
                 ],
                 "function": [],

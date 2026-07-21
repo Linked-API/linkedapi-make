@@ -12,6 +12,7 @@
 			"reactToPost",
 			"removeConnection",
 			"retrieveConnections",
+			"retrieveFeed",
 			"retrieveConnectionRequests",
 			"retrievePendingRequests",
 			"retrievePerformance",
