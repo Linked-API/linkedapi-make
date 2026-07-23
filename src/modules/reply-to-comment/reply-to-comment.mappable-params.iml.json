@@ -1,0 +1,16 @@
+[
+  {
+    "name": "commentUrl",
+    "type": "text",
+    "label": "Comment URL",
+    "required": true,
+    "help": "LinkedIn URL of the comment to reply to"
+  },
+  {
+    "name": "replyText",
+    "type": "text",
+    "label": "Reply Text",
+    "required": true,
+    "help": "Reply text"
+  }
+]

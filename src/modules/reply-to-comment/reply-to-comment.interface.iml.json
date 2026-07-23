@@ -27,12 +27,12 @@
         "label": "Error Type",
         "options": [
           {
-            "label": "Post Not Found",
-            "value": "postNotFound"
+            "label": "Comment Not Found",
+            "value": "commentNotFound"
           },
           {
-            "label": "Commenting Not Allowed",
-            "value": "commentingNotAllowed"
+            "label": "Replying Not Allowed",
+            "value": "replyingNotAllowed"
           }
         ]
       },

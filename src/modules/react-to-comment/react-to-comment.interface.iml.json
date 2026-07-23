@@ -3,18 +3,7 @@
     "name": "data",
     "type": "collection",
     "label": "Data",
-    "spec": [
-      {
-        "name": "commentUrn",
-        "type": "text",
-        "label": "Comment URN"
-      },
-      {
-        "name": "commentUrl",
-        "type": "text",
-        "label": "Comment URL"
-      }
-    ]
+    "spec": []
   },
   {
     "name": "errors",
@@ -27,12 +16,8 @@
         "label": "Error Type",
         "options": [
           {
-            "label": "Post Not Found",
-            "value": "postNotFound"
-          },
-          {
-            "label": "Commenting Not Allowed",
-            "value": "commentingNotAllowed"
+            "label": "Comment Not Found",
+            "value": "commentNotFound"
           }
         ]
       },

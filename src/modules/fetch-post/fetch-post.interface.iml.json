@@ -219,6 +219,16 @@
         "label": "Comments",
         "spec": [
           {
+            "name": "commentUrn",
+            "type": "text",
+            "label": "Comment URN"
+          },
+          {
+            "name": "commentUrl",
+            "type": "text",
+            "label": "Comment URL"
+          },
+          {
             "name": "commenterUrl",
             "type": "url",
             "label": "Commenter URL"

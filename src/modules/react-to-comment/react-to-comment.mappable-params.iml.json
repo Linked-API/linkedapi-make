@@ -1,0 +1,43 @@
+[
+  {
+    "name": "commentUrl",
+    "type": "text",
+    "label": "Comment URL",
+    "required": true,
+    "help": "LinkedIn URL of the comment to react to"
+  },
+  {
+    "name": "reactionType",
+    "type": "select",
+    "label": "Reaction Type",
+    "required": true,
+    "help": "Type of reaction to add to the comment",
+    "default": "like",
+    "options": [
+      {
+        "value": "like",
+        "label": "Like"
+      },
+      {
+        "value": "celebrate",
+        "label": "Celebrate"
+      },
+      {
+        "value": "support",
+        "label": "Support"
+      },
+      {
+        "value": "love",
+        "label": "Love"
+      },
+      {
+        "value": "insightful",
+        "label": "Insightful"
+      },
+      {
+        "value": "funny",
+        "label": "Funny"
+      }
+    ]
+  }
+]
