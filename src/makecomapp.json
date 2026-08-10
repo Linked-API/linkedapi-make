@@ -51,6 +51,38 @@
                     "scope": "modules/comment-on-post/comment-on-post.scope.iml.json"
                 }
             },
+            "reactToComment": {
+                "label": "React to a comment",
+                "description": "Reacts to a LinkedIn comment by comment URL.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/react-to-comment/react-to-comment.communication.iml.json",
+                    "staticParams": "modules/react-to-comment/react-to-comment.static-params.iml.json",
+                    "mappableParams": "modules/react-to-comment/react-to-comment.mappable-params.iml.json",
+                    "interface": "modules/react-to-comment/react-to-comment.interface.iml.json",
+                    "samples": "modules/react-to-comment/react-to-comment.samples.iml.json",
+                    "scope": "modules/react-to-comment/react-to-comment.scope.iml.json"
+                }
+            },
+            "replyToComment": {
+                "label": "Reply to a comment",
+                "description": "Replies to a LinkedIn comment by comment URL.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/reply-to-comment/reply-to-comment.communication.iml.json",
+                    "staticParams": "modules/reply-to-comment/reply-to-comment.static-params.iml.json",
+                    "mappableParams": "modules/reply-to-comment/reply-to-comment.mappable-params.iml.json",
+                    "interface": "modules/reply-to-comment/reply-to-comment.interface.iml.json",
+                    "samples": "modules/reply-to-comment/reply-to-comment.samples.iml.json",
+                    "scope": "modules/reply-to-comment/reply-to-comment.scope.iml.json"
+                }
+            },
             "createPost": {
                 "label": "Create a post",
                 "description": "Creates a new LinkedIn post.",
@@ -1258,6 +1290,14 @@
                     {
                         "local": "retrieveFeed",
                         "remote": "retrieveFeed"
+                    },
+                    {
+                        "local": "reactToComment",
+                        "remote": "reactToComment"
+                    },
+                    {
+                        "local": "replyToComment",
+                        "remote": "replyToComment"
                     }
                 ],
                 "function": [],

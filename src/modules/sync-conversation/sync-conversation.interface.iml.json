@@ -3,7 +3,14 @@
     "name": "data",
     "type": "collection",
     "label": "Data",
-    "spec": []
+    "spec": [
+      {
+        "name": "syncUntil",
+        "type": "text",
+        "label": "Sync Until",
+        "help": "Moment when synchronization of this conversation stops."
+      }
+    ]
   },
   {
     "name": "errors",

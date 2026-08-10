@@ -297,7 +297,14 @@
           {
             "label": "Data",
             "name": "data",
-            "spec": [],
+            "spec": [
+              {
+                "help": "Moment when synchronization of this conversation stops.",
+                "label": "Sync Until",
+                "name": "syncUntil",
+                "type": "text"
+              }
+            ],
             "type": "collection"
           },
           {
@@ -340,6 +347,17 @@
                     "name": "personUrl",
                     "required": true,
                     "type": "text"
+                  },
+                  {
+                    "help": "How many days the conversation stays synchronized (1-90, default 30). Counted from the moment the action starts running; a reply does not extend it. Syncing the same person again starts a new period and keeps the history already collected.",
+                    "label": "Sync Days",
+                    "name": "days",
+                    "required": false,
+                    "type": "number",
+                    "validate": {
+                      "max": 90,
+                      "min": 1
+                    }
                   }
                 ]
               }
@@ -1525,7 +1543,14 @@
           {
             "label": "Data",
             "name": "data",
-            "spec": [],
+            "spec": [
+              {
+                "help": "Moment when synchronization of this conversation stops.",
+                "label": "Sync Until",
+                "name": "syncUntil",
+                "type": "text"
+              }
+            ],
             "type": "collection"
           },
           {
@@ -1572,6 +1597,17 @@
                     "name": "personUrl",
                     "required": true,
                     "type": "text"
+                  },
+                  {
+                    "help": "How many days the conversation stays synchronized (1-90, default 30). Counted from the moment the action starts running; a reply does not extend it. Syncing the same person again starts a new period and keeps the history already collected.",
+                    "label": "Sync Days",
+                    "name": "days",
+                    "required": false,
+                    "type": "number",
+                    "validate": {
+                      "max": 90,
+                      "min": 1
+                    }
                   }
                 ]
               }
@@ -3939,7 +3975,8 @@
           {
             "body": {
               "data": {
-                "personUrl": "{{parameters.personUrl}}"
+                "personUrl": "{{parameters.personUrl}}",
+                "days": "{{parameters.days}}"
               },
               "operationName": "syncConversation"
             },
@@ -5247,7 +5284,8 @@
           {
             "body": {
               "data": {
-                "personUrl": "{{parameters.personUrl}}"
+                "personUrl": "{{parameters.personUrl}}",
+                "days": "{{parameters.days}}"
               },
               "operationName": "nvSyncConversation"
             },

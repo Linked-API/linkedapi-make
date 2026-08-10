@@ -5,7 +5,8 @@
     "body": {
       "operationName": "nvSyncConversation",
       "data": {
-        "personUrl": "{{parameters.personUrl}}"
+        "personUrl": "{{parameters.personUrl}}",
+        "days": "{{parameters.days}}"
       }
     },
     "response": {
