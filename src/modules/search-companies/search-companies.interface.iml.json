@@ -10,6 +10,11 @@
         "label": "Company Name"
       },
       {
+        "name": "urn",
+        "type": "text",
+        "label": "Company URN"
+      },
+      {
         "name": "publicUrl",
         "type": "url",
         "label": "Public LinkedIn URL"

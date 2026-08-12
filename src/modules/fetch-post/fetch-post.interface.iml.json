@@ -55,6 +55,11 @@
             "label": "Author Name"
           },
           {
+            "name": "urn",
+            "type": "text",
+            "label": "Author URN"
+          },
+          {
             "name": "profileUrl",
             "type": "url",
             "label": "Author Profile URL"
@@ -95,6 +100,11 @@
             "name": "name",
             "type": "text",
             "label": "Reposter Name"
+          },
+          {
+            "name": "urn",
+            "type": "text",
+            "label": "Reposter URN"
           },
           {
             "name": "profileUrl",
@@ -295,6 +305,11 @@
         "type": "array",
         "label": "Reactions",
         "spec": [
+          {
+            "name": "engagerUrn",
+            "type": "text",
+            "label": "Engager URN"
+          },
           {
             "name": "engagerUrl",
             "type": "url",

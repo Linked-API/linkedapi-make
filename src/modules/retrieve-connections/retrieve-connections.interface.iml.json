@@ -10,6 +10,11 @@
         "label": "Full Name"
       },
       {
+        "name": "urn",
+        "type": "text",
+        "label": "Person URN"
+      },
+      {
         "name": "publicUrl",
         "type": "url",
         "label": "Public LinkedIn URL"
@@ -23,6 +28,11 @@
         "name": "location",
         "type": "text",
         "label": "Location"
+      },
+      {
+        "name": "avatarUrl",
+        "type": "url",
+        "label": "Avatar URL"
       },
       {
         "name": "connectedAt",

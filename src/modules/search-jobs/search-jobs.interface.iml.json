@@ -5,6 +5,7 @@
     "label": "Search Results",
     "spec": [
       { "name": "jobId", "type": "text", "label": "Job ID" },
+      { "name": "urn", "type": "text", "label": "Job URN" },
       { "name": "jobUrl", "type": "url", "label": "Job URL" },
       { "name": "title", "type": "text", "label": "Title" },
       { "name": "companyName", "type": "text", "label": "Company Name" },

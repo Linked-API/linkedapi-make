@@ -5,6 +5,11 @@
     "label": "Conversations",
     "spec": [
       {
+        "name": "personUrn",
+        "type": "text",
+        "label": "Person URN"
+      },
+      {
         "name": "personUrl",
         "type": "url",
         "label": "Person LinkedIn URL"

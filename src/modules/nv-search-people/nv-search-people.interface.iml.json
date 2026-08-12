@@ -10,6 +10,11 @@
         "label": "Full Name"
       },
       {
+        "name": "urn",
+        "type": "text",
+        "label": "Person URN"
+      },
+      {
         "name": "hashedUrl",
         "type": "url",
         "label": "Hashed LinkedIn URL"

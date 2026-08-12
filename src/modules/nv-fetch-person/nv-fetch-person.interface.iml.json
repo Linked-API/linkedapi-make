@@ -10,6 +10,11 @@
         "label": "Full Name"
       },
       {
+        "name": "urn",
+        "type": "text",
+        "label": "Person URN"
+      },
+      {
         "name": "publicUrl",
         "type": "url",
         "label": "Public LinkedIn URL"
@@ -43,6 +48,11 @@
         "name": "companyName",
         "type": "text",
         "label": "Company Name"
+      },
+      {
+        "name": "companyUrn",
+        "type": "text",
+        "label": "Company URN"
       },
       {
         "name": "companyHashedUrl",

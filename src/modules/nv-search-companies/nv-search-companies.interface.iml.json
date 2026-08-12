@@ -10,6 +10,11 @@
         "label": "Company Name"
       },
       {
+        "name": "urn",
+        "type": "text",
+        "label": "Company URN"
+      },
+      {
         "name": "hashedUrl",
         "type": "url",
         "label": "Company Hashed URL"

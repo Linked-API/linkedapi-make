@@ -29,6 +29,11 @@
         "label": "Inviter Name"
       },
       {
+        "name": "urn",
+        "type": "text",
+        "label": "Inviter URN"
+      },
+      {
         "name": "publicUrl",
         "type": "url",
         "label": "Inviter LinkedIn URL"
