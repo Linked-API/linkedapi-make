@@ -1,0 +1,17 @@
+[
+  {
+    "name": "limit",
+    "type": "number",
+    "label": "Limit",
+    "required": false,
+    "help": "Maximum number of profile viewers to retrieve (1-300)",
+    "default": 20
+  },
+  {
+    "name": "since",
+    "type": "date",
+    "label": "Since",
+    "required": false,
+    "help": "Only viewers seen at or after this moment. Matched against the estimated view time."
+  }
+]

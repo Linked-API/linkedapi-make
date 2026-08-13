@@ -435,6 +435,22 @@
                     "scope": "modules/retrieve-feed/retrieve-feed.scope.iml.json"
                 }
             },
+            "retrieveProfileViewers": {
+                "label": "Retrieve profile viewers",
+                "description": "Retrieves the people who recently viewed your LinkedIn profile.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/retrieve-profile-viewers/retrieve-profile-viewers.communication.iml.json",
+                    "staticParams": "modules/retrieve-profile-viewers/retrieve-profile-viewers.static-params.iml.json",
+                    "mappableParams": "modules/retrieve-profile-viewers/retrieve-profile-viewers.mappable-params.iml.json",
+                    "interface": "modules/retrieve-profile-viewers/retrieve-profile-viewers.interface.iml.json",
+                    "samples": "modules/retrieve-profile-viewers/retrieve-profile-viewers.samples.iml.json",
+                    "scope": "modules/retrieve-profile-viewers/retrieve-profile-viewers.scope.iml.json"
+                }
+            },
             "retrieveInvitations": {
                 "label": "Retrieve incoming invitations",
                 "description": "Retrieves incoming connection, company-follow, and newsletter-subscription invitations.",

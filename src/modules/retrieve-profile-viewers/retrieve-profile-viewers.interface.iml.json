@@ -1,0 +1,79 @@
+[
+  {
+    "name": "data",
+    "type": "array",
+    "label": "Profile Viewers",
+    "spec": [
+      {
+        "name": "viewerType",
+        "type": "select",
+        "label": "Viewer Type",
+        "options": [
+          {
+            "label": "Identified",
+            "value": "identified"
+          },
+          {
+            "label": "Anonymous",
+            "value": "anonymous"
+          }
+        ]
+      },
+      {
+        "name": "viewedAt",
+        "type": "date",
+        "label": "Viewed At"
+      },
+      {
+        "name": "viewedAgo",
+        "type": "text",
+        "label": "Viewed Ago"
+      },
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Name"
+      },
+      {
+        "name": "publicUrl",
+        "type": "url",
+        "label": "Public URL"
+      },
+      {
+        "name": "urn",
+        "type": "text",
+        "label": "Member URN"
+      },
+      {
+        "name": "headline",
+        "type": "text",
+        "label": "Headline"
+      },
+      {
+        "name": "connectionDegree",
+        "type": "number",
+        "label": "Connection Degree"
+      },
+      {
+        "name": "avatarUrl",
+        "type": "url",
+        "label": "Avatar URL"
+      },
+      {
+        "name": "description",
+        "type": "text",
+        "label": "Description"
+      },
+      {
+        "name": "searchUrl",
+        "type": "url",
+        "label": "Search URL"
+      }
+    ]
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors"
+  }
+]
