@@ -9,7 +9,6 @@
       { "name": "jobUrl", "type": "url", "label": "Job URL" },
       { "name": "title", "type": "text", "label": "Title" },
       { "name": "companyName", "type": "text", "label": "Company Name" },
-      { "name": "companyUrn", "type": "text", "label": "Company URN" },
       { "name": "companyUrl", "type": "url", "label": "Company URL" },
       { "name": "location", "type": "text", "label": "Location" },
       { "name": "postedDate", "type": "text", "label": "Posted Date" },

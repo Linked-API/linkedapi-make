@@ -19,14 +19,22 @@
     "type": "url",
     "label": "Custom Search URL",
     "required": false,
-    "help": "URL copied from a LinkedIn jobs search page after configuring desired filters. When specified, overrides term and filter parameters."
+    "help": "URL copied from a LinkedIn jobs search page after configuring desired filters. When specified, overrides term, location, filter and AI search preference parameters."
   },
   {
     "name": "location",
     "type": "text",
     "label": "Location",
     "required": false,
-    "help": "Free-form location to filter by (e.g., San Francisco, California, United States)"
+    "help": "Free-form location to filter by (e.g., San Francisco, California, United States). Applied on both versions of LinkedIn jobs search."
+  },
+  {
+    "name": "excludeSimilarResults",
+    "type": "boolean",
+    "label": "Exclude Similar Results",
+    "required": false,
+    "help": "When enabled, excludes near matches, which only the AI-powered search returns. Fewer results than the limit may come back.",
+    "default": false
   },
   {
     "name": "datePosted",
@@ -147,5 +155,94 @@
     "required": false,
     "help": "When enabled, only returns fair chance employer jobs",
     "default": false
+  },
+  {
+    "name": "prefDatePosted",
+    "type": "select",
+    "label": "AI Search: Date Posted",
+    "required": false,
+    "help": "Prefer jobs by when they were posted. AI search preferences target the AI-powered LinkedIn jobs search and cannot be combined with the filter parameters above.",
+    "options": [
+      { "value": "anyTime", "label": "Any Time" },
+      { "value": "past24Hours", "label": "Past 24 Hours" },
+      { "value": "pastWeek", "label": "Past Week" },
+      { "value": "pastMonth", "label": "Past Month" }
+    ]
+  },
+  {
+    "name": "prefExperienceLevels",
+    "type": "select",
+    "label": "AI Search: Experience Levels",
+    "required": false,
+    "help": "Prefer experience levels. Senior corresponds to Mid-Senior Level in the filter parameters.",
+    "multiple": true,
+    "options": [
+      { "value": "entryLevel", "label": "Entry Level" },
+      { "value": "senior", "label": "Senior" },
+      { "value": "manager", "label": "Manager" },
+      { "value": "director", "label": "Director" },
+      { "value": "executive", "label": "Executive" }
+    ]
+  },
+  {
+    "name": "prefEmploymentTypes",
+    "type": "select",
+    "label": "AI Search: Employment Types",
+    "required": false,
+    "help": "Prefer employment types",
+    "multiple": true,
+    "options": [
+      { "value": "fullTime", "label": "Full Time" },
+      { "value": "partTime", "label": "Part Time" },
+      { "value": "contract", "label": "Contract" },
+      { "value": "internship", "label": "Internship" },
+      { "value": "volunteer", "label": "Volunteer" }
+    ]
+  },
+  {
+    "name": "prefCompanies",
+    "type": "array",
+    "label": "AI Search: Companies",
+    "required": false,
+    "help": "Company names to prefer (e.g., Google, Microsoft)"
+  },
+  {
+    "name": "prefRemote",
+    "type": "boolean",
+    "label": "AI Search: Remote",
+    "required": false,
+    "help": "When enabled, only returns remote jobs. The AI-powered search has no on-site or hybrid equivalent.",
+    "default": false
+  },
+  {
+    "name": "prefEasyApply",
+    "type": "boolean",
+    "label": "AI Search: Easy Apply",
+    "required": false,
+    "help": "When enabled, only returns jobs with Easy Apply",
+    "default": false
+  },
+  {
+    "name": "prefUnder10Applicants",
+    "type": "boolean",
+    "label": "AI Search: Under 10 Applicants",
+    "required": false,
+    "help": "When enabled, only returns jobs with fewer than 10 applicants",
+    "default": false
+  },
+  {
+    "name": "prefInYourNetwork",
+    "type": "boolean",
+    "label": "AI Search: In Your Network",
+    "required": false,
+    "help": "When enabled, only returns jobs from your network",
+    "default": false
+  },
+  {
+    "name": "prefKeywords",
+    "type": "array",
+    "label": "AI Search: Keywords",
+    "required": false,
+    "help": "Free-form skills, technologies or topics to narrow the search by (e.g., AWS, Fintech). LinkedIn suggests a different set for every search."
   }
 ]

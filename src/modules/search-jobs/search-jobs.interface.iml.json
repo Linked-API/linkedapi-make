@@ -32,7 +32,8 @@
         ]
       },
       { "name": "easyApply", "type": "boolean", "label": "Easy Apply" },
-      { "name": "isPromoted", "type": "boolean", "label": "Is Promoted" }
+      { "name": "isPromoted", "type": "boolean", "label": "Is Promoted" },
+      { "name": "isSimilarMatch", "type": "boolean", "label": "Is Similar Match" }
     ]
   },
   {
@@ -44,7 +45,10 @@
         "name": "type",
         "type": "select",
         "label": "Error Type",
-        "options": [{ "value": "searchingNotAllowed", "label": "Searching Not Allowed" }]
+        "options": [
+          { "value": "searchingNotAllowed", "label": "Searching Not Allowed" },
+          { "value": "searchInterfaceMismatch", "label": "Search Interface Mismatch" }
+        ]
       },
       { "name": "message", "type": "text", "label": "Error Message" }
     ]
