@@ -45,6 +45,11 @@
             "label": "Person LinkedIn URL"
           },
           {
+            "name": "personPublicUrl",
+            "type": "url",
+            "label": "Person Public LinkedIn URL"
+          },
+          {
             "name": "sender",
             "type": "select",
             "label": "Message Sender",
