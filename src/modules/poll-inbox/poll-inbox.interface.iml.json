@@ -40,9 +40,9 @@
             "label": "Person URN"
           },
           {
-            "name": "personUrl",
+            "name": "personHashedUrl",
             "type": "url",
-            "label": "Person LinkedIn URL"
+            "label": "Person Hashed LinkedIn URL"
           },
           {
             "name": "personPublicUrl",
