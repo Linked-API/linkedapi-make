@@ -1,0 +1,116 @@
+[
+  {
+    "name": "searchTerm",
+    "type": "text",
+    "label": "Search Term",
+    "required": false,
+    "help": "Keyword or phrase to search, from 1 to 50 characters. Either Search Term or Custom Search URL must be provided."
+  },
+  {
+    "name": "limit",
+    "type": "number",
+    "label": "Limit",
+    "required": false,
+    "help": "Number of search results to return (max 100)",
+    "default": 10
+  },
+  {
+    "name": "customSearchUrl",
+    "type": "url",
+    "label": "Custom Search URL",
+    "required": false,
+    "help": "URL copied from a LinkedIn content search page after configuring desired filters. When specified, all filter parameters below are ignored entirely."
+  },
+  {
+    "name": "sort",
+    "type": "select",
+    "label": "Sort By",
+    "required": false,
+    "help": "How LinkedIn orders the results",
+    "options": [
+      { "value": "topMatch", "label": "Top Match" },
+      { "value": "latest", "label": "Latest" }
+    ]
+  },
+  {
+    "name": "datePosted",
+    "type": "select",
+    "label": "Date Posted",
+    "required": false,
+    "help": "Filter by when the post was published",
+    "options": [
+      { "value": "past24Hours", "label": "Past 24 Hours" },
+      { "value": "pastWeek", "label": "Past Week" },
+      { "value": "pastMonth", "label": "Past Month" }
+    ]
+  },
+  {
+    "name": "contentType",
+    "type": "select",
+    "label": "Content Type",
+    "required": false,
+    "help": "Filter by the kind of content the post carries",
+    "options": [
+      { "value": "videos", "label": "Videos" },
+      { "value": "images", "label": "Images" },
+      { "value": "jobPosts", "label": "Job Posts" },
+      { "value": "liveVideos", "label": "Live Videos" },
+      { "value": "documents", "label": "Documents" }
+    ]
+  },
+  {
+    "name": "postedBy",
+    "type": "select",
+    "label": "Posted By",
+    "required": false,
+    "help": "Filter by who published the post",
+    "multiple": true,
+    "options": [
+      { "value": "me", "label": "Me" },
+      { "value": "firstConnections", "label": "1st Connections" },
+      { "value": "peopleYouFollow", "label": "People You Follow" }
+    ]
+  },
+  {
+    "name": "fromMembers",
+    "type": "array",
+    "label": "From Members",
+    "required": false,
+    "help": "Names of people whose posts to keep (e.g., Bill Gates, Satya Nadella). LinkedIn picks whichever person it ranks first for a typed name, which may be a namesake."
+  },
+  {
+    "name": "fromCompanies",
+    "type": "array",
+    "label": "From Companies",
+    "required": false,
+    "help": "Names of companies whose posts to keep (e.g., Microsoft, Google). LinkedIn picks whichever company it ranks first for a typed name, which may be a namesake."
+  },
+  {
+    "name": "mentioningMembers",
+    "type": "array",
+    "label": "Mentioning Members",
+    "required": false,
+    "help": "Names of people to look for in post text (e.g., Bill Gates, Satya Nadella). LinkedIn picks whichever person it ranks first for a typed name, which may be a namesake."
+  },
+  {
+    "name": "mentioningCompanies",
+    "type": "array",
+    "label": "Mentioning Companies",
+    "required": false,
+    "help": "Names of companies to look for in post text (e.g., Microsoft, Google). LinkedIn picks whichever company it ranks first for a typed name, which may be a namesake."
+  },
+  {
+    "name": "authorCompanies",
+    "type": "array",
+    "label": "Author Companies",
+    "required": false,
+    "help": "Names of companies the post author works at (e.g., Microsoft, Google). LinkedIn picks whichever company it ranks first for a typed name, which may be a namesake."
+  },
+  {
+    "name": "authorIndustries",
+    "type": "array",
+    "label": "Author Industries",
+    "required": false,
+    "help": "Industries the post author works in (e.g., Software Development, Technology). Takes specific values available in the LinkedIn interface."
+  }
+]

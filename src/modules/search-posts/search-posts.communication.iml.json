@@ -1,0 +1,67 @@
+[
+  {
+    "url": "/workflows",
+    "method": "POST",
+    "body": {
+      "operationName": "searchPosts",
+      "data": {
+        "customSearchUrl": "{{parameters.customSearchUrl}}",
+        "term": "{{parameters.searchTerm}}",
+        "limit": "{{parameters.limit}}",
+        "filter": {
+          "sort": "{{parameters.sort}}",
+          "datePosted": "{{parameters.datePosted}}",
+          "contentType": "{{parameters.contentType}}",
+          "postedBy": "{{if(length(parameters.postedBy) > 0, parameters.postedBy, undefined)}}",
+          "fromMembers": "{{if(length(parameters.fromMembers) > 0, parameters.fromMembers, undefined)}}",
+          "fromCompanies": "{{if(length(parameters.fromCompanies) > 0, parameters.fromCompanies, undefined)}}",
+          "mentioningMembers": "{{if(length(parameters.mentioningMembers) > 0, parameters.mentioningMembers, undefined)}}",
+          "mentioningCompanies": "{{if(length(parameters.mentioningCompanies) > 0, parameters.mentioningCompanies, undefined)}}",
+          "authorCompanies": "{{if(length(parameters.authorCompanies) > 0, parameters.authorCompanies, undefined)}}",
+          "authorIndustries": "{{if(length(parameters.authorIndustries) > 0, parameters.authorIndustries, undefined)}}"
+        }
+      }
+    },
+    "response": {
+      "temp": {
+        "workflowId": "{{body.workflowId}}",
+        "operationName": "searchPosts",
+        "status": "{{body.status || body.workflowStatus}}",
+        "message": "{{body.message}}",
+        "workflowStatus": "{{body.workflowStatus || body.status}}",
+        "criticalError": "{{body.criticalError}}"
+      }
+    }
+  },
+  {
+    "url": "/workflows/{{temp.workflowId}}?operationName={{temp.operationName}}",
+    "method": "GET",
+    "repeat": {
+      "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
+      "delay": 5000,
+      "limit": 1800
+    },
+    "response": {
+      "temp": {
+        "status": "{{body.status || body.workflowStatus}}",
+        "data": "{{body.data}}",
+        "errors": "{{body.errors}}",
+        "message": "{{body.message}}",
+        "workflowStatus": "{{body.workflowStatus || body.status}}",
+        "criticalError": "{{body.criticalError}}"
+      }
+    }
+  },
+  {
+    "response": {
+      "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}",
+      "error": {
+        "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
+      },
+      "output": {
+        "data": "{{temp.data}}",
+        "errors": "{{temp.errors}}"
+      }
+    }
+  }
+]

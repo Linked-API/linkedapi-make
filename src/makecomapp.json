@@ -563,6 +563,22 @@
                     "scope": "modules/search-people/search-people.scope.iml.json"
                 }
             },
+            "searchPosts": {
+                "label": "Search for posts",
+                "description": "Search for posts on LinkedIn.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/search-posts/search-posts.communication.iml.json",
+                    "staticParams": "modules/search-posts/search-posts.static-params.iml.json",
+                    "mappableParams": "modules/search-posts/search-posts.mappable-params.iml.json",
+                    "interface": "modules/search-posts/search-posts.interface.iml.json",
+                    "samples": "modules/search-posts/search-posts.samples.iml.json",
+                    "scope": "modules/search-posts/search-posts.scope.iml.json"
+                }
+            },
             "sendConnectionRequest": {
                 "label": "Send a connection request",
                 "description": "Send a connection request to a person.",

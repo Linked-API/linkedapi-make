@@ -22,6 +22,7 @@
 			"searchCompanies",
 			"searchJobs",
 			"searchPeople",
+			"searchPosts",
 			"sendConnectionRequest",
 			"acceptConnectionRequest",
 			"ignoreConnectionRequest",
