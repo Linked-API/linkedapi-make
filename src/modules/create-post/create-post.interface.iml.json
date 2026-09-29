@@ -8,6 +8,11 @@
         "name": "postUrl",
         "type": "url",
         "label": "Post URL"
+      },
+      {
+        "name": "postUrn",
+        "type": "text",
+        "label": "Post URN"
       }
     ]
   },
@@ -32,6 +37,10 @@
           {
             "label": "No Posting Permission",
             "value": "noPostingPermission"
+          },
+          {
+            "label": "Mention Not Resolved",
+            "value": "mentionNotResolved"
           },
           {
             "label": "Unsupported Attachment Type",

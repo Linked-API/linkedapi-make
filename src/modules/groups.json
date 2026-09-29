@@ -6,6 +6,7 @@
 			"commentOnPost",
 			"replyToComment",
 			"createPost",
+			"createRepost",
 			"fetchCompany",
 			"fetchPerson",
 			"fetchPost",

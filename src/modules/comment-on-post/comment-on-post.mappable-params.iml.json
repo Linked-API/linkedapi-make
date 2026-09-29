@@ -3,8 +3,15 @@
     "name": "postUrl",
     "type": "text",
     "label": "Post URL",
-    "required": true,
-    "help": "The LinkedIn post URL to comment on"
+    "required": false,
+    "help": "The LinkedIn post URL to comment on. Provide this or the post URN."
+  },
+  {
+    "name": "postUrn",
+    "type": "text",
+    "label": "Post URN",
+    "required": false,
+    "help": "URN of the post, accepted instead of the post URL. For example, urn:li:activity:1234567890123456789."
   },
   {
     "name": "commentText",

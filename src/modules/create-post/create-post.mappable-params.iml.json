@@ -4,7 +4,51 @@
     "type": "text",
     "label": "Post Text",
     "required": true,
-    "help": "Post content, must be up to 3000 characters"
+    "help": "Post content, must be up to 3000 characters. Write @[key] where a mention should appear."
+  },
+  {
+    "name": "mentions",
+    "type": "array",
+    "label": "Mentions",
+    "required": false,
+    "help": "People and companies to mention in the text. Each item binds a @[key] placeholder to one entity.",
+    "spec": [
+      {
+        "name": "key",
+        "type": "text",
+        "label": "Key",
+        "required": true,
+        "help": "Placeholder name used in the text as @[key]. From 1 to 30 characters: letters, digits, underscore or hyphen."
+      },
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Name",
+        "required": true,
+        "help": "Name to find the person or company by. Always required, because LinkedIn resolves a mention through its own name suggestions."
+      },
+      {
+        "name": "urn",
+        "type": "text",
+        "label": "URN",
+        "required": false,
+        "help": "URN of the person or company, deciding which of the offered namesakes is taken. Provide at most one identifier."
+      },
+      {
+        "name": "personHashedUrl",
+        "type": "text",
+        "label": "Person Hashed URL",
+        "required": false,
+        "help": "Hashed LinkedIn profile URL, as an alternative to the URN"
+      },
+      {
+        "name": "companyHashedUrl",
+        "type": "text",
+        "label": "Company Hashed URL",
+        "required": false,
+        "help": "Hashed LinkedIn company page URL, as an alternative to the URN"
+      }
+    ]
   },
   {
     "name": "companyUrl",

@@ -1,0 +1,54 @@
+[
+  {
+    "name": "data",
+    "type": "collection",
+    "label": "Data",
+    "spec": [
+      {
+        "name": "postUrl",
+        "type": "url",
+        "label": "Repost URL"
+      },
+      {
+        "name": "postUrn",
+        "type": "text",
+        "label": "Repost URN"
+      }
+    ]
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": [
+      {
+        "name": "type",
+        "type": "select",
+        "label": "Error Type",
+        "options": [
+          {
+            "label": "Post Not Found",
+            "value": "postNotFound"
+          },
+          {
+            "label": "Repost Not Allowed",
+            "value": "repostNotAllowed"
+          },
+          {
+            "label": "Already Reposted",
+            "value": "alreadyReposted"
+          },
+          {
+            "label": "Mention Not Resolved",
+            "value": "mentionNotResolved"
+          }
+        ]
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "label": "Error Message"
+      }
+    ]
+  }
+]

@@ -99,6 +99,22 @@
                     "scope": "modules/create-post/create-post.scope.iml.json"
                 }
             },
+            "createRepost": {
+                "label": "Create a repost",
+                "description": "Reposts a LinkedIn post, as is or with your own commentary.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/create-repost/create-repost.communication.iml.json",
+                    "staticParams": "modules/create-repost/create-repost.static-params.iml.json",
+                    "mappableParams": "modules/create-repost/create-repost.mappable-params.iml.json",
+                    "interface": "modules/create-repost/create-repost.interface.iml.json",
+                    "samples": "modules/create-repost/create-repost.samples.iml.json",
+                    "scope": "modules/create-repost/create-repost.scope.iml.json"
+                }
+            },
             "customWorkflow": {
                 "label": "Execute a custom workflow",
                 "description": "Execute a custom multi-step workflow using raw workflow definition.",
@@ -1090,6 +1106,10 @@
                     {
                         "local": "createPost",
                         "remote": "createPost"
+                    },
+                    {
+                        "local": "createRepost",
+                        "remote": "createRepost"
                     },
                     {
                         "local": "customWorkflow",

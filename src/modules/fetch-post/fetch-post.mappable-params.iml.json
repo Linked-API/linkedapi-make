@@ -3,8 +3,15 @@
     "name": "postUrl",
     "type": "text",
     "label": "Post URL",
-    "required": true,
-    "help": "LinkedIn URL of the post to fetch"
+    "required": false,
+    "help": "LinkedIn URL of the post to fetch. Provide this or the post URN."
+  },
+  {
+    "name": "postUrn",
+    "type": "text",
+    "label": "Post URN",
+    "required": false,
+    "help": "URN of the post, accepted instead of the post URL. For example, urn:li:activity:1234567890123456789."
   },
   {
     "name": "retrieveComments",

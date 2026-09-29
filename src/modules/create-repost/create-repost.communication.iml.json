@@ -3,18 +3,18 @@
     "url": "/workflows",
     "method": "POST",
     "body": {
-      "operationName": "createPost",
+      "operationName": "createRepost",
       "data": {
-        "text": "{{parameters.postText}}",
-        "companyUrl": "{{if(parameters.companyUrl, parameters.companyUrl, undefined)}}",
-        "mentions": "{{if(length(parameters.mentions) > 0, parameters.mentions, undefined)}}",
-        "attachments": "{{if(length(parameters.attachments) > 0, parameters.attachments, undefined)}}"
+        "postUrl": "{{if(parameters.postUrl, parameters.postUrl, undefined)}}",
+        "postUrn": "{{if(parameters.postUrn, parameters.postUrn, undefined)}}",
+        "text": "{{if(parameters.repostText, parameters.repostText, undefined)}}",
+        "mentions": "{{if(length(parameters.mentions) > 0, parameters.mentions, undefined)}}"
       }
     },
     "response": {
       "temp": {
         "workflowId": "{{body.workflowId}}",
-        "operationName": "createPost",
+        "operationName": "createRepost",
         "status": "{{body.status || body.workflowStatus}}",
         "message": "{{body.message}}",
         "workflowStatus": "{{body.workflowStatus || body.status}}",

@@ -5,7 +5,8 @@
     "body": {
       "operationName": "fetchPost",
       "data": {
-        "postUrl": "{{parameters.postUrl}}",
+        "postUrl": "{{if(parameters.postUrl, parameters.postUrl, undefined)}}",
+        "postUrn": "{{if(parameters.postUrn, parameters.postUrn, undefined)}}",
         "retrieveComments": "{{parameters.retrieveComments}}",
         "retrieveReactions": "{{parameters.retrieveReactions}}",
         "commentsRetrievalConfig": {

@@ -1,0 +1,67 @@
+[
+  {
+    "name": "postUrl",
+    "type": "text",
+    "label": "Post URL",
+    "required": false,
+    "help": "LinkedIn URL of the post to repost. Provide this or the post URN."
+  },
+  {
+    "name": "postUrn",
+    "type": "text",
+    "label": "Post URN",
+    "required": false,
+    "help": "URN of the post to repost, accepted instead of the post URL. For example, urn:li:activity:1234567890123456789."
+  },
+  {
+    "name": "repostText",
+    "type": "text",
+    "label": "Commentary",
+    "required": false,
+    "help": "Your own commentary, up to 3000 characters. Leave empty to repost the post as is. Write @[key] where a mention should appear."
+  },
+  {
+    "name": "mentions",
+    "type": "array",
+    "label": "Mentions",
+    "required": false,
+    "help": "People and companies to mention in the commentary. Each item binds a @[key] placeholder to one entity.",
+    "spec": [
+      {
+        "name": "key",
+        "type": "text",
+        "label": "Key",
+        "required": true,
+        "help": "Placeholder name used in the text as @[key]. From 1 to 30 characters: letters, digits, underscore or hyphen."
+      },
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Name",
+        "required": true,
+        "help": "Name to find the person or company by. Always required, because LinkedIn resolves a mention through its own name suggestions."
+      },
+      {
+        "name": "urn",
+        "type": "text",
+        "label": "URN",
+        "required": false,
+        "help": "URN of the person or company, deciding which of the offered namesakes is taken. Provide at most one identifier."
+      },
+      {
+        "name": "personHashedUrl",
+        "type": "text",
+        "label": "Person Hashed URL",
+        "required": false,
+        "help": "Hashed LinkedIn profile URL, as an alternative to the URN"
+      },
+      {
+        "name": "companyHashedUrl",
+        "type": "text",
+        "label": "Company Hashed URL",
+        "required": false,
+        "help": "Hashed LinkedIn company page URL, as an alternative to the URN"
+      }
+    ]
+  }
+]
