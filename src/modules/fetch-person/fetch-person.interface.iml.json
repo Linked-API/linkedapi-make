@@ -70,6 +70,32 @@
         "label": "Avatar URL"
       },
       {
+        "name": "viewerState",
+        "type": "collection",
+        "label": "Viewer State",
+        "spec": [
+          {
+            "name": "connectionDegree",
+            "type": "select",
+            "label": "Connection Degree",
+            "options": [
+              {
+                "label": "1st",
+                "value": "1st"
+              },
+              {
+                "label": "2nd",
+                "value": "2nd"
+              },
+              {
+                "label": "3rd+",
+                "value": "3rd+"
+              }
+            ]
+          }
+        ]
+      },
+      {
         "name": "experiences",
         "type": "array",
         "label": "Work Experiences",
@@ -326,6 +352,32 @@
                 "name": "companyUrl",
                 "type": "url",
                 "label": "Author Company URL"
+              },
+              {
+                "name": "viewerState",
+                "type": "collection",
+                "label": "Viewer State",
+                "spec": [
+                  {
+                    "name": "connectionDegree",
+                    "type": "select",
+                    "label": "Connection Degree",
+                    "options": [
+                      {
+                        "label": "1st",
+                        "value": "1st"
+                      },
+                      {
+                        "label": "2nd",
+                        "value": "2nd"
+                      },
+                      {
+                        "label": "3rd+",
+                        "value": "3rd+"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -475,6 +527,49 @@
             "name": "repostsCount",
             "type": "number",
             "label": "Reposts Count"
+          },
+          {
+            "name": "viewerState",
+            "type": "collection",
+            "label": "Viewer State",
+            "spec": [
+              {
+                "name": "reaction",
+                "type": "select",
+                "label": "Your Reaction to the Post",
+                "options": [
+                  {
+                    "label": "Like",
+                    "value": "like"
+                  },
+                  {
+                    "label": "Celebrate",
+                    "value": "celebrate"
+                  },
+                  {
+                    "label": "Support",
+                    "value": "support"
+                  },
+                  {
+                    "label": "Love",
+                    "value": "love"
+                  },
+                  {
+                    "label": "Insightful",
+                    "value": "insightful"
+                  },
+                  {
+                    "label": "Funny",
+                    "value": "funny"
+                  }
+                ]
+              },
+              {
+                "name": "isOwn",
+                "type": "boolean",
+                "label": "Is Your Post"
+              }
+            ]
           }
         ]
       },

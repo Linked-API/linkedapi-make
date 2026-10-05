@@ -10,7 +10,10 @@
         "retrieveDMs": "{{parameters.retrieveDMs}}",
         "retrievePosts": "{{parameters.retrievePosts}}",
         "employeesRetrievalConfig": {
-          "limit": "{{parameters.employeeLimit}}"
+          "limit": "{{parameters.employeeLimit}}",
+          "filter": {
+            "connectionDegrees": "{{parameters.employeeConnectionDegrees}}"
+          }
         },
         "dmsRetrievalConfig": {
           "limit": "{{parameters.dmsLimit}}"

@@ -33,6 +33,10 @@
           {
             "label": "Commenting Not Allowed",
             "value": "commentingNotAllowed"
+          },
+          {
+            "label": "Duplicate Comment",
+            "value": "duplicateComment"
           }
         ]
       },

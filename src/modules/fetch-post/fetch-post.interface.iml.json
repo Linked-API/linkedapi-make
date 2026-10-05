@@ -73,6 +73,32 @@
             "name": "companyUrl",
             "type": "url",
             "label": "Author Company URL"
+          },
+          {
+            "name": "viewerState",
+            "type": "collection",
+            "label": "Viewer State",
+            "spec": [
+              {
+                "name": "connectionDegree",
+                "type": "select",
+                "label": "Connection Degree",
+                "options": [
+                  {
+                    "label": "1st",
+                    "value": "1st"
+                  },
+                  {
+                    "label": "2nd",
+                    "value": "2nd"
+                  },
+                  {
+                    "label": "3rd+",
+                    "value": "3rd+"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -224,6 +250,49 @@
         "label": "Reposts Count"
       },
       {
+        "name": "viewerState",
+        "type": "collection",
+        "label": "Viewer State",
+        "spec": [
+          {
+            "name": "reaction",
+            "type": "select",
+            "label": "Your Reaction to the Post",
+            "options": [
+              {
+                "label": "Like",
+                "value": "like"
+              },
+              {
+                "label": "Celebrate",
+                "value": "celebrate"
+              },
+              {
+                "label": "Support",
+                "value": "support"
+              },
+              {
+                "label": "Love",
+                "value": "love"
+              },
+              {
+                "label": "Insightful",
+                "value": "insightful"
+              },
+              {
+                "label": "Funny",
+                "value": "funny"
+              }
+            ]
+          },
+          {
+            "name": "isOwn",
+            "type": "boolean",
+            "label": "Is Your Post"
+          }
+        ]
+      },
+      {
         "name": "comments",
         "type": "array",
         "label": "Comments",
@@ -239,24 +308,92 @@
             "label": "Comment URL"
           },
           {
+            "name": "author",
+            "type": "collection",
+            "label": "Comment Author",
+            "spec": [
+              {
+                "name": "type",
+                "type": "select",
+                "label": "Author Type",
+                "options": [
+                  {
+                    "label": "Person",
+                    "value": "person"
+                  },
+                  {
+                    "label": "Company",
+                    "value": "company"
+                  }
+                ]
+              },
+              {
+                "name": "name",
+                "type": "text",
+                "label": "Author Name"
+              },
+              {
+                "name": "profileUrl",
+                "type": "url",
+                "label": "Author Profile URL"
+              },
+              {
+                "name": "headline",
+                "type": "text",
+                "label": "Author Headline"
+              },
+              {
+                "name": "companyUrl",
+                "type": "url",
+                "label": "Author Company URL"
+              },
+              {
+                "name": "viewerState",
+                "type": "collection",
+                "label": "Viewer State",
+                "spec": [
+                  {
+                    "name": "connectionDegree",
+                    "type": "select",
+                    "label": "Connection Degree",
+                    "options": [
+                      {
+                        "label": "1st",
+                        "value": "1st"
+                      },
+                      {
+                        "label": "2nd",
+                        "value": "2nd"
+                      },
+                      {
+                        "label": "3rd+",
+                        "value": "3rd+"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "name": "commenterUrl",
             "type": "url",
-            "label": "Commenter URL"
+            "label": "Commenter URL (deprecated, use Comment Author)"
           },
           {
             "name": "commenterName",
             "type": "text",
-            "label": "Commenter Name"
+            "label": "Commenter Name (deprecated, use Comment Author)"
           },
           {
             "name": "commenterHeadline",
             "type": "text",
-            "label": "Commenter Headline"
+            "label": "Commenter Headline (deprecated, use Comment Author)"
           },
           {
             "name": "commenterType",
             "type": "select",
-            "label": "Commenter Type",
+            "label": "Commenter Type (deprecated, use Comment Author)",
             "options": [
               {
                 "label": "Person",
@@ -297,6 +434,49 @@
             "name": "repliesCount",
             "type": "number",
             "label": "Replies Count"
+          },
+          {
+            "name": "viewerState",
+            "type": "collection",
+            "label": "Viewer State",
+            "spec": [
+              {
+                "name": "reaction",
+                "type": "select",
+                "label": "Your Reaction to the Comment",
+                "options": [
+                  {
+                    "label": "Like",
+                    "value": "like"
+                  },
+                  {
+                    "label": "Celebrate",
+                    "value": "celebrate"
+                  },
+                  {
+                    "label": "Support",
+                    "value": "support"
+                  },
+                  {
+                    "label": "Love",
+                    "value": "love"
+                  },
+                  {
+                    "label": "Insightful",
+                    "value": "insightful"
+                  },
+                  {
+                    "label": "Funny",
+                    "value": "funny"
+                  }
+                ]
+              },
+              {
+                "name": "isOwn",
+                "type": "boolean",
+                "label": "Is Your Comment"
+              }
+            ]
           }
         ]
       },

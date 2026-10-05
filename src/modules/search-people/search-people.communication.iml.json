@@ -16,7 +16,8 @@
           "industries": "{{parameters.industries}}",
           "currentCompanies": "{{parameters.currentCompanies}}",
           "previousCompanies": "{{parameters.previousCompanies}}",
-          "schools": "{{parameters.schools}}"
+          "schools": "{{parameters.schools}}",
+          "connectionDegrees": "{{parameters.connectionDegrees}}"
         }
       }
     },

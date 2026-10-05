@@ -49,6 +49,10 @@
           {
             "label": "Searching Not Allowed",
             "value": "searchingNotAllowed"
+          },
+          {
+            "label": "Filter Not Applied",
+            "value": "filterNotApplied"
           }
         ]
       },

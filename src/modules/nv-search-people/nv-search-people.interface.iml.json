@@ -33,6 +33,32 @@
         "name": "avatarUrl",
         "type": "url",
         "label": "Avatar URL"
+      },
+      {
+        "name": "viewerState",
+        "type": "collection",
+        "label": "Viewer State",
+        "spec": [
+          {
+            "name": "connectionDegree",
+            "type": "select",
+            "label": "Connection Degree",
+            "options": [
+              {
+                "label": "1st",
+                "value": "1st"
+              },
+              {
+                "label": "2nd",
+                "value": "2nd"
+              },
+              {
+                "label": "3rd+",
+                "value": "3rd+"
+              }
+            ]
+          }
+        ]
       }
     ]
   },

@@ -33,7 +33,24 @@
           { "name": "name", "type": "text", "label": "Author Name" },
           { "name": "profileUrl", "type": "url", "label": "Author Profile URL" },
           { "name": "headline", "type": "text", "label": "Author Headline" },
-          { "name": "companyUrl", "type": "url", "label": "Author Company URL" }
+          { "name": "companyUrl", "type": "url", "label": "Author Company URL" },
+          {
+            "name": "viewerState",
+            "type": "collection",
+            "label": "Viewer State",
+            "spec": [
+              {
+                "name": "connectionDegree",
+                "type": "select",
+                "label": "Connection Degree",
+                "options": [
+                  { "value": "1st", "label": "1st" },
+                  { "value": "2nd", "label": "2nd" },
+                  { "value": "3rd+", "label": "3rd+" }
+                ]
+              }
+            ]
+          }
         ]
       },
       {
@@ -93,7 +110,28 @@
       { "name": "hasPoll", "type": "boolean", "label": "Has Poll" },
       { "name": "reactionsCount", "type": "number", "label": "Reactions Count" },
       { "name": "commentsCount", "type": "number", "label": "Comments Count" },
-      { "name": "repostsCount", "type": "number", "label": "Reposts Count" }
+      { "name": "repostsCount", "type": "number", "label": "Reposts Count" },
+      {
+        "name": "viewerState",
+        "type": "collection",
+        "label": "Viewer State",
+        "spec": [
+          {
+            "name": "reaction",
+            "type": "select",
+            "label": "Your Reaction to the Post",
+            "options": [
+              { "value": "like", "label": "Like" },
+              { "value": "celebrate", "label": "Celebrate" },
+              { "value": "support", "label": "Support" },
+              { "value": "love", "label": "Love" },
+              { "value": "insightful", "label": "Insightful" },
+              { "value": "funny", "label": "Funny" }
+            ]
+          },
+          { "name": "isOwn", "type": "boolean", "label": "Is Your Post" }
+        ]
+      }
     ]
   },
   {
@@ -106,7 +144,7 @@
         "type": "select",
         "label": "Error Type",
         "options": [
-          { "value": "filterIdentityMismatch", "label": "Filter Identity Mismatch" },
+          { "value": "filterNotApplied", "label": "Filter Not Applied" },
           { "value": "searchingNotAllowed", "label": "Searching Not Allowed" }
         ]
       },

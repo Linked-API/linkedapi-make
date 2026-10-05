@@ -95,6 +95,32 @@
     ]
   },
   {
+    "name": "connectionDegrees",
+    "type": "select",
+    "label": "Connection Degrees",
+    "required": false,
+    "help": "Your connection degrees to the employees to filter by, or members of the groups you belong to. Only used when Retrieve Employees is enabled",
+    "multiple": true,
+    "options": [
+      {
+        "label": "1st",
+        "value": "1st"
+      },
+      {
+        "label": "2nd",
+        "value": "2nd"
+      },
+      {
+        "label": "3rd+",
+        "value": "3rd+"
+      },
+      {
+        "label": "Group Members",
+        "value": "groupMembers"
+      }
+    ]
+  },
+  {
     "name": "retrieveDMs",
     "type": "boolean",
     "label": "Retrieve Decision Makers",

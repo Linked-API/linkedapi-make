@@ -17,7 +17,8 @@
           "currentCompanies": "{{parameters.currentCompanies}}",
           "previousCompanies": "{{parameters.previousCompanies}}",
           "schools": "{{parameters.schools}}",
-          "yearsOfExperiences": "{{parameters.yearsOfExperiences}}"
+          "yearsOfExperiences": "{{parameters.yearsOfExperiences}}",
+          "connectionDegrees": "{{parameters.connectionDegrees}}"
         }
       }
     },

@@ -76,5 +76,27 @@
     "label": "Schools",
     "required": false,
     "help": "Schools to filter by (e.g., Stanford University, MIT)"
+  },
+  {
+    "name": "connectionDegrees",
+    "type": "select",
+    "label": "Connection Degrees",
+    "required": false,
+    "help": "Your connection degrees to the people to filter by",
+    "multiple": true,
+    "options": [
+      {
+        "label": "1st",
+        "value": "1st"
+      },
+      {
+        "label": "2nd",
+        "value": "2nd"
+      },
+      {
+        "label": "3rd+",
+        "value": "3rd+"
+      }
+    ]
   }
 ]

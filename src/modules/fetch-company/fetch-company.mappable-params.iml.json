@@ -23,6 +23,28 @@
     "default": 500
   },
   {
+    "name": "employeeConnectionDegrees",
+    "type": "select",
+    "label": "Connection Degrees",
+    "required": false,
+    "help": "Your connection degrees to the employees to filter by. Only used when Retrieve Employees is enabled",
+    "multiple": true,
+    "options": [
+      {
+        "label": "1st",
+        "value": "1st"
+      },
+      {
+        "label": "2nd",
+        "value": "2nd"
+      },
+      {
+        "label": "3rd+",
+        "value": "3rd+"
+      }
+    ]
+  },
+  {
     "name": "retrieveDMs",
     "type": "boolean",
     "label": "Retrieve Decision Makers",
