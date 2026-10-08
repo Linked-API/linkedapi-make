@@ -13,11 +13,11 @@
           "datePosted": "{{parameters.datePosted}}",
           "contentType": "{{parameters.contentType}}",
           "postedBy": "{{if(length(parameters.postedBy) > 0, parameters.postedBy, undefined)}}",
-          "fromMembers": "{{if(length(parameters.fromMembers) > 0, parameters.fromMembers, undefined)}}",
-          "fromCompanies": "{{if(length(parameters.fromCompanies) > 0, parameters.fromCompanies, undefined)}}",
-          "mentioningMembers": "{{if(length(parameters.mentioningMembers) > 0, parameters.mentioningMembers, undefined)}}",
-          "mentioningCompanies": "{{if(length(parameters.mentioningCompanies) > 0, parameters.mentioningCompanies, undefined)}}",
-          "authorCompanies": "{{if(length(parameters.authorCompanies) > 0, parameters.authorCompanies, undefined)}}",
+          "fromMembers": "{{if(length(parameters.fromMembersWithId) > 0, if(length(parameters.fromMembers) > 0, merge(parameters.fromMembers, parameters.fromMembersWithId), parameters.fromMembersWithId), if(length(parameters.fromMembers) > 0, parameters.fromMembers, undefined))}}",
+          "fromCompanies": "{{if(length(parameters.fromCompaniesWithId) > 0, if(length(parameters.fromCompanies) > 0, merge(parameters.fromCompanies, parameters.fromCompaniesWithId), parameters.fromCompaniesWithId), if(length(parameters.fromCompanies) > 0, parameters.fromCompanies, undefined))}}",
+          "mentioningMembers": "{{if(length(parameters.mentioningMembersWithId) > 0, if(length(parameters.mentioningMembers) > 0, merge(parameters.mentioningMembers, parameters.mentioningMembersWithId), parameters.mentioningMembersWithId), if(length(parameters.mentioningMembers) > 0, parameters.mentioningMembers, undefined))}}",
+          "mentioningCompanies": "{{if(length(parameters.mentioningCompaniesWithId) > 0, if(length(parameters.mentioningCompanies) > 0, merge(parameters.mentioningCompanies, parameters.mentioningCompaniesWithId), parameters.mentioningCompaniesWithId), if(length(parameters.mentioningCompanies) > 0, parameters.mentioningCompanies, undefined))}}",
+          "authorCompanies": "{{if(length(parameters.authorCompaniesWithId) > 0, if(length(parameters.authorCompanies) > 0, merge(parameters.authorCompanies, parameters.authorCompaniesWithId), parameters.authorCompaniesWithId), if(length(parameters.authorCompanies) > 0, parameters.authorCompanies, undefined))}}",
           "authorIndustries": "{{if(length(parameters.authorIndustries) > 0, parameters.authorIndustries, undefined)}}"
         }
       }

@@ -213,6 +213,10 @@
           {
             "label": "Retrieving Not Allowed",
             "value": "retrievingNotAllowed"
+          },
+          {
+            "label": "Filter Not Applied",
+            "value": "filterNotApplied"
           }
         ]
       },

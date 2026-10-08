@@ -76,35 +76,150 @@
     "type": "array",
     "label": "From Members",
     "required": false,
-    "help": "Names of people whose posts to keep (e.g., Bill Gates, Satya Nadella). LinkedIn picks whichever person it ranks first for a typed name, which may be a namesake."
+    "help": "Names of people whose posts to keep (e.g., Bill Gates, Satya Nadella). A name alone may match a namesake; if LinkedIn offers no matching option, the search fails with Filter Not Applied."
+  },
+  {
+    "name": "fromMembersWithId",
+    "type": "array",
+    "label": "From Members (with ID)",
+    "required": false,
+    "help": "People whose posts to keep, each pinned by ID: a member URN, profile URL or Sales Navigator lead URL. Combined with From Members.",
+    "spec": [
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Name",
+        "required": true,
+        "help": "Name of the person"
+      },
+      {
+        "name": "id",
+        "type": "text",
+        "label": "ID",
+        "required": true,
+        "help": "Identifier that pins the filter to exactly this person"
+      }
+    ]
   },
   {
     "name": "fromCompanies",
     "type": "array",
     "label": "From Companies",
     "required": false,
-    "help": "Names of companies whose posts to keep (e.g., Microsoft, Google). LinkedIn picks whichever company it ranks first for a typed name, which may be a namesake."
+    "help": "Names of companies whose posts to keep (e.g., Microsoft, Google). A name alone may match a namesake; if LinkedIn offers no matching option, the search fails with Filter Not Applied."
+  },
+  {
+    "name": "fromCompaniesWithId",
+    "type": "array",
+    "label": "From Companies (with ID)",
+    "required": false,
+    "help": "Companies whose posts to keep, each pinned by ID: an organization URN, company URL or Sales Navigator company URL. Combined with From Companies.",
+    "spec": [
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Name",
+        "required": true,
+        "help": "Name of the company"
+      },
+      {
+        "name": "id",
+        "type": "text",
+        "label": "ID",
+        "required": true,
+        "help": "Identifier that pins the filter to exactly this company"
+      }
+    ]
   },
   {
     "name": "mentioningMembers",
     "type": "array",
     "label": "Mentioning Members",
     "required": false,
-    "help": "Names of people to look for in post text (e.g., Bill Gates, Satya Nadella). LinkedIn picks whichever person it ranks first for a typed name, which may be a namesake."
+    "help": "Names of people to look for in post text (e.g., Bill Gates, Satya Nadella). A name alone may match a namesake; if LinkedIn offers no matching option, the search fails with Filter Not Applied."
+  },
+  {
+    "name": "mentioningMembersWithId",
+    "type": "array",
+    "label": "Mentioning Members (with ID)",
+    "required": false,
+    "help": "People to look for in post text, each pinned by ID: a member URN, profile URL or Sales Navigator lead URL. Combined with Mentioning Members.",
+    "spec": [
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Name",
+        "required": true,
+        "help": "Name of the person"
+      },
+      {
+        "name": "id",
+        "type": "text",
+        "label": "ID",
+        "required": true,
+        "help": "Identifier that pins the filter to exactly this person"
+      }
+    ]
   },
   {
     "name": "mentioningCompanies",
     "type": "array",
     "label": "Mentioning Companies",
     "required": false,
-    "help": "Names of companies to look for in post text (e.g., Microsoft, Google). LinkedIn picks whichever company it ranks first for a typed name, which may be a namesake."
+    "help": "Names of companies to look for in post text (e.g., Microsoft, Google). A name alone may match a namesake; if LinkedIn offers no matching option, the search fails with Filter Not Applied."
+  },
+  {
+    "name": "mentioningCompaniesWithId",
+    "type": "array",
+    "label": "Mentioning Companies (with ID)",
+    "required": false,
+    "help": "Companies to look for in post text, each pinned by ID: an organization URN, company URL or Sales Navigator company URL. Combined with Mentioning Companies.",
+    "spec": [
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Name",
+        "required": true,
+        "help": "Name of the company"
+      },
+      {
+        "name": "id",
+        "type": "text",
+        "label": "ID",
+        "required": true,
+        "help": "Identifier that pins the filter to exactly this company"
+      }
+    ]
   },
   {
     "name": "authorCompanies",
     "type": "array",
     "label": "Author Companies",
     "required": false,
-    "help": "Names of companies the post author works at (e.g., Microsoft, Google). LinkedIn picks whichever company it ranks first for a typed name, which may be a namesake."
+    "help": "Names of companies the post author works at (e.g., Microsoft, Google). A name alone may match a namesake; if LinkedIn offers no matching option, the search fails with Filter Not Applied."
+  },
+  {
+    "name": "authorCompaniesWithId",
+    "type": "array",
+    "label": "Author Companies (with ID)",
+    "required": false,
+    "help": "Companies the post author works at, each pinned by ID: an organization URN, company URL or Sales Navigator company URL. Combined with Author Companies.",
+    "spec": [
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Name",
+        "required": true,
+        "help": "Name of the company"
+      },
+      {
+        "name": "id",
+        "type": "text",
+        "label": "ID",
+        "required": true,
+        "help": "Identifier that pins the filter to exactly this company"
+      }
+    ]
   },
   {
     "name": "authorIndustries",

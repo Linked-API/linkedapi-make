@@ -486,29 +486,102 @@
         "label": "Reactions",
         "spec": [
           {
+            "name": "actor",
+            "type": "collection",
+            "label": "Reaction Actor",
+            "spec": [
+              {
+                "name": "type",
+                "type": "select",
+                "label": "Actor Type",
+                "options": [
+                  {
+                    "label": "Person",
+                    "value": "person"
+                  },
+                  {
+                    "label": "Company",
+                    "value": "company"
+                  }
+                ]
+              },
+              {
+                "name": "name",
+                "type": "text",
+                "label": "Actor Name"
+              },
+              {
+                "name": "urn",
+                "type": "text",
+                "label": "Actor URN"
+              },
+              {
+                "name": "profileUrl",
+                "type": "url",
+                "label": "Actor Profile URL"
+              },
+              {
+                "name": "headline",
+                "type": "text",
+                "label": "Actor Headline"
+              },
+              {
+                "name": "companyUrl",
+                "type": "url",
+                "label": "Actor Company URL"
+              },
+              {
+                "name": "viewerState",
+                "type": "collection",
+                "label": "Viewer State",
+                "spec": [
+                  {
+                    "name": "connectionDegree",
+                    "type": "select",
+                    "label": "Connection Degree",
+                    "options": [
+                      {
+                        "label": "1st",
+                        "value": "1st"
+                      },
+                      {
+                        "label": "2nd",
+                        "value": "2nd"
+                      },
+                      {
+                        "label": "3rd+",
+                        "value": "3rd+"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "name": "engagerUrn",
             "type": "text",
-            "label": "Engager URN"
+            "label": "Engager URN (deprecated, use Reaction Actor)"
           },
           {
             "name": "engagerUrl",
             "type": "url",
-            "label": "Engager URL"
+            "label": "Engager URL (deprecated, use Reaction Actor)"
           },
           {
             "name": "engagerName",
             "type": "text",
-            "label": "Engager Name"
+            "label": "Engager Name (deprecated, use Reaction Actor)"
           },
           {
             "name": "engagerHeadline",
             "type": "text",
-            "label": "Engager Headline"
+            "label": "Engager Headline (deprecated, use Reaction Actor)"
           },
           {
             "name": "engagerType",
             "type": "select",
-            "label": "Engager Type",
+            "label": "Engager Type (deprecated, use Reaction Actor)",
             "options": [
               {
                 "label": "Person",
