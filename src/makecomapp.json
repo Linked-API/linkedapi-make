@@ -293,7 +293,7 @@
             },
             "nvSyncConversation": {
                 "label": "Sync a conversation in Sales Navigator",
-                "description": "Sync a conversation in Sales Navigator so you can start polling it.",
+                "description": "Load a person's earlier Sales Navigator message history. Run once per person – not on every scenario run; to catch new replies use Sync Inbox in Sales Navigator once and Poll Inbox.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -309,7 +309,7 @@
             },
             "nvSyncInbox": {
                 "label": "Sync inbox in Sales Navigator",
-                "description": "Enable whole-inbox monitoring in Sales Navigator so every incoming conversation can be polled.",
+                "description": "Recommended way to watch incoming Sales Navigator messages: enable whole-inbox monitoring in Sales Navigator so every incoming conversation can be polled.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -325,7 +325,7 @@
             },
             "pollConversations": {
                 "label": "Poll conversations for new messages",
-                "description": "Poll multiple conversations for new messages.",
+                "description": "Legacy – use Poll Inbox with Person URL.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -341,7 +341,7 @@
             },
             "pollInbox": {
                 "label": "Poll inbox for new messages",
-                "description": "Poll the monitored inbox for new messages across all conversations.",
+                "description": "Poll the monitored inbox for new messages across all conversations, or set Person URL to get one person's whole known conversation.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -677,7 +677,7 @@
             },
             "syncConversation": {
                 "label": "Sync a conversation",
-                "description": "Sync a conversation so you can start polling it for new messages.",
+                "description": "Load a person's earlier message history. Run once per person – not on every scenario run; to catch new replies use Sync Inbox once and Poll Inbox.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -693,7 +693,7 @@
             },
             "syncInbox": {
                 "label": "Sync inbox",
-                "description": "Enable whole-inbox monitoring so every incoming conversation can be polled.",
+                "description": "Recommended way to watch incoming messages: enable whole-inbox monitoring so every incoming conversation can be polled.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",

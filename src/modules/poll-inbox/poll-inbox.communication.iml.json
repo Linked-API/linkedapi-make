@@ -5,7 +5,8 @@
     "body": {
       "since": "{{parameters.since}}",
       "type": "{{parameters.type}}",
-      "threadId": "{{parameters.threadId}}"
+      "threadId": "{{parameters.threadId}}",
+      "personUrl": "{{parameters.personUrl}}"
     },
     "response": {
       "output": {

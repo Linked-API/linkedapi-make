@@ -4,7 +4,7 @@
     "type": "date",
     "label": "Since Date",
     "required": false,
-    "help": "Only retrieve messages after this date (ISO 8601 format). If empty, all captured messages are returned."
+    "help": "Only retrieve messages at or after this date (ISO 8601 format). If empty, all captured messages are returned. Message times are whole minutes."
   },
   {
     "name": "type",
@@ -29,5 +29,12 @@
     "label": "Thread ID",
     "required": false,
     "help": "Restrict the result to a single conversation thread"
+  },
+  {
+    "name": "personUrl",
+    "type": "text",
+    "label": "Person URL",
+    "required": false,
+    "help": "Return the whole known conversation with this person instead of the whole inbox, including history loaded by Sync Conversation; the output then also has Threads. A hashed URL always matches; a public URL matches only once Linked API knows it."
   }
 ]

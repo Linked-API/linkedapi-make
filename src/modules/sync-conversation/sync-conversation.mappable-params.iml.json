@@ -16,6 +16,6 @@
       "min": 1,
       "max": 90
     },
-    "help": "How many days the conversation stays synchronized (1-90, default 30). Counted from the moment the action starts running; a reply does not extend it. Syncing the same person again starts a new period and keeps the history already collected."
+    "help": "Syncing period, not the depth of history: how many days new messages keep being added to the loaded history (1-90, default 30). The whole conversation is read regardless. Counted from the moment the action starts running; a reply does not extend it. Syncing the same person again keeps the history already collected and never shortens the period."
   }
 ]

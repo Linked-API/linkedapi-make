@@ -15,6 +15,11 @@
             "label": "Message ID"
           },
           {
+            "name": "inboxMessageId",
+            "type": "text",
+            "label": "Inbox Message ID"
+          },
+          {
             "name": "type",
             "type": "select",
             "label": "Conversation Type",
@@ -73,6 +78,48 @@
             "name": "time",
             "type": "date",
             "label": "Message Time"
+          }
+        ]
+      },
+      {
+        "name": "threads",
+        "type": "array",
+        "label": "Threads",
+        "spec": [
+          {
+            "name": "threadId",
+            "type": "text",
+            "label": "Thread ID"
+          },
+          {
+            "name": "type",
+            "type": "select",
+            "label": "Conversation Type",
+            "options": [
+              {
+                "label": "Standard Interface",
+                "value": "st"
+              },
+              {
+                "label": "Sales Navigator",
+                "value": "nv"
+              }
+            ]
+          },
+          {
+            "name": "personUrn",
+            "type": "text",
+            "label": "Person URN"
+          },
+          {
+            "name": "historyFrom",
+            "type": "date",
+            "label": "History From"
+          },
+          {
+            "name": "historyComplete",
+            "type": "boolean",
+            "label": "History Complete"
           }
         ]
       }
