@@ -1,0 +1,16 @@
+[
+  {
+    "name": "personUrl",
+    "type": "text",
+    "label": "Person URL",
+    "required": true,
+    "help": "Public or hashed LinkedIn URL of the person whose skill you want to endorse. LinkedIn lets you endorse skills only of your 1st-degree connections."
+  },
+  {
+    "name": "skillName",
+    "type": "text",
+    "label": "Skill Name",
+    "required": true,
+    "help": "Name of the skill to endorse, up to 200 characters. It must equal the skill's name on the person's profile; letter case and extra spaces are ignored. It is not a pattern. Skill names are shown as the profile owner entered them, in the owner's language, whatever your own LinkedIn language: a German profile lists Projektmanagement, not Project Management. A skill you have already endorsed is left as it is and counts as a success. Every successful endorsement counts toward the stEndorsements limit."
+  }
+]

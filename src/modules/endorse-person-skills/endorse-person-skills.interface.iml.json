@@ -1,0 +1,89 @@
+[
+  {
+    "name": "data",
+    "type": "array",
+    "label": "Endorsements",
+    "spec": [
+      {
+        "name": "skillName",
+        "type": "text",
+        "label": "Skill Name"
+      },
+      {
+        "name": "success",
+        "type": "boolean",
+        "label": "Success"
+      },
+      {
+        "name": "error",
+        "type": "collection",
+        "label": "Error",
+        "spec": [
+          {
+            "name": "type",
+            "type": "select",
+            "label": "Error Type",
+            "options": [
+              {
+                "label": "Connection Not Found",
+                "value": "connectionNotFound"
+              },
+              {
+                "label": "Endorsement Unavailable",
+                "value": "endorsementUnavailable"
+              },
+              {
+                "label": "Limit Exceeded",
+                "value": "limitExceeded"
+              },
+              {
+                "label": "Unexpected Error",
+                "value": "unexpectedError"
+              }
+            ]
+          },
+          {
+            "name": "message",
+            "type": "text",
+            "label": "Error Message"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": [
+      {
+        "name": "type",
+        "type": "select",
+        "label": "Error Type",
+        "options": [
+          {
+            "label": "Person Not Found",
+            "value": "personNotFound"
+          },
+          {
+            "label": "Person Likely Changed Public URL",
+            "value": "personLikelyChangedPublicUrl"
+          },
+          {
+            "label": "Self Profile Not Allowed",
+            "value": "selfProfileNotAllowed"
+          },
+          {
+            "label": "Limit Exceeded",
+            "value": "limitExceeded"
+          }
+        ]
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "label": "Error Message"
+      }
+    ]
+  }
+]
