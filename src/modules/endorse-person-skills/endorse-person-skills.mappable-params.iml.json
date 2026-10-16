@@ -1,0 +1,16 @@
+[
+  {
+    "name": "personUrl",
+    "type": "text",
+    "label": "Person URL",
+    "required": true,
+    "help": "Public or hashed LinkedIn URL of the person whose skills you want to endorse. LinkedIn lets you endorse skills only of your 1st-degree connections; for anyone else every selected skill gets Connection Not Found."
+  },
+  {
+    "name": "skillNamePatterns",
+    "type": "array",
+    "label": "Skill Name Patterns",
+    "required": false,
+    "help": "Regular expressions that select skills by name; a skill is selected when any of them matches. Leave empty to endorse every skill of the person. The syntax is RE2: lookaround and backreferences are not supported. Matching is case-insensitive and searches anywhere in the name: manage matches Project Management. Anchor a pattern with ^…$ to require the whole name: ^scrum$ matches Scrum but not Scrum Master. Up to 20 patterns of up to 200 characters each. Skill names are shown as the profile owner entered them, in the owner's language, whatever your own LinkedIn language, so write patterns in the language of the profiles you target. A skill you have already endorsed counts as a success, and every successful endorsement counts toward the stEndorsements limit."
+  }
+]

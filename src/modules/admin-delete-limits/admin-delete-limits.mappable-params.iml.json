@@ -25,6 +25,7 @@
           { "value": "stMessages", "label": "Messages" },
           { "value": "stSearchQueries", "label": "Search Queries" },
           { "value": "stReactions", "label": "Reactions" },
+          { "value": "stEndorsements", "label": "Endorsements" },
           { "value": "stComments", "label": "Comments" },
           { "value": "stPosts", "label": "Posts" },
           { "value": "nvPersonProfileViews", "label": "SN Person Profile Views" },

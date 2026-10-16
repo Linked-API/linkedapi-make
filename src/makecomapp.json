@@ -131,6 +131,38 @@
                     "scope": "modules/custom-workflow/custom-workflow.scope.iml.json"
                 }
             },
+            "endorsePersonSkill": {
+                "label": "Endorse a person skill",
+                "description": "Endorses one skill, by its exact name, of a 1st-degree connection.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/endorse-person-skill/endorse-person-skill.communication.iml.json",
+                    "staticParams": "modules/endorse-person-skill/endorse-person-skill.static-params.iml.json",
+                    "mappableParams": "modules/endorse-person-skill/endorse-person-skill.mappable-params.iml.json",
+                    "interface": "modules/endorse-person-skill/endorse-person-skill.interface.iml.json",
+                    "samples": "modules/endorse-person-skill/endorse-person-skill.samples.iml.json",
+                    "scope": "modules/endorse-person-skill/endorse-person-skill.scope.iml.json"
+                }
+            },
+            "endorsePersonSkills": {
+                "label": "Endorse person skills",
+                "description": "Endorses every skill of a 1st-degree connection whose name matches your patterns, or all of their skills.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/endorse-person-skills/endorse-person-skills.communication.iml.json",
+                    "staticParams": "modules/endorse-person-skills/endorse-person-skills.static-params.iml.json",
+                    "mappableParams": "modules/endorse-person-skills/endorse-person-skills.mappable-params.iml.json",
+                    "interface": "modules/endorse-person-skills/endorse-person-skills.interface.iml.json",
+                    "samples": "modules/endorse-person-skills/endorse-person-skills.samples.iml.json",
+                    "scope": "modules/endorse-person-skills/endorse-person-skills.scope.iml.json"
+                }
+            },
             "fetchCompany": {
                 "label": "Fetch a company",
                 "description": "Fetches detailed information about a LinkedIn company.",
@@ -1114,6 +1146,14 @@
                     {
                         "local": "customWorkflow",
                         "remote": "customWorkflow"
+                    },
+                    {
+                        "local": "endorsePersonSkill",
+                        "remote": "endorsePersonSkill"
+                    },
+                    {
+                        "local": "endorsePersonSkills",
+                        "remote": "endorsePersonSkills"
                     },
                     {
                         "local": "fetchCompany",
