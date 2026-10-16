@@ -6,7 +6,7 @@
       "operationName": "endorsePersonSkills",
       "data": {
         "personUrl": "{{parameters.personUrl}}",
-        "skillNamePatterns": "{{if(length(parameters.skillNamePatterns) > 0, parameters.skillNamePatterns, undefined)}}"
+        "skillNamePatterns": "{{if(parameters.allSkills === true, undefined, parameters.skillNamePatterns || '')}}"
       }
     },
     "response": {
