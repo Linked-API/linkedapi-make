@@ -68,7 +68,7 @@
     "type": "number",
     "label": "Reactions Limit",
     "required": false,
-    "help": "Number of reactions to retrieve (max 1000). Only used when Retrieve Reactions is enabled",
+    "help": "Number of reactions to retrieve (max 500). Only used when Retrieve Reactions is enabled",
     "default": 10
   }
 ]
