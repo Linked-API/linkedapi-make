@@ -83,6 +83,14 @@
           {
             "label": "Filter Not Applied",
             "value": "filterNotApplied"
+          },
+          {
+            "label": "Sales Navigator Onboarding Required",
+            "value": "salesNavigatorOnboardingRequired"
+          },
+          {
+            "label": "Search Temporarily Unavailable",
+            "value": "searchTemporarilyUnavailable"
           }
         ]
       },

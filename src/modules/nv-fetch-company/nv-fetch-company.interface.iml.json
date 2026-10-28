@@ -217,6 +217,10 @@
           {
             "label": "Filter Not Applied",
             "value": "filterNotApplied"
+          },
+          {
+            "label": "Search Temporarily Unavailable",
+            "value": "searchTemporarilyUnavailable"
           }
         ]
       },

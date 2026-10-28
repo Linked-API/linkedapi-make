@@ -25,6 +25,23 @@
     "name": "errors",
     "type": "array",
     "label": "Errors",
-    "spec": []
+    "spec": [
+      {
+        "name": "type",
+        "type": "select",
+        "label": "Error Type",
+        "options": [
+          {
+            "label": "SSI Not Available",
+            "value": "ssiNotAvailable"
+          }
+        ]
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "label": "Error Message"
+      }
+    ]
   }
 ]

@@ -42,6 +42,10 @@
           {
             "label": "Request Not Allowed",
             "value": "requestNotAllowed"
+          },
+          {
+            "label": "Invitation Already Received",
+            "value": "invitationAlreadyReceived"
           }
         ]
       },

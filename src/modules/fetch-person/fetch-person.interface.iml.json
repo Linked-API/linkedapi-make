@@ -672,6 +672,10 @@
           {
             "label": "Self Profile Not Allowed",
             "value": "selfProfileNotAllowed"
+          },
+          {
+            "label": "Person Likely Changed Public URL",
+            "value": "personLikelyChangedPublicUrl"
           }
         ]
       },

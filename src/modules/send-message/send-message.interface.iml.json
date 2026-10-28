@@ -22,6 +22,10 @@
           {
             "label": "Messaging Not Allowed",
             "value": "messagingNotAllowed"
+          },
+          {
+            "label": "Person Likely Changed Public URL",
+            "value": "personLikelyChangedPublicUrl"
           }
         ]
       },
