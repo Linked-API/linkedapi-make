@@ -1,11 +1,5 @@
 [
   {
-    "name": "data",
-    "type": "collection",
-    "label": "Data",
-    "spec": []
-  },
-  {
     "name": "errors",
     "type": "array",
     "label": "Errors",

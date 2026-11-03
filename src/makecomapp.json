@@ -227,6 +227,22 @@
                     "scope": "modules/fetch-job/fetch-job.scope.iml.json"
                 }
             },
+            "nvRetrieveAlerts": {
+                "label": "Retrieve alerts in Sales Navigator",
+                "description": "Retrieves lead and account alerts with filtering and sorting.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/nv-retrieve-alerts/nv-retrieve-alerts.communication.iml.json",
+                    "staticParams": "modules/nv-retrieve-alerts/nv-retrieve-alerts.static-params.iml.json",
+                    "mappableParams": "modules/nv-retrieve-alerts/nv-retrieve-alerts.mappable-params.iml.json",
+                    "interface": "modules/nv-retrieve-alerts/nv-retrieve-alerts.interface.iml.json",
+                    "samples": "modules/nv-retrieve-alerts/nv-retrieve-alerts.samples.iml.json",
+                    "scope": "modules/nv-retrieve-alerts/nv-retrieve-alerts.scope.iml.json"
+                }
+            },
             "nvFetchCompany": {
                 "label": "Fetch a company in Sales Navigator",
                 "description": "Fetch detailed information about a company in Sales Navigator.",
@@ -1140,20 +1156,8 @@
                         "remote": "createPost"
                     },
                     {
-                        "local": "createRepost",
-                        "remote": "createRepost"
-                    },
-                    {
                         "local": "customWorkflow",
                         "remote": "customWorkflow"
-                    },
-                    {
-                        "local": "endorsePersonSkill",
-                        "remote": "endorsePersonSkill"
-                    },
-                    {
-                        "local": "endorsePersonSkills",
-                        "remote": "endorsePersonSkills"
                     },
                     {
                         "local": "fetchCompany",
@@ -1166,6 +1170,10 @@
                     {
                         "local": "fetchPost",
                         "remote": "fetchPost"
+                    },
+                    {
+                        "local": "nvRetrieveAlerts",
+                        "remote": "nvRetrieveAlerts"
                     },
                     {
                         "local": "nvFetchCompany",
@@ -1390,6 +1398,26 @@
                     {
                         "local": "replyToComment",
                         "remote": "replyToComment"
+                    },
+                    {
+                        "local": "retrieveProfileViewers",
+                        "remote": "retrieveProfileViewers"
+                    },
+                    {
+                        "local": "searchPosts",
+                        "remote": "searchPosts"
+                    },
+                    {
+                        "local": "createRepost",
+                        "remote": "createRepost"
+                    },
+                    {
+                        "local": "endorsePersonSkill",
+                        "remote": "endorsePersonSkill"
+                    },
+                    {
+                        "local": "endorsePersonSkills",
+                        "remote": "endorsePersonSkills"
                     }
                 ],
                 "function": [],

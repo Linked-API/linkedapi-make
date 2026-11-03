@@ -21,6 +21,7 @@
 			"retrieveConnectionRequests",
 			"retrievePendingRequests",
 			"retrievePerformance",
+			"retrieveProfileViewers",
 			"retrieveSSI",
 			"searchCompanies",
 			"searchJobs",
@@ -40,6 +41,7 @@
 	{
 		"label": "Sales Navigator",
 		"modules": [
+			"nvRetrieveAlerts",
 			"nvFetchCompany",
 			"nvFetchPerson",
 			"nvSearchCompanies",

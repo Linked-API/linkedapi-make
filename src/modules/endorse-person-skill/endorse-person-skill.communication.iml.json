@@ -46,7 +46,6 @@
         "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
       },
       "output": {
-        "data": "{{temp.data}}",
         "errors": "{{temp.errors}}"
       }
     }

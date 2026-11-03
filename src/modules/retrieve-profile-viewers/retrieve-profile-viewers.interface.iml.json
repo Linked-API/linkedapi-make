@@ -74,6 +74,24 @@
   {
     "name": "errors",
     "type": "array",
-    "label": "Errors"
+    "label": "Errors",
+    "spec": [
+      {
+        "name": "type",
+        "type": "select",
+        "label": "Error Type",
+        "options": [
+          {
+            "label": "Unexpected Error",
+            "value": "unexpectedError"
+          }
+        ]
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "label": "Error Message"
+      }
+    ]
   }
 ]

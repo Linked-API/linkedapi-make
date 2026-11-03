@@ -23,7 +23,7 @@
     "default": 500
   },
   {
-    "name": "employeeConnectionDegrees",
+    "name": "connectionDegrees",
     "type": "select",
     "label": "Connection Degrees",
     "required": false,

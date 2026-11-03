@@ -11,9 +11,7 @@
         "retrievePosts": "{{parameters.retrievePosts}}",
         "employeesRetrievalConfig": {
           "limit": "{{parameters.employeeLimit}}",
-          "filter": {
-            "connectionDegrees": "{{parameters.employeeConnectionDegrees}}"
-          }
+          "filter": "{{if(length(parameters.connectionDegrees) > 0, pick(parameters, 'connectionDegrees'), undefined)}}"
         },
         "dmsRetrievalConfig": {
           "limit": "{{parameters.dmsLimit}}"

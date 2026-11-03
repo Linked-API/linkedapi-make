@@ -1,0 +1,75 @@
+[
+  {
+    "name": "limit",
+    "type": "number",
+    "label": "Limit",
+    "required": false,
+    "default": 50,
+    "validate": {
+      "min": 1,
+      "max": 1000
+    },
+    "help": "Maximum matching alerts to return (1-1000)."
+  },
+  {
+    "name": "sort",
+    "type": "select",
+    "label": "Sort",
+    "required": false,
+    "default": "latest",
+    "options": [
+      {
+        "label": "Latest",
+        "value": "latest"
+      },
+      {
+        "label": "Relevance",
+        "value": "relevance"
+      }
+    ],
+    "help": "Sales Navigator ordering; latest is newest first."
+  },
+  {
+    "name": "category",
+    "type": "select",
+    "label": "Category",
+    "required": false,
+    "options": [
+      {
+        "label": "Lead",
+        "value": "lead"
+      },
+      {
+        "label": "Account",
+        "value": "account"
+      }
+    ],
+    "help": "Leave empty for both lead and account alerts."
+  },
+  {
+    "name": "types",
+    "type": "array",
+    "label": "Types",
+    "required": false,
+    "spec": {
+      "type": "text",
+      "label": "Machine Code"
+    },
+    "help": "Exact upstream machine codes, including future codes. Empty means no type restriction."
+  },
+  {
+    "name": "since",
+    "type": "text",
+    "label": "Since",
+    "required": false,
+    "help": "Inclusive ISO timestamp cutoff, for example 2026-10-01T00:00:00Z."
+  },
+  {
+    "name": "excludeSuggested",
+    "type": "boolean",
+    "label": "Exclude Suggested",
+    "required": false,
+    "default": false,
+    "help": "Return only subjects confirmed as saved; exclude unsaved and unknown saved states. Filters are combined with AND."
+  }
+]

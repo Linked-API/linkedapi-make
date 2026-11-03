@@ -55,6 +55,11 @@
             "label": "Person Public LinkedIn URL"
           },
           {
+            "name": "personUrl",
+            "type": "url",
+            "label": "Person LinkedIn URL (deprecated, same as Person Hashed LinkedIn URL)"
+          },
+          {
             "name": "sender",
             "type": "select",
             "label": "Message Sender",
