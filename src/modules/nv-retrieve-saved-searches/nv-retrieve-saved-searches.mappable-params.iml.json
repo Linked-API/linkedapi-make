@@ -1,0 +1,19 @@
+[
+  {
+    "name": "type",
+    "type": "select",
+    "label": "Type",
+    "required": true,
+    "help": "Sales Navigator subject type.",
+    "options": [
+      {
+        "label": "Lead",
+        "value": "lead"
+      },
+      {
+        "label": "Account",
+        "value": "account"
+      }
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+[
+  {
+    "name": "savedSearchId",
+    "type": "text",
+    "label": "Saved Search ID",
+    "required": true,
+    "help": "Owned saved-search ID as a positive decimal string."
+  }
+]

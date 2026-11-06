@@ -1,0 +1,15 @@
+{
+  "errors": [],
+  "data": [
+    {
+      "id": "7420000000000000001",
+      "name": "Example",
+      "type": "lead",
+      "url": "https://www.linkedin.com/sales/search/people?query=example",
+      "keywords": null,
+      "createdAt": null,
+      "lastViewedAt": null,
+      "newResultsCount": null
+    }
+  ]
+}

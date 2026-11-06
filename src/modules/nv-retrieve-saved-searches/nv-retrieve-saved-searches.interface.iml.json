@@ -1,0 +1,66 @@
+[
+  {
+    "name": "data",
+    "type": "array",
+    "label": "Retrieve Saved Searches",
+    "spec": [
+      {
+        "name": "id",
+        "type": "text",
+        "label": "Id"
+      },
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Name"
+      },
+      {
+        "name": "type",
+        "type": "text",
+        "label": "Type"
+      },
+      {
+        "name": "url",
+        "type": "url",
+        "label": "Url"
+      },
+      {
+        "name": "keywords",
+        "type": "text",
+        "label": "Keywords"
+      },
+      {
+        "name": "createdAt",
+        "type": "date",
+        "label": "Created At"
+      },
+      {
+        "name": "lastViewedAt",
+        "type": "date",
+        "label": "Last Viewed At"
+      },
+      {
+        "name": "newResultsCount",
+        "type": "number",
+        "label": "New Results Count"
+      }
+    ]
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": [
+      {
+        "name": "type",
+        "type": "text",
+        "label": "Error Type"
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "label": "Error Message"
+      }
+    ]
+  }
+]

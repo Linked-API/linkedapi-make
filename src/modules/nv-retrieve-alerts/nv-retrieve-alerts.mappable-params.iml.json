@@ -71,5 +71,23 @@
     "required": false,
     "default": false,
     "help": "Return only subjects confirmed as saved; exclude unsaved and unknown saved states. Filters are combined with AND."
+  },
+  {
+    "name": "listId",
+    "type": "text",
+    "label": "List ID",
+    "required": false,
+    "help": "Owned list ID; requires latest sorting. Other filters are ANDed."
+  },
+  {
+    "name": "subjects",
+    "type": "array",
+    "label": "Subjects",
+    "required": false,
+    "spec": {
+      "type": "text",
+      "label": "Subject Identity"
+    },
+    "help": "Recognised hashed LinkedIn URLs or Sales Navigator subject URNs, one identity per item. Any listed subject may match; other filters are ANDed. Empty means unrestricted."
   }
 ]

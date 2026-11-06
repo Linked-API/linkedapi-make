@@ -1,0 +1,16 @@
+[
+  {
+    "name": "personHashedUrl",
+    "type": "text",
+    "label": "Person URL",
+    "required": true,
+    "help": "URL accepted by the Sales Navigator opener, including an alert subject URL."
+  },
+  {
+    "name": "listId",
+    "type": "text",
+    "label": "List ID",
+    "required": false,
+    "help": "Optional string ID of an owned custom lead list; other targets return listNotFound. Current limitation: If you have more than 10 lead lists, if the menu hides this list, the call fails with unexpectedError; the lead may be saved but not added to it."
+  }
+]

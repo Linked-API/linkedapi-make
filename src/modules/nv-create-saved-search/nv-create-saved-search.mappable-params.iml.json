@@ -1,0 +1,26 @@
+[
+  {
+    "name": "type",
+    "type": "select",
+    "label": "Type",
+    "required": true,
+    "help": "Sales Navigator subject type.",
+    "options": [
+      {
+        "label": "Lead",
+        "value": "lead"
+      },
+      {
+        "label": "Account",
+        "value": "account"
+      }
+    ]
+  },
+  {
+    "name": "customSearchUrl",
+    "type": "text",
+    "label": "Search URL",
+    "required": true,
+    "help": "Sales Navigator search URL copied from /sales/search/people for lead or /sales/search/company for account; must match type."
+  }
+]

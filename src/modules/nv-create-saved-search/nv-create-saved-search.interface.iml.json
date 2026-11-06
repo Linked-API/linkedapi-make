@@ -1,0 +1,46 @@
+[
+  {
+    "name": "data",
+    "type": "collection",
+    "label": "Create Saved Search",
+    "spec": [
+      {
+        "name": "id",
+        "type": "text",
+        "label": "Id"
+      },
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Name"
+      },
+      {
+        "name": "type",
+        "type": "text",
+        "label": "Type"
+      },
+      {
+        "name": "url",
+        "type": "url",
+        "label": "Url"
+      }
+    ]
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": [
+      {
+        "name": "type",
+        "type": "text",
+        "label": "Error Type"
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "label": "Error Message"
+      }
+    ]
+  }
+]

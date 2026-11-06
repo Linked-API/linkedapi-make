@@ -1,0 +1,33 @@
+[
+  {
+    "name": "type",
+    "type": "select",
+    "label": "Type",
+    "required": true,
+    "options": [
+      {
+        "label": "Lead",
+        "value": "lead"
+      },
+      {
+        "label": "Account",
+        "value": "account"
+      }
+    ],
+    "help": "Owned list type to create."
+  },
+  {
+    "name": "name",
+    "type": "text",
+    "label": "Name",
+    "required": true,
+    "help": "Trimmed name, 1–75 characters after trimming. Same-type trimmed, case-sensitive duplicates, including system lists, return listAlreadyExists; nothing is created."
+  },
+  {
+    "name": "description",
+    "type": "text",
+    "label": "Description",
+    "required": false,
+    "help": "Optional description; surrounding spaces are trimmed. Up to 350 characters after trimming; blank omitted."
+  }
+]

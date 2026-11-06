@@ -1,0 +1,16 @@
+[
+  {
+    "name": "companyHashedUrl",
+    "type": "text",
+    "label": "Company URL",
+    "required": true,
+    "help": "Public or hashed LinkedIn company URL, including /company/... and /sales/company/... or an alert subject URL."
+  },
+  {
+    "name": "listId",
+    "type": "text",
+    "label": "List ID",
+    "required": true,
+    "help": "Owned list ID as a string, never a number."
+  }
+]

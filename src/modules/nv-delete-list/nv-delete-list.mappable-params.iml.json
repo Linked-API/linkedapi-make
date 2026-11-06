@@ -1,0 +1,9 @@
+[
+  {
+    "name": "listId",
+    "type": "text",
+    "label": "List ID",
+    "required": true,
+    "help": "Owned list ID as text, never a number. Members stay saved and in their other lists. Unknown, shared or deleted IDs: listNotFound; system lists without Delete: listNotDeletable."
+  }
+]

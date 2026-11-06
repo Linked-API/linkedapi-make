@@ -2,8 +2,8 @@
   {
     "name": "personHashedUrl",
     "type": "text",
-    "label": "Person Hashed URL",
+    "label": "Person URL",
     "required": true,
-    "help": "Hashed LinkedIn URL of the person in Sales Navigator"
+    "help": "Public or hashed LinkedIn person URL, including /in/... and /sales/lead/... or an alert subject URL."
   }
 ]

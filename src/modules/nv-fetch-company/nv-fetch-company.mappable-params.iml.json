@@ -2,9 +2,9 @@
   {
     "name": "companyHashedUrl",
     "type": "text",
-    "label": "Company Hashed URL",
+    "label": "Company URL",
     "required": true,
-    "help": "Hashed LinkedIn URL of the company in Sales Navigator"
+    "help": "Public or hashed LinkedIn company URL, including /company/... and /sales/company/... or an alert subject URL."
   },
   {
     "name": "retrieveEmployees",

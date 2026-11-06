@@ -11,7 +11,9 @@
           "category": "{{parameters.category}}",
           "types": "{{parameters.types}}",
           "since": "{{parameters.since}}",
-          "excludeSuggested": "{{parameters.excludeSuggested}}"
+          "excludeSuggested": "{{parameters.excludeSuggested}}",
+          "listId": "{{if(parameters.listId, parameters.listId, undefined)}}",
+          "subjects": "{{parameters.subjects}}"
         }
       }
     },

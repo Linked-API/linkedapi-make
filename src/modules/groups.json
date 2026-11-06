@@ -42,6 +42,13 @@
 		"label": "Sales Navigator",
 		"modules": [
 			"nvRetrieveAlerts",
+			"nvRetrieveLists",
+			"nvCreateList",
+			"nvDeleteList",
+			"nvUnsaveAccount",
+			"nvSaveAccount",
+			"nvUnsaveLead",
+			"nvSaveLead",
 			"nvFetchCompany",
 			"nvFetchPerson",
 			"nvSearchCompanies",
@@ -49,7 +56,15 @@
 			"nvManageConversation",
 			"nvSendMessage",
 			"nvSyncConversation",
-			"nvSyncInbox"
+			"nvSyncInbox",
+			"nvRetrieveListLeads",
+			"nvRetrieveListAccounts",
+			"nvRemoveLeadFromList",
+			"nvRemoveAccountFromList",
+			"nvRenameList",
+			"nvRetrieveSavedSearches",
+			"nvCreateSavedSearch",
+			"nvDeleteSavedSearch"
 		]
 	},
 	{

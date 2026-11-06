@@ -1,0 +1,56 @@
+[
+  {
+    "name": "data",
+    "type": "array",
+    "label": "Lists",
+    "spec": [
+      {
+        "name": "id",
+        "type": "text",
+        "label": "List ID"
+      },
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Name"
+      },
+      {
+        "name": "type",
+        "type": "text",
+        "label": "Type"
+      },
+      {
+        "name": "source",
+        "type": "text",
+        "label": "Source"
+      },
+      {
+        "name": "entityCount",
+        "type": "number",
+        "label": "Entity Count"
+      },
+      {
+        "name": "url",
+        "type": "url",
+        "label": "URL"
+      }
+    ]
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": [
+      {
+        "name": "type",
+        "type": "text",
+        "label": "Error Type"
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "label": "Error Message"
+      }
+    ]
+  }
+]

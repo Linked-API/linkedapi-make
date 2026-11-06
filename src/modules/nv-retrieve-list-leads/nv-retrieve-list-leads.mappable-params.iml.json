@@ -1,0 +1,21 @@
+[
+  {
+    "name": "listId",
+    "type": "text",
+    "label": "List ID",
+    "required": true,
+    "help": "Owned list ID as a string, never a number."
+  },
+  {
+    "name": "limit",
+    "type": "number",
+    "label": "Limit",
+    "required": false,
+    "help": "Maximum matching members, 1–1000; default 25.",
+    "default": 25,
+    "validate": {
+      "min": 1,
+      "max": 1000
+    }
+  }
+]

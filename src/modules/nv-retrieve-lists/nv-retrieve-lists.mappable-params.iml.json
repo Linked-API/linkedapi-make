@@ -1,0 +1,19 @@
+[
+  {
+    "name": "type",
+    "type": "select",
+    "label": "Type",
+    "required": true,
+    "options": [
+      {
+        "label": "Lead",
+        "value": "lead"
+      },
+      {
+        "label": "Account",
+        "value": "account"
+      }
+    ],
+    "help": "Owned list type to retrieve."
+  }
+]

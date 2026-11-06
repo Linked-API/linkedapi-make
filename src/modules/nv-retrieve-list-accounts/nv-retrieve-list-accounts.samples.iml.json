@@ -1,0 +1,12 @@
+{
+  "errors": [],
+  "data": [
+    {
+      "name": "Example",
+      "urn": "urn:li:member:123",
+      "hashedUrl": "https://www.linkedin.com/in/ACoAAAExample",
+      "industry": null,
+      "employeesCount": null
+    }
+  ]
+}

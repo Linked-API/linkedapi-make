@@ -1,0 +1,16 @@
+[
+  {
+    "name": "companyHashedUrl",
+    "type": "text",
+    "label": "Company URL",
+    "required": true,
+    "help": "URL accepted by the Sales Navigator opener, including an alert subject URL."
+  },
+  {
+    "name": "listId",
+    "type": "text",
+    "label": "List ID",
+    "required": false,
+    "help": "Optional string ID of an owned custom account list or My Current Accounts; other targets return listNotFound. Current limitation: If you have more than 10 account lists, if the menu hides this list, the call fails with unexpectedError; the account may be saved but not added to it."
+  }
+]

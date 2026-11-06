@@ -1,0 +1,9 @@
+[
+  {
+    "name": "personHashedUrl",
+    "type": "text",
+    "label": "Person URL",
+    "required": true,
+    "help": "URL accepted by the Sales Navigator opener, including an alert subject URL."
+  }
+]

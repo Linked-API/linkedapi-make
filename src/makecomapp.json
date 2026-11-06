@@ -227,6 +227,86 @@
                     "scope": "modules/fetch-job/fetch-job.scope.iml.json"
                 }
             },
+            "nvSaveLead": {
+                "label": "Save Lead in Sales Navigator",
+                "description": "Plus. Ensure lead saved, optionally in one list; other lists untouched. May save its company. Idempotent. Sales Navigator can take up to a few minutes to reflect a change. A call that conflicts with a change you just made through Linked API may fail with unexpectedError; retry it a little later.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/nv-save-lead/nv-save-lead.communication.iml.json",
+                    "staticParams": "modules/nv-save-lead/nv-save-lead.static-params.iml.json",
+                    "mappableParams": "modules/nv-save-lead/nv-save-lead.mappable-params.iml.json",
+                    "interface": "modules/nv-save-lead/nv-save-lead.interface.iml.json",
+                    "samples": "modules/nv-save-lead/nv-save-lead.samples.iml.json",
+                    "scope": "modules/nv-save-lead/nv-save-lead.scope.iml.json"
+                }
+            },
+            "nvUnsaveLead": {
+                "label": "Unsave Lead in Sales Navigator",
+                "description": "Plus required. Native lead unsave removes it from saved leads and all custom lists you own. Idempotent. Sales Navigator can take up to a few minutes to reflect a change. A call that conflicts with a change you just made through Linked API may fail with unexpectedError; retry it a little later.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/nv-unsave-lead/nv-unsave-lead.communication.iml.json",
+                    "staticParams": "modules/nv-unsave-lead/nv-unsave-lead.static-params.iml.json",
+                    "mappableParams": "modules/nv-unsave-lead/nv-unsave-lead.mappable-params.iml.json",
+                    "interface": "modules/nv-unsave-lead/nv-unsave-lead.interface.iml.json",
+                    "samples": "modules/nv-unsave-lead/nv-unsave-lead.samples.iml.json",
+                    "scope": "modules/nv-unsave-lead/nv-unsave-lead.scope.iml.json"
+                }
+            },
+            "nvSaveAccount": {
+                "label": "Save Account in Sales Navigator",
+                "description": "Plus required. Ensure account saved, optionally in one list; other lists untouched. Idempotent. Sales Navigator can take up to a few minutes to reflect a change. A call that conflicts with a change you just made through Linked API may fail with unexpectedError; retry it a little later.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/nv-save-account/nv-save-account.communication.iml.json",
+                    "staticParams": "modules/nv-save-account/nv-save-account.static-params.iml.json",
+                    "mappableParams": "modules/nv-save-account/nv-save-account.mappable-params.iml.json",
+                    "interface": "modules/nv-save-account/nv-save-account.interface.iml.json",
+                    "samples": "modules/nv-save-account/nv-save-account.samples.iml.json",
+                    "scope": "modules/nv-save-account/nv-save-account.scope.iml.json"
+                }
+            },
+            "nvUnsaveAccount": {
+                "label": "Unsave Account in Sales Navigator",
+                "description": "Plus required. Unsave account only; its saved leads stay saved. Idempotent. Sales Navigator can take up to a few minutes to reflect a change. A call that conflicts with a change you just made through Linked API may fail with unexpectedError; retry it a little later.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/nv-unsave-account/nv-unsave-account.communication.iml.json",
+                    "staticParams": "modules/nv-unsave-account/nv-unsave-account.static-params.iml.json",
+                    "mappableParams": "modules/nv-unsave-account/nv-unsave-account.mappable-params.iml.json",
+                    "interface": "modules/nv-unsave-account/nv-unsave-account.interface.iml.json",
+                    "samples": "modules/nv-unsave-account/nv-unsave-account.samples.iml.json",
+                    "scope": "modules/nv-unsave-account/nv-unsave-account.scope.iml.json"
+                }
+            },
+            "nvRetrieveLists": {
+                "label": "Retrieve Lists in Sales Navigator",
+                "description": "Plus required. Retrieve every owned Sales Navigator list of the requested type. Results contain id (string), name, type (lead/account), source (open upstream string), entityCount (number or null), and url.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/nv-retrieve-lists/nv-retrieve-lists.communication.iml.json",
+                    "staticParams": "modules/nv-retrieve-lists/nv-retrieve-lists.static-params.iml.json",
+                    "mappableParams": "modules/nv-retrieve-lists/nv-retrieve-lists.mappable-params.iml.json",
+                    "interface": "modules/nv-retrieve-lists/nv-retrieve-lists.interface.iml.json",
+                    "samples": "modules/nv-retrieve-lists/nv-retrieve-lists.samples.iml.json",
+                    "scope": "modules/nv-retrieve-lists/nv-retrieve-lists.scope.iml.json"
+                }
+            },
             "nvRetrieveAlerts": {
                 "label": "Retrieve alerts in Sales Navigator",
                 "description": "Retrieves lead and account alerts with filtering and sorting.",
@@ -1122,6 +1202,166 @@
                     "samples": "modules/admin-reset-limits/admin-reset-limits.samples.iml.json",
                     "scope": "modules/admin-reset-limits/admin-reset-limits.scope.iml.json"
                 }
+            },
+            "nvCreateList": {
+                "label": "Create List in Sales Navigator",
+                "description": "Plus; English only. Create owned lead/account list. Name trimmed, 1–75 chars; optional description: surrounding spaces trimmed, ≤350 after trim; blank omitted. Same-type trimmed, case-sensitive duplicate (incl. system names): listAlreadyExists, nothing created. Returns id (string), name, type, url.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/nv-create-list/nv-create-list.communication.iml.json",
+                    "staticParams": "modules/nv-create-list/nv-create-list.static-params.iml.json",
+                    "mappableParams": "modules/nv-create-list/nv-create-list.mappable-params.iml.json",
+                    "interface": "modules/nv-create-list/nv-create-list.interface.iml.json",
+                    "samples": "modules/nv-create-list/nv-create-list.samples.iml.json",
+                    "scope": "modules/nv-create-list/nv-create-list.scope.iml.json"
+                }
+            },
+            "nvDeleteList": {
+                "label": "Delete List in Sales Navigator",
+                "description": "Plus; English only. Delete one owned list by string ID; members stay saved and in other lists. Unknown, shared or already-deleted ID: listNotFound. System list without Delete: listNotDeletable. Success has no result data.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/nv-delete-list/nv-delete-list.communication.iml.json",
+                    "staticParams": "modules/nv-delete-list/nv-delete-list.static-params.iml.json",
+                    "mappableParams": "modules/nv-delete-list/nv-delete-list.mappable-params.iml.json",
+                    "interface": "modules/nv-delete-list/nv-delete-list.interface.iml.json",
+                    "samples": "modules/nv-delete-list/nv-delete-list.samples.iml.json",
+                    "scope": "modules/nv-delete-list/nv-delete-list.scope.iml.json"
+                }
+            },
+            "nvRetrieveListLeads": {
+                "label": "Retrieve List Leads in Sales Navigator",
+                "description": "Retrieve list leads from an owned Sales Navigator list. Plus required.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/nv-retrieve-list-leads/nv-retrieve-list-leads.communication.iml.json",
+                    "staticParams": "modules/nv-retrieve-list-leads/nv-retrieve-list-leads.static-params.iml.json",
+                    "mappableParams": "modules/nv-retrieve-list-leads/nv-retrieve-list-leads.mappable-params.iml.json",
+                    "interface": "modules/nv-retrieve-list-leads/nv-retrieve-list-leads.interface.iml.json",
+                    "samples": "modules/nv-retrieve-list-leads/nv-retrieve-list-leads.samples.iml.json",
+                    "scope": "modules/nv-retrieve-list-leads/nv-retrieve-list-leads.scope.iml.json"
+                }
+            },
+            "nvRetrieveListAccounts": {
+                "label": "Retrieve List Accounts in Sales Navigator",
+                "description": "Retrieve list accounts from an owned Sales Navigator list. Plus required.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/nv-retrieve-list-accounts/nv-retrieve-list-accounts.communication.iml.json",
+                    "staticParams": "modules/nv-retrieve-list-accounts/nv-retrieve-list-accounts.static-params.iml.json",
+                    "mappableParams": "modules/nv-retrieve-list-accounts/nv-retrieve-list-accounts.mappable-params.iml.json",
+                    "interface": "modules/nv-retrieve-list-accounts/nv-retrieve-list-accounts.interface.iml.json",
+                    "samples": "modules/nv-retrieve-list-accounts/nv-retrieve-list-accounts.samples.iml.json",
+                    "scope": "modules/nv-retrieve-list-accounts/nv-retrieve-list-accounts.scope.iml.json"
+                }
+            },
+            "nvRemoveLeadFromList": {
+                "label": "Remove Lead from List in Sales Navigator",
+                "description": "Remove a lead from exactly one owned custom list, keeping it saved and in its other lists. Repeating an absent membership succeeds. English interface only. Plus required.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/nv-remove-lead-from-list/nv-remove-lead-from-list.communication.iml.json",
+                    "staticParams": "modules/nv-remove-lead-from-list/nv-remove-lead-from-list.static-params.iml.json",
+                    "mappableParams": "modules/nv-remove-lead-from-list/nv-remove-lead-from-list.mappable-params.iml.json",
+                    "interface": "modules/nv-remove-lead-from-list/nv-remove-lead-from-list.interface.iml.json",
+                    "samples": "modules/nv-remove-lead-from-list/nv-remove-lead-from-list.samples.iml.json",
+                    "scope": "modules/nv-remove-lead-from-list/nv-remove-lead-from-list.scope.iml.json"
+                }
+            },
+            "nvRemoveAccountFromList": {
+                "label": "Remove Account from List in Sales Navigator",
+                "description": "Remove an account from exactly one owned custom list, keeping it saved even after its last list. Repeating an absent membership succeeds. English interface only. Plus required.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/nv-remove-account-from-list/nv-remove-account-from-list.communication.iml.json",
+                    "staticParams": "modules/nv-remove-account-from-list/nv-remove-account-from-list.static-params.iml.json",
+                    "mappableParams": "modules/nv-remove-account-from-list/nv-remove-account-from-list.mappable-params.iml.json",
+                    "interface": "modules/nv-remove-account-from-list/nv-remove-account-from-list.interface.iml.json",
+                    "samples": "modules/nv-remove-account-from-list/nv-remove-account-from-list.samples.iml.json",
+                    "scope": "modules/nv-remove-account-from-list/nv-remove-account-from-list.scope.iml.json"
+                }
+            },
+            "nvRenameList": {
+                "label": "Rename List in Sales Navigator",
+                "description": "Rename an owned custom list. Trimmed name: 1–75 characters, no line breaks. Same name succeeds; duplicates return listAlreadyExists and system lists return listNotRenamable. English interface only. Plus required.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/nv-rename-list/nv-rename-list.communication.iml.json",
+                    "staticParams": "modules/nv-rename-list/nv-rename-list.static-params.iml.json",
+                    "mappableParams": "modules/nv-rename-list/nv-rename-list.mappable-params.iml.json",
+                    "interface": "modules/nv-rename-list/nv-rename-list.interface.iml.json",
+                    "samples": "modules/nv-rename-list/nv-rename-list.samples.iml.json",
+                    "scope": "modules/nv-rename-list/nv-rename-list.scope.iml.json"
+                }
+            },
+            "nvRetrieveSavedSearches": {
+                "label": "Retrieve Saved Searches in Sales Navigator",
+                "description": "Retrieve owned saved searches of the requested type. Plus required.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/nv-retrieve-saved-searches/nv-retrieve-saved-searches.communication.iml.json",
+                    "staticParams": "modules/nv-retrieve-saved-searches/nv-retrieve-saved-searches.static-params.iml.json",
+                    "mappableParams": "modules/nv-retrieve-saved-searches/nv-retrieve-saved-searches.mappable-params.iml.json",
+                    "interface": "modules/nv-retrieve-saved-searches/nv-retrieve-saved-searches.interface.iml.json",
+                    "samples": "modules/nv-retrieve-saved-searches/nv-retrieve-saved-searches.samples.iml.json",
+                    "scope": "modules/nv-retrieve-saved-searches/nv-retrieve-saved-searches.scope.iml.json"
+                }
+            },
+            "nvCreateSavedSearch": {
+                "label": "Create Saved Search in Sales Navigator",
+                "description": "Save a Sales Navigator search URL matching the requested type. Returns its id, name, type and URL. English interface only. Plus required.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/nv-create-saved-search/nv-create-saved-search.communication.iml.json",
+                    "staticParams": "modules/nv-create-saved-search/nv-create-saved-search.static-params.iml.json",
+                    "mappableParams": "modules/nv-create-saved-search/nv-create-saved-search.mappable-params.iml.json",
+                    "interface": "modules/nv-create-saved-search/nv-create-saved-search.interface.iml.json",
+                    "samples": "modules/nv-create-saved-search/nv-create-saved-search.samples.iml.json",
+                    "scope": "modules/nv-create-saved-search/nv-create-saved-search.scope.iml.json"
+                }
+            },
+            "nvDeleteSavedSearch": {
+                "label": "Delete Saved Search in Sales Navigator",
+                "description": "Delete an owned saved search by its string ID. An absent search returns savedSearchNotFound. English interface only. Plus required.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/nv-delete-saved-search/nv-delete-saved-search.communication.iml.json",
+                    "staticParams": "modules/nv-delete-saved-search/nv-delete-saved-search.static-params.iml.json",
+                    "mappableParams": "modules/nv-delete-saved-search/nv-delete-saved-search.mappable-params.iml.json",
+                    "interface": "modules/nv-delete-saved-search/nv-delete-saved-search.interface.iml.json",
+                    "samples": "modules/nv-delete-saved-search/nv-delete-saved-search.samples.iml.json",
+                    "scope": "modules/nv-delete-saved-search/nv-delete-saved-search.scope.iml.json"
+                }
             }
         },
         "function": {},
@@ -1418,6 +1658,66 @@
                     {
                         "local": "endorsePersonSkills",
                         "remote": "endorsePersonSkills"
+                    },
+                    {
+                        "local": "nvSaveLead",
+                        "remote": "nvSaveLead"
+                    },
+                    {
+                        "local": "nvUnsaveLead",
+                        "remote": "nvUnsaveLead"
+                    },
+                    {
+                        "local": "nvSaveAccount",
+                        "remote": "nvSaveAccount"
+                    },
+                    {
+                        "local": "nvUnsaveAccount",
+                        "remote": "nvUnsaveAccount"
+                    },
+                    {
+                        "local": "nvRetrieveLists",
+                        "remote": "nvRetrieveLists"
+                    },
+                    {
+                        "local": "nvCreateList",
+                        "remote": "nvCreateList"
+                    },
+                    {
+                        "local": "nvDeleteList",
+                        "remote": "nvDeleteList"
+                    },
+                    {
+                        "local": "nvRetrieveListLeads",
+                        "remote": "nvRetrieveListLeads"
+                    },
+                    {
+                        "local": "nvRetrieveListAccounts",
+                        "remote": "nvRetrieveListAccounts"
+                    },
+                    {
+                        "local": "nvRemoveLeadFromList",
+                        "remote": "nvRemoveLeadFromList"
+                    },
+                    {
+                        "local": "nvRemoveAccountFromList",
+                        "remote": "nvRemoveAccountFromList"
+                    },
+                    {
+                        "local": "nvRenameList",
+                        "remote": "nvRenameList"
+                    },
+                    {
+                        "local": "nvRetrieveSavedSearches",
+                        "remote": "nvRetrieveSavedSearches"
+                    },
+                    {
+                        "local": "nvCreateSavedSearch",
+                        "remote": "nvCreateSavedSearch"
+                    },
+                    {
+                        "local": "nvDeleteSavedSearch",
+                        "remote": "nvDeleteSavedSearch"
                     }
                 ],
                 "function": [],
