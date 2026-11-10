@@ -22,5 +22,12 @@
     "label": "Search URL",
     "required": true,
     "help": "Sales Navigator search URL copied from /sales/search/people for lead or /sales/search/company for account; must match type."
+  },
+  {
+    "name": "name",
+    "type": "text",
+    "label": "Name",
+    "required": false,
+    "help": "Optional name for the saved search; trimmed, single line, 1–256 characters. A name already used by a saved search of the same type returns savedSearchAlreadyExists. Blank keeps the name Sales Navigator gives it."
   }
 ]

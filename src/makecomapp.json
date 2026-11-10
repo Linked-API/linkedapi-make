@@ -1205,7 +1205,7 @@
             },
             "nvCreateList": {
                 "label": "Create List in Sales Navigator",
-                "description": "Plus; English only. Create owned lead/account list. Name trimmed, 1–75 chars; optional description: surrounding spaces trimmed, ≤350 after trim; blank omitted. Same-type trimmed, case-sensitive duplicate (incl. system names): listAlreadyExists, nothing created. Returns id (string), name, type, url.",
+                "description": "Plus. Create owned lead/account list. Name trimmed, 1–75 chars; optional description: surrounding spaces trimmed, ≤350 after trim; blank omitted. Same-type trimmed, case-sensitive duplicate (incl. system names): listAlreadyExists, nothing created. Returns id (string), name, type, url.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -1221,7 +1221,7 @@
             },
             "nvDeleteList": {
                 "label": "Delete List in Sales Navigator",
-                "description": "Plus; English only. Delete one owned list by string ID; members stay saved and in other lists. Unknown, shared or already-deleted ID: listNotFound. System list without Delete: listNotDeletable. Success has no result data.",
+                "description": "Plus. Delete one owned list by string ID; members stay saved and in other lists. Unknown, shared or already-deleted ID: listNotFound. System list without Delete: listNotDeletable. Success has no result data.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -1269,7 +1269,7 @@
             },
             "nvRemoveLeadFromList": {
                 "label": "Remove Lead from List in Sales Navigator",
-                "description": "Remove a lead from exactly one owned custom list, keeping it saved and in its other lists. Repeating an absent membership succeeds. English interface only. Plus required.",
+                "description": "Remove a lead from exactly one owned custom list, keeping it saved and in its other lists. Repeating an absent membership succeeds. Plus required.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -1285,7 +1285,7 @@
             },
             "nvRemoveAccountFromList": {
                 "label": "Remove Account from List in Sales Navigator",
-                "description": "Remove an account from exactly one owned custom list, keeping it saved even after its last list. Repeating an absent membership succeeds. English interface only. Plus required.",
+                "description": "Remove an account from exactly one owned custom list, keeping it saved even after its last list. Repeating an absent membership succeeds. Plus required.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -1301,7 +1301,7 @@
             },
             "nvRenameList": {
                 "label": "Rename List in Sales Navigator",
-                "description": "Rename an owned custom list. Trimmed name: 1–75 characters, no line breaks. Same name succeeds; duplicates return listAlreadyExists and system lists return listNotRenamable. English interface only. Plus required.",
+                "description": "Rename an owned custom list. Trimmed name: 1–75 characters, no line breaks. Same name succeeds; duplicates return listAlreadyExists and system lists return listNotRenamable. Plus required.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -1333,7 +1333,7 @@
             },
             "nvCreateSavedSearch": {
                 "label": "Create Saved Search in Sales Navigator",
-                "description": "Save a Sales Navigator search URL matching the requested type. Returns its id, name, type and URL. English interface only. Plus required.",
+                "description": "Save a Sales Navigator search URL matching the requested type, optionally under a name. Returns its id, name, type and URL. Plus required.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -1349,7 +1349,7 @@
             },
             "nvDeleteSavedSearch": {
                 "label": "Delete Saved Search in Sales Navigator",
-                "description": "Delete an owned saved search by its string ID. An absent search returns savedSearchNotFound. English interface only. Plus required.",
+                "description": "Delete an owned saved search by its string ID. An absent search returns savedSearchNotFound. Plus required.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",

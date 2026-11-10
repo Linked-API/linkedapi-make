@@ -6,7 +6,8 @@
       "operationName": "nvCreateSavedSearch",
       "data": {
         "type": "{{parameters.type}}",
-        "customSearchUrl": "{{parameters.customSearchUrl}}"
+        "customSearchUrl": "{{parameters.customSearchUrl}}",
+        "name": "{{if(parameters.name, parameters.name, undefined)}}"
       }
     },
     "response": {
