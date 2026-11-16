@@ -14,6 +14,17 @@
         "value": "account"
       }
     ],
-    "help": "Owned list type to retrieve."
+    "help": "Choose whether to return your lead lists or your account lists."
+  },
+  {
+    "name": "limit",
+    "type": "uinteger",
+    "label": "Limit",
+    "required": false,
+    "default": 10,
+    "validate": {
+      "min": 1
+    },
+    "help": "Maximum number of lists to return. Leave empty to return all of them."
   }
 ]

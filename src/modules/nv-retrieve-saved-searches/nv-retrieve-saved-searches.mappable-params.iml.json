@@ -4,7 +4,7 @@
     "type": "select",
     "label": "Type",
     "required": true,
-    "help": "Sales Navigator subject type.",
+    "help": "Choose whether to return your saved lead searches or your saved account searches.",
     "options": [
       {
         "label": "Lead",
@@ -15,5 +15,16 @@
         "value": "account"
       }
     ]
+  },
+  {
+    "name": "limit",
+    "type": "uinteger",
+    "label": "Limit",
+    "required": false,
+    "default": 10,
+    "validate": {
+      "min": 1
+    },
+    "help": "Maximum number of saved searches to return. Leave empty to return all of them."
   }
 ]

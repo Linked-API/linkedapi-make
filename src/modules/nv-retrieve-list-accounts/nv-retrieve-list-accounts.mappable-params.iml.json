@@ -4,18 +4,18 @@
     "type": "text",
     "label": "List ID",
     "required": true,
-    "help": "Owned list ID as a string, never a number."
+    "help": "ID of one of your account lists, for example 7420000000000000002. Find it in the Retrieve Lists output or at the end of the list's URL."
   },
   {
     "name": "limit",
-    "type": "number",
+    "type": "uinteger",
     "label": "Limit",
     "required": false,
-    "help": "Maximum matching members, 1–1000; default 25.",
-    "default": 25,
+    "default": 10,
     "validate": {
       "min": 1,
       "max": 1000
-    }
+    },
+    "help": "Maximum number of accounts to return, up to 1000. Leave empty to return up to 25."
   }
 ]

@@ -4,13 +4,13 @@
     "type": "text",
     "label": "Person URL",
     "required": true,
-    "help": "Recruiter profile URL (/talent/profile/…)"
+    "help": "Recruiter profile URL (/talent/profile/...), for example the Recruiter Profile URL from Search People."
   },
   {
     "name": "projectId",
     "type": "text",
     "label": "Project ID",
     "required": true,
-    "help": "Project ID as a string of digits"
+    "help": "ID of the project, for example 1234567890. Find it in the Retrieve Projects output."
   }
 ]

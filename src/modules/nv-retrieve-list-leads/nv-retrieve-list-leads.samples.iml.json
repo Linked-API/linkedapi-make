@@ -1,14 +1,9 @@
 {
-  "errors": [],
-  "data": [
-    {
-      "name": "Example",
-      "urn": "urn:li:member:123",
-      "hashedUrl": "https://www.linkedin.com/in/ACoAAAExample",
-      "position": null,
-      "companyName": null,
-      "location": null,
-      "addedToListAt": null
-    }
-  ]
+  "name": "Jane Smith",
+  "urn": "urn:li:member:123456789",
+  "hashedUrl": "https://www.linkedin.com/in/SInQBmjJ015eLr8",
+  "position": "Head of Sales",
+  "companyName": "Example Labs",
+  "location": "London, England, United Kingdom",
+  "addedToListAt": "2026-10-30T09:00:00.000Z"
 }

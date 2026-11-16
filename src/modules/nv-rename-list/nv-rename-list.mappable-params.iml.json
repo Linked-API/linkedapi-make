@@ -4,13 +4,13 @@
     "type": "text",
     "label": "List ID",
     "required": true,
-    "help": "Owned list ID as a string, never a number."
+    "help": "ID of the list to rename, for example 7420000000000000001. Find it in the Retrieve Lists output or at the end of the list's URL."
   },
   {
     "name": "name",
     "type": "text",
     "label": "Name",
     "required": true,
-    "help": "Trimmed name, 1–75 characters without line breaks."
+    "help": "New list name, up to 75 characters on one line. Spaces at the start and end are removed. If another list of this type already has exactly this name, the module fails."
   }
 ]

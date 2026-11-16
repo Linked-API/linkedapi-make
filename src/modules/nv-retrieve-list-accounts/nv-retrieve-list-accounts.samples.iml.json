@@ -1,12 +1,7 @@
 {
-  "errors": [],
-  "data": [
-    {
-      "name": "Example",
-      "urn": "urn:li:member:123",
-      "hashedUrl": "https://www.linkedin.com/in/ACoAAAExample",
-      "industry": null,
-      "employeesCount": null
-    }
-  ]
+  "name": "TechCorp",
+  "urn": "urn:li:organization:12345678",
+  "hashedUrl": "https://www.linkedin.com/company/12345678",
+  "industry": "IT Services and IT Consulting",
+  "employeesCount": 500
 }

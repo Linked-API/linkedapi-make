@@ -4,36 +4,26 @@
     "type": "text",
     "label": "Search Term",
     "required": false,
-    "help": "Search keywords; filters alone accepted. A mix with Custom Search URL is refused by Core."
-  },
-  {
-    "name": "limit",
-    "type": "number",
-    "label": "Limit",
-    "required": false,
-    "help": "Maximum results, 1–1000; default 25",
-    "default": 25
+    "help": "Search keywords. Leave empty to search by filters only. Cannot be combined with Custom Search URL."
   },
   {
     "name": "customSearchUrl",
     "type": "url",
     "label": "Custom Search URL",
     "required": false,
-    "help": "Recruiter search URL. A mix with Search Term or any filter is refused by Core."
+    "help": "A search URL copied from Recruiter's address bar. Cannot be combined with Search Term or filters."
   },
   {
     "name": "jobTitles",
     "type": "array",
     "label": "Job Titles",
-    "required": false,
-    "help": "Job Titles"
+    "required": false
   },
   {
     "name": "jobTitlesScope",
     "type": "select",
     "label": "Job Titles Scope",
     "required": false,
-    "help": "Job Titles Scope",
     "options": [
       {
         "label": "currentOrPast",
@@ -57,15 +47,13 @@
     "name": "locations",
     "type": "array",
     "label": "Locations",
-    "required": false,
-    "help": "Locations"
+    "required": false
   },
   {
     "name": "locationsScope",
     "type": "select",
     "label": "Locations Scope",
     "required": false,
-    "help": "Locations Scope",
     "options": [
       {
         "label": "current",
@@ -86,21 +74,20 @@
     "type": "collection",
     "label": "Postal Code",
     "required": false,
-    "help": "Code is required when a radius is set. Core refuses a radius without a code.",
+    "help": "Postal or ZIP code with an optional radius. Code is required when a radius is set.",
     "spec": [
       {
         "name": "code",
         "type": "text",
         "label": "Code",
         "required": false,
-        "help": "Required postal or ZIP code"
+        "help": "Postal or ZIP code."
       },
       {
         "name": "radiusMiles",
         "type": "select",
         "label": "Radius Miles",
         "required": false,
-        "help": "Radius Miles",
         "options": [
           {
             "label": "1",
@@ -138,30 +125,27 @@
     "name": "skills",
     "type": "array",
     "label": "Skills",
-    "required": false,
-    "help": "Skills"
+    "required": false
   },
   {
     "name": "hasPassedSkillAssessment",
     "type": "boolean",
     "label": "Has Passed Skill Assessment",
     "required": false,
-    "help": "True sets the checkbox on; false leaves it off, not an inverse filter",
+    "help": "Return only people who passed a skill assessment. Disabled means this filter is not applied.",
     "default": false
   },
   {
     "name": "companies",
     "type": "array",
     "label": "Companies",
-    "required": false,
-    "help": "Companies"
+    "required": false
   },
   {
     "name": "companiesScope",
     "type": "select",
     "label": "Companies Scope",
     "required": false,
-    "help": "Companies Scope",
     "options": [
       {
         "label": "currentOrPast",
@@ -185,22 +169,19 @@
     "name": "currentCompanies",
     "type": "array",
     "label": "Current Companies",
-    "required": false,
-    "help": "Current Companies"
+    "required": false
   },
   {
     "name": "pastCompanies",
     "type": "array",
     "label": "Past Companies",
-    "required": false,
-    "help": "Past Companies"
+    "required": false
   },
   {
     "name": "companySizes",
     "type": "select",
     "label": "Company Sizes",
     "required": false,
-    "help": "Company Sizes",
     "options": [
       {
         "label": "selfEmployed",
@@ -245,22 +226,20 @@
     "name": "schools",
     "type": "array",
     "label": "Schools",
-    "required": false,
-    "help": "Schools"
+    "required": false
   },
   {
     "name": "graduationYears",
     "type": "collection",
     "label": "Graduation Years",
     "required": false,
-    "help": "Graduation Years",
     "spec": [
       {
         "name": "from",
         "type": "number",
         "label": "From",
         "required": false,
-        "help": "Integer from bound, 1900–2100; from must not exceed to",
+        "help": "Earliest graduation year, 1900–2100.",
         "validate": {
           "min": 1900,
           "max": 2100
@@ -271,7 +250,7 @@
         "type": "number",
         "label": "To",
         "required": false,
-        "help": "Integer to bound, 1900–2100; from must not exceed to",
+        "help": "Latest graduation year, 1900–2100.",
         "validate": {
           "min": 1900,
           "max": 2100
@@ -283,15 +262,13 @@
     "name": "industries",
     "type": "array",
     "label": "Industries",
-    "required": false,
-    "help": "Industries"
+    "required": false
   },
   {
     "name": "jobFunctions",
     "type": "select",
     "label": "Job Functions",
     "required": false,
-    "help": "Job Functions",
     "options": [
       {
         "label": "Accounting",
@@ -405,7 +382,6 @@
     "type": "select",
     "label": "Seniority",
     "required": false,
-    "help": "Seniority",
     "options": [
       {
         "label": "unpaid",
@@ -455,14 +431,13 @@
     "type": "collection",
     "label": "Years Of Experience",
     "required": false,
-    "help": "Years Of Experience",
     "spec": [
       {
         "name": "from",
         "type": "number",
         "label": "From",
         "required": false,
-        "help": "Integer from bound, 0–30; from must not exceed to",
+        "help": "Minimum years of experience, 0–30.",
         "validate": {
           "min": 0,
           "max": 30
@@ -473,7 +448,7 @@
         "type": "number",
         "label": "To",
         "required": false,
-        "help": "Integer to bound, 0–30; from must not exceed to",
+        "help": "Maximum years of experience, 0–30.",
         "validate": {
           "min": 0,
           "max": 30
@@ -485,29 +460,26 @@
     "name": "firstNames",
     "type": "array",
     "label": "First Names",
-    "required": false,
-    "help": "First Names"
+    "required": false
   },
   {
     "name": "lastNames",
     "type": "array",
     "label": "Last Names",
-    "required": false,
-    "help": "Last Names"
+    "required": false
   },
   {
     "name": "profileLanguages",
     "type": "array",
     "label": "Profile Languages",
     "required": false,
-    "help": "LinkedIn language codes en, es, in (Indonesian), _o (Other), not names"
+    "help": "LinkedIn language codes such as en or es, not language names. Use in for Indonesian and _o for Other."
   },
   {
     "name": "recentlyJoined",
     "type": "select",
     "label": "Recently Joined",
     "required": false,
-    "help": "Recently Joined",
     "options": [
       {
         "label": "1day",
@@ -537,7 +509,6 @@
     "type": "select",
     "label": "Network Relationships",
     "required": false,
-    "help": "Network Relationships",
     "options": [
       {
         "label": "1st",
@@ -563,29 +534,27 @@
     "type": "boolean",
     "label": "Is Military Veteran",
     "required": false,
-    "help": "True sets the checkbox on; false leaves it off, not an inverse filter",
+    "help": "Return only military veterans. Disabled means this filter is not applied.",
     "default": false
   },
   {
     "name": "groups",
     "type": "array",
     "label": "Groups",
-    "required": false,
-    "help": "Groups"
+    "required": false
   },
   {
     "name": "recruitingActivity",
     "type": "collection",
     "label": "Recruiting Activity",
     "required": false,
-    "help": "Type is required when a period is set. Core refuses a period without a type.",
+    "help": "Recruiting activity of your team with the person. Type is required when a period is set.",
     "spec": [
       {
         "name": "type",
         "type": "select",
         "label": "Type",
         "required": false,
-        "help": "Type",
         "options": [
           {
             "label": "messages",
@@ -614,7 +583,6 @@
         "type": "select",
         "label": "Period",
         "required": false,
-        "help": "Period",
         "options": [
           {
             "label": "anytime",
@@ -657,21 +625,32 @@
     "type": "array",
     "label": "Projects",
     "required": false,
-    "help": "Project names, not IDs"
+    "help": "Project names, not IDs."
   },
   {
     "name": "notes",
     "type": "array",
     "label": "Notes",
-    "required": false,
-    "help": "Notes"
+    "required": false
   },
   {
     "name": "hidePreviouslyViewed",
     "type": "boolean",
     "label": "Hide Previously Viewed",
     "required": false,
-    "help": "True sets the checkbox on; false leaves it off, not an inverse filter",
+    "help": "Leave out people you have already viewed. Disabled means this filter is not applied.",
     "default": false
+  },
+  {
+    "name": "limit",
+    "type": "uinteger",
+    "label": "Limit",
+    "required": false,
+    "default": 10,
+    "validate": {
+      "min": 1,
+      "max": 1000
+    },
+    "help": "Maximum number of people to return, up to 1000. Leave empty to return up to 25."
   }
 ]

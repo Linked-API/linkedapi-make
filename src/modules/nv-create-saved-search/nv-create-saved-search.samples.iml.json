@@ -1,9 +1,8 @@
 {
-  "errors": [],
   "data": {
-    "id": "7420000000000000001",
-    "name": "Example",
+    "id": "1900000001",
+    "name": "Lead Search 1",
     "type": "lead",
-    "url": "https://www.linkedin.com/sales/search/people?query=example"
+    "url": "https://www.linkedin.com/sales/search/people?savedSearchId=1900000001"
   }
 }

@@ -1,1 +1,7 @@
-{ "data": [], "errors": [] }
+{
+  "projectId": "1234567890",
+  "name": "Senior Backend Engineer",
+  "createdAt": "2026-11-02",
+  "candidateCount": 14,
+  "projectUrl": "https://www.linkedin.com/talent/hire/1234567890/overview"
+}

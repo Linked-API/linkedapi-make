@@ -4,27 +4,43 @@
     "type": "text",
     "label": "Project ID",
     "required": true,
-    "help": "Project ID as a string of digits"
+    "help": "ID of the project, for example 1234567890. Find it in the Retrieve Projects output."
   },
   {
     "name": "stage",
     "type": "select",
     "label": "Stage",
     "required": false,
-    "help": "Stage",
+    "help": "Return only candidates in this stage. Leave empty for all stages.",
     "options": [
-      { "label": "uncontacted", "value": "uncontacted" },
-      { "label": "contacted", "value": "contacted" },
-      { "label": "replied", "value": "replied" },
-      { "label": "archived", "value": "archived" }
+      {
+        "label": "uncontacted",
+        "value": "uncontacted"
+      },
+      {
+        "label": "contacted",
+        "value": "contacted"
+      },
+      {
+        "label": "replied",
+        "value": "replied"
+      },
+      {
+        "label": "archived",
+        "value": "archived"
+      }
     ]
   },
   {
     "name": "limit",
-    "type": "number",
+    "type": "uinteger",
     "label": "Limit",
     "required": false,
-    "help": "Maximum results, 1–1000",
-    "default": 25
+    "default": 10,
+    "validate": {
+      "min": 1,
+      "max": 1000
+    },
+    "help": "Maximum number of candidates to return, up to 1000. Leave empty to return up to 25."
   }
 ]

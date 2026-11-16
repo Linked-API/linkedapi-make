@@ -4,13 +4,13 @@
     "type": "text",
     "label": "Company URL",
     "required": true,
-    "help": "URL accepted by the Sales Navigator opener, including an alert subject URL."
+    "help": "Public or hashed LinkedIn company URL, including /company/... and /sales/company/... or an alert subject URL."
   },
   {
     "name": "listId",
     "type": "text",
     "label": "List ID",
     "required": false,
-    "help": "Optional string ID of an owned custom account list or My Current Accounts; other targets return listNotFound. Current limitation: If you have more than 10 account lists, if the menu hides this list, the call fails with unexpectedError; the account may be saved but not added to it."
+    "help": "ID of one of your account lists, or of My Current Accounts, to also add the account to. Find it in the Retrieve Lists output or at the end of the list's URL. Leave empty to only save the account. With more than 10 account lists, a list that Sales Navigator's menu hides cannot be used and the module fails."
   }
 ]

@@ -1,51 +1,27 @@
 [
   {
-    "name": "data",
-    "type": "array",
-    "label": "Retrieve List Accounts",
-    "spec": [
-      {
-        "name": "name",
-        "type": "text",
-        "label": "Name"
-      },
-      {
-        "name": "urn",
-        "type": "text",
-        "label": "Urn"
-      },
-      {
-        "name": "hashedUrl",
-        "type": "url",
-        "label": "Hashed Url"
-      },
-      {
-        "name": "industry",
-        "type": "text",
-        "label": "Industry"
-      },
-      {
-        "name": "employeesCount",
-        "type": "number",
-        "label": "Employees Count"
-      }
-    ]
+    "name": "name",
+    "type": "text",
+    "label": "Name"
   },
   {
-    "name": "errors",
-    "type": "array",
-    "label": "Errors",
-    "spec": [
-      {
-        "name": "type",
-        "type": "text",
-        "label": "Error Type"
-      },
-      {
-        "name": "message",
-        "type": "text",
-        "label": "Error Message"
-      }
-    ]
+    "name": "urn",
+    "type": "text",
+    "label": "Company URN"
+  },
+  {
+    "name": "hashedUrl",
+    "type": "url",
+    "label": "Company Hashed URL"
+  },
+  {
+    "name": "industry",
+    "type": "text",
+    "label": "Industry"
+  },
+  {
+    "name": "employeesCount",
+    "type": "number",
+    "label": "Employees Count"
   }
 ]

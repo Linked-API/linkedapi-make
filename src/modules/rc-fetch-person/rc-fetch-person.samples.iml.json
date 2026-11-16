@@ -1,1 +1,20 @@
-{ "data": {}, "errors": [] }
+{
+  "data": {
+    "name": "Jane Smith",
+    "recruiterProfileUrl": "https://www.linkedin.com/talent/profile/AEMAAAExample",
+    "headline": "Head of Sales at Example Labs",
+    "location": "London, England, United Kingdom",
+    "avatarUrl": "https://media.licdn.com/dms/image/example/profile-displayphoto.jpg",
+    "viewerState": {
+      "connectionDegree": "2nd"
+    },
+    "publicUrl": "https://www.linkedin.com/in/jane-smith",
+    "industry": "Software Development",
+    "recruitingActivity": {
+      "projects": 1,
+      "messages": 2,
+      "feedback": 0,
+      "attachments": 0
+    }
+  }
+}

@@ -1,98 +1,74 @@
 [
   {
-    "name": "data",
-    "type": "array",
-    "label": "Alerts",
+    "name": "id",
+    "type": "text",
+    "label": "Alert URN"
+  },
+  {
+    "name": "type",
+    "type": "text",
+    "label": "Alert Type"
+  },
+  {
+    "name": "publishedAt",
+    "type": "date",
+    "label": "Published At"
+  },
+  {
+    "name": "subject",
+    "type": "collection",
+    "label": "Subject",
     "spec": [
-      {
-        "name": "id",
-        "type": "text",
-        "label": "Notification URN"
-      },
       {
         "name": "type",
         "type": "text",
-        "label": "Machine Type"
+        "label": "Subject Type"
       },
       {
-        "name": "publishedAt",
-        "type": "date",
-        "label": "Published At"
-      },
-      {
-        "name": "subject",
-        "type": "collection",
-        "label": "Subject",
-        "spec": [
-          {
-            "name": "type",
-            "type": "text",
-            "label": "Subject Type"
-          },
-          {
-            "name": "urn",
-            "type": "text",
-            "label": "Subject URN"
-          },
-          {
-            "name": "name",
-            "type": "text",
-            "label": "Name"
-          },
-          {
-            "name": "url",
-            "type": "url",
-            "label": "Subject URL"
-          },
-          {
-            "name": "saved",
-            "type": "boolean",
-            "label": "Saved"
-          }
-        ]
-      },
-      {
-        "name": "headline",
+        "name": "urn",
         "type": "text",
-        "label": "Headline"
+        "label": "Subject URN"
       },
       {
-        "name": "text",
+        "name": "name",
         "type": "text",
-        "label": "Text"
-      },
-      {
-        "name": "subline",
-        "type": "text",
-        "label": "Subline"
+        "label": "Name"
       },
       {
         "name": "url",
         "type": "url",
-        "label": "Alert URL"
+        "label": "Subject URL"
       },
       {
-        "name": "relatedEntityUrn",
-        "type": "text",
-        "label": "Related Entity URN"
+        "name": "saved",
+        "type": "boolean",
+        "label": "Saved"
       }
     ]
   },
   {
-    "name": "errors",
-    "type": "array",
-    "label": "Errors",
-    "spec": [
-      {
-        "name": "type",
-        "type": "text",
-        "label": "Error Type"
-      },
-      {
-        "name": "message",
-        "type": "text",
-        "label": "Error Message"
-      }
-    ]
+    "name": "headline",
+    "type": "text",
+    "label": "Headline"
+  },
+  {
+    "name": "text",
+    "type": "text",
+    "label": "Text"
+  },
+  {
+    "name": "subline",
+    "type": "text",
+    "label": "Subline"
+  },
+  {
+    "name": "url",
+    "type": "url",
+    "label": "Alert URL"
+  },
+  {
+    "name": "relatedEntityUrn",
+    "type": "text",
+    "label": "Related Entity URN"
   }
 ]

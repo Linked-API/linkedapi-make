@@ -4,13 +4,13 @@
     "type": "text",
     "label": "Person URL",
     "required": true,
-    "help": "URL accepted by the Sales Navigator opener, including an alert subject URL."
+    "help": "Public or hashed LinkedIn person URL, including /in/... and /sales/lead/... or an alert subject URL."
   },
   {
     "name": "listId",
     "type": "text",
     "label": "List ID",
     "required": false,
-    "help": "Optional string ID of an owned custom lead list; other targets return listNotFound. Current limitation: If you have more than 10 lead lists, if the menu hides this list, the call fails with unexpectedError; the lead may be saved but not added to it."
+    "help": "ID of one of your lead lists to also add the lead to. Find it in the Retrieve Lists output or at the end of the list's URL. Leave empty to only save the lead. With more than 10 lead lists, a list that Sales Navigator's menu hides cannot be used and the module fails."
   }
 ]

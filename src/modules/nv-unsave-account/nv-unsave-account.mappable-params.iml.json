@@ -4,6 +4,6 @@
     "type": "text",
     "label": "Company URL",
     "required": true,
-    "help": "URL accepted by the Sales Navigator opener, including an alert subject URL."
+    "help": "Public or hashed LinkedIn company URL, including /company/... and /sales/company/... or an alert subject URL."
   }
 ]

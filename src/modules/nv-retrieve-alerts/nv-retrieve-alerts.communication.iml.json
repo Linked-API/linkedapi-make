@@ -8,12 +8,8 @@
         "limit": "{{parameters.limit}}",
         "sort": "{{parameters.sort}}",
         "filter": {
-          "category": "{{parameters.category}}",
-          "types": "{{parameters.types}}",
-          "since": "{{parameters.since}}",
-          "excludeSuggested": "{{parameters.excludeSuggested}}",
-          "listId": "{{if(parameters.listId, parameters.listId, undefined)}}",
-          "subjects": "{{parameters.subjects}}"
+          "{{...}}": "{{omit(parameters, 'limit', 'sort', 'since')}}",
+          "since": "{{if(parameters.since, formatDate(parameters.since, 'YYYY-MM-DDTHH:mm:ss.SSSZ'), undefined)}}"
         }
       }
     },
@@ -29,8 +25,11 @@
     }
   },
   {
-    "url": "/workflows/{{temp.workflowId}}?operationName={{temp.operationName}}",
+    "url": "/workflows/{{temp.workflowId}}",
     "method": "GET",
+    "qs": {
+      "operationName": "{{temp.operationName}}"
+    },
     "repeat": {
       "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
       "delay": 5000,
@@ -49,14 +48,16 @@
   },
   {
     "response": {
-      "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}",
+      "valid": "{{(temp.workflowStatus || temp.status) === 'completed' && length(temp.errors) === 0}}",
       "error": {
-        "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
+        "message": "{{if(length(temp.errors) > 0, temp.errors[1].type + ': ' + temp.errors[1].message, temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.')}}"
       },
+      "iterate": "{{temp.data}}",
       "output": {
-        "data": "{{temp.data}}",
-        "errors": "{{temp.errors}}"
-      }
+        "{{...}}": "{{item}}",
+        "publishedAt": "{{if(item.publishedAt, parseDate(item.publishedAt, 'YYYY-MM-DDTHH:mm:ss.SSSZ'), undefined)}}"
+      },
+      "limit": "{{parameters.limit}}"
     }
   }
 ]

@@ -1,15 +1,10 @@
 {
-  "errors": [],
-  "data": [
-    {
-      "id": "7420000000000000001",
-      "name": "Example",
-      "type": "lead",
-      "url": "https://www.linkedin.com/sales/search/people?query=example",
-      "keywords": null,
-      "createdAt": null,
-      "lastViewedAt": null,
-      "newResultsCount": null
-    }
-  ]
+  "id": "1900000001",
+  "name": "Lead Search 1",
+  "type": "lead",
+  "url": "https://www.linkedin.com/sales/search/people?savedSearchId=1900000001",
+  "keywords": "Head of Sales",
+  "createdAt": "2026-11-02T10:15:00.000Z",
+  "lastViewedAt": "2026-11-02T10:15:00.000Z",
+  "newResultsCount": null
 }

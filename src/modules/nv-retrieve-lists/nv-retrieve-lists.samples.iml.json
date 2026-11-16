@@ -1,13 +1,8 @@
 {
-  "data": [
-    {
-      "id": "7420000000000000001",
-      "name": "Prospects",
-      "type": "lead",
-      "source": "MANUAL",
-      "entityCount": null,
-      "url": "https://www.linkedin.com/sales/lists/people/7420000000000000001"
-    }
-  ],
-  "errors": []
+  "id": "7420000000000000001",
+  "name": "Q4 outreach",
+  "type": "lead",
+  "source": "MANUAL",
+  "entityCount": 12,
+  "url": "https://www.linkedin.com/sales/lists/people/7420000000000000001"
 }

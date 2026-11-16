@@ -11,6 +11,6 @@
     "type": "text",
     "label": "List ID",
     "required": true,
-    "help": "Owned list ID as a string, never a number."
+    "help": "ID of the lead list, for example 7420000000000000001. Find it in the Retrieve Lists output or at the end of the list's URL."
   }
 ]

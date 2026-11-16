@@ -4,6 +4,6 @@
     "type": "text",
     "label": "Saved Search ID",
     "required": true,
-    "help": "Owned saved-search ID as a positive decimal string."
+    "help": "ID of the saved search to delete, for example 1900000001. Find it in the Retrieve Saved Searches output or after savedSearchId= in the search's URL."
   }
 ]

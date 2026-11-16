@@ -2,12 +2,12 @@
   {
     "name": "data",
     "type": "collection",
-    "label": "Create Saved Search",
+    "label": "Saved Search",
     "spec": [
       {
         "name": "id",
         "type": "text",
-        "label": "Id"
+        "label": "Saved Search ID"
       },
       {
         "name": "name",
@@ -22,24 +22,7 @@
       {
         "name": "url",
         "type": "url",
-        "label": "Url"
-      }
-    ]
-  },
-  {
-    "name": "errors",
-    "type": "array",
-    "label": "Errors",
-    "spec": [
-      {
-        "name": "type",
-        "type": "text",
-        "label": "Error Type"
-      },
-      {
-        "name": "message",
-        "type": "text",
-        "label": "Error Message"
+        "label": "URL"
       }
     ]
   }

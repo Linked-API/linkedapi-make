@@ -4,6 +4,6 @@
     "type": "text",
     "label": "Name",
     "required": true,
-    "help": "Project name, 1–100 characters, one line. Creation is not idempotent: after a failure, check your projects before creating again (a duplicate can only be archived)."
+    "help": "Project name, up to 100 characters on one line."
   }
 ]

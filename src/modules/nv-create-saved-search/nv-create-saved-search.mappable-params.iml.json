@@ -4,7 +4,7 @@
     "type": "select",
     "label": "Type",
     "required": true,
-    "help": "Sales Navigator subject type.",
+    "help": "Lead for a people search, Account for a company search. It must match the Search URL.",
     "options": [
       {
         "label": "Lead",
@@ -21,13 +21,13 @@
     "type": "text",
     "label": "Search URL",
     "required": true,
-    "help": "Sales Navigator search URL copied from /sales/search/people for lead or /sales/search/company for account; must match type."
+    "help": "The search URL copied from your browser's address bar in Sales Navigator: a /sales/search/people URL for a lead search or a /sales/search/company URL for an account search."
   },
   {
     "name": "name",
     "type": "text",
     "label": "Name",
     "required": false,
-    "help": "Optional name for the saved search; trimmed, single line, 1–256 characters. A name already used by a saved search of the same type returns savedSearchAlreadyExists. Blank keeps the name Sales Navigator gives it."
+    "help": "Optional name, up to 256 characters on one line. Leave empty to keep the name Sales Navigator gives the search. If another saved search of this type already has this name, the module fails."
   }
 ]

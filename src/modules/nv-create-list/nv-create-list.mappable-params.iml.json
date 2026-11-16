@@ -14,20 +14,20 @@
         "value": "account"
       }
     ],
-    "help": "Owned list type to create."
+    "help": "Choose whether to create a lead list or an account list."
   },
   {
     "name": "name",
     "type": "text",
     "label": "Name",
     "required": true,
-    "help": "Trimmed name, 1–75 characters after trimming. Same-type trimmed, case-sensitive duplicates, including system lists, return listAlreadyExists; nothing is created."
+    "help": "List name, up to 75 characters. Spaces at the start and end are removed. If you already have a list of this type with exactly the same name, including a built-in list, the module fails and no list is created. Letter case counts."
   },
   {
     "name": "description",
     "type": "text",
     "label": "Description",
     "required": false,
-    "help": "Optional description; surrounding spaces are trimmed. Up to 350 characters after trimming; blank omitted."
+    "help": "Optional list description, up to 350 characters."
   }
 ]

@@ -1,55 +1,27 @@
 [
   {
-    "name": "data",
-    "type": "array",
-    "label": "Data",
-    "required": false,
-    "help": "Data",
-    "spec": [
-      {
-        "name": "projectId",
-        "type": "text",
-        "label": "Project ID",
-        "required": false,
-        "help": "Project ID"
-      },
-      {
-        "name": "name",
-        "type": "text",
-        "label": "Name",
-        "required": false,
-        "help": "Name"
-      },
-      {
-        "name": "createdAt",
-        "type": "text",
-        "label": "Created At",
-        "required": false,
-        "help": "Created At"
-      },
-      {
-        "name": "candidateCount",
-        "type": "number",
-        "label": "Candidate Count",
-        "required": false,
-        "help": "Candidate Count"
-      },
-      {
-        "name": "projectUrl",
-        "type": "url",
-        "label": "Project URL",
-        "required": false,
-        "help": "Project URL"
-      }
-    ]
+    "name": "projectId",
+    "type": "text",
+    "label": "Project ID"
   },
   {
-    "name": "errors",
-    "type": "array",
-    "label": "Errors",
-    "spec": [
-      { "name": "type", "type": "text", "label": "Error Type" },
-      { "name": "message", "type": "text", "label": "Error Message" }
-    ]
+    "name": "name",
+    "type": "text",
+    "label": "Name"
+  },
+  {
+    "name": "createdAt",
+    "type": "text",
+    "label": "Created At"
+  },
+  {
+    "name": "candidateCount",
+    "type": "number",
+    "label": "Candidate Count"
+  },
+  {
+    "name": "projectUrl",
+    "type": "url",
+    "label": "Project URL"
   }
 ]

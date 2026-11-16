@@ -4,14 +4,14 @@
     "type": "text",
     "label": "Person URL",
     "required": true,
-    "help": "Recruiter profile URL (/talent/profile/…)"
+    "help": "Recruiter profile URL (/talent/profile/...), for example the Recruiter Profile URL from Search People or Retrieve Project Candidates."
   },
   {
     "name": "basicInfo",
     "type": "boolean",
     "label": "Basic Info",
     "required": false,
-    "help": "Read candidate details; default true",
+    "help": "Return the candidate's details.",
     "default": true
   },
   {
@@ -19,7 +19,7 @@
     "type": "boolean",
     "label": "Recruiting Activity",
     "required": false,
-    "help": "Read recruiting activity counts",
+    "help": "Also return how many projects, messages, feedback entries and attachments your team has for this candidate.",
     "default": false
   }
 ]

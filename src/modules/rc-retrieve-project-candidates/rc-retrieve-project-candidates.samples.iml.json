@@ -1,1 +1,11 @@
-{ "data": [], "errors": [] }
+{
+  "name": "Jane Smith",
+  "recruiterProfileUrl": "https://www.linkedin.com/talent/profile/AEMAAAExample",
+  "headline": "Head of Sales at Example Labs",
+  "location": "London, England, United Kingdom",
+  "avatarUrl": "https://media.licdn.com/dms/image/example/profile-displayphoto.jpg",
+  "viewerState": {
+    "connectionDegree": "2nd"
+  },
+  "stage": "uncontacted"
+}

@@ -229,7 +229,7 @@
             },
             "nvSaveLead": {
                 "label": "Save Lead in Sales Navigator",
-                "description": "Plus. Ensure lead saved, optionally in one list; other lists untouched. May save its company. Idempotent. Sales Navigator can take up to a few minutes to reflect a change. A call that conflicts with a change you just made through Linked API may fail with unexpectedError; retry it a little later.",
+                "description": "Saves a lead in Sales Navigator and optionally adds it to one of your lead lists; its other lists are not changed. A lead that is already saved stays saved. Sales Navigator may also save the lead's company and can take a few minutes to show the change. Requires the Plus plan.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -245,7 +245,7 @@
             },
             "nvUnsaveLead": {
                 "label": "Unsave Lead in Sales Navigator",
-                "description": "Plus required. Native lead unsave removes it from saved leads and all custom lists you own. Idempotent. Sales Navigator can take up to a few minutes to reflect a change. A call that conflicts with a change you just made through Linked API may fail with unexpectedError; retry it a little later.",
+                "description": "Unsaves a lead in Sales Navigator, which also removes it from all of your lead lists. A lead that is not saved stays unsaved. Sales Navigator can take a few minutes to show the change. Requires the Plus plan.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -261,7 +261,7 @@
             },
             "nvSaveAccount": {
                 "label": "Save Account in Sales Navigator",
-                "description": "Plus required. Ensure account saved, optionally in one list; other lists untouched. Idempotent. Sales Navigator can take up to a few minutes to reflect a change. A call that conflicts with a change you just made through Linked API may fail with unexpectedError; retry it a little later.",
+                "description": "Saves an account (company) in Sales Navigator and optionally adds it to one of your account lists; its other lists are not changed. An account that is already saved stays saved. Sales Navigator can take a few minutes to show the change. Requires the Plus plan.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -277,7 +277,7 @@
             },
             "nvUnsaveAccount": {
                 "label": "Unsave Account in Sales Navigator",
-                "description": "Plus required. Unsave account only; its saved leads stay saved. Idempotent. Sales Navigator can take up to a few minutes to reflect a change. A call that conflicts with a change you just made through Linked API may fail with unexpectedError; retry it a little later.",
+                "description": "Unsaves an account (company) in Sales Navigator. Its saved leads stay saved. An account that is not saved stays unsaved. Sales Navigator can take a few minutes to show the change. Requires the Plus plan.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -293,8 +293,8 @@
             },
             "nvRetrieveLists": {
                 "label": "Retrieve Lists in Sales Navigator",
-                "description": "Plus required. Retrieve every owned Sales Navigator list of the requested type. Results contain id (string), name, type (lead/account), source (open upstream string), entityCount (number or null), and url.",
-                "moduleType": "action",
+                "description": "Returns your Sales Navigator lead lists or account lists, one bundle per list, with each list's ID, name, number of members and URL. Requires the Plus plan.",
+                "moduleType": "search",
                 "actionCrud": null,
                 "connection": "connection1",
                 "altConnection": null,
@@ -308,9 +308,9 @@
                 }
             },
             "nvRetrieveAlerts": {
-                "label": "Retrieve alerts in Sales Navigator",
-                "description": "Retrieves lead and account alerts with filtering and sorting.",
-                "moduleType": "action",
+                "label": "Retrieve Alerts in Sales Navigator",
+                "description": "Returns your Sales Navigator lead and account alerts, one bundle per alert. You can filter by alert type, date, list, or specific leads and accounts; an alert must match every filter you set. Requires the Plus plan.",
+                "moduleType": "search",
                 "actionCrud": null,
                 "connection": "connection1",
                 "altConnection": null,
@@ -1205,7 +1205,7 @@
             },
             "nvCreateList": {
                 "label": "Create List in Sales Navigator",
-                "description": "Plus. Create owned lead/account list. Name trimmed, 1–75 chars; optional description: surrounding spaces trimmed, ≤350 after trim; blank omitted. Same-type trimmed, case-sensitive duplicate (incl. system names): listAlreadyExists, nothing created. Returns id (string), name, type, url.",
+                "description": "Creates a lead list or an account list in Sales Navigator and returns its ID, name and URL. Requires the Plus plan.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -1221,7 +1221,7 @@
             },
             "nvDeleteList": {
                 "label": "Delete List in Sales Navigator",
-                "description": "Plus. Delete one owned list by string ID; members stay saved and in other lists. Unknown, shared or already-deleted ID: listNotFound. System list without Delete: listNotDeletable. Success has no result data.",
+                "description": "Deletes one of your Sales Navigator lists. Its leads or accounts stay saved and stay in your other lists. Built-in lists that Sales Navigator does not let you delete cannot be deleted here either. Requires the Plus plan.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -1237,8 +1237,8 @@
             },
             "nvRetrieveListLeads": {
                 "label": "Retrieve List Leads in Sales Navigator",
-                "description": "Retrieve list leads from an owned Sales Navigator list. Plus required.",
-                "moduleType": "action",
+                "description": "Returns the leads in one of your Sales Navigator lead lists, one bundle per lead, in the order the list shows them. Requires the Plus plan.",
+                "moduleType": "search",
                 "actionCrud": null,
                 "connection": "connection1",
                 "altConnection": null,
@@ -1253,8 +1253,8 @@
             },
             "nvRetrieveListAccounts": {
                 "label": "Retrieve List Accounts in Sales Navigator",
-                "description": "Retrieve list accounts from an owned Sales Navigator list. Plus required.",
-                "moduleType": "action",
+                "description": "Returns the accounts in one of your Sales Navigator account lists, one bundle per account, in the order the list shows them. Requires the Plus plan.",
+                "moduleType": "search",
                 "actionCrud": null,
                 "connection": "connection1",
                 "altConnection": null,
@@ -1269,7 +1269,7 @@
             },
             "nvRemoveLeadFromList": {
                 "label": "Remove Lead from List in Sales Navigator",
-                "description": "Remove a lead from exactly one owned custom list, keeping it saved and in its other lists. Repeating an absent membership succeeds. Plus required.",
+                "description": "Removes a lead from one of your lead lists. The lead stays saved and stays in your other lists. If the lead is not in the list, nothing changes. Requires the Plus plan.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -1285,7 +1285,7 @@
             },
             "nvRemoveAccountFromList": {
                 "label": "Remove Account from List in Sales Navigator",
-                "description": "Remove an account from exactly one owned custom list, keeping it saved even after its last list. Repeating an absent membership succeeds. Plus required.",
+                "description": "Removes an account from one of your account lists. The account stays saved, even when this was its last list. If the account is not in the list, nothing changes. Requires the Plus plan.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -1301,7 +1301,7 @@
             },
             "nvRenameList": {
                 "label": "Rename List in Sales Navigator",
-                "description": "Rename an owned custom list. Trimmed name: 1–75 characters, no line breaks. Same name succeeds; duplicates return listAlreadyExists and system lists return listNotRenamable. Plus required.",
+                "description": "Renames one of your Sales Navigator lists and returns the list. Renaming a list to its current name changes nothing. Built-in lists cannot be renamed. Requires the Plus plan.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -1317,8 +1317,8 @@
             },
             "nvRetrieveSavedSearches": {
                 "label": "Retrieve Saved Searches in Sales Navigator",
-                "description": "Retrieve owned saved searches of the requested type. Plus required.",
-                "moduleType": "action",
+                "description": "Returns your Sales Navigator saved lead searches or saved account searches, one bundle per search. Requires the Plus plan.",
+                "moduleType": "search",
                 "actionCrud": null,
                 "connection": "connection1",
                 "altConnection": null,
@@ -1333,7 +1333,7 @@
             },
             "nvCreateSavedSearch": {
                 "label": "Create Saved Search in Sales Navigator",
-                "description": "Save a Sales Navigator search URL matching the requested type, optionally under a name. Returns its id, name, type and URL. Plus required.",
+                "description": "Saves a Sales Navigator search, optionally under your own name, and returns its ID, name and URL. Requires the Plus plan.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -1349,7 +1349,7 @@
             },
             "nvDeleteSavedSearch": {
                 "label": "Delete Saved Search in Sales Navigator",
-                "description": "Delete an owned saved search by its string ID. An absent search returns savedSearchNotFound. Plus required.",
+                "description": "Deletes one of your Sales Navigator saved searches. Requires the Plus plan.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -1365,8 +1365,8 @@
             },
             "rcSearchPeople": {
                 "label": "Search People in Recruiter Lite",
-                "description": "Search People in Recruiter Lite. Requires a LinkedIn Recruiter Lite seat and Linked API's Plus plan. Provide term, a nonempty filter, or customSearchUrl. customSearchUrl cannot be combined with term or filter. Filters alone are accepted. Scope fields and false booleans alone are not search criteria.",
-                "moduleType": "action",
+                "description": "Searches for people in LinkedIn Recruiter Lite and returns one bundle per person. Use Search Term, filters, or a Custom Search URL copied from Recruiter; a Custom Search URL cannot be combined with the others. Scope fields alone do not count as filters. Requires a LinkedIn Recruiter Lite seat and the Plus plan.",
+                "moduleType": "search",
                 "actionCrud": null,
                 "connection": "connection1",
                 "altConnection": null,
@@ -1381,7 +1381,7 @@
             },
             "rcFetchPerson": {
                 "label": "Fetch Person in Recruiter Lite",
-                "description": "Fetch Person in Recruiter Lite. Requires a LinkedIn Recruiter Lite seat and Linked API's Plus plan. ",
+                "description": "Returns a candidate's profile from LinkedIn Recruiter Lite and, optionally, their recruiting activity counts. Requires a LinkedIn Recruiter Lite seat and the Plus plan.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -1397,8 +1397,8 @@
             },
             "rcRetrieveProjects": {
                 "label": "Retrieve Projects in Recruiter Lite",
-                "description": "Retrieve Projects in Recruiter Lite. Requires a LinkedIn Recruiter Lite seat and Linked API's Plus plan. ",
-                "moduleType": "action",
+                "description": "Returns your LinkedIn Recruiter Lite projects, one bundle per project. Requires a LinkedIn Recruiter Lite seat and the Plus plan.",
+                "moduleType": "search",
                 "actionCrud": null,
                 "connection": "connection1",
                 "altConnection": null,
@@ -1413,8 +1413,8 @@
             },
             "rcRetrieveProjectCandidates": {
                 "label": "Retrieve Project Candidates in Recruiter Lite",
-                "description": "Retrieve Project Candidates in Recruiter Lite. Requires a LinkedIn Recruiter Lite seat and Linked API's Plus plan. ",
-                "moduleType": "action",
+                "description": "Returns the candidates in one of your LinkedIn Recruiter Lite projects, one bundle per candidate, optionally only those in one stage. Requires a LinkedIn Recruiter Lite seat and the Plus plan.",
+                "moduleType": "search",
                 "actionCrud": null,
                 "connection": "connection1",
                 "altConnection": null,
@@ -1429,7 +1429,7 @@
             },
             "rcSaveToProject": {
                 "label": "Save to Project in Recruiter Lite",
-                "description": "Save to Project in Recruiter Lite. Requires a LinkedIn Recruiter Lite seat and Linked API's Plus plan. ",
+                "description": "Saves a candidate to one of your LinkedIn Recruiter Lite projects. If the candidate is already in the project, nothing changes and Already In Project is true. Requires a LinkedIn Recruiter Lite seat and the Plus plan.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -1445,7 +1445,7 @@
             },
             "rcCreateProject": {
                 "label": "Create Project in Recruiter Lite",
-                "description": "Create Project in Recruiter Lite. Requires a LinkedIn Recruiter Lite seat and Linked API's Plus plan. Creation is not idempotent: after a failure, check your projects before creating again (a duplicate can only be archived).",
+                "description": "Creates a project in LinkedIn Recruiter Lite and returns its ID, name and URL. If the module fails, check your projects before running it again: a project created twice can only be archived. Requires a LinkedIn Recruiter Lite seat and the Plus plan.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -1461,7 +1461,7 @@
             },
             "rcRenameProject": {
                 "label": "Rename Project in Recruiter Lite",
-                "description": "Rename Project in Recruiter Lite. Requires a LinkedIn Recruiter Lite seat and Linked API's Plus plan. ",
+                "description": "Renames a LinkedIn Recruiter Lite project and optionally changes its description. Requires a LinkedIn Recruiter Lite seat and the Plus plan.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -1477,7 +1477,7 @@
             },
             "rcArchiveProject": {
                 "label": "Archive Project in Recruiter Lite",
-                "description": "Archive Project in Recruiter Lite. Requires a LinkedIn Recruiter Lite seat and Linked API's Plus plan. ",
+                "description": "Archives a LinkedIn Recruiter Lite project. If the project is already archived, nothing changes and Already Archived is true. Requires a LinkedIn Recruiter Lite seat and the Plus plan.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -1493,7 +1493,7 @@
             },
             "rcSendMessage": {
                 "label": "Send Message in Recruiter Lite",
-                "description": "Send Message in Recruiter Lite. Requires a LinkedIn Recruiter Lite seat and Linked API's Plus plan. New InMail requires personUrl, subject (1–200 characters, one line) and text (1–1900 characters). Reply with threadId and text only, without personUrl or subject. A paid InMail credit is spent only when allowPaidCredit is true. After an unexpectedError, check the conversation before sending again. Turn on Allow Paid Credit only when the user has explicitly approved spending a paid InMail credit on this message; on inMailCreditRequired, ask the user instead of retrying with Allow Paid Credit on.",
+                "description": "Sends a new InMail or replies in an existing LinkedIn Recruiter Lite conversation. For a new InMail, fill in Person URL, Message Subject and Message Text; for a reply, fill in Thread ID and Message Text only. If the module fails with an unexpected error, check the conversation before sending again. Requires a LinkedIn Recruiter Lite seat and the Plus plan.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",
@@ -1509,7 +1509,7 @@
             },
             "rcSyncInbox": {
                 "label": "Sync Inbox in Recruiter Lite",
-                "description": "Sync Inbox in Recruiter Lite. Requires a LinkedIn Recruiter Lite seat and Linked API's Plus plan. Enable whole-inbox monitoring, then poll with type rc.",
+                "description": "Turns on monitoring of your whole LinkedIn Recruiter Lite inbox. New messages then arrive through the Poll Inbox module with type Recruiter Lite. Requires a LinkedIn Recruiter Lite seat and the Plus plan.",
                 "moduleType": "action",
                 "actionCrud": null,
                 "connection": "connection1",

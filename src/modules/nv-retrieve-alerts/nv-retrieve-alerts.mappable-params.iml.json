@@ -1,17 +1,5 @@
 [
   {
-    "name": "limit",
-    "type": "number",
-    "label": "Limit",
-    "required": false,
-    "default": 50,
-    "validate": {
-      "min": 1,
-      "max": 1000
-    },
-    "help": "Maximum matching alerts to return (1-1000)."
-  },
-  {
     "name": "sort",
     "type": "select",
     "label": "Sort",
@@ -27,7 +15,7 @@
         "value": "relevance"
       }
     ],
-    "help": "Sales Navigator ordering; latest is newest first."
+    "help": "Latest returns the newest alerts first. Relevance uses Sales Navigator's own order."
   },
   {
     "name": "category",
@@ -44,25 +32,25 @@
         "value": "account"
       }
     ],
-    "help": "Leave empty for both lead and account alerts."
+    "help": "Return only lead alerts or only account alerts. Leave empty for both."
   },
   {
     "name": "types",
     "type": "array",
-    "label": "Types",
+    "label": "Alert Types",
     "required": false,
     "spec": {
       "type": "text",
-      "label": "Machine Code"
+      "label": "Alert Type"
     },
-    "help": "Exact upstream machine codes, including future codes. Empty means no type restriction."
+    "help": "Return only these alert types, for example LEAD_SHARED_UPDATE, LEAD_ACCEPTED_INVITATION, LEAD_PROFILE_VIEW_SIGNAL, ACCOUNT_SHARED_UPDATE or ACCOUNT_SENIOR_HIRE. All known types: https://linkedapi.io/docs/action-nv-retrieve-alerts#alert-types. Leave empty for all types."
   },
   {
     "name": "since",
-    "type": "text",
+    "type": "date",
     "label": "Since",
     "required": false,
-    "help": "Inclusive ISO timestamp cutoff, for example 2026-10-01T00:00:00Z."
+    "help": "Return only alerts published at or after this date and time."
   },
   {
     "name": "excludeSuggested",
@@ -70,24 +58,36 @@
     "label": "Exclude Suggested",
     "required": false,
     "default": false,
-    "help": "Return only subjects confirmed as saved; exclude unsaved and unknown saved states. Filters are combined with AND."
+    "help": "Return only alerts about leads and accounts you have saved, leaving out suggested ones."
   },
   {
     "name": "listId",
     "type": "text",
     "label": "List ID",
     "required": false,
-    "help": "Owned list ID; requires latest sorting. Other filters are ANDed."
+    "help": "Return only alerts about members of this list. Find it in the Retrieve Lists output or at the end of the list's URL. Works only with Latest sorting."
   },
   {
     "name": "subjects",
     "type": "array",
-    "label": "Subjects",
+    "label": "Leads and Accounts",
     "required": false,
     "spec": {
       "type": "text",
-      "label": "Subject Identity"
+      "label": "Lead or Account"
     },
-    "help": "Recognised hashed LinkedIn URLs or Sales Navigator subject URNs, one identity per item. Any listed subject may match; other filters are ANDed. Empty means unrestricted."
+    "help": "Return only alerts about these leads or accounts. Enter Sales Navigator lead or account URLs (/sales/lead/... or /sales/company/...) or Subject URN values from earlier alerts."
+  },
+  {
+    "name": "limit",
+    "type": "uinteger",
+    "label": "Limit",
+    "required": false,
+    "default": 10,
+    "validate": {
+      "min": 1,
+      "max": 1000
+    },
+    "help": "Maximum number of alerts to return, up to 1000. Leave empty to return up to 50."
   }
 ]

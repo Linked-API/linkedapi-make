@@ -4,20 +4,20 @@
     "type": "text",
     "label": "Project ID",
     "required": true,
-    "help": "Project ID as a string of digits"
+    "help": "ID of the project, for example 1234567890. Find it in the Retrieve Projects output."
   },
   {
     "name": "name",
     "type": "text",
     "label": "Name",
     "required": true,
-    "help": "Project name, 1–100 characters, one line"
+    "help": "New project name, up to 100 characters on one line."
   },
   {
     "name": "description",
     "type": "text",
     "label": "Description",
     "required": false,
-    "help": "Up to 2000 characters; omit to leave unchanged"
+    "help": "New description, up to 2000 characters. Leave empty to keep the current one."
   }
 ]

@@ -4,9 +4,7 @@
     "method": "POST",
     "body": {
       "operationName": "nvUnsaveLead",
-      "data": {
-        "personHashedUrl": "{{parameters.personHashedUrl}}"
-      }
+      "data": "{{parameters}}"
     },
     "response": {
       "temp": {
@@ -20,8 +18,11 @@
     }
   },
   {
-    "url": "/workflows/{{temp.workflowId}}?operationName={{temp.operationName}}",
+    "url": "/workflows/{{temp.workflowId}}",
     "method": "GET",
+    "qs": {
+      "operationName": "{{temp.operationName}}"
+    },
     "repeat": {
       "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
       "delay": 5000,
@@ -40,12 +41,9 @@
   },
   {
     "response": {
-      "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}",
+      "valid": "{{(temp.workflowStatus || temp.status) === 'completed' && length(temp.errors) === 0}}",
       "error": {
-        "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
-      },
-      "output": {
-        "errors": "{{temp.errors}}"
+        "message": "{{if(length(temp.errors) > 0, temp.errors[1].type + ': ' + temp.errors[1].message, temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.')}}"
       }
     }
   }

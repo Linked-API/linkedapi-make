@@ -1,61 +1,37 @@
 [
   {
-    "name": "data",
-    "type": "array",
-    "label": "Retrieve List Leads",
-    "spec": [
-      {
-        "name": "name",
-        "type": "text",
-        "label": "Name"
-      },
-      {
-        "name": "urn",
-        "type": "text",
-        "label": "Urn"
-      },
-      {
-        "name": "hashedUrl",
-        "type": "url",
-        "label": "Hashed Url"
-      },
-      {
-        "name": "position",
-        "type": "text",
-        "label": "Position"
-      },
-      {
-        "name": "companyName",
-        "type": "text",
-        "label": "Company Name"
-      },
-      {
-        "name": "location",
-        "type": "text",
-        "label": "Location"
-      },
-      {
-        "name": "addedToListAt",
-        "type": "date",
-        "label": "Added To List At"
-      }
-    ]
+    "name": "name",
+    "type": "text",
+    "label": "Name"
   },
   {
-    "name": "errors",
-    "type": "array",
-    "label": "Errors",
-    "spec": [
-      {
-        "name": "type",
-        "type": "text",
-        "label": "Error Type"
-      },
-      {
-        "name": "message",
-        "type": "text",
-        "label": "Error Message"
-      }
-    ]
+    "name": "urn",
+    "type": "text",
+    "label": "Person URN"
+  },
+  {
+    "name": "hashedUrl",
+    "type": "url",
+    "label": "Hashed LinkedIn URL"
+  },
+  {
+    "name": "position",
+    "type": "text",
+    "label": "Position"
+  },
+  {
+    "name": "companyName",
+    "type": "text",
+    "label": "Company Name"
+  },
+  {
+    "name": "location",
+    "type": "text",
+    "label": "Location"
+  },
+  {
+    "name": "addedToListAt",
+    "type": "date",
+    "label": "Added To List At"
   }
 ]
