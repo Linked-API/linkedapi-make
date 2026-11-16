@@ -1,0 +1,23 @@
+[
+  {
+    "name": "projectId",
+    "type": "text",
+    "label": "Project ID",
+    "required": true,
+    "help": "Project ID as a string of digits"
+  },
+  {
+    "name": "name",
+    "type": "text",
+    "label": "Name",
+    "required": true,
+    "help": "Project name, 1–100 characters, one line"
+  },
+  {
+    "name": "description",
+    "type": "text",
+    "label": "Description",
+    "required": false,
+    "help": "Up to 2000 characters; omit to leave unchanged"
+  }
+]

@@ -1362,6 +1362,166 @@
                     "samples": "modules/nv-delete-saved-search/nv-delete-saved-search.samples.iml.json",
                     "scope": "modules/nv-delete-saved-search/nv-delete-saved-search.scope.iml.json"
                 }
+            },
+            "rcSearchPeople": {
+                "label": "Search People in Recruiter Lite",
+                "description": "Search People in Recruiter Lite. Requires a LinkedIn Recruiter Lite seat and Linked API's Plus plan. Provide term, a nonempty filter, or customSearchUrl. customSearchUrl cannot be combined with term or filter. Filters alone are accepted. Scope fields and false booleans alone are not search criteria.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/rc-search-people/rc-search-people.communication.iml.json",
+                    "staticParams": "modules/rc-search-people/rc-search-people.static-params.iml.json",
+                    "mappableParams": "modules/rc-search-people/rc-search-people.mappable-params.iml.json",
+                    "interface": "modules/rc-search-people/rc-search-people.interface.iml.json",
+                    "samples": "modules/rc-search-people/rc-search-people.samples.iml.json",
+                    "scope": "modules/rc-search-people/rc-search-people.scope.iml.json"
+                }
+            },
+            "rcFetchPerson": {
+                "label": "Fetch Person in Recruiter Lite",
+                "description": "Fetch Person in Recruiter Lite. Requires a LinkedIn Recruiter Lite seat and Linked API's Plus plan. ",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/rc-fetch-person/rc-fetch-person.communication.iml.json",
+                    "staticParams": "modules/rc-fetch-person/rc-fetch-person.static-params.iml.json",
+                    "mappableParams": "modules/rc-fetch-person/rc-fetch-person.mappable-params.iml.json",
+                    "interface": "modules/rc-fetch-person/rc-fetch-person.interface.iml.json",
+                    "samples": "modules/rc-fetch-person/rc-fetch-person.samples.iml.json",
+                    "scope": "modules/rc-fetch-person/rc-fetch-person.scope.iml.json"
+                }
+            },
+            "rcRetrieveProjects": {
+                "label": "Retrieve Projects in Recruiter Lite",
+                "description": "Retrieve Projects in Recruiter Lite. Requires a LinkedIn Recruiter Lite seat and Linked API's Plus plan. ",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/rc-retrieve-projects/rc-retrieve-projects.communication.iml.json",
+                    "staticParams": "modules/rc-retrieve-projects/rc-retrieve-projects.static-params.iml.json",
+                    "mappableParams": "modules/rc-retrieve-projects/rc-retrieve-projects.mappable-params.iml.json",
+                    "interface": "modules/rc-retrieve-projects/rc-retrieve-projects.interface.iml.json",
+                    "samples": "modules/rc-retrieve-projects/rc-retrieve-projects.samples.iml.json",
+                    "scope": "modules/rc-retrieve-projects/rc-retrieve-projects.scope.iml.json"
+                }
+            },
+            "rcRetrieveProjectCandidates": {
+                "label": "Retrieve Project Candidates in Recruiter Lite",
+                "description": "Retrieve Project Candidates in Recruiter Lite. Requires a LinkedIn Recruiter Lite seat and Linked API's Plus plan. ",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/rc-retrieve-project-candidates/rc-retrieve-project-candidates.communication.iml.json",
+                    "staticParams": "modules/rc-retrieve-project-candidates/rc-retrieve-project-candidates.static-params.iml.json",
+                    "mappableParams": "modules/rc-retrieve-project-candidates/rc-retrieve-project-candidates.mappable-params.iml.json",
+                    "interface": "modules/rc-retrieve-project-candidates/rc-retrieve-project-candidates.interface.iml.json",
+                    "samples": "modules/rc-retrieve-project-candidates/rc-retrieve-project-candidates.samples.iml.json",
+                    "scope": "modules/rc-retrieve-project-candidates/rc-retrieve-project-candidates.scope.iml.json"
+                }
+            },
+            "rcSaveToProject": {
+                "label": "Save to Project in Recruiter Lite",
+                "description": "Save to Project in Recruiter Lite. Requires a LinkedIn Recruiter Lite seat and Linked API's Plus plan. ",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/rc-save-to-project/rc-save-to-project.communication.iml.json",
+                    "staticParams": "modules/rc-save-to-project/rc-save-to-project.static-params.iml.json",
+                    "mappableParams": "modules/rc-save-to-project/rc-save-to-project.mappable-params.iml.json",
+                    "interface": "modules/rc-save-to-project/rc-save-to-project.interface.iml.json",
+                    "samples": "modules/rc-save-to-project/rc-save-to-project.samples.iml.json",
+                    "scope": "modules/rc-save-to-project/rc-save-to-project.scope.iml.json"
+                }
+            },
+            "rcCreateProject": {
+                "label": "Create Project in Recruiter Lite",
+                "description": "Create Project in Recruiter Lite. Requires a LinkedIn Recruiter Lite seat and Linked API's Plus plan. Creation is not idempotent: after a failure, check your projects before creating again (a duplicate can only be archived).",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/rc-create-project/rc-create-project.communication.iml.json",
+                    "staticParams": "modules/rc-create-project/rc-create-project.static-params.iml.json",
+                    "mappableParams": "modules/rc-create-project/rc-create-project.mappable-params.iml.json",
+                    "interface": "modules/rc-create-project/rc-create-project.interface.iml.json",
+                    "samples": "modules/rc-create-project/rc-create-project.samples.iml.json",
+                    "scope": "modules/rc-create-project/rc-create-project.scope.iml.json"
+                }
+            },
+            "rcRenameProject": {
+                "label": "Rename Project in Recruiter Lite",
+                "description": "Rename Project in Recruiter Lite. Requires a LinkedIn Recruiter Lite seat and Linked API's Plus plan. ",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/rc-rename-project/rc-rename-project.communication.iml.json",
+                    "staticParams": "modules/rc-rename-project/rc-rename-project.static-params.iml.json",
+                    "mappableParams": "modules/rc-rename-project/rc-rename-project.mappable-params.iml.json",
+                    "interface": "modules/rc-rename-project/rc-rename-project.interface.iml.json",
+                    "samples": "modules/rc-rename-project/rc-rename-project.samples.iml.json",
+                    "scope": "modules/rc-rename-project/rc-rename-project.scope.iml.json"
+                }
+            },
+            "rcArchiveProject": {
+                "label": "Archive Project in Recruiter Lite",
+                "description": "Archive Project in Recruiter Lite. Requires a LinkedIn Recruiter Lite seat and Linked API's Plus plan. ",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/rc-archive-project/rc-archive-project.communication.iml.json",
+                    "staticParams": "modules/rc-archive-project/rc-archive-project.static-params.iml.json",
+                    "mappableParams": "modules/rc-archive-project/rc-archive-project.mappable-params.iml.json",
+                    "interface": "modules/rc-archive-project/rc-archive-project.interface.iml.json",
+                    "samples": "modules/rc-archive-project/rc-archive-project.samples.iml.json",
+                    "scope": "modules/rc-archive-project/rc-archive-project.scope.iml.json"
+                }
+            },
+            "rcSendMessage": {
+                "label": "Send Message in Recruiter Lite",
+                "description": "Send Message in Recruiter Lite. Requires a LinkedIn Recruiter Lite seat and Linked API's Plus plan. New InMail requires personUrl, subject (1–200 characters, one line) and text (1–1900 characters). Reply with threadId and text only, without personUrl or subject. A paid InMail credit is spent only when allowPaidCredit is true. After an unexpectedError, check the conversation before sending again. Turn on Allow Paid Credit only when the user has explicitly approved spending a paid InMail credit on this message; on inMailCreditRequired, ask the user instead of retrying with Allow Paid Credit on.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/rc-send-message/rc-send-message.communication.iml.json",
+                    "staticParams": "modules/rc-send-message/rc-send-message.static-params.iml.json",
+                    "mappableParams": "modules/rc-send-message/rc-send-message.mappable-params.iml.json",
+                    "interface": "modules/rc-send-message/rc-send-message.interface.iml.json",
+                    "samples": "modules/rc-send-message/rc-send-message.samples.iml.json",
+                    "scope": "modules/rc-send-message/rc-send-message.scope.iml.json"
+                }
+            },
+            "rcSyncInbox": {
+                "label": "Sync Inbox in Recruiter Lite",
+                "description": "Sync Inbox in Recruiter Lite. Requires a LinkedIn Recruiter Lite seat and Linked API's Plus plan. Enable whole-inbox monitoring, then poll with type rc.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/rc-sync-inbox/rc-sync-inbox.communication.iml.json",
+                    "staticParams": "modules/rc-sync-inbox/rc-sync-inbox.static-params.iml.json",
+                    "mappableParams": "modules/rc-sync-inbox/rc-sync-inbox.mappable-params.iml.json",
+                    "interface": "modules/rc-sync-inbox/rc-sync-inbox.interface.iml.json",
+                    "samples": "modules/rc-sync-inbox/rc-sync-inbox.samples.iml.json",
+                    "scope": "modules/rc-sync-inbox/rc-sync-inbox.scope.iml.json"
+                }
             }
         },
         "function": {},
@@ -1718,6 +1878,46 @@
                     {
                         "local": "nvDeleteSavedSearch",
                         "remote": "nvDeleteSavedSearch"
+                    },
+                    {
+                        "local": "rcSearchPeople",
+                        "remote": "rcSearchPeople"
+                    },
+                    {
+                        "local": "rcFetchPerson",
+                        "remote": "rcFetchPerson"
+                    },
+                    {
+                        "local": "rcRetrieveProjects",
+                        "remote": "rcRetrieveProjects"
+                    },
+                    {
+                        "local": "rcRetrieveProjectCandidates",
+                        "remote": "rcRetrieveProjectCandidates"
+                    },
+                    {
+                        "local": "rcSaveToProject",
+                        "remote": "rcSaveToProject"
+                    },
+                    {
+                        "local": "rcCreateProject",
+                        "remote": "rcCreateProject"
+                    },
+                    {
+                        "local": "rcRenameProject",
+                        "remote": "rcRenameProject"
+                    },
+                    {
+                        "local": "rcArchiveProject",
+                        "remote": "rcArchiveProject"
+                    },
+                    {
+                        "local": "rcSendMessage",
+                        "remote": "rcSendMessage"
+                    },
+                    {
+                        "local": "rcSyncInbox",
+                        "remote": "rcSyncInbox"
                     }
                 ],
                 "function": [],

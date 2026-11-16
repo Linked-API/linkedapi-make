@@ -1,0 +1,41 @@
+[
+  {
+    "name": "data",
+    "type": "collection",
+    "label": "Data",
+    "required": false,
+    "help": "Data",
+    "spec": [
+      {
+        "name": "projectId",
+        "type": "text",
+        "label": "Project ID",
+        "required": false,
+        "help": "Project ID"
+      },
+      {
+        "name": "projectUrl",
+        "type": "url",
+        "label": "Project URL",
+        "required": false,
+        "help": "Project URL"
+      },
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Name",
+        "required": false,
+        "help": "Name"
+      }
+    ]
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": [
+      { "name": "type", "type": "text", "label": "Error Type" },
+      { "name": "message", "type": "text", "label": "Error Message" }
+    ]
+  }
+]

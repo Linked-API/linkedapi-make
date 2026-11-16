@@ -1,0 +1,38 @@
+[
+  {
+    "name": "personUrl",
+    "type": "text",
+    "label": "Person URL",
+    "required": false,
+    "help": "New InMail recipient: Recruiter profile URL. A mix with Thread ID is refused by Core."
+  },
+  {
+    "name": "threadId",
+    "type": "text",
+    "label": "Thread ID",
+    "required": false,
+    "help": "Reply thread ID. A mix with Person URL or Subject is refused by Core."
+  },
+  {
+    "name": "messageSubject",
+    "type": "text",
+    "label": "Message Subject",
+    "required": false,
+    "help": "New InMail subject, 1–200 characters, one line; required with Person URL. A mix with Thread ID is refused by Core."
+  },
+  {
+    "name": "messageText",
+    "type": "text",
+    "label": "Message Text",
+    "required": true,
+    "help": "Message text, 1–1900 characters"
+  },
+  {
+    "name": "allowPaidCredit",
+    "type": "boolean",
+    "label": "Allow Paid Credit",
+    "required": false,
+    "help": "A paid InMail credit is spent only when this is true. Turn on Allow Paid Credit only when the user has explicitly approved spending a paid InMail credit on this message; on inMailCreditRequired, ask the user instead of retrying with Allow Paid Credit on.",
+    "default": false
+  }
+]

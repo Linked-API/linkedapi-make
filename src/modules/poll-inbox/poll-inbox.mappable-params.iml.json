@@ -11,7 +11,7 @@
     "type": "select",
     "label": "Interface Type",
     "required": false,
-    "help": "Filter messages by inbox type. If empty, both standard and Sales Navigator messages are returned.",
+    "help": "Filter messages by inbox type. If empty, standard, Sales Navigator and Recruiter Lite messages are returned.",
     "options": [
       {
         "value": "st",
@@ -20,6 +20,10 @@
       {
         "value": "nv",
         "label": "Sales Navigator"
+      },
+      {
+        "label": "Recruiter Lite",
+        "value": "rc"
       }
     ]
   },
@@ -35,6 +39,6 @@
     "type": "text",
     "label": "Person URL",
     "required": false,
-    "help": "Return the whole known conversation with this person instead of the whole inbox, including history loaded by Sync Conversation; the output then also has Threads. A hashed URL always matches; a public URL matches only once Linked API knows it."
+    "help": "Return the whole known conversation with this person instead of the whole inbox, including history loaded by Sync Conversation; the output then also has Threads. A hashed URL always matches; a public URL matches only once Linked API knows it. Recruiter profile URLs (/talent/profile/…) are also accepted."
   }
 ]

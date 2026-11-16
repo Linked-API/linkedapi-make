@@ -1,0 +1,25 @@
+[
+  {
+    "name": "personUrl",
+    "type": "text",
+    "label": "Person URL",
+    "required": true,
+    "help": "Recruiter profile URL (/talent/profile/…)"
+  },
+  {
+    "name": "basicInfo",
+    "type": "boolean",
+    "label": "Basic Info",
+    "required": false,
+    "help": "Read candidate details; default true",
+    "default": true
+  },
+  {
+    "name": "recruitingActivity",
+    "type": "boolean",
+    "label": "Recruiting Activity",
+    "required": false,
+    "help": "Read recruiting activity counts",
+    "default": false
+  }
+]

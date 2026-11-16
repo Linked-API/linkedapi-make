@@ -1,0 +1,122 @@
+[
+  {
+    "name": "data",
+    "type": "collection",
+    "label": "Data",
+    "required": false,
+    "help": "Data",
+    "spec": [
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Name",
+        "required": false,
+        "help": "Name"
+      },
+      {
+        "name": "recruiterProfileUrl",
+        "type": "url",
+        "label": "Recruiter Profile URL",
+        "required": false,
+        "help": "Recruiter Profile URL"
+      },
+      {
+        "name": "headline",
+        "type": "text",
+        "label": "Headline",
+        "required": false,
+        "help": "Headline"
+      },
+      {
+        "name": "location",
+        "type": "text",
+        "label": "Location",
+        "required": false,
+        "help": "Location"
+      },
+      {
+        "name": "avatarUrl",
+        "type": "url",
+        "label": "Avatar URL",
+        "required": false,
+        "help": "Avatar URL"
+      },
+      {
+        "name": "viewerState",
+        "type": "collection",
+        "label": "Viewer State",
+        "required": false,
+        "help": "Viewer State",
+        "spec": [
+          {
+            "name": "connectionDegree",
+            "type": "text",
+            "label": "Connection Degree",
+            "required": false,
+            "help": "Connection Degree"
+          }
+        ]
+      },
+      {
+        "name": "publicUrl",
+        "type": "url",
+        "label": "Public URL",
+        "required": false,
+        "help": "Public URL"
+      },
+      {
+        "name": "industry",
+        "type": "text",
+        "label": "Industry",
+        "required": false,
+        "help": "Industry"
+      },
+      {
+        "name": "recruitingActivity",
+        "type": "collection",
+        "label": "Recruiting Activity",
+        "required": false,
+        "help": "Recruiting Activity",
+        "spec": [
+          {
+            "name": "projects",
+            "type": "number",
+            "label": "Projects",
+            "required": false,
+            "help": "Projects"
+          },
+          {
+            "name": "messages",
+            "type": "number",
+            "label": "Messages",
+            "required": false,
+            "help": "Messages"
+          },
+          {
+            "name": "feedback",
+            "type": "number",
+            "label": "Feedback",
+            "required": false,
+            "help": "Feedback"
+          },
+          {
+            "name": "attachments",
+            "type": "number",
+            "label": "Attachments",
+            "required": false,
+            "help": "Attachments"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": [
+      { "name": "type", "type": "text", "label": "Error Type" },
+      { "name": "message", "type": "text", "label": "Error Message" }
+    ]
+  }
+]

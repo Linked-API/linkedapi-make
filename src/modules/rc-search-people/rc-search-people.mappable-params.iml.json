@@ -1,0 +1,677 @@
+[
+  {
+    "name": "searchTerm",
+    "type": "text",
+    "label": "Search Term",
+    "required": false,
+    "help": "Search keywords; filters alone accepted. A mix with Custom Search URL is refused by Core."
+  },
+  {
+    "name": "limit",
+    "type": "number",
+    "label": "Limit",
+    "required": false,
+    "help": "Maximum results, 1–1000; default 25",
+    "default": 25
+  },
+  {
+    "name": "customSearchUrl",
+    "type": "url",
+    "label": "Custom Search URL",
+    "required": false,
+    "help": "Recruiter search URL. A mix with Search Term or any filter is refused by Core."
+  },
+  {
+    "name": "jobTitles",
+    "type": "array",
+    "label": "Job Titles",
+    "required": false,
+    "help": "Job Titles"
+  },
+  {
+    "name": "jobTitlesScope",
+    "type": "select",
+    "label": "Job Titles Scope",
+    "required": false,
+    "help": "Job Titles Scope",
+    "options": [
+      {
+        "label": "currentOrPast",
+        "value": "currentOrPast"
+      },
+      {
+        "label": "current",
+        "value": "current"
+      },
+      {
+        "label": "pastNotCurrent",
+        "value": "pastNotCurrent"
+      },
+      {
+        "label": "past",
+        "value": "past"
+      }
+    ]
+  },
+  {
+    "name": "locations",
+    "type": "array",
+    "label": "Locations",
+    "required": false,
+    "help": "Locations"
+  },
+  {
+    "name": "locationsScope",
+    "type": "select",
+    "label": "Locations Scope",
+    "required": false,
+    "help": "Locations Scope",
+    "options": [
+      {
+        "label": "current",
+        "value": "current"
+      },
+      {
+        "label": "currentOrOpenToRelocate",
+        "value": "currentOrOpenToRelocate"
+      },
+      {
+        "label": "openToRelocateOnly",
+        "value": "openToRelocateOnly"
+      }
+    ]
+  },
+  {
+    "name": "postalCode",
+    "type": "collection",
+    "label": "Postal Code",
+    "required": false,
+    "help": "Code is required when a radius is set. Core refuses a radius without a code.",
+    "spec": [
+      {
+        "name": "code",
+        "type": "text",
+        "label": "Code",
+        "required": false,
+        "help": "Required postal or ZIP code"
+      },
+      {
+        "name": "radiusMiles",
+        "type": "select",
+        "label": "Radius Miles",
+        "required": false,
+        "help": "Radius Miles",
+        "options": [
+          {
+            "label": "1",
+            "value": 1
+          },
+          {
+            "label": "5",
+            "value": 5
+          },
+          {
+            "label": "10",
+            "value": 10
+          },
+          {
+            "label": "25",
+            "value": 25
+          },
+          {
+            "label": "50",
+            "value": 50
+          },
+          {
+            "label": "100",
+            "value": 100
+          },
+          {
+            "label": "200",
+            "value": 200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "skills",
+    "type": "array",
+    "label": "Skills",
+    "required": false,
+    "help": "Skills"
+  },
+  {
+    "name": "hasPassedSkillAssessment",
+    "type": "boolean",
+    "label": "Has Passed Skill Assessment",
+    "required": false,
+    "help": "True sets the checkbox on; false leaves it off, not an inverse filter",
+    "default": false
+  },
+  {
+    "name": "companies",
+    "type": "array",
+    "label": "Companies",
+    "required": false,
+    "help": "Companies"
+  },
+  {
+    "name": "companiesScope",
+    "type": "select",
+    "label": "Companies Scope",
+    "required": false,
+    "help": "Companies Scope",
+    "options": [
+      {
+        "label": "currentOrPast",
+        "value": "currentOrPast"
+      },
+      {
+        "label": "current",
+        "value": "current"
+      },
+      {
+        "label": "pastNotCurrent",
+        "value": "pastNotCurrent"
+      },
+      {
+        "label": "past",
+        "value": "past"
+      }
+    ]
+  },
+  {
+    "name": "currentCompanies",
+    "type": "array",
+    "label": "Current Companies",
+    "required": false,
+    "help": "Current Companies"
+  },
+  {
+    "name": "pastCompanies",
+    "type": "array",
+    "label": "Past Companies",
+    "required": false,
+    "help": "Past Companies"
+  },
+  {
+    "name": "companySizes",
+    "type": "select",
+    "label": "Company Sizes",
+    "required": false,
+    "help": "Company Sizes",
+    "options": [
+      {
+        "label": "selfEmployed",
+        "value": "selfEmployed"
+      },
+      {
+        "label": "1-10",
+        "value": "1-10"
+      },
+      {
+        "label": "11-50",
+        "value": "11-50"
+      },
+      {
+        "label": "51-200",
+        "value": "51-200"
+      },
+      {
+        "label": "201-500",
+        "value": "201-500"
+      },
+      {
+        "label": "501-1000",
+        "value": "501-1000"
+      },
+      {
+        "label": "1001-5000",
+        "value": "1001-5000"
+      },
+      {
+        "label": "5001-10000",
+        "value": "5001-10000"
+      },
+      {
+        "label": "10001+",
+        "value": "10001+"
+      }
+    ],
+    "multiple": true
+  },
+  {
+    "name": "schools",
+    "type": "array",
+    "label": "Schools",
+    "required": false,
+    "help": "Schools"
+  },
+  {
+    "name": "graduationYears",
+    "type": "collection",
+    "label": "Graduation Years",
+    "required": false,
+    "help": "Graduation Years",
+    "spec": [
+      {
+        "name": "from",
+        "type": "number",
+        "label": "From",
+        "required": false,
+        "help": "Integer from bound, 1900–2100; from must not exceed to",
+        "validate": {
+          "min": 1900,
+          "max": 2100
+        }
+      },
+      {
+        "name": "to",
+        "type": "number",
+        "label": "To",
+        "required": false,
+        "help": "Integer to bound, 1900–2100; from must not exceed to",
+        "validate": {
+          "min": 1900,
+          "max": 2100
+        }
+      }
+    ]
+  },
+  {
+    "name": "industries",
+    "type": "array",
+    "label": "Industries",
+    "required": false,
+    "help": "Industries"
+  },
+  {
+    "name": "jobFunctions",
+    "type": "select",
+    "label": "Job Functions",
+    "required": false,
+    "help": "Job Functions",
+    "options": [
+      {
+        "label": "Accounting",
+        "value": "Accounting"
+      },
+      {
+        "label": "Administrative",
+        "value": "Administrative"
+      },
+      {
+        "label": "Arts and Design",
+        "value": "Arts and Design"
+      },
+      {
+        "label": "Business Development",
+        "value": "Business Development"
+      },
+      {
+        "label": "Community and Social Services",
+        "value": "Community and Social Services"
+      },
+      {
+        "label": "Consulting",
+        "value": "Consulting"
+      },
+      {
+        "label": "Customer Success and Support",
+        "value": "Customer Success and Support"
+      },
+      {
+        "label": "Education",
+        "value": "Education"
+      },
+      {
+        "label": "Engineering",
+        "value": "Engineering"
+      },
+      {
+        "label": "Entrepreneurship",
+        "value": "Entrepreneurship"
+      },
+      {
+        "label": "Finance",
+        "value": "Finance"
+      },
+      {
+        "label": "Healthcare Services",
+        "value": "Healthcare Services"
+      },
+      {
+        "label": "Human Resources",
+        "value": "Human Resources"
+      },
+      {
+        "label": "Information Technology",
+        "value": "Information Technology"
+      },
+      {
+        "label": "Legal",
+        "value": "Legal"
+      },
+      {
+        "label": "Marketing",
+        "value": "Marketing"
+      },
+      {
+        "label": "Media and Communication",
+        "value": "Media and Communication"
+      },
+      {
+        "label": "Military and Protective Services",
+        "value": "Military and Protective Services"
+      },
+      {
+        "label": "Operations",
+        "value": "Operations"
+      },
+      {
+        "label": "Product Management",
+        "value": "Product Management"
+      },
+      {
+        "label": "Program and Project Management",
+        "value": "Program and Project Management"
+      },
+      {
+        "label": "Purchasing",
+        "value": "Purchasing"
+      },
+      {
+        "label": "Quality Assurance",
+        "value": "Quality Assurance"
+      },
+      {
+        "label": "Real Estate",
+        "value": "Real Estate"
+      },
+      {
+        "label": "Research",
+        "value": "Research"
+      },
+      {
+        "label": "Sales",
+        "value": "Sales"
+      }
+    ],
+    "multiple": true
+  },
+  {
+    "name": "seniority",
+    "type": "select",
+    "label": "Seniority",
+    "required": false,
+    "help": "Seniority",
+    "options": [
+      {
+        "label": "unpaid",
+        "value": "unpaid"
+      },
+      {
+        "label": "training",
+        "value": "training"
+      },
+      {
+        "label": "entry",
+        "value": "entry"
+      },
+      {
+        "label": "senior",
+        "value": "senior"
+      },
+      {
+        "label": "manager",
+        "value": "manager"
+      },
+      {
+        "label": "director",
+        "value": "director"
+      },
+      {
+        "label": "vp",
+        "value": "vp"
+      },
+      {
+        "label": "cxo",
+        "value": "cxo"
+      },
+      {
+        "label": "partner",
+        "value": "partner"
+      },
+      {
+        "label": "owner",
+        "value": "owner"
+      }
+    ],
+    "multiple": true
+  },
+  {
+    "name": "yearsOfExperience",
+    "type": "collection",
+    "label": "Years Of Experience",
+    "required": false,
+    "help": "Years Of Experience",
+    "spec": [
+      {
+        "name": "from",
+        "type": "number",
+        "label": "From",
+        "required": false,
+        "help": "Integer from bound, 0–30; from must not exceed to",
+        "validate": {
+          "min": 0,
+          "max": 30
+        }
+      },
+      {
+        "name": "to",
+        "type": "number",
+        "label": "To",
+        "required": false,
+        "help": "Integer to bound, 0–30; from must not exceed to",
+        "validate": {
+          "min": 0,
+          "max": 30
+        }
+      }
+    ]
+  },
+  {
+    "name": "firstNames",
+    "type": "array",
+    "label": "First Names",
+    "required": false,
+    "help": "First Names"
+  },
+  {
+    "name": "lastNames",
+    "type": "array",
+    "label": "Last Names",
+    "required": false,
+    "help": "Last Names"
+  },
+  {
+    "name": "profileLanguages",
+    "type": "array",
+    "label": "Profile Languages",
+    "required": false,
+    "help": "LinkedIn language codes en, es, in (Indonesian), _o (Other), not names"
+  },
+  {
+    "name": "recentlyJoined",
+    "type": "select",
+    "label": "Recently Joined",
+    "required": false,
+    "help": "Recently Joined",
+    "options": [
+      {
+        "label": "1day",
+        "value": "1day"
+      },
+      {
+        "label": "2to7days",
+        "value": "2to7days"
+      },
+      {
+        "label": "8to14days",
+        "value": "8to14days"
+      },
+      {
+        "label": "15to30days",
+        "value": "15to30days"
+      },
+      {
+        "label": "1to3months",
+        "value": "1to3months"
+      }
+    ],
+    "multiple": true
+  },
+  {
+    "name": "networkRelationships",
+    "type": "select",
+    "label": "Network Relationships",
+    "required": false,
+    "help": "Network Relationships",
+    "options": [
+      {
+        "label": "1st",
+        "value": "1st"
+      },
+      {
+        "label": "2nd",
+        "value": "2nd"
+      },
+      {
+        "label": "groupMembers",
+        "value": "groupMembers"
+      },
+      {
+        "label": "3rd+",
+        "value": "3rd+"
+      }
+    ],
+    "multiple": true
+  },
+  {
+    "name": "isMilitaryVeteran",
+    "type": "boolean",
+    "label": "Is Military Veteran",
+    "required": false,
+    "help": "True sets the checkbox on; false leaves it off, not an inverse filter",
+    "default": false
+  },
+  {
+    "name": "groups",
+    "type": "array",
+    "label": "Groups",
+    "required": false,
+    "help": "Groups"
+  },
+  {
+    "name": "recruitingActivity",
+    "type": "collection",
+    "label": "Recruiting Activity",
+    "required": false,
+    "help": "Type is required when a period is set. Core refuses a period without a type.",
+    "spec": [
+      {
+        "name": "type",
+        "type": "select",
+        "label": "Type",
+        "required": false,
+        "help": "Type",
+        "options": [
+          {
+            "label": "messages",
+            "value": "messages"
+          },
+          {
+            "label": "notes",
+            "value": "notes"
+          },
+          {
+            "label": "projects",
+            "value": "projects"
+          },
+          {
+            "label": "resumes",
+            "value": "resumes"
+          },
+          {
+            "label": "reviews",
+            "value": "reviews"
+          }
+        ]
+      },
+      {
+        "name": "period",
+        "type": "select",
+        "label": "Period",
+        "required": false,
+        "help": "Period",
+        "options": [
+          {
+            "label": "anytime",
+            "value": "anytime"
+          },
+          {
+            "label": "pastDay",
+            "value": "pastDay"
+          },
+          {
+            "label": "pastWeek",
+            "value": "pastWeek"
+          },
+          {
+            "label": "pastTwoWeeks",
+            "value": "pastTwoWeeks"
+          },
+          {
+            "label": "pastThreeMonths",
+            "value": "pastThreeMonths"
+          },
+          {
+            "label": "pastSixMonths",
+            "value": "pastSixMonths"
+          },
+          {
+            "label": "pastYear",
+            "value": "pastYear"
+          },
+          {
+            "label": "pastTwoYears",
+            "value": "pastTwoYears"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "projects",
+    "type": "array",
+    "label": "Projects",
+    "required": false,
+    "help": "Project names, not IDs"
+  },
+  {
+    "name": "notes",
+    "type": "array",
+    "label": "Notes",
+    "required": false,
+    "help": "Notes"
+  },
+  {
+    "name": "hidePreviouslyViewed",
+    "type": "boolean",
+    "label": "Hide Previously Viewed",
+    "required": false,
+    "help": "True sets the checkbox on; false leaves it off, not an inverse filter",
+    "default": false
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "name": "projectId",
+    "type": "text",
+    "label": "Project ID",
+    "required": true,
+    "help": "Project ID as a string of digits"
+  },
+  {
+    "name": "stage",
+    "type": "select",
+    "label": "Stage",
+    "required": false,
+    "help": "Stage",
+    "options": [
+      { "label": "uncontacted", "value": "uncontacted" },
+      { "label": "contacted", "value": "contacted" },
+      { "label": "replied", "value": "replied" },
+      { "label": "archived", "value": "archived" }
+    ]
+  },
+  {
+    "name": "limit",
+    "type": "number",
+    "label": "Limit",
+    "required": false,
+    "help": "Maximum results, 1–1000",
+    "default": 25
+  }
+]

@@ -31,6 +31,10 @@
               {
                 "label": "Sales Navigator",
                 "value": "nv"
+              },
+              {
+                "label": "Recruiter Lite",
+                "value": "rc"
               }
             ]
           },
@@ -42,12 +46,14 @@
           {
             "name": "personUrn",
             "type": "text",
-            "label": "Person URN"
+            "label": "Person URN",
+            "help": "Null for Recruiter Lite messages"
           },
           {
             "name": "personHashedUrl",
             "type": "url",
-            "label": "Person Hashed LinkedIn URL"
+            "label": "Person Hashed LinkedIn URL",
+            "help": "Null for Recruiter Lite messages"
           },
           {
             "name": "personPublicUrl",
@@ -57,7 +63,8 @@
           {
             "name": "personUrl",
             "type": "url",
-            "label": "Person LinkedIn URL (deprecated, same as Person Hashed LinkedIn URL)"
+            "label": "Person LinkedIn URL (deprecated, same as Person Hashed LinkedIn URL)",
+            "help": "Null for Recruiter Lite messages"
           },
           {
             "name": "sender",
@@ -83,6 +90,12 @@
             "name": "time",
             "type": "date",
             "label": "Message Time"
+          },
+          {
+            "name": "personRecruiterUrl",
+            "type": "url",
+            "label": "Person Recruiter URL",
+            "help": "Recruiter profile URL, or null when unavailable"
           }
         ]
       },
@@ -108,6 +121,10 @@
               {
                 "label": "Sales Navigator",
                 "value": "nv"
+              },
+              {
+                "label": "Recruiter Lite",
+                "value": "rc"
               }
             ]
           },

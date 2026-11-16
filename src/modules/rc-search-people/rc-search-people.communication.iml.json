@@ -1,0 +1,89 @@
+[
+  {
+    "url": "/workflows",
+    "method": "POST",
+    "body": {
+      "operationName": "rcSearchPeople",
+      "data": {
+        "term": "{{if(length(trim(parameters.searchTerm)) > 0, parameters.searchTerm, undefined)}}",
+        "limit": "{{parameters.limit}}",
+        "customSearchUrl": "{{if(length(parameters.customSearchUrl) > 0, parameters.customSearchUrl, undefined)}}",
+        "filter": "{{if((length(parameters.jobTitles) > 0) || (parameters.jobTitlesScope) || (length(parameters.locations) > 0) || (parameters.locationsScope) || ((length(parameters.postalCode.code) > 0) || (parameters.postalCode.radiusMiles !== undefined && parameters.postalCode.radiusMiles !== null && parameters.postalCode.radiusMiles !== '')) || (length(parameters.skills) > 0) || (parameters.hasPassedSkillAssessment === true) || (length(parameters.companies) > 0) || (parameters.companiesScope) || (length(parameters.currentCompanies) > 0) || (length(parameters.pastCompanies) > 0) || (length(parameters.companySizes) > 0) || (length(parameters.schools) > 0) || ((parameters.graduationYears.from !== undefined && parameters.graduationYears.from !== null && parameters.graduationYears.from !== '') || (parameters.graduationYears.to !== undefined && parameters.graduationYears.to !== null && parameters.graduationYears.to !== '')) || (length(parameters.industries) > 0) || (length(parameters.jobFunctions) > 0) || (length(parameters.seniority) > 0) || ((parameters.yearsOfExperience.from !== undefined && parameters.yearsOfExperience.from !== null && parameters.yearsOfExperience.from !== '') || (parameters.yearsOfExperience.to !== undefined && parameters.yearsOfExperience.to !== null && parameters.yearsOfExperience.to !== '')) || (length(parameters.firstNames) > 0) || (length(parameters.lastNames) > 0) || (length(parameters.profileLanguages) > 0) || (length(parameters.recentlyJoined) > 0) || (length(parameters.networkRelationships) > 0) || (parameters.isMilitaryVeteran === true) || (length(parameters.groups) > 0) || ((length(parameters.recruitingActivity.type) > 0) || (length(parameters.recruitingActivity.period) > 0)) || (length(parameters.projects) > 0) || (length(parameters.notes) > 0) || (parameters.hidePreviouslyViewed === true), temp.rcFilter, undefined)}}"
+      }
+    },
+    "response": {
+      "temp": {
+        "workflowId": "{{body.workflowId}}",
+        "operationName": "rcSearchPeople",
+        "status": "{{body.status || body.workflowStatus}}",
+        "message": "{{body.message}}",
+        "workflowStatus": "{{body.workflowStatus || body.status}}",
+        "criticalError": "{{body.criticalError}}"
+      }
+    },
+    "temp": {
+      "rcFilter": {
+        "jobTitles": "{{if(length(parameters.jobTitles) > 0, parameters.jobTitles, undefined)}}",
+        "jobTitlesScope": "{{if(parameters.jobTitlesScope, parameters.jobTitlesScope, undefined)}}",
+        "locations": "{{if(length(parameters.locations) > 0, parameters.locations, undefined)}}",
+        "locationsScope": "{{if(parameters.locationsScope, parameters.locationsScope, undefined)}}",
+        "postalCode": "{{if(length(parameters.postalCode.code) > 0, if(parameters.postalCode.radiusMiles !== undefined && parameters.postalCode.radiusMiles !== null && parameters.postalCode.radiusMiles !== '', pick(parameters.postalCode, 'code', 'radiusMiles'), pick(parameters.postalCode, 'code')), if(parameters.postalCode.radiusMiles !== undefined && parameters.postalCode.radiusMiles !== null && parameters.postalCode.radiusMiles !== '', pick(parameters.postalCode, 'radiusMiles'), undefined))}}",
+        "skills": "{{if(length(parameters.skills) > 0, parameters.skills, undefined)}}",
+        "hasPassedSkillAssessment": "{{if(parameters.hasPassedSkillAssessment === true, parameters.hasPassedSkillAssessment, undefined)}}",
+        "companies": "{{if(length(parameters.companies) > 0, parameters.companies, undefined)}}",
+        "companiesScope": "{{if(parameters.companiesScope, parameters.companiesScope, undefined)}}",
+        "currentCompanies": "{{if(length(parameters.currentCompanies) > 0, parameters.currentCompanies, undefined)}}",
+        "pastCompanies": "{{if(length(parameters.pastCompanies) > 0, parameters.pastCompanies, undefined)}}",
+        "companySizes": "{{if(length(parameters.companySizes) > 0, parameters.companySizes, undefined)}}",
+        "schools": "{{if(length(parameters.schools) > 0, parameters.schools, undefined)}}",
+        "graduationYears": "{{if(parameters.graduationYears.from !== undefined && parameters.graduationYears.from !== null && parameters.graduationYears.from !== '', if(parameters.graduationYears.to !== undefined && parameters.graduationYears.to !== null && parameters.graduationYears.to !== '', pick(parameters.graduationYears, 'from', 'to'), pick(parameters.graduationYears, 'from')), if(parameters.graduationYears.to !== undefined && parameters.graduationYears.to !== null && parameters.graduationYears.to !== '', pick(parameters.graduationYears, 'to'), undefined))}}",
+        "industries": "{{if(length(parameters.industries) > 0, parameters.industries, undefined)}}",
+        "jobFunctions": "{{if(length(parameters.jobFunctions) > 0, parameters.jobFunctions, undefined)}}",
+        "seniority": "{{if(length(parameters.seniority) > 0, parameters.seniority, undefined)}}",
+        "yearsOfExperience": "{{if(parameters.yearsOfExperience.from !== undefined && parameters.yearsOfExperience.from !== null && parameters.yearsOfExperience.from !== '', if(parameters.yearsOfExperience.to !== undefined && parameters.yearsOfExperience.to !== null && parameters.yearsOfExperience.to !== '', pick(parameters.yearsOfExperience, 'from', 'to'), pick(parameters.yearsOfExperience, 'from')), if(parameters.yearsOfExperience.to !== undefined && parameters.yearsOfExperience.to !== null && parameters.yearsOfExperience.to !== '', pick(parameters.yearsOfExperience, 'to'), undefined))}}",
+        "firstNames": "{{if(length(parameters.firstNames) > 0, parameters.firstNames, undefined)}}",
+        "lastNames": "{{if(length(parameters.lastNames) > 0, parameters.lastNames, undefined)}}",
+        "profileLanguages": "{{if(length(parameters.profileLanguages) > 0, parameters.profileLanguages, undefined)}}",
+        "recentlyJoined": "{{if(length(parameters.recentlyJoined) > 0, parameters.recentlyJoined, undefined)}}",
+        "networkRelationships": "{{if(length(parameters.networkRelationships) > 0, parameters.networkRelationships, undefined)}}",
+        "isMilitaryVeteran": "{{if(parameters.isMilitaryVeteran === true, parameters.isMilitaryVeteran, undefined)}}",
+        "groups": "{{if(length(parameters.groups) > 0, parameters.groups, undefined)}}",
+        "recruitingActivity": "{{if(length(parameters.recruitingActivity.type) > 0, if(length(parameters.recruitingActivity.period) > 0, pick(parameters.recruitingActivity, 'type', 'period'), pick(parameters.recruitingActivity, 'type')), if(length(parameters.recruitingActivity.period) > 0, pick(parameters.recruitingActivity, 'period'), undefined))}}",
+        "projects": "{{if(length(parameters.projects) > 0, parameters.projects, undefined)}}",
+        "notes": "{{if(length(parameters.notes) > 0, parameters.notes, undefined)}}",
+        "hidePreviouslyViewed": "{{if(parameters.hidePreviouslyViewed === true, parameters.hidePreviouslyViewed, undefined)}}"
+      }
+    }
+  },
+  {
+    "url": "/workflows/{{temp.workflowId}}?operationName={{temp.operationName}}",
+    "method": "GET",
+    "repeat": {
+      "condition": "{{(body.workflowStatus || body.status) === 'pending' || (body.workflowStatus || body.status) === 'running'}}",
+      "delay": 5000,
+      "limit": 1800
+    },
+    "response": {
+      "temp": {
+        "status": "{{body.status || body.workflowStatus}}",
+        "data": "{{body.data}}",
+        "errors": "{{body.errors}}",
+        "message": "{{body.message}}",
+        "workflowStatus": "{{body.workflowStatus || body.status}}",
+        "criticalError": "{{body.criticalError}}"
+      }
+    }
+  },
+  {
+    "response": {
+      "valid": "{{(temp.workflowStatus || temp.status) === 'completed'}}",
+      "error": {
+        "message": "{{temp.criticalError.message || temp.message || 'Workflow timed out or did not complete.'}}"
+      },
+      "output": {
+        "data": "{{temp.data}}",
+        "errors": "{{temp.errors}}"
+      }
+    }
+  }
+]

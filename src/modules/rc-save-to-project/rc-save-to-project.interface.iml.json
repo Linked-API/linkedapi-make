@@ -1,0 +1,27 @@
+[
+  {
+    "name": "data",
+    "type": "collection",
+    "label": "Data",
+    "required": false,
+    "help": "Data",
+    "spec": [
+      {
+        "name": "alreadyInProject",
+        "type": "boolean",
+        "label": "Already In Project",
+        "required": false,
+        "help": "Already In Project"
+      }
+    ]
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": [
+      { "name": "type", "type": "text", "label": "Error Type" },
+      { "name": "message", "type": "text", "label": "Error Message" }
+    ]
+  }
+]

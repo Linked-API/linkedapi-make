@@ -68,6 +68,21 @@
 		]
 	},
 	{
+		"label": "Recruiter Lite",
+		"modules": [
+			"rcSearchPeople",
+			"rcFetchPerson",
+			"rcRetrieveProjects",
+			"rcRetrieveProjectCandidates",
+			"rcSaveToProject",
+			"rcCreateProject",
+			"rcRenameProject",
+			"rcArchiveProject",
+			"rcSendMessage",
+			"rcSyncInbox"
+		]
+	},
+	{
 		"label": "Other Operations",
 		"modules": [
 			"customWorkflow",

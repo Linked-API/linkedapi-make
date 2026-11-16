@@ -1,0 +1,16 @@
+[
+  {
+    "name": "personUrl",
+    "type": "text",
+    "label": "Person URL",
+    "required": true,
+    "help": "Recruiter profile URL (/talent/profile/…)"
+  },
+  {
+    "name": "projectId",
+    "type": "text",
+    "label": "Project ID",
+    "required": true,
+    "help": "Project ID as a string of digits"
+  }
+]
