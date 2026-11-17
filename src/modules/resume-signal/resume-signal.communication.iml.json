@@ -1,0 +1,12 @@
+[
+  {
+    "url": "/signals/{{parameters.signalId}}/resume",
+    "method": "POST",
+    "response": {
+      "output": {
+        "data": "{{body.data}}",
+        "errors": "{{body.errors}}"
+      }
+    }
+  }
+]

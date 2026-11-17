@@ -1522,6 +1522,118 @@
                     "samples": "modules/rc-sync-inbox/rc-sync-inbox.samples.iml.json",
                     "scope": "modules/rc-sync-inbox/rc-sync-inbox.scope.iml.json"
                 }
+            },
+            "createSignal": {
+                "label": "Create a signal",
+                "description": "Create a signal to watch LinkedIn activity.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/create-signal/create-signal.communication.iml.json",
+                    "staticParams": "modules/create-signal/create-signal.static-params.iml.json",
+                    "mappableParams": "modules/create-signal/create-signal.mappable-params.iml.json",
+                    "interface": "modules/create-signal/create-signal.interface.iml.json",
+                    "samples": "modules/create-signal/create-signal.samples.iml.json",
+                    "scope": "modules/create-signal/create-signal.scope.iml.json"
+                }
+            },
+            "getSignals": {
+                "label": "Get all signals",
+                "description": "Get all signals on the account.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/get-signals/get-signals.communication.iml.json",
+                    "staticParams": "modules/get-signals/get-signals.static-params.iml.json",
+                    "mappableParams": "modules/get-signals/get-signals.mappable-params.iml.json",
+                    "interface": "modules/get-signals/get-signals.interface.iml.json",
+                    "samples": "modules/get-signals/get-signals.samples.iml.json",
+                    "scope": "modules/get-signals/get-signals.scope.iml.json"
+                }
+            },
+            "getSignal": {
+                "label": "Get a signal",
+                "description": "Get one signal by its ID.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/get-signal/get-signal.communication.iml.json",
+                    "staticParams": "modules/get-signal/get-signal.static-params.iml.json",
+                    "mappableParams": "modules/get-signal/get-signal.mappable-params.iml.json",
+                    "interface": "modules/get-signal/get-signal.interface.iml.json",
+                    "samples": "modules/get-signal/get-signal.samples.iml.json",
+                    "scope": "modules/get-signal/get-signal.scope.iml.json"
+                }
+            },
+            "pauseSignal": {
+                "label": "Pause a signal",
+                "description": "Pause checks for a signal.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/pause-signal/pause-signal.communication.iml.json",
+                    "staticParams": "modules/pause-signal/pause-signal.static-params.iml.json",
+                    "mappableParams": "modules/pause-signal/pause-signal.mappable-params.iml.json",
+                    "interface": "modules/pause-signal/pause-signal.interface.iml.json",
+                    "samples": "modules/pause-signal/pause-signal.samples.iml.json",
+                    "scope": "modules/pause-signal/pause-signal.scope.iml.json"
+                }
+            },
+            "resumeSignal": {
+                "label": "Resume a signal",
+                "description": "Resume checks and report new activity since the last check.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/resume-signal/resume-signal.communication.iml.json",
+                    "staticParams": "modules/resume-signal/resume-signal.static-params.iml.json",
+                    "mappableParams": "modules/resume-signal/resume-signal.mappable-params.iml.json",
+                    "interface": "modules/resume-signal/resume-signal.interface.iml.json",
+                    "samples": "modules/resume-signal/resume-signal.samples.iml.json",
+                    "scope": "modules/resume-signal/resume-signal.scope.iml.json"
+                }
+            },
+            "deleteSignal": {
+                "label": "Delete a signal",
+                "description": "Delete a signal while keeping its captured events available.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/delete-signal/delete-signal.communication.iml.json",
+                    "staticParams": "modules/delete-signal/delete-signal.static-params.iml.json",
+                    "mappableParams": "modules/delete-signal/delete-signal.mappable-params.iml.json",
+                    "interface": "modules/delete-signal/delete-signal.interface.iml.json",
+                    "samples": "modules/delete-signal/delete-signal.samples.iml.json",
+                    "scope": "modules/delete-signal/delete-signal.scope.iml.json"
+                }
+            },
+            "pollSignals": {
+                "label": "Poll signals for new events",
+                "description": "Poll signal events. Pass Since to fetch only later events; without it the response can be large.",
+                "moduleType": "action",
+                "actionCrud": null,
+                "connection": "connection1",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/poll-signals/poll-signals.communication.iml.json",
+                    "staticParams": "modules/poll-signals/poll-signals.static-params.iml.json",
+                    "mappableParams": "modules/poll-signals/poll-signals.mappable-params.iml.json",
+                    "interface": "modules/poll-signals/poll-signals.interface.iml.json",
+                    "samples": "modules/poll-signals/poll-signals.samples.iml.json",
+                    "scope": "modules/poll-signals/poll-signals.scope.iml.json"
+                }
             }
         },
         "function": {},
@@ -1918,6 +2030,34 @@
                     {
                         "local": "rcSyncInbox",
                         "remote": "rcSyncInbox"
+                    },
+                    {
+                        "local": "createSignal",
+                        "remote": "createSignal"
+                    },
+                    {
+                        "local": "getSignals",
+                        "remote": "getSignals"
+                    },
+                    {
+                        "local": "getSignal",
+                        "remote": "getSignal"
+                    },
+                    {
+                        "local": "pauseSignal",
+                        "remote": "pauseSignal"
+                    },
+                    {
+                        "local": "resumeSignal",
+                        "remote": "resumeSignal"
+                    },
+                    {
+                        "local": "deleteSignal",
+                        "remote": "deleteSignal"
+                    },
+                    {
+                        "local": "pollSignals",
+                        "remote": "pollSignals"
                     }
                 ],
                 "function": [],

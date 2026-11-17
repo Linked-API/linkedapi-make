@@ -1,0 +1,54 @@
+[
+  {
+    "name": "type",
+    "type": "select",
+    "label": "Signal type",
+    "required": false,
+    "options": [
+      {
+        "value": "companyPosts",
+        "label": "Company posts"
+      },
+      {
+        "value": "network",
+        "label": "Network"
+      },
+      {
+        "value": "personPosts",
+        "label": "Person posts"
+      },
+      {
+        "value": "postEngagement",
+        "label": "Post engagement"
+      },
+      {
+        "value": "postSearch",
+        "label": "Post search"
+      },
+      {
+        "value": "profileViewers",
+        "label": "Profile viewers"
+      }
+    ]
+  },
+  {
+    "name": "status",
+    "type": "select",
+    "label": "Status",
+    "required": false,
+    "options": [
+      {
+        "value": "active",
+        "label": "active"
+      },
+      {
+        "value": "paused",
+        "label": "paused"
+      },
+      {
+        "value": "stopped",
+        "label": "stopped"
+      }
+    ]
+  }
+]

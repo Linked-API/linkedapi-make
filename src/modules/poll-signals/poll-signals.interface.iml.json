@@ -1,0 +1,175 @@
+[
+  {
+    "name": "data",
+    "type": "collection",
+    "label": "Data",
+    "spec": [
+      {
+        "name": "events",
+        "type": "array",
+        "label": "Events",
+        "spec": [
+          {
+            "name": "id",
+            "type": "text",
+            "label": "Event ID"
+          },
+          {
+            "name": "signalId",
+            "type": "text",
+            "label": "Signal ID"
+          },
+          {
+            "name": "signalType",
+            "type": "select",
+            "label": "Signal type",
+            "options": [
+              {
+                "value": "companyPosts",
+                "label": "Company posts"
+              },
+              {
+                "value": "network",
+                "label": "Network"
+              },
+              {
+                "value": "personPosts",
+                "label": "Person posts"
+              },
+              {
+                "value": "postEngagement",
+                "label": "Post engagement"
+              },
+              {
+                "value": "postSearch",
+                "label": "Post search"
+              },
+              {
+                "value": "profileViewers",
+                "label": "Profile viewers"
+              }
+            ]
+          },
+          {
+            "name": "label",
+            "type": "text",
+            "label": "Label"
+          },
+          {
+            "name": "type",
+            "type": "select",
+            "label": "Event type",
+            "options": [
+              {
+                "value": "commentAdded",
+                "label": "Comment added"
+              },
+              {
+                "value": "connectionAccepted",
+                "label": "Connection accepted"
+              },
+              {
+                "value": "connectionAdded",
+                "label": "Connection added"
+              },
+              {
+                "value": "connectionRequestReceived",
+                "label": "Connection request received"
+              },
+              {
+                "value": "postFound",
+                "label": "Post found"
+              },
+              {
+                "value": "postPublished",
+                "label": "Post published"
+              },
+              {
+                "value": "profileViewed",
+                "label": "Profile viewed"
+              },
+              {
+                "value": "reactionAdded",
+                "label": "Reaction added"
+              }
+            ]
+          },
+          {
+            "name": "detectedAt",
+            "type": "date",
+            "label": "Detected at"
+          },
+          {
+            "name": "post",
+            "type": "collection",
+            "label": "Post",
+            "spec": []
+          },
+          {
+            "name": "postUrl",
+            "type": "url",
+            "label": "Post URL"
+          },
+          {
+            "name": "comment",
+            "type": "collection",
+            "label": "Comment",
+            "spec": []
+          },
+          {
+            "name": "reaction",
+            "type": "collection",
+            "label": "Reaction",
+            "spec": [
+              {
+                "name": "actor",
+                "type": "collection",
+                "label": "Actor",
+                "spec": []
+              },
+              {
+                "name": "type",
+                "type": "text",
+                "label": "Reaction type"
+              }
+            ]
+          },
+          {
+            "name": "viewer",
+            "type": "collection",
+            "label": "Viewer",
+            "spec": []
+          },
+          {
+            "name": "personUrn",
+            "type": "text",
+            "label": "Person URN"
+          },
+          {
+            "name": "personUrl",
+            "type": "url",
+            "label": "Person LinkedIn URL"
+          }
+        ]
+      }
+    ],
+    "help": "The complete API result is preserved, including fields that vary by signal type."
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": [
+      {
+        "name": "type",
+        "type": "text",
+        "label": "Error type"
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "label": "Error message"
+      }
+    ]
+  }
+]

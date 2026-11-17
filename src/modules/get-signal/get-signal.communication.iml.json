@@ -1,0 +1,12 @@
+[
+  {
+    "url": "/signals/{{parameters.signalId}}",
+    "method": "GET",
+    "response": {
+      "output": {
+        "data": "{{body.data}}",
+        "errors": "{{body.errors}}"
+      }
+    }
+  }
+]

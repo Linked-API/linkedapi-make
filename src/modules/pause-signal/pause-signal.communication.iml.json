@@ -1,0 +1,12 @@
+[
+  {
+    "url": "/signals/{{parameters.signalId}}/pause",
+    "method": "POST",
+    "response": {
+      "output": {
+        "data": "{{body.data}}",
+        "errors": "{{body.errors}}"
+      }
+    }
+  }
+]

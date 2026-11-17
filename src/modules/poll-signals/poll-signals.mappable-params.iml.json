@@ -1,0 +1,88 @@
+[
+  {
+    "name": "since",
+    "type": "date",
+    "label": "Since date",
+    "required": false,
+    "help": "Pass the newest detectedAt you have to retrieve only later events. If empty, all retained events are returned and the response can be large."
+  },
+  {
+    "name": "signalId",
+    "type": "text",
+    "label": "Signal ID",
+    "required": false,
+    "help": "The sigsub-… identifier returned when the signal was created."
+  },
+  {
+    "name": "signalType",
+    "type": "select",
+    "label": "Signal type",
+    "required": false,
+    "options": [
+      {
+        "value": "companyPosts",
+        "label": "Company posts"
+      },
+      {
+        "value": "network",
+        "label": "Network"
+      },
+      {
+        "value": "personPosts",
+        "label": "Person posts"
+      },
+      {
+        "value": "postEngagement",
+        "label": "Post engagement"
+      },
+      {
+        "value": "postSearch",
+        "label": "Post search"
+      },
+      {
+        "value": "profileViewers",
+        "label": "Profile viewers"
+      }
+    ]
+  },
+  {
+    "name": "eventType",
+    "type": "select",
+    "label": "Event type",
+    "required": false,
+    "options": [
+      {
+        "value": "commentAdded",
+        "label": "Comment added"
+      },
+      {
+        "value": "connectionAccepted",
+        "label": "Connection accepted"
+      },
+      {
+        "value": "connectionAdded",
+        "label": "Connection added"
+      },
+      {
+        "value": "connectionRequestReceived",
+        "label": "Connection request received"
+      },
+      {
+        "value": "postFound",
+        "label": "Post found"
+      },
+      {
+        "value": "postPublished",
+        "label": "Post published"
+      },
+      {
+        "value": "profileViewed",
+        "label": "Profile viewed"
+      },
+      {
+        "value": "reactionAdded",
+        "label": "Reaction added"
+      }
+    ]
+  }
+]

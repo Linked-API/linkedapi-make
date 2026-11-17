@@ -1,0 +1,12 @@
+[
+  {
+    "url": "/signals/{{parameters.signalId}}",
+    "method": "DELETE",
+    "response": {
+      "output": {
+        "data": "{{body.data}}",
+        "errors": "{{body.errors}}"
+      }
+    }
+  }
+]

@@ -1,0 +1,138 @@
+[
+  {
+    "name": "data",
+    "type": "collection",
+    "label": "Data",
+    "spec": [
+      {
+        "name": "id",
+        "type": "text",
+        "label": "Signal ID"
+      },
+      {
+        "name": "type",
+        "type": "select",
+        "label": "Signal type",
+        "options": [
+          {
+            "value": "companyPosts",
+            "label": "Company posts"
+          },
+          {
+            "value": "network",
+            "label": "Network"
+          },
+          {
+            "value": "personPosts",
+            "label": "Person posts"
+          },
+          {
+            "value": "postEngagement",
+            "label": "Post engagement"
+          },
+          {
+            "value": "postSearch",
+            "label": "Post search"
+          },
+          {
+            "value": "profileViewers",
+            "label": "Profile viewers"
+          }
+        ]
+      },
+      {
+        "name": "label",
+        "type": "text",
+        "label": "Label"
+      },
+      {
+        "name": "status",
+        "type": "select",
+        "label": "Status",
+        "options": [
+          {
+            "value": "active",
+            "label": "active"
+          },
+          {
+            "value": "paused",
+            "label": "paused"
+          },
+          {
+            "value": "stopped",
+            "label": "stopped"
+          }
+        ]
+      },
+      {
+        "name": "stoppedReason",
+        "type": "text",
+        "label": "Stopped reason"
+      },
+      {
+        "name": "createdAt",
+        "type": "date",
+        "label": "Created at"
+      },
+      {
+        "name": "baselineAt",
+        "type": "date",
+        "label": "Baseline at"
+      },
+      {
+        "name": "lastCheckedAt",
+        "type": "date",
+        "label": "Last checked at"
+      },
+      {
+        "name": "nextCheckAt",
+        "type": "date",
+        "label": "Next check at"
+      },
+      {
+        "name": "personUrl",
+        "type": "url",
+        "label": "Person LinkedIn URL"
+      },
+      {
+        "name": "companyUrl",
+        "type": "url",
+        "label": "Company LinkedIn URL"
+      },
+      {
+        "name": "postUrl",
+        "type": "url",
+        "label": "Post URL"
+      },
+      {
+        "name": "myPosts",
+        "type": "boolean",
+        "label": "My posts"
+      },
+      {
+        "name": "filter",
+        "type": "collection",
+        "label": "Filter",
+        "spec": []
+      }
+    ],
+    "help": "The complete API result is preserved, including fields that vary by signal type."
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": [
+      {
+        "name": "type",
+        "type": "text",
+        "label": "Error type"
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "label": "Error message"
+      }
+    ]
+  }
+]

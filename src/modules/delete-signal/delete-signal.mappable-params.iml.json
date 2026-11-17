@@ -1,0 +1,9 @@
+[
+  {
+    "name": "signalId",
+    "type": "text",
+    "label": "Signal ID",
+    "required": true,
+    "help": "The sigsub-… identifier returned when the signal was created."
+  }
+]

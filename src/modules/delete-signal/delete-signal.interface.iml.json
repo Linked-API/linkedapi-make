@@ -1,0 +1,32 @@
+[
+  {
+    "name": "data",
+    "type": "collection",
+    "label": "Data",
+    "spec": [
+      {
+        "name": "deleted",
+        "type": "boolean",
+        "label": "Deleted"
+      }
+    ],
+    "help": "The complete API result is preserved, including fields that vary by signal type."
+  },
+  {
+    "name": "errors",
+    "type": "array",
+    "label": "Errors",
+    "spec": [
+      {
+        "name": "type",
+        "type": "text",
+        "label": "Error type"
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "label": "Error message"
+      }
+    ]
+  }
+]

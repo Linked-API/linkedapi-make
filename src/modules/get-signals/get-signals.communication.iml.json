@@ -1,0 +1,16 @@
+[
+  {
+    "url": "/signals",
+    "method": "GET",
+    "qs": {
+      "type": "{{if(length(parameters.type) > 0, parameters.type, undefined)}}",
+      "status": "{{if(length(parameters.status) > 0, parameters.status, undefined)}}"
+    },
+    "response": {
+      "output": {
+        "data": "{{body.data}}",
+        "errors": "{{body.errors}}"
+      }
+    }
+  }
+]

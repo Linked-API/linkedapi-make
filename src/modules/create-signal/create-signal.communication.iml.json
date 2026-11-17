@@ -1,0 +1,22 @@
+[
+  {
+    "url": "/signals",
+    "method": "POST",
+    "body": {
+      "type": "{{parameters.type}}",
+      "label": "{{if(length(parameters.label) > 0, parameters.label, undefined)}}",
+      "personUrl": "{{if(parameters.type === 'personPosts', parameters.personUrl, undefined)}}",
+      "companyUrl": "{{if(parameters.type === 'companyPosts', parameters.companyUrl, undefined)}}",
+      "postUrl": "{{if(parameters.type === 'postEngagement' && parameters.myPosts !== true, parameters.postUrl, undefined)}}",
+      "myPosts": "{{if(parameters.type === 'postEngagement' && parameters.myPosts === true, true, undefined)}}",
+      "term": "{{if(parameters.type === 'postSearch', parameters.term, undefined)}}",
+      "filter": "{{if(parameters.type === 'postSearch', parameters.filter, undefined)}}"
+    },
+    "response": {
+      "output": {
+        "data": "{{body.data}}",
+        "errors": "{{body.errors}}"
+      }
+    }
+  }
+]

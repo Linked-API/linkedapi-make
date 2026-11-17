@@ -1,0 +1,221 @@
+[
+  {
+    "name": "type",
+    "type": "select",
+    "label": "Signal type",
+    "required": true,
+    "options": [
+      {
+        "value": "companyPosts",
+        "label": "Company posts",
+        "nested": [
+          {
+            "name": "companyUrl",
+            "type": "url",
+            "label": "Company LinkedIn URL",
+            "required": true
+          }
+        ]
+      },
+      {
+        "value": "network",
+        "label": "Network"
+      },
+      {
+        "value": "personPosts",
+        "label": "Person posts",
+        "nested": [
+          {
+            "name": "personUrl",
+            "type": "url",
+            "label": "Person LinkedIn URL",
+            "required": true
+          }
+        ]
+      },
+      {
+        "value": "postEngagement",
+        "label": "Post engagement",
+        "nested": [
+          {
+            "name": "myPosts",
+            "type": "boolean",
+            "label": "My posts",
+            "required": false,
+            "default": false,
+            "help": "Watch engagement on your own posts instead of one post URL."
+          },
+          {
+            "name": "postUrl",
+            "type": "url",
+            "label": "Post URL",
+            "required": false,
+            "help": "Required unless My posts is enabled."
+          }
+        ]
+      },
+      {
+        "value": "postSearch",
+        "label": "Post search",
+        "nested": [
+          {
+            "name": "term",
+            "type": "array",
+            "label": "Phrases",
+            "required": true,
+            "validate": {
+              "minItems": 1,
+              "maxItems": 3
+            },
+            "spec": {
+              "type": "text",
+              "label": "Phrase"
+            },
+            "help": "One to three phrases to watch for in new posts."
+          },
+          {
+            "name": "filter",
+            "type": "collection",
+            "label": "Filter",
+            "required": false,
+            "spec": [
+              {
+                "name": "contentType",
+                "type": "select",
+                "label": "Content type",
+                "required": false,
+                "options": [
+                  {
+                    "value": "documents",
+                    "label": "Documents"
+                  },
+                  {
+                    "value": "images",
+                    "label": "Images"
+                  },
+                  {
+                    "value": "jobPosts",
+                    "label": "Job posts"
+                  },
+                  {
+                    "value": "liveVideos",
+                    "label": "Live videos"
+                  },
+                  {
+                    "value": "videos",
+                    "label": "Videos"
+                  }
+                ]
+              },
+              {
+                "name": "postedBy",
+                "type": "select",
+                "label": "Posted by",
+                "required": false,
+                "multiple": true,
+                "options": [
+                  {
+                    "value": "firstConnections",
+                    "label": "1st connections"
+                  },
+                  {
+                    "value": "me",
+                    "label": "Me"
+                  },
+                  {
+                    "value": "peopleYouFollow",
+                    "label": "People you follow"
+                  }
+                ]
+              },
+              {
+                "name": "mentioningMembers",
+                "type": "array",
+                "label": "Mentioning members",
+                "required": false,
+                "help": "Use a name alone, or add a LinkedIn URL, URN or company identifier to pin the match.",
+                "spec": [
+                  {
+                    "name": "name",
+                    "type": "text",
+                    "label": "Name",
+                    "required": true
+                  },
+                  {
+                    "name": "id",
+                    "type": "text",
+                    "label": "ID",
+                    "required": false
+                  }
+                ]
+              },
+              {
+                "name": "mentioningCompanies",
+                "type": "array",
+                "label": "Mentioning companies",
+                "required": false,
+                "help": "Use a name alone, or add a LinkedIn URL, URN or company identifier to pin the match.",
+                "spec": [
+                  {
+                    "name": "name",
+                    "type": "text",
+                    "label": "Name",
+                    "required": true
+                  },
+                  {
+                    "name": "id",
+                    "type": "text",
+                    "label": "ID",
+                    "required": false
+                  }
+                ]
+              },
+              {
+                "name": "authorCompanies",
+                "type": "array",
+                "label": "Author companies",
+                "required": false,
+                "help": "Use a name alone, or add a LinkedIn URL, URN or company identifier to pin the match.",
+                "spec": [
+                  {
+                    "name": "name",
+                    "type": "text",
+                    "label": "Name",
+                    "required": true
+                  },
+                  {
+                    "name": "id",
+                    "type": "text",
+                    "label": "ID",
+                    "required": false
+                  }
+                ]
+              },
+              {
+                "name": "authorIndustries",
+                "type": "array",
+                "label": "Author industries",
+                "required": false,
+                "spec": {
+                  "type": "text",
+                  "label": "Industry"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "value": "profileViewers",
+        "label": "Profile viewers"
+      }
+    ]
+  },
+  {
+    "name": "label",
+    "type": "text",
+    "label": "Label",
+    "required": false,
+    "help": "Your label, up to 64 characters, returned with the signal and its events."
+  }
+]

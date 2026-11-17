@@ -1,0 +1,18 @@
+[
+  {
+    "url": "/signals/poll",
+    "method": "POST",
+    "body": {
+      "since": "{{parameters.since}}",
+      "signalId": "{{parameters.signalId}}",
+      "signalType": "{{parameters.signalType}}",
+      "eventType": "{{parameters.eventType}}"
+    },
+    "response": {
+      "output": {
+        "data": "{{body.data}}",
+        "errors": "{{body.errors}}"
+      }
+    }
+  }
+]
